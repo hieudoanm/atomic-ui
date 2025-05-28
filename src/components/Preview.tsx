@@ -32,7 +32,7 @@ export const Preview: FC<{
 
         <button
           type="button"
-          className="cursor-pointer rounded-lg bg-red-500 px-4 py-2 text-white shadow dark:bg-red-700 dark:shadow-neutral-100/10"
+          className="cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10"
           onClick={() => setPreview((previous: boolean) => !previous)}>
           {preview ? 'Preview' : 'Code'}
         </button>

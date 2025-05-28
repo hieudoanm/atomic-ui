@@ -58,7 +58,7 @@ const HomePage: NextPage<{
                 GitHub
               </Link>
               <label
-                className="relative block h-8 w-14 rounded-full bg-neutral-200 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-red-500 dark:bg-neutral-800 dark:has-checked:bg-red-700"
+                className="relative block h-8 w-14 rounded-full bg-neutral-200 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-purple-500 dark:bg-neutral-800 dark:has-checked:bg-purple-700"
                 aria-label="Toggle dark mode">
                 <input
                   type="checkbox"
@@ -112,10 +112,12 @@ const HomePage: NextPage<{
                     responsive UIs for your next project.
                   </span>
                 </p>
-                <div className="flex justify-center gap-x-6 text-sm font-black text-neutral-900 dark:text-neutral-100">
-                  <p className="whitespace-nowrap">✅ No Install</p>
-                  <p className="whitespace-nowrap">✅ No Config</p>
-                  <p className="whitespace-nowrap">✅ No Setup</p>
+                <div className="flex flex-col justify-center gap-x-6 text-sm font-black text-neutral-900 md:flex-row dark:text-neutral-100">
+                  <p className="whitespace-nowrap">🔮 Copy / Paste</p>
+                  <p className="whitespace-nowrap">🔮 Pure TailwindCSS</p>
+                  <p className="whitespace-nowrap">
+                    🔮 Atoms / Molecules / Organisms
+                  </p>
                 </div>
               </div>
             </div>
@@ -295,6 +297,8 @@ export const getStaticProps = () => {
     { path: 'feedback/alert', emoji: '🚨', name: 'Alert' },
     { path: 'feedback/badge', emoji: '🏷️', name: 'Badge' },
     { path: 'feedback/loading', emoji: '⏳', name: 'Loading' },
+    { path: 'feedback/progress', emoji: '🏁', name: 'Progress' },
+    { path: 'feedback/skeleton', emoji: '🩻', name: 'Skeleton' },
     { path: 'feedback/toast', emoji: '🥑', name: 'Toast' },
     { path: 'form/checkbox', emoji: '☑️', name: 'Checkbox' },
     { path: 'form/input', emoji: '⌨️', name: 'Input' },
@@ -312,7 +316,9 @@ export const getStaticProps = () => {
     { path: 'navigation/menu', emoji: '📁', name: 'Menu' },
     { path: 'navigation/pagination', emoji: '📄', name: 'Pagination' },
     { path: 'navigation/steps', emoji: '🪜', name: 'Steps' },
-    { path: 'typography/heading', emoji: '🔤', name: 'Heading' },
+    { path: 'typography/code', emoji: '🧑‍💻', name: 'Code' },
+    { path: 'typography/kbd', emoji: '⌨️', name: 'KBD' },
+    { path: 'typography/heading', emoji: '🔠', name: 'Heading' },
     { path: 'typography/paragraph', emoji: '🔤', name: 'Paragraph' },
   ].map(({ path = '', emoji = '', name = '' }) => {
     const group = path.split('/').at(0);

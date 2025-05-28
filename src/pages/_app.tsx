@@ -3,6 +3,9 @@ import type { AppProps } from 'next/app';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Head from 'next/head';
 
+const NODE_ENV = process.env.NODE_ENV ?? 'development';
+const BASE_PATH = NODE_ENV === 'development' ? '' : '/atomic-ui';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -18,6 +21,11 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>atomic/ui</title>
+        <link
+          rel="icon"
+          href={`${BASE_PATH}/favicon.ico`}
+          type="image/x-icon"
+        />
       </Head>
       <div className={`${geistSans.className} ${geistMono.className}`}>
         <Component {...pageProps} />
