@@ -66,8 +66,7 @@
                               children: d,
                             }),
                             (0, s.jsx)('h3', {
-                              className:
-                                'w-60 truncate text-xl font-bold whitespace-nowrap md:text-2xl',
+                              className: 'text-xl font-bold md:text-2xl',
                               children: i,
                             }),
                           ],

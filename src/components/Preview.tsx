@@ -24,12 +24,9 @@ export const Preview: FC<{
           <span className="text-4xl">{emoji}</span>
           <div>
             <p className="text-xs capitalize">{group}</p>
-            <h3 className="w-60 truncate text-xl font-bold whitespace-nowrap md:text-2xl">
-              {name}
-            </h3>
+            <h3 className="text-xl font-bold md:text-2xl">{name}</h3>
           </div>
         </div>
-
         <button
           type="button"
           className="cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10"
