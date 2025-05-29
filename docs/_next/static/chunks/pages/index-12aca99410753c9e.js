@@ -253,7 +253,7 @@
                                 }),
                                 (0, s.jsx)('span', {
                                   children:
-                                    'is a free collection of Tailwind CSS components designed with atomic design principles in mind. It offers a flexible set of building blocks to help you quickly build modern, responsive UIs for your next project.',
+                                    'is a free collection of Tailwind CSS components designed with atomic design principles in mind. It offers a flexible set of 44 free, customizable components with built-in dark mode support to help you quickly build modern, responsive UI.',
                                 }),
                               ],
                             }),

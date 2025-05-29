@@ -108,8 +108,9 @@ const HomePage: NextPage<{
                   <span>
                     is a free collection of Tailwind CSS components designed
                     with atomic design principles in mind. It offers a flexible
-                    set of building blocks to help you quickly build modern,
-                    responsive UIs for your next project.
+                    set of 44 free, customizable components with built-in dark
+                    mode support to help you quickly build modern, responsive
+                    UI.
                   </span>
                 </p>
                 <div className="flex flex-col justify-center gap-x-6 text-sm font-black text-neutral-900 md:flex-row dark:text-neutral-100">

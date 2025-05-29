@@ -6,6 +6,7 @@
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Components](#components)
+    - [Inspired By](#inspired-by)
   - [Themes / Preview](#themes--preview)
     - [Dark](#dark)
     - [Light](#light)
@@ -15,7 +16,7 @@
 
 ## Introduction
 
-`atomic/ui` is a free collection of Tailwind CSS components designed with atomic design principles in mind. It offers a flexible set of building blocks to help you quickly build modern, responsive UIs for your next project.
+`atomic/ui` is a free collection of Tailwind CSS components designed with atomic design principles in mind. It offers a flexible set of 44 free, customizable components with built-in dark mode support to help you quickly build modern, responsive UI.
 
 Browse the website for the components you need, copy the code and paste it into your project. All components have support for dark mode.
 
@@ -70,6 +71,14 @@ Browse the website for the components you need, copy the code and paste it into 
 | 43  | 7.03     | Typography | Heading           | Done        |
 | 44  | 7.04     | Typography | Text              | Done        |
 
+### Inspired By
+
+1. [Ant Design](https://ant.design/)
+2. [Chakra UI](https://chakra-ui.com/)
+3. [DaisyUI](https://daisyui.com/)
+4. [Material UI](https://mui.com/)
+5. [Tailwind UI](https://tailwindui.com/)
+
 ## Themes / Preview
 
 ### Dark
@@ -83,7 +92,7 @@ Browse the website for the components you need, copy the code and paste it into 
 ## Roadmap
 
 - [ ] Add Social Preview Cover
-- [ ] Add more Components from 32 to 44
+- [ ] Add more Components from 38 to 44
 - [ ] Add Comments
 
 ## Contributing

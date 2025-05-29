@@ -17,7 +17,7 @@
     },
     '/': [
       'static/chunks/5001-e5cbd64a2f73809f.js',
-      'static/chunks/pages/index-4ccca252a4468932.js',
+      'static/chunks/pages/index-12aca99410753c9e.js',
     ],
     '/_error': ['static/chunks/pages/_error-37539812ac3b83ec.js'],
     sortedPages: ['/', '/_app', '/_error'],
