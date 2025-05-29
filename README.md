@@ -1,5 +1,7 @@
 # [`atomic/ui`](https://hieudoanm.github.io/atomic-ui/)
 
+![cover](./images/cover.jpg)
+
 ## Table of Contents
 
 - [`atomic/ui`](#atomicui)
@@ -24,52 +26,54 @@ Browse the website for the components you need, copy the code and paste it into 
 
 `atomic/ui` offer 32 components for free.
 
+Status: `In Progress` - `Completed`
+
 | No  | Group No | Group Name | Component         | Status      |
 | --- | -------- | ---------- | ----------------- | ----------- |
-| 01  | 1.01     | Button     | Button            | Done        |
-| 02  | 1.02     | Button     | Button Group      | Done        |
+| 01  | 1.01     | Button     | Button            | Completed   |
+| 02  | 1.02     | Button     | Button Group      | Completed   |
 | 03  | 1.03     | Button     | Button - Dropdown | In Progress |
 | 04  | 1.04     | Button     | Icon Button       | In Progress |
-| 05  | 2.01     | Data       | List              | Done        |
-| 06  | 2.02     | Data       | Stats             | Done        |
-| 07  | 2.03     | Data       | Table             | Done        |
-| 08  | 2.04     | Data       | Tooltip           | Done        |
-| 09  | 2.05     | Feedback   | Alert             | Done        |
-| 10  | 2.06     | Feedback   | Badge             | Done        |
-| 11  | 2.07     | Feedback   | Loading           | Done        |
-| 12  | 2.08     | Feedback   | Progress          | Done        |
-| 13  | 2.09     | Feedback   | Skeleton          | Done        |
-| 14  | 2.10     | Feedback   | Toast             | Done        |
-| 15  | 3.01     | Form       | Calendar          | Done        |
-| 16  | 3.02     | Form       | Checkbox          | Done        |
-| 17  | 3.03     | Form       | Input             | Done        |
-| 18  | 3.04     | Form       | Radio             | Done        |
-| 19  | 3.05     | Form       | Range             | Done        |
-| 20  | 3.06     | Form       | Select            | Done        |
-| 21  | 3.07     | Form       | Textarea          | Done        |
-| 22  | 3.08     | Form       | Toggle            | Done        |
-| 23  | 4.01     | Layout     | Accordian         | Done        |
-| 24  | 4.02     | Layout     | Card              | Done        |
-| 25  | 4.03     | Layout     | Collapse          | Done        |
-| 26  | 4.04     | Layout     | Divider           | Done        |
+| 05  | 2.01     | Data       | List              | Completed   |
+| 06  | 2.02     | Data       | Stats             | Completed   |
+| 07  | 2.03     | Data       | Table             | Completed   |
+| 08  | 2.04     | Data       | Tooltip           | Completed   |
+| 09  | 2.05     | Feedback   | Alert             | Completed   |
+| 10  | 2.06     | Feedback   | Badge             | Completed   |
+| 11  | 2.07     | Feedback   | Loading           | Completed   |
+| 12  | 2.08     | Feedback   | Progress          | Completed   |
+| 13  | 2.09     | Feedback   | Skeleton          | Completed   |
+| 14  | 2.10     | Feedback   | Toast             | Completed   |
+| 15  | 3.01     | Form       | Calendar          | Completed   |
+| 16  | 3.02     | Form       | Checkbox          | Completed   |
+| 17  | 3.03     | Form       | Input             | Completed   |
+| 18  | 3.04     | Form       | Radio             | Completed   |
+| 19  | 3.05     | Form       | Range             | Completed   |
+| 20  | 3.06     | Form       | Select            | Completed   |
+| 21  | 3.07     | Form       | Textarea          | Completed   |
+| 22  | 3.08     | Form       | Toggle            | Completed   |
+| 23  | 4.01     | Layout     | Accordian         | Completed   |
+| 24  | 4.02     | Layout     | Card              | Completed   |
+| 25  | 4.03     | Layout     | Collapse          | Completed   |
+| 26  | 4.04     | Layout     | Divider           | Completed   |
 | 27  | 4.05     | Layout     | Drawer            | In Progress |
-| 28  | 4.06     | Layout     | Footer            | Done        |
-| 29  | 4.07     | Layout     | Hero              | Done        |
-| 30  | 4.08     | Layout     | Modal             | Done        |
-| 31  | 5.01     | Media      | Avatar            | Done        |
+| 28  | 4.06     | Layout     | Footer            | Completed   |
+| 29  | 4.07     | Layout     | Hero              | Completed   |
+| 30  | 4.08     | Layout     | Modal             | Completed   |
+| 31  | 5.01     | Media      | Avatar            | Completed   |
 | 32  | 5.02     | Media      | Carousel          | In Progress |
 | 33  | 5.03     | Media      | Diff              | In Progress |
-| 34  | 5.04     | Media      | File              | Done        |
-| 35  | 6.01     | Navigation | Breadcrumbs       | Done        |
-| 36  | 6.02     | Navigation | Menu              | Done        |
-| 37  | 6.03     | Navigation | Navbar            | Done        |
-| 38  | 6.04     | Navigation | Pagination        | Done        |
-| 39  | 6.05     | Navigation | Steps             | Done        |
+| 34  | 5.04     | Media      | File              | Completed   |
+| 35  | 6.01     | Navigation | Breadcrumbs       | Completed   |
+| 36  | 6.02     | Navigation | Menu              | Completed   |
+| 37  | 6.03     | Navigation | Navbar            | Completed   |
+| 38  | 6.04     | Navigation | Pagination        | Completed   |
+| 39  | 6.05     | Navigation | Steps             | Completed   |
 | 40  | 6.06     | Navigation | Tabs              | In Progress |
-| 41  | 7.01     | Typography | Code              | Done        |
-| 42  | 7.02     | Typography | KBD (Keyboard)    | Done        |
-| 43  | 7.03     | Typography | Heading           | Done        |
-| 44  | 7.04     | Typography | Text              | Done        |
+| 41  | 7.01     | Typography | Code              | Completed   |
+| 42  | 7.02     | Typography | KBD (Keyboard)    | Completed   |
+| 43  | 7.03     | Typography | Heading           | Completed   |
+| 44  | 7.04     | Typography | Text              | Completed   |
 
 ### Inspired By
 
