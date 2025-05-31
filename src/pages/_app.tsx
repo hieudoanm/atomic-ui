@@ -20,12 +20,8 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>atomic/ui</title>
-        <link
-          rel="icon"
-          href={`${BASE_PATH}/favicon.ico`}
-          type="image/x-icon"
-        />
+        <title>atomic</title>
+        <link rel="icon" href={`${BASE_PATH}/favicon.ico`} type="image/x-icon" />
       </Head>
       <div className={`${geistSans.className} ${geistMono.className}`}>
         <Component {...pageProps} />

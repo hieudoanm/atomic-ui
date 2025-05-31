@@ -1,14 +1,16 @@
-# [`atomic/ui`](https://hieudoanm.github.io/atomic-ui/)
+# [`atomic/front-end`](https://hieudoanm.github.io/atomic/)
 
 ![cover](./images/cover.jpg)
 
 ## Table of Contents
 
-- [`atomic/ui`](#atomicui)
+- [`atomic/front-end`](#atomicfront-end)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
-  - [Components](#components)
-    - [Inspired By](#inspired-by)
+  - [Code](#code)
+    - [Components](#components)
+      - [Inspired By](#inspired-by)
+    - [Hooks](#hooks)
   - [Themes / Preview](#themes--preview)
     - [Dark](#dark)
     - [Light](#light)
@@ -18,15 +20,21 @@
 
 ## Introduction
 
+`atomic` is a free, modern collection of Tailwind CSS UI components and reusable React Hooks, built with atomic design principles. It includes 44+ customizable components and practical hooks with built-in dark mode and responsive behavior—helping you build fast, accessible, and maintainable interfaces with ease.
+
+`atomic/hooks` is a free collection of React hooks built with simplicity and reusability in mind. It offers a flexible set of essential utilities to help you manage state, side effects, and async logic more effectively — all with a focus on clean, scalable React code.
+
 `atomic/ui` is a free collection of Tailwind CSS components designed with atomic design principles in mind. It offers a flexible set of 44 free, customizable components with built-in dark mode support to help you quickly build modern, responsive UI.
 
-Browse the website for the components you need, copy the code and paste it into your project. All components have support for dark mode.
+Browse the website for the components/hooks you need, copy the code and paste it into your project.
 
-## Components
-
-`atomic/ui` offer 32 components for free.
+## Code
 
 Status: `In Progress` - `Completed`
+
+### Components
+
+`atomic/ui` offer 44 components for free.
 
 | No  | Group No | Group Name | Component         | Status      |
 | --- | -------- | ---------- | ----------------- | ----------- |
@@ -75,13 +83,36 @@ Status: `In Progress` - `Completed`
 | 43  | 7.03     | Typography | Heading           | Completed   |
 | 44  | 7.04     | Typography | Text              | Completed   |
 
-### Inspired By
+#### Inspired By
 
 1. [Ant Design](https://ant.design/)
 2. [Chakra UI](https://chakra-ui.com/)
 3. [DaisyUI](https://daisyui.com/)
 4. [Material UI](https://mui.com/)
 5. [Tailwind UI](https://tailwindui.com/)
+
+### Hooks
+
+`atomic/hooks` offer 16 components for free.
+
+| No  | Group No | Group Name | Hook                  | Status    |
+| --- | -------- | ---------- | --------------------- | --------- |
+| 01  | 1.1      | Boolean    | `use-boolean`         | Completed |
+| 02  | 1.2      | Boolean    | `use-toggle`          | Completed |
+| 03  | 2.1      | Events     | `use-keyboard`        | Completed |
+| 04  | 2.2      | Events     | `use-online`          | Completed |
+| 05  | 2.3      | Events     | `use-resize`          | Completed |
+| 06  | 2.4      | Events     | `use-scroll`          | Completed |
+| 07  | 3.1      | Info       | `use-battery`         | Completed |
+| 08  | 3.2      | Info       | `use-browser`         | Completed |
+| 09  | 3.3      | Info       | `use-language`        | Completed |
+| 10  | 3.4      | Info       | `use-screen`          | Completed |
+| 11  | 4.1      | Navigator  | `use-clipboard`       | Completed |
+| 12  | 4.2      | Navigator  | `use-geolocation`     | Completed |
+| 13  | 5.1      | Storage    | `use-local-storage`   | Completed |
+| 14  | 5.2      | Storage    | `use-session-storage` | Completed |
+| 15  | 6.1      | Time       | `use-timeout`         | Completed |
+| 16  | 6.2      | Time       | `use-interval`        | Completed |
 
 ## Themes / Preview
 
@@ -95,7 +126,6 @@ Status: `In Progress` - `Completed`
 
 ## Roadmap
 
-- [ ] Add Social Preview Cover
 - [ ] Add more Components from 38 to 44
 - [ ] Add Comments
 

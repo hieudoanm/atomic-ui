@@ -17,10 +17,5 @@ export const Code: FC<{
     codeToHtmlAsync();
   });
 
-  return (
-    <div
-      dangerouslySetInnerHTML={{ __html: html }}
-      className="w-full overflow-x-auto bg-neutral-900 p-4"
-    />
-  );
+  return <div dangerouslySetInnerHTML={{ __html: html }} className="w-full overflow-x-auto bg-neutral-900 p-4" />;
 };

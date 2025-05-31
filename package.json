@@ -1,20 +1,21 @@
 {
-  "name": "@atomic/ui",
+  "name": "@atomic/front-end",
   "version": "0.0.1",
   "private": true,
-  "description": "Atomic UI",
+  "description": "Atomic - Hooks & UI",
   "packageManager": "pnpm@10.11.0",
   "keywords": [
     "atomic",
+    "hooks",
     "ui"
   ],
-  "homepage": "https://github.com/hieudoanm/atomic-ui#readme",
+  "homepage": "https://github.com/hieudoanm/atomic#readme",
   "bugs": {
-    "url": "https://github.com/hieudoanm/atomic-ui/issues"
+    "url": "https://github.com/hieudoanm/atomic/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hieudoanm/atomic-ui.git"
+    "url": "git+https://github.com/hieudoanm/atomic.git"
   },
   "license": "GPL-3.0",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io/)",

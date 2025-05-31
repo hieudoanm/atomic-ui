@@ -8,7 +8,8 @@ export const Preview: FC<{
   group: string;
   name: string;
   code: string;
-}> = ({ id = '', emoji = '', group = '', name = '', code = '' }) => {
+  codeOnly?: boolean;
+}> = ({ id = '', emoji = '', group = '', name = '', code = '', codeOnly = false }) => {
   const [html, setHtml] = useState('');
   const [preview, setPreview] = useState<boolean>(true);
 
@@ -27,21 +28,26 @@ export const Preview: FC<{
             <h3 className="text-xl font-bold md:text-2xl">{name}</h3>
           </div>
         </div>
-        <button
-          type="button"
-          className="cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10"
-          onClick={() => setPreview((previous: boolean) => !previous)}>
-          {preview ? 'Preview' : 'Code'}
-        </button>
+        {!codeOnly && (
+          <button
+            type="button"
+            className="cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10"
+            onClick={() => setPreview((previous: boolean) => !previous)}>
+            {preview ? 'Preview' : 'Code'}
+          </button>
+        )}
       </div>
       <div className="flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
-        {preview ? (
-          <div
-            className="w-full p-4 md:p-8"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+        {codeOnly ? (
+          <Code code={code} lang="tsx" />
         ) : (
-          <Code code={code} lang="html" />
+          <>
+            {preview ? (
+              <div className="w-full p-4 md:p-8" dangerouslySetInnerHTML={{ __html: html }} />
+            ) : (
+              <Code code={code} lang="html" />
+            )}
+          </>
         )}
       </div>
     </div>
