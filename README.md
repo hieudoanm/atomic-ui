@@ -9,9 +9,8 @@
   - [Introduction](#introduction)
   - [Code](#code)
     - [React Hooks](#react-hooks)
-      - [React Hooks - Inspired By](#react-hooks---inspired-by)
     - [UI Components](#ui-components)
-      - [UI - Inspired By](#ui---inspired-by)
+    - [Inspired By](#inspired-by)
   - [Themes / Preview](#themes--preview)
     - [Dark](#dark)
     - [Light](#light)
@@ -55,11 +54,6 @@ Status: `In Progress` - `Completed`
 | 14  | 5.2      | Storage    | `use-session-storage` | Completed |
 | 15  | 6.1      | Time       | `use-timeout`         | Completed |
 | 16  | 6.2      | Time       | `use-interval`        | Completed |
-
-#### React Hooks - Inspired By
-
-1. [useHooks](https://usehooks.com/)
-2. [useHooksTS](https://usehooks-ts.com/)
 
 ### UI Components
 
@@ -112,13 +106,26 @@ Status: `In Progress` - `Completed`
 | 43  | 7.03     | Typography | Heading           | Completed   |
 | 44  | 7.04     | Typography | Text              | Completed   |
 
-#### UI - Inspired By
+### Inspired By
 
-1. [Ant Design](https://ant.design/)
-2. [Chakra UI](https://chakra-ui.com/)
-3. [DaisyUI](https://daisyui.com/)
-4. [Material UI](https://mui.com/)
-5. [Tailwind UI](https://tailwindui.com/)
+- React Hooks
+  - [useHooks](https://usehooks.com/)
+  - [useHooksTS](https://usehooks-ts.com/)
+- UI Components
+  - CSS Utilities
+    - [DaisyUI](https://daisyui.com/)
+    - [Flowbite](https://flowbite.com)
+    - [HyperUI](https://www.hyperui.dev/)
+    - [MerakiUI](https://merakiui.com/)
+    - [Tailwind UI](https://tailwindui.com/)
+  - React
+    - [Ant Design](https://ant.design/)
+    - [Chakra UI](https://chakra-ui.com/)
+    - [Headless UI](https://headlessui.com/)
+    - [Hero UI](https://www.heroui.com/)
+    - [Material UI](https://mui.com/)
+    - [Radix UI](https://www.radix-ui.com/)
+    - [shadcn/ui](https://ui.shadcn.com/)
 
 ## Themes / Preview
 
