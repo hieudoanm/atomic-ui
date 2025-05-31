@@ -1,16 +1,17 @@
-# [`atomic/front-end`](https://hieudoanm.github.io/atomic/)
+# [`atomic`](https://hieudoanm.github.io/atomic/)
 
 ![cover](./images/cover.jpg)
 
 ## Table of Contents
 
-- [`atomic/front-end`](#atomicfront-end)
+- [`atomic`](#atomic)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Code](#code)
-    - [Components](#components)
-      - [Inspired By](#inspired-by)
-    - [Hooks](#hooks)
+    - [React Hooks](#react-hooks)
+      - [React Hooks - Inspired By](#react-hooks---inspired-by)
+    - [UI Components](#ui-components)
+      - [UI - Inspired By](#ui---inspired-by)
   - [Themes / Preview](#themes--preview)
     - [Dark](#dark)
     - [Light](#light)
@@ -32,7 +33,35 @@ Browse the website for the components/hooks you need, copy the code and paste it
 
 Status: `In Progress` - `Completed`
 
-### Components
+### React Hooks
+
+`atomic/hooks` offer 16 components for free.
+
+| No  | Group No | Group Name | Hook                  | Status    |
+| --- | -------- | ---------- | --------------------- | --------- |
+| 01  | 1.1      | Boolean    | `use-boolean`         | Completed |
+| 02  | 1.2      | Boolean    | `use-toggle`          | Completed |
+| 03  | 2.1      | Events     | `use-keyboard`        | Completed |
+| 04  | 2.2      | Events     | `use-online`          | Completed |
+| 05  | 2.3      | Events     | `use-resize`          | Completed |
+| 06  | 2.4      | Events     | `use-scroll`          | Completed |
+| 07  | 3.1      | Info       | `use-battery`         | Completed |
+| 08  | 3.2      | Info       | `use-browser`         | Completed |
+| 09  | 3.3      | Info       | `use-language`        | Completed |
+| 10  | 3.4      | Info       | `use-screen`          | Completed |
+| 11  | 4.1      | Navigator  | `use-clipboard`       | Completed |
+| 12  | 4.2      | Navigator  | `use-geolocation`     | Completed |
+| 13  | 5.1      | Storage    | `use-local-storage`   | Completed |
+| 14  | 5.2      | Storage    | `use-session-storage` | Completed |
+| 15  | 6.1      | Time       | `use-timeout`         | Completed |
+| 16  | 6.2      | Time       | `use-interval`        | Completed |
+
+#### React Hooks - Inspired By
+
+1. [useHooks](https://usehooks.com/)
+2. [useHooksTS](https://usehooks-ts.com/)
+
+### UI Components
 
 `atomic/ui` offer 44 components for free.
 
@@ -83,36 +112,13 @@ Status: `In Progress` - `Completed`
 | 43  | 7.03     | Typography | Heading           | Completed   |
 | 44  | 7.04     | Typography | Text              | Completed   |
 
-#### Inspired By
+#### UI - Inspired By
 
 1. [Ant Design](https://ant.design/)
 2. [Chakra UI](https://chakra-ui.com/)
 3. [DaisyUI](https://daisyui.com/)
 4. [Material UI](https://mui.com/)
 5. [Tailwind UI](https://tailwindui.com/)
-
-### Hooks
-
-`atomic/hooks` offer 16 components for free.
-
-| No  | Group No | Group Name | Hook                  | Status    |
-| --- | -------- | ---------- | --------------------- | --------- |
-| 01  | 1.1      | Boolean    | `use-boolean`         | Completed |
-| 02  | 1.2      | Boolean    | `use-toggle`          | Completed |
-| 03  | 2.1      | Events     | `use-keyboard`        | Completed |
-| 04  | 2.2      | Events     | `use-online`          | Completed |
-| 05  | 2.3      | Events     | `use-resize`          | Completed |
-| 06  | 2.4      | Events     | `use-scroll`          | Completed |
-| 07  | 3.1      | Info       | `use-battery`         | Completed |
-| 08  | 3.2      | Info       | `use-browser`         | Completed |
-| 09  | 3.3      | Info       | `use-language`        | Completed |
-| 10  | 3.4      | Info       | `use-screen`          | Completed |
-| 11  | 4.1      | Navigator  | `use-clipboard`       | Completed |
-| 12  | 4.2      | Navigator  | `use-geolocation`     | Completed |
-| 13  | 5.1      | Storage    | `use-local-storage`   | Completed |
-| 14  | 5.2      | Storage    | `use-session-storage` | Completed |
-| 15  | 6.1      | Time       | `use-timeout`         | Completed |
-| 16  | 6.2      | Time       | `use-interval`        | Completed |
 
 ## Themes / Preview
 
