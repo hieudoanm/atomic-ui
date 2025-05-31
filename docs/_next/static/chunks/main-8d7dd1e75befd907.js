@@ -1532,7 +1532,7 @@
             (this.pageLoader = o);
           let R = (0, p.isDynamicRoute)(e) && self.__NEXT_DATA__.autoExport;
           if (
-            ((this.basePath = '/atomic-ui'),
+            ((this.basePath = '/atomic'),
             (this.sub = c),
             (this.clc = null),
             (this._wrapApp = l),
@@ -2920,7 +2920,7 @@
       let n = r(5052),
         o = r(3308);
       function a(e, t) {
-        return (0, o.normalizePathTrailingSlash)((0, n.addPathPrefix)(e, '/atomic-ui'));
+        return (0, o.normalizePathTrailingSlash)((0, n.addPathPrefix)(e, '/atomic'));
       }
       ('function' == typeof t.default || ('object' == typeof t.default && null !== t.default)) &&
         void 0 === t.default.__esModule &&
@@ -3062,7 +3062,7 @@
           },
         }),
         r(8968);
-      let n = '/atomic-ui';
+      let n = '/atomic';
       function o(e) {
         return 0 === n.length || (e = e.slice(n.length)).startsWith('/') || (e = '/' + e), e;
       }
@@ -4532,7 +4532,7 @@
                         value: {
                           deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
                           imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-                          path: '/atomic-ui/_next/image/',
+                          path: '/atomic/_next/image/',
                           loader: 'default',
                           dangerouslyAllowSVG: !1,
                           unoptimized: !1,
@@ -4982,7 +4982,7 @@
         });
       let n = r(4501);
       function o(e) {
-        return (0, n.pathHasPrefix)(e, '/atomic-ui');
+        return (0, n.pathHasPrefix)(e, '/atomic');
       }
       ('function' == typeof t.default || ('object' == typeof t.default && null !== t.default)) &&
         void 0 === t.default.__esModule &&

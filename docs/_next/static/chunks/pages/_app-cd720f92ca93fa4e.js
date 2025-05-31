@@ -7,15 +7,15 @@
     1800: (a) => {
       a.exports = {
         style: { fontFamily: "'Geist Mono', 'Geist Mono Fallback'", fontStyle: 'normal' },
-        className: '__className_00560a',
-        variable: '__variable_00560a',
+        className: '__className_493667',
+        variable: '__variable_493667',
       };
     },
     5e3: (a) => {
       a.exports = {
         style: { fontFamily: "'Geist', 'Geist Fallback'", fontStyle: 'normal' },
-        className: '__className_65fa45',
-        variable: '__variable_65fa45',
+        className: '__className_a00d80',
+        variable: '__variable_a00d80',
       };
     },
     8217: () => {},

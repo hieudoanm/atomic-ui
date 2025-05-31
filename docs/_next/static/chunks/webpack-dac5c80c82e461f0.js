@@ -410,7 +410,7 @@
       );
     })(),
     (c.tu = (e) => c.tt().createScriptURL(e)),
-    (c.p = '/atomic-ui/_next/'),
+    (c.p = '/atomic/_next/'),
     (() => {
       var e = { 8068: 0 };
       (c.f.j = (a, f) => {

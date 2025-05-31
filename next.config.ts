@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   trailingSlash: true,
   reactStrictMode: true,
-  basePath: NODE_ENV === 'development' ? '' : '/atomic-ui',
+  basePath: NODE_ENV === 'development' ? '' : '/atomic',
   output: NODE_ENV === 'development' ? 'standalone' : 'export',
   distDir: NODE_ENV === 'development' ? '.next' : 'docs',
 };
