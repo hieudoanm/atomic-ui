@@ -1,4 +1,4 @@
-import { useDarkMode } from '@atomic-ui/hooks/use-dark-mode';
+import { useDarkMode } from '@atomic/hooks/use-dark-mode';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ChangeEvent, Dispatch, FC, SetStateAction } from 'react';
@@ -51,7 +51,7 @@ export const Navbar: FC<{
                   />
                 </div>
               )}
-              <Link href="https://github.com/hieudoanm/atomic-ui" target="_blank" className="font-semibold">
+              <Link href="https://github.com/hieudoanm/atomic" target="_blank" className="font-semibold">
                 GitHub
               </Link>
               <label

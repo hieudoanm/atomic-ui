@@ -76,7 +76,7 @@
                               }),
                             }),
                           (0, t.jsx)(c(), {
-                            href: 'https://github.com/hieudoanm/atomic-ui',
+                            href: 'https://github.com/hieudoanm/atomic',
                             target: '_blank',
                             className: 'font-semibold',
                             children: 'GitHub',

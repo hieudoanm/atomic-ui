@@ -30,7 +30,7 @@
         i = s.n(c),
         o = s(1668),
         r = s.n(o);
-      let _ = '/atomic-ui';
+      let _ = '/atomic';
       function m(a) {
         let { Component: e, pageProps: s } = a;
         return (0, l.jsxs)(l.Fragment, {

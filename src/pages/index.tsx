@@ -1,6 +1,6 @@
-import { Footer } from '@atomic-ui/components/Footer';
-import { Hero } from '@atomic-ui/components/Hero';
-import { Navbar } from '@atomic-ui/components/Navbar';
+import { Footer } from '@atomic/components/Footer';
+import { Hero } from '@atomic/components/Hero';
+import { Navbar } from '@atomic/components/Navbar';
 import { NextPage } from 'next';
 import Link from 'next/link';
 

@@ -1,10 +1,10 @@
-import '@atomic-ui/styles/globals.css';
+import '@atomic/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Head from 'next/head';
 
 const NODE_ENV = process.env.NODE_ENV ?? 'development';
-const BASE_PATH = NODE_ENV === 'development' ? '' : '/atomic-ui';
+const BASE_PATH = NODE_ENV === 'development' ? '' : '/atomic';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
