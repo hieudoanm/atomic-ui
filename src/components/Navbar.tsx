@@ -26,13 +26,15 @@ export const Navbar: FC<{
               <Link href="/" className="text-lg font-bold md:text-xl">
                 ⚛️ {title}
               </Link>
-              {links.map(({ id = '', href = '', text = '' }) => {
-                return (
-                  <Link key={id} href={href} className="text-sm md:text-base">
-                    {text}
-                  </Link>
-                );
-              })}
+              <div className="hidden items-center gap-x-2 md:flex">
+                {links.map(({ id = '', href = '', text = '' }) => {
+                  return (
+                    <Link key={id} href={href} className="text-sm md:text-base">
+                      {text}
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
             <div className="flex items-center gap-x-4">
               {disabledSearch && (

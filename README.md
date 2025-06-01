@@ -101,16 +101,20 @@ Status: `In Progress` - `Completed`
 | 32  | 5.02     | Media      | Carousel          | In Progress |
 | 33  | 5.03     | Media      | Diff              | In Progress |
 | 34  | 5.04     | Media      | File              | Completed   |
-| 35  | 6.01     | Navigation | Breadcrumbs       | Completed   |
-| 36  | 6.02     | Navigation | Menu              | Completed   |
-| 37  | 6.03     | Navigation | Navbar            | Completed   |
-| 38  | 6.04     | Navigation | Pagination        | Completed   |
-| 39  | 6.05     | Navigation | Steps             | Completed   |
-| 40  | 6.06     | Navigation | Tabs              | In Progress |
-| 41  | 7.01     | Typography | Code              | Completed   |
-| 42  | 7.02     | Typography | KBD (Keyboard)    | Completed   |
-| 43  | 7.03     | Typography | Heading           | Completed   |
-| 44  | 7.04     | Typography | Text              | Completed   |
+| 35  | 6.01     | Mockup     | Browser           | In Progress |
+| 36  | 6.02     | Mockup     | Phone             | In Progress |
+| 37  | 6.03     | Mockup     | Terminal          | In Progress |
+| 38  | 6.04     | Mockup     | Window            | In Progress |
+| 39  | 7.01     | Navigation | Breadcrumbs       | Completed   |
+| 40  | 7.02     | Navigation | Menu              | Completed   |
+| 41  | 7.03     | Navigation | Navbar            | Completed   |
+| 42  | 7.04     | Navigation | Pagination        | Completed   |
+| 43  | 7.05     | Navigation | Steps             | Completed   |
+| 44  | 7.06     | Navigation | Tabs              | In Progress |
+| 45  | 8.01     | Typography | Code              | Completed   |
+| 46  | 8.02     | Typography | KBD (Keyboard)    | Completed   |
+| 47  | 8.03     | Typography | Heading           | Completed   |
+| 48  | 8.04     | Typography | Text              | Completed   |
 
 ### Inspired By
 
@@ -145,7 +149,7 @@ Status: `In Progress` - `Completed`
 
 ## Roadmap
 
-- [ ] Add more Components from 38 to 44
+- [ ] Add more Components from 38 to 48
 - [ ] Add Comments
 
 ## Contributing

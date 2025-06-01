@@ -92,22 +92,22 @@ const HooksPage: NextPage<{ hooks: Hook[] }> = ({ hooks = [] }) => {
 
 export const getStaticProps = () => {
   const hooks = [
-    { path: 'boolean/use-boolean', emoji: '', name: 'useBoolean' },
-    { path: 'boolean/use-toggle', emoji: '', name: 'useToggle' },
-    { path: 'events/use-keyboard', emoji: '', name: 'useKeyboard' },
-    { path: 'events/use-online', emoji: '', name: 'useOnline' },
-    { path: 'events/use-resize', emoji: '', name: 'useResize' },
-    { path: 'events/use-scroll', emoji: '', name: 'useScroll' },
-    { path: 'info/use-battery', emoji: '', name: 'useBattery' },
-    { path: 'info/use-browser', emoji: '', name: 'useBrowser' },
-    { path: 'info/use-language', emoji: '', name: 'useLanguage' },
-    { path: 'info/use-screen', emoji: '', name: 'useScreen' },
-    { path: 'navigator/use-clipboard', emoji: '', name: 'useClipboard' },
-    { path: 'navigator/use-geolocation', emoji: '', name: 'useGeolocation' },
-    { path: 'storage/use-local-storage', emoji: '', name: 'useLocalStorage' },
-    { path: 'storage/use-session-storage', emoji: '', name: 'useSessionStorage' },
-    { path: 'time/use-interval', emoji: '', name: 'useInterval' },
-    { path: 'time/use-timeout', emoji: '', name: 'useTimeout' },
+    { path: 'boolean/use-boolean', emoji: '🔘', name: 'useBoolean' },
+    { path: 'boolean/use-toggle', emoji: '🔀', name: 'useToggle' },
+    { path: 'events/use-keyboard', emoji: '⌨️', name: 'useKeyboard' },
+    { path: 'events/use-online', emoji: '📶', name: 'useOnline' },
+    { path: 'events/use-resize', emoji: '📏', name: 'useResize' },
+    { path: 'events/use-scroll', emoji: '🖱️', name: 'useScroll' },
+    { path: 'info/use-battery', emoji: '🔋', name: 'useBattery' },
+    { path: 'info/use-browser', emoji: '🌐', name: 'useBrowser' },
+    { path: 'info/use-language', emoji: '🈯', name: 'useLanguage' },
+    { path: 'info/use-screen', emoji: '🖥️', name: 'useScreen' },
+    { path: 'navigator/use-clipboard', emoji: '📋', name: 'useClipboard' },
+    { path: 'navigator/use-geolocation', emoji: '📍', name: 'useGeolocation' },
+    { path: 'storage/use-local-storage', emoji: '💾', name: 'useLocalStorage' },
+    { path: 'storage/use-session-storage', emoji: '🗂️', name: 'useSessionStorage' },
+    { path: 'time/use-interval', emoji: '⏱️', name: 'useInterval' },
+    { path: 'time/use-timeout', emoji: '⏳', name: 'useTimeout' },
   ].map(({ path = '', emoji = '', name = '' }) => {
     const group = path.split('/').at(0);
     const id = path.replaceAll('/', '-');

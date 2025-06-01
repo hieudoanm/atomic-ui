@@ -210,6 +210,10 @@ export const getStaticProps = () => {
     { path: 'media/carousel', emoji: '🎠', name: 'Carousel' },
     { path: 'media/diff', emoji: '🧬', name: 'Diff' },
     { path: 'media/file', emoji: '📂', name: 'File' },
+    { path: 'mockup/browser', emoji: '🌐', name: 'Browser' },
+    { path: 'mockup/phone', emoji: '📱', name: 'Phone' },
+    { path: 'mockup/terminal', emoji: '🖥️', name: 'Terminal' },
+    { path: 'mockup/window', emoji: '🪟', name: 'Window' },
     { path: 'navigation/breadcrumbs', emoji: '🍞', name: 'Breadcrumbs' },
     { path: 'navigation/menu', emoji: '📁', name: 'Menu' },
     { path: 'navigation/navbar', emoji: '🧭', name: 'Navbar' },
@@ -223,7 +227,7 @@ export const getStaticProps = () => {
   ].map(({ path = '', emoji = '', name = '' }) => {
     const group = path.split('/').at(0);
     const id = path.replaceAll('/', '-');
-    const componentPath = `${__dirname}/src/html/${path}.html`;
+    const componentPath = `${__dirname}/src/html/components/${path}.html`;
     const code = readFileSync(componentPath, 'utf-8');
     return { id, group, name, emoji, code };
   });

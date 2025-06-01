@@ -19,21 +19,18 @@ const HomePage: NextPage = () => {
           />
           <section className="py-4 md:py-8">
             <div className="container mx-auto px-8">
-              <div className="grid grid-cols-2 gap-4 md:gap-8">
-                <div className="col-span-1">
-                  <Link href="/hooks">
-                    <button className="w-full cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow dark:bg-purple-700 dark:shadow-neutral-100/10">
-                      hooks
-                    </button>
-                  </Link>
-                </div>
-                <div className="col-span-1">
-                  <Link href="/ui">
-                    <button className="w-full cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow dark:bg-purple-700 dark:shadow-neutral-100/10">
-                      ui
-                    </button>
-                  </Link>
-                </div>
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
+                {['hooks', 'icons', 'templates', 'ui'].map((page: string) => {
+                  return (
+                    <div key={page} className="col-span-1">
+                      <Link href="/hooks">
+                        <button className="w-full cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow dark:bg-purple-700 dark:shadow-neutral-100/10">
+                          {page}
+                        </button>
+                      </Link>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </section>
