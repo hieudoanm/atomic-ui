@@ -6664,7 +6664,7 @@
           },
           { id: 'rust', name: 'Rust', aliases: ['rs'], import: () => n.e(850).then(n.bind(n, 850)) },
           { id: 'sas', name: 'SAS', import: () => Promise.all([n.e(9754), n.e(9309)]).then(n.bind(n, 9309)) },
-          { id: 'sass', name: 'Sass', import: () => n.e(7938).then(n.bind(n, 7938)) },
+          { id: 'sass', name: 'Sass', import: () => n.e(5557).then(n.bind(n, 7938)) },
           { id: 'scala', name: 'Scala', import: () => n.e(2140).then(n.bind(n, 2140)) },
           { id: 'scheme', name: 'Scheme', import: () => n.e(161).then(n.bind(n, 161)) },
           { id: 'scss', name: 'SCSS', import: () => Promise.all([n.e(3939), n.e(232)]).then(n.bind(n, 232)) },

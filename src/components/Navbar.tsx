@@ -23,12 +23,12 @@ export const Navbar: FC<{
         <div className="container mx-auto flex flex-col gap-y-2 px-8 py-4">
           <div className="flex items-center justify-between gap-x-4">
             <div className="flex items-center gap-x-4">
-              <Link href="/">
-                <h3 className="text-2xl font-bold">⚛️ {title}</h3>
+              <Link href="/" className="text-lg font-bold md:text-xl">
+                ⚛️ {title}
               </Link>
               {links.map(({ id = '', href = '', text = '' }) => {
                 return (
-                  <Link key={id} href={href} className="text-2xl">
+                  <Link key={id} href={href} className="text-sm md:text-base">
                     {text}
                   </Link>
                 );

@@ -5,11 +5,11 @@
       'use strict';
       l.d(a, { F: () => o });
       var s = l(5640),
-        r = l(148);
-      let t = () => {
-        let [e, a] = (0, r.useState)(!1);
+        t = l(148);
+      let r = () => {
+        let [e, a] = (0, t.useState)(!1);
         return (
-          (0, r.useEffect)(() => {
+          (0, t.useEffect)(() => {
             'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), a(!0));
           }, []),
           {
@@ -32,8 +32,8 @@
         i = l(6826),
         c = l.n(i);
       let o = (e) => {
-        let { title: a = '', links: l = [], query: r = '', setState: d, disabledSearch: i = !1 } = e,
-          { darkMode: o = !1, toggleDarkMode: x } = t();
+        let { title: a = '', links: l = [], query: t = '', setState: d, disabledSearch: i = !1 } = e,
+          { darkMode: o = !1, toggleDarkMode: x } = r();
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(n(), { children: (0, s.jsx)('title', { children: a }) }),
@@ -48,13 +48,14 @@
                       (0, s.jsxs)('div', {
                         className: 'flex items-center gap-x-4',
                         children: [
-                          (0, s.jsx)(c(), {
+                          (0, s.jsxs)(c(), {
                             href: '/',
-                            children: (0, s.jsxs)('h3', { className: 'text-2xl font-bold', children: ['⚛️ ', a] }),
+                            className: 'text-lg font-bold md:text-xl',
+                            children: ['⚛️ ', a],
                           }),
                           l.map((e) => {
-                            let { id: a = '', href: l = '', text: r = '' } = e;
-                            return (0, s.jsx)(c(), { href: l, className: 'text-2xl', children: r }, a);
+                            let { id: a = '', href: l = '', text: t = '' } = e;
+                            return (0, s.jsx)(c(), { href: l, className: 'text-sm md:text-base', children: t }, a);
                           }),
                         ],
                       }),
@@ -67,7 +68,7 @@
                               children: (0, s.jsx)('input', {
                                 type: 'text',
                                 placeholder: 'Search',
-                                value: r,
+                                value: t,
                                 className:
                                   'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
                                 onChange: (e) => {
@@ -110,7 +111,7 @@
                       children: (0, s.jsx)('input', {
                         type: 'text',
                         placeholder: 'Search Components',
-                        value: r,
+                        value: t,
                         className:
                           'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
                         onChange: (e) => {
@@ -125,35 +126,45 @@
         });
       };
     },
+    1461: (e, a, l) => {
+      'use strict';
+      l.d(a, { l: () => s });
+      let s = [
+        { id: 'hooks', href: '/hooks', text: 'hooks' },
+        { id: 'icons', href: '/icons', text: 'icons' },
+        { id: 'templates', href: '/templates', text: 'templates' },
+        { id: 'ui', href: '/ui', text: 'ui' },
+      ];
+    },
     5196: (e, a, l) => {
       'use strict';
       l.d(a, { l: () => i });
       var s = l(5640),
-        r = l(8809),
-        t = l(148),
+        t = l(8809),
+        r = l(148),
         d = l(5031);
       let n = (e) => {
           let { code: a, lang: l } = e,
-            [r, n] = (0, t.useState)('');
+            [t, n] = (0, r.useState)('');
           return (
-            (0, t.useEffect)(() => {
+            (0, r.useEffect)(() => {
               (async () => {
                 n(await (0, d.Yz)(a, { lang: l, theme: 'github-dark' }));
               })();
             }),
             (0, s.jsx)('div', {
-              dangerouslySetInnerHTML: { __html: r },
+              dangerouslySetInnerHTML: { __html: t },
               className: 'w-full overflow-x-auto bg-neutral-900 p-4',
             })
           );
         },
         i = (e) => {
           let { id: a = '', emoji: l = '', group: d = '', name: i = '', code: c = '', codeOnly: o = !1 } = e,
-            [x, u] = (0, t.useState)(''),
-            [h, m] = (0, t.useState)(!0);
+            [x, u] = (0, r.useState)(''),
+            [h, m] = (0, r.useState)(!0);
           return (
-            (0, t.useEffect)(() => {
-              u((0, r.A)(window).sanitize(c));
+            (0, r.useEffect)(() => {
+              u((0, t.A)(window).sanitize(c));
             }, [c]),
             (0, s.jsxs)('div', {
               id: a,
@@ -205,9 +216,9 @@
     },
     6453: (e, a, l) => {
       'use strict';
-      l.d(a, { w: () => r });
+      l.d(a, { w: () => t });
       var s = l(5640);
-      let r = (e) => {
+      let t = (e) => {
         let { title: a = '' } = e;
         return (0, s.jsx)('footer', {
           className: 'border-t border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
@@ -228,10 +239,10 @@
     },
     8604: (e, a, l) => {
       'use strict';
-      l.d(a, { l: () => r });
+      l.d(a, { l: () => t });
       var s = l(5640);
-      let r = (e) => {
-        let { title: a = '', subtitle: l = '', description: r = '', features: t = [] } = e;
+      let t = (e) => {
+        let { title: a = '', subtitle: l = '', description: t = '', features: r = [] } = e;
         return (0, s.jsx)('section', {
           className: 'py-8 md:py-16',
           children: (0, s.jsx)('div', {
@@ -257,14 +268,14 @@
                         'mr-1 rounded bg-neutral-900 px-1 py-0.5 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900',
                       children: a,
                     }),
-                    (0, s.jsx)('span', { children: r }),
+                    (0, s.jsx)('span', { children: t }),
                   ],
                 }),
-                t.length > 0 &&
+                r.length > 0 &&
                   (0, s.jsx)('div', {
                     className:
                       'flex flex-col justify-center gap-x-6 text-sm font-black text-neutral-900 md:flex-row dark:text-neutral-100',
-                    children: t.map((e) =>
+                    children: r.map((e) =>
                       (0, s.jsxs)('p', { className: 'whitespace-nowrap', children: ['\uD83D\uDD2E ', e] }, e)
                     ),
                   }),
@@ -276,20 +287,21 @@
     },
     8797: (e, a, l) => {
       'use strict';
-      l.r(a), l.d(a, { __N_SSG: () => x, default: () => u });
+      l.r(a), l.d(a, { __N_SSG: () => u, default: () => h });
       var s = l(5640),
-        r = l(6453),
-        t = l(8604),
+        t = l(6453),
+        r = l(8604),
         d = l(767),
         n = l(5196),
-        i = l(6826),
-        c = l.n(i),
-        o = l(148),
-        x = !0;
-      let u = (e) => {
+        i = l(1461),
+        c = l(6826),
+        o = l.n(c),
+        x = l(148),
+        u = !0;
+      let h = (e) => {
         let { components: a = [] } = e,
-          [{ query: l = '' }, i] = (0, o.useState)({ query: '' }),
-          x = a.filter((e) => {
+          [{ query: l = '' }, c] = (0, x.useState)({ query: '' }),
+          u = a.filter((e) => {
             let { id: a, name: s } = e;
             return a.toLowerCase().includes(l.toLowerCase()) || s.toLowerCase().includes(l.toLowerCase());
           });
@@ -297,10 +309,13 @@
           className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
           children: [
             (0, s.jsx)(d.F, {
-              links: [{ id: 'hooks', href: '/hooks', text: 'hooks' }],
+              links: i.l.filter((e) => {
+                let { id: a } = e;
+                return 'ui' !== a;
+              }),
               title: 'atomic/ui',
               query: l,
-              setState: i,
+              setState: c,
             }),
             (0, s.jsxs)('div', {
               className: 'grow overflow-auto',
@@ -308,7 +323,7 @@
                 (0, s.jsxs)('main', {
                   className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
                   children: [
-                    (0, s.jsx)(t.l, {
+                    (0, s.jsx)(r.l, {
                       title: 'atomic/ui',
                       subtitle: 'Free and Open Source TailwindCSS v4 Components',
                       description:
@@ -327,19 +342,19 @@
                               children: [
                                 (0, s.jsx)('span', { className: 'capitalize', children: 'Components' }),
                                 ' (',
-                                x.length,
+                                u.length,
                                 ')',
                               ],
                             }),
-                            x.length > 0 &&
+                            u.length > 0 &&
                               (0, s.jsxs)(s.Fragment, {
                                 children: [
                                   (0, s.jsx)('div', {
                                     className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4',
-                                    children: x.map((e) => {
-                                      let { id: a = '', emoji: l = '', group: r, name: t = '' } = e;
+                                    children: u.map((e) => {
+                                      let { id: a = '', emoji: l = '', group: t, name: r = '' } = e;
                                       return (0, s.jsx)(
-                                        c(),
+                                        o(),
                                         {
                                           href: '#'.concat(a),
                                           children: (0, s.jsx)('div', {
@@ -352,10 +367,10 @@
                                                 (0, s.jsxs)('div', {
                                                   className: 'flex flex-col gap-y-0.25',
                                                   children: [
-                                                    (0, s.jsx)('p', { className: 'text-xs capitalize', children: r }),
+                                                    (0, s.jsx)('p', { className: 'text-xs capitalize', children: t }),
                                                     (0, s.jsx)('p', {
                                                       className: 'font-semibold capitalize',
-                                                      children: t,
+                                                      children: r,
                                                     }),
                                                   ],
                                                 }),
@@ -369,13 +384,13 @@
                                   }),
                                   (0, s.jsx)('div', {
                                     className: 'flex flex-col gap-y-8',
-                                    children: x.map((e) => {
-                                      let { id: a = '', emoji: l = '', group: r = '', name: t = '', code: d = '' } = e;
+                                    children: u.map((e) => {
+                                      let { id: a = '', emoji: l = '', group: t = '', name: r = '', code: d = '' } = e;
                                       return (0, s.jsx)(
                                         'div',
                                         {
                                           className: 'flex flex-col gap-y-4',
-                                          children: (0, s.jsx)(n.l, { id: a, emoji: l, group: r, name: t, code: d }),
+                                          children: (0, s.jsx)(n.l, { id: a, emoji: l, group: t, name: r, code: d }),
                                         },
                                         a
                                       );
@@ -464,7 +479,7 @@
                                       darkClass: 'dark:shadow-neutral-100/10',
                                     },
                                   ].map((e, a) => {
-                                    let { id: l = '', name: r = '', lightClass: t = '', darkClass: d = '' } = e;
+                                    let { id: l = '', name: t = '', lightClass: r = '', darkClass: d = '' } = e;
                                     return (0, s.jsxs)(
                                       'tr',
                                       {
@@ -474,13 +489,13 @@
                                             className: 'px-3 py-2 whitespace-nowrap',
                                             children: a + 1,
                                           }),
-                                          (0, s.jsx)('td', { className: 'px-3 py-2 whitespace-nowrap', children: r }),
+                                          (0, s.jsx)('td', { className: 'px-3 py-2 whitespace-nowrap', children: t }),
                                           (0, s.jsx)('td', {
                                             className: 'px-3 py-2 whitespace-nowrap',
                                             children: (0, s.jsx)('code', {
                                               className:
                                                 'mr-1 rounded bg-neutral-900 px-1 py-0.5 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900',
-                                              children: t,
+                                              children: r,
                                             }),
                                           }),
                                           (0, s.jsx)('td', {
@@ -505,7 +520,7 @@
                     }),
                   ],
                 }),
-                (0, s.jsx)(r.w, { title: 'atomic/ui' }),
+                (0, s.jsx)(t.w, { title: 'atomic/ui' }),
               ],
             }),
           ],

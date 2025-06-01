@@ -9,6 +9,8 @@
   - [Introduction](#introduction)
   - [Code](#code)
     - [React Hooks](#react-hooks)
+    - [SVG Icons](#svg-icons)
+    - [Page Templates](#page-templates)
     - [UI Components](#ui-components)
     - [Inspired By](#inspired-by)
   - [Themes / Preview](#themes--preview)
@@ -54,6 +56,10 @@ Status: `In Progress` - `Completed`
 | 14  | 5.2      | Storage    | `use-session-storage` | Completed |
 | 15  | 6.1      | Time       | `use-timeout`         | Completed |
 | 16  | 6.2      | Time       | `use-interval`        | Completed |
+
+### SVG Icons
+
+### Page Templates
 
 ### UI Components
 

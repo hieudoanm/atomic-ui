@@ -2,6 +2,7 @@ import { Footer } from '@atomic/components/Footer';
 import { Hero } from '@atomic/components/Hero';
 import { Navbar } from '@atomic/components/Navbar';
 import { Preview } from '@atomic/components/Preview';
+import { NAVBAR_LINKS } from '@atomic/constants';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { readFileSync } from 'node:fs';
@@ -30,7 +31,7 @@ const UIPage: NextPage<{ components: Component[] }> = ({ components = [] }) => {
   return (
     <div className="flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
       <Navbar
-        links={[{ id: 'hooks', href: '/hooks', text: 'hooks' }]}
+        links={NAVBAR_LINKS.filter(({ id }) => id !== 'ui')}
         title="atomic/ui"
         query={query}
         setState={setState}
