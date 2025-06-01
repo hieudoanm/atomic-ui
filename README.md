@@ -101,10 +101,10 @@ Status: `In Progress` - `Completed`
 | 32  | 5.02     | Media      | Carousel          | In Progress |
 | 33  | 5.03     | Media      | Diff              | In Progress |
 | 34  | 5.04     | Media      | File              | Completed   |
-| 35  | 6.01     | Mockup     | Browser           | In Progress |
-| 36  | 6.02     | Mockup     | Phone             | In Progress |
-| 37  | 6.03     | Mockup     | Terminal          | In Progress |
-| 38  | 6.04     | Mockup     | Window            | In Progress |
+| 35  | 6.01     | Mockup     | Browser           | Completed   |
+| 36  | 6.02     | Mockup     | Phone             | Completed   |
+| 37  | 6.03     | Mockup     | Terminal          | Completed   |
+| 38  | 6.04     | Mockup     | Window            | Completed   |
 | 39  | 7.01     | Navigation | Breadcrumbs       | Completed   |
 | 40  | 7.02     | Navigation | Menu              | Completed   |
 | 41  | 7.03     | Navigation | Navbar            | Completed   |
