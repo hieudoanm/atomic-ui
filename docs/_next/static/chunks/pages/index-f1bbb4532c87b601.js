@@ -172,7 +172,7 @@
                     title: 'atomic',
                     subtitle: 'Free and Open Source Front-end Code',
                     description:
-                      'is a free, modern collection of Tailwind CSS UI components and reusable React Hooks, built with atomic design principles. It includes 44+ customizable components and practical hooks with built-in dark mode and responsive behavior—helping you build fast, accessible, and maintainable interfaces with ease.',
+                      'is a free, modern collection of Tailwind CSS UI components, reusable React Hooks, SVG icons, interactive Charts, and ready-to-use Templates—built with atomic design principles. It includes 44+ customizable components with built-in dark mode, responsive behavior, and accessibility in mind, helping you build fast, elegant, and maintainable interfaces with ease.',
                     features: ['Copy / Paste', 'Pure TailwindCSS', 'Pure React Hooks'],
                   }),
                   (0, s.jsx)('section', {
