@@ -20,12 +20,17 @@ const HomePage: NextPage = () => {
           <section className="py-4 md:py-8">
             <div className="container mx-auto px-8">
               <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
-                {['hooks', 'icons', 'templates', 'ui'].map((page: string) => {
+                {[
+                  { id: 'hooks', href: '/hooks', text: 'React Hooks' },
+                  { id: 'icons', href: '/icons', text: 'SVG Icons' },
+                  { id: 'templates', href: '/templates', text: 'Page Templates' },
+                  { id: 'ui', href: '/ui', text: 'UI Components' },
+                ].map(({ href = '', text = '' }) => {
                   return (
-                    <div key={page} className="col-span-1">
-                      <Link href="/hooks">
+                    <div key={href} className="col-span-1">
+                      <Link href={href}>
                         <button className="w-full cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow dark:bg-purple-700 dark:shadow-neutral-100/10">
-                          {page}
+                          {text}
                         </button>
                       </Link>
                     </div>

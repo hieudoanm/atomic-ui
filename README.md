@@ -70,7 +70,7 @@ Status: `In Progress` - `Completed`
 | 01  | 1.01     | Button     | Button               | Completed   |
 | 02  | 1.02     | Button     | Button Group         | Completed   |
 | 03  | 1.03     | Button     | Button - Dropdown    | Completed   |
-| 04  | 1.04     | Button     | Icon Button          | In Progress |
+| 04  | 1.04     | Button     | Icon Button          | Completed   |
 | 05  | 2.01     | Data       | List                 | Completed   |
 | 06  | 2.02     | Data       | Stats                | Completed   |
 | 07  | 2.03     | Data       | Table                | Completed   |
@@ -114,7 +114,7 @@ Status: `In Progress` - `Completed`
 | 45  | 8.03     | Navigation | Navbar               | Completed   |
 | 46  | 8.04     | Navigation | Pagination           | Completed   |
 | 47  | 8.05     | Navigation | Steps                | Completed   |
-| 48  | 8.06     | Navigation | Tabs                 | In Progress |
+| 48  | 8.06     | Navigation | Tabs                 | Completed   |
 | 49  | 9.01     | Typography | Code                 | Completed   |
 | 50  | 9.02     | Typography | KBD (Keyboard)       | Completed   |
 | 51  | 9.03     | Typography | Heading              | Completed   |
