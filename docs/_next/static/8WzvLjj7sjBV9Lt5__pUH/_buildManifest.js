@@ -3,14 +3,14 @@
     __rewrites: { afterFiles: [], beforeFiles: [], fallback: [] },
     __routerFilterStatic: { numItems: 0, errorRate: 1e-4, numBits: 0, numHashes: null, bitArray: [] },
     __routerFilterDynamic: { numItems: t, errorRate: 1e-4, numBits: t, numHashes: null, bitArray: [] },
-    '/': [s, 'static/chunks/pages/index-f1bbb4532c87b601.js'],
+    '/': [s, 'static/chunks/pages/index-22d3df28a2c41ff6.js'],
     '/_error': ['static/chunks/pages/_error-6ee6de26e6bc46a7.js'],
     '/charts': [s, a, 'static/chunks/pages/charts-a68b7ad7d59bb65c.js'],
     '/hooks': [s, e, a, 'static/chunks/pages/hooks-c98975b21c742a2a.js'],
     '/icons': [s, e, 'static/chunks/pages/icons-e9d89c91b4582043.js'],
     '/templates': [s, e, 'static/chunks/pages/templates-2d26211b4b3f9d04.js'],
     '/templates/[id]': [s, e, a, 'static/chunks/pages/templates/[id]-0ed4b46df61ad77e.js'],
-    '/ui': [s, e, a, 'static/chunks/pages/ui-eb12052a4c07e720.js'],
+    '/ui': [s, e, a, 'static/chunks/pages/ui-7476d1957b5185dd.js'],
     sortedPages: ['/', '/_app', '/_error', '/charts', '/hooks', '/icons', '/templates', '/templates/[id]', '/ui'],
   };
 })(

@@ -41,7 +41,7 @@ const UIPage: NextPage<{ components: Component[] }> = ({ components = [] }) => {
           <Hero
             title="atomic/ui"
             subtitle="Free and Open Source TailwindCSS v4 Components"
-            description="is a free collection of Tailwind CSS components designed with atomic design principles in mind. It offers a flexible set of 44 free, customizable components with built-in dark mode support to help you quickly build modern, responsive UI."
+            description="is a free collection of Tailwind CSS components designed with atomic design principles in mind. It offers a flexible set of customizable components with built-in dark mode support to help you quickly build modern, responsive UIs."
             features={['Copy / Paste', 'Pure TailwindCSS', 'Atoms / Molecules / Organisms']}
           />
           <section className="py-4 md:py-8">
