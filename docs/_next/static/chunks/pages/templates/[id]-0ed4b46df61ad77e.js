@@ -133,10 +133,10 @@
       'use strict';
       a.r(t), a.d(t, { __N_SSG: () => c, default: () => o });
       var s = a(5640),
-        l = a(6453),
-        r = a(8604),
-        n = a(767),
-        d = a(7921),
+        l = a(7921),
+        r = a(6453),
+        n = a(8604),
+        d = a(767),
         i = a(1461),
         c = !0;
       let o = (e) => {
@@ -145,7 +145,7 @@
         return (0, s.jsxs)('div', {
           className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
           children: [
-            (0, s.jsx)(n.F, {
+            (0, s.jsx)(d.F, {
               links: i.l.filter((e) => {
                 let { id: t } = e;
                 return 'templates' !== t;
@@ -160,7 +160,7 @@
               children: [
                 (0, s.jsx)('main', {
                   className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                  children: (0, s.jsx)(r.l, {
+                  children: (0, s.jsx)(n.l, {
                     title: 'atomic/templates',
                     subtitle: 'Free and Open Source Web/App Templates',
                     description:
@@ -174,11 +174,11 @@
                     className: 'container mx-auto px-8',
                     children: (0, s.jsx)('div', {
                       className: 'flex flex-col gap-y-4 md:gap-y-8',
-                      children: (0, s.jsx)(d.l, { id: a, emoji: '\uD83D\uDCDD', group: 'Template', name: c, code: o }),
+                      children: (0, s.jsx)(l.O, { id: a, emoji: '\uD83D\uDCDD', group: 'Template', name: c, code: o }),
                     }),
                   }),
                 }),
-                (0, s.jsx)(l.w, { title: 'atomic/templates' }),
+                (0, s.jsx)(r.w, { title: 'atomic/templates' }),
               ],
             }),
           ],
@@ -243,7 +243,7 @@
     },
     7921: (e, t, a) => {
       'use strict';
-      a.d(t, { l: () => d });
+      a.d(t, { O: () => d });
       var s = a(5640),
         l = a(8809),
         r = a(148),

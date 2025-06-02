@@ -187,7 +187,7 @@
     },
     7921: (e, t, a) => {
       'use strict';
-      a.d(t, { l: () => n });
+      a.d(t, { O: () => n });
       var s = a(5640),
         l = a(8809),
         r = a(148),
@@ -249,10 +249,10 @@
       'use strict';
       a.r(t), a.d(t, { __N_SSG: () => u, default: () => h });
       var s = a(5640),
-        l = a(6453),
-        r = a(8604),
-        d = a(767),
-        n = a(7921),
+        l = a(7921),
+        r = a(6453),
+        d = a(8604),
+        n = a(767),
         c = a(1461),
         i = a(6826),
         o = a.n(i),
@@ -268,7 +268,7 @@
         return (0, s.jsxs)('div', {
           className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
           children: [
-            (0, s.jsx)(d.F, {
+            (0, s.jsx)(n.F, {
               links: c.l.filter((e) => {
                 let { id: t } = e;
                 return 'hooks' !== t;
@@ -282,7 +282,7 @@
               children: (0, s.jsxs)('main', {
                 className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
                 children: [
-                  (0, s.jsx)(r.l, {
+                  (0, s.jsx)(d.l, {
                     title: 'atomic/hooks',
                     subtitle: 'Free and Open Source React v19 Hooks',
                     description:
@@ -344,17 +344,17 @@
                                 (0, s.jsx)('div', {
                                   className: 'flex flex-col gap-y-8',
                                   children: u.map((e) => {
-                                    let { id: t = '', emoji: a = '', group: l = '', name: r = '', code: d = '' } = e;
+                                    let { id: t = '', emoji: a = '', group: r = '', name: d = '', code: n = '' } = e;
                                     return (0, s.jsx)(
                                       'div',
                                       {
                                         className: 'flex flex-col gap-y-4',
-                                        children: (0, s.jsx)(n.l, {
+                                        children: (0, s.jsx)(l.O, {
                                           id: t,
                                           emoji: a,
-                                          group: l,
-                                          name: r,
-                                          code: d,
+                                          group: r,
+                                          name: d,
+                                          code: n,
                                           codeOnly: !0,
                                         }),
                                       },
@@ -371,7 +371,7 @@
                 ],
               }),
             }),
-            (0, s.jsx)(l.w, { title: 'atomic/hooks' }),
+            (0, s.jsx)(r.w, { title: 'atomic/hooks' }),
           ],
         });
       };

@@ -1,7 +1,7 @@
+import { CodePreview } from '@atomic/components/CodePreview';
 import { Footer } from '@atomic/components/Footer';
 import { Hero } from '@atomic/components/Hero';
 import { Navbar } from '@atomic/components/Navbar';
-import { Preview } from '@atomic/components/CodePreview';
 import { NAVBAR_LINKS } from '@atomic/constants';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -73,7 +73,7 @@ const HooksPage: NextPage<{ hooks: Hook[] }> = ({ hooks = [] }) => {
                       {filteredHooks.map(({ id = '', emoji = '', group = '', name = '', code = '' }) => {
                         return (
                           <div key={id} className="flex flex-col gap-y-4">
-                            <Preview id={id} emoji={emoji} group={group} name={name} code={code} codeOnly />
+                            <CodePreview id={id} emoji={emoji} group={group} name={name} code={code} codeOnly />
                           </div>
                         );
                       })}

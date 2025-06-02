@@ -1,7 +1,7 @@
+import { CodePreview } from '@atomic/components/CodePreview';
 import { Footer } from '@atomic/components/Footer';
 import { Hero } from '@atomic/components/Hero';
 import { Navbar } from '@atomic/components/Navbar';
-import { Preview } from '@atomic/components/CodePreview';
 import { NAVBAR_LINKS } from '@atomic/constants';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { readFileSync } from 'node:fs';
@@ -36,7 +36,7 @@ const TemplatePage: NextPage<{ template: TemplateType }> = ({ template = { id: '
         <section className="py-4 md:py-8">
           <div className="container mx-auto px-8">
             <div className="flex flex-col gap-y-4 md:gap-y-8">
-              <Preview id={id} emoji={'📝'} group="Template" name={name} code={code} />
+              <CodePreview id={id} emoji={'📝'} group="Template" name={name} code={code} />
             </div>
           </div>
         </section>

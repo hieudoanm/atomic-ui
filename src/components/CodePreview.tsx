@@ -2,7 +2,7 @@ import createDOMPurify from 'dompurify';
 import { FC, useEffect, useState } from 'react';
 import { Code } from './Code';
 
-export const Preview: FC<{
+export const CodePreview: FC<{
   id: string;
   emoji: string;
   group: string;

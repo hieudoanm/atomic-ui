@@ -6,11 +6,11 @@
     '/': [s, 'static/chunks/pages/index-f1bbb4532c87b601.js'],
     '/_error': ['static/chunks/pages/_error-6ee6de26e6bc46a7.js'],
     '/charts': [s, a, 'static/chunks/pages/charts-a68b7ad7d59bb65c.js'],
-    '/hooks': [s, e, a, 'static/chunks/pages/hooks-9b47cd4e07f6f9b2.js'],
+    '/hooks': [s, e, a, 'static/chunks/pages/hooks-c98975b21c742a2a.js'],
     '/icons': [s, e, 'static/chunks/pages/icons-e9d89c91b4582043.js'],
     '/templates': [s, e, 'static/chunks/pages/templates-2d26211b4b3f9d04.js'],
-    '/templates/[id]': [s, e, a, 'static/chunks/pages/templates/[id]-62df01ba8ebc4c5d.js'],
-    '/ui': [s, e, a, 'static/chunks/pages/ui-52158e734063cb43.js'],
+    '/templates/[id]': [s, e, a, 'static/chunks/pages/templates/[id]-0ed4b46df61ad77e.js'],
+    '/ui': [s, e, a, 'static/chunks/pages/ui-eb12052a4c07e720.js'],
     sortedPages: ['/', '/_app', '/_error', '/charts', '/hooks', '/icons', '/templates', '/templates/[id]', '/ui'],
   };
 })(
