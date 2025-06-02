@@ -37,7 +37,7 @@ export const Navbar: FC<{
               </div>
             </div>
             <div className="flex items-center gap-x-4">
-              {disabledSearch && (
+              {!disabledSearch && (
                 <div className="hidden grow md:block">
                   <input
                     type="text"

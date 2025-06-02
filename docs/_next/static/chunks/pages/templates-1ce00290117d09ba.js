@@ -1,6 +1,14 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [7938],
+  [1377],
   {
+    145: (e, t, a) => {
+      (window.__NEXT_P = window.__NEXT_P || []).push([
+        '/templates',
+        function () {
+          return a(8330);
+        },
+      ]);
+    },
     767: (e, t, a) => {
       'use strict';
       a.d(t, { F: () => o });
@@ -29,10 +37,10 @@
       };
       var n = a(1668),
         d = a.n(n),
-        c = a(6826),
-        i = a.n(c);
+        i = a(6826),
+        c = a.n(i);
       let o = (e) => {
-        let { title: t = '', links: a = [], query: l = '', setState: n, disabledSearch: c = !1 } = e,
+        let { title: t = '', links: a = [], query: l = '', setState: n, disabledSearch: i = !1 } = e,
           { darkMode: o = !1, toggleDarkMode: u } = r();
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -48,7 +56,7 @@
                       (0, s.jsxs)('div', {
                         className: 'flex items-center gap-x-4',
                         children: [
-                          (0, s.jsxs)(i(), {
+                          (0, s.jsxs)(c(), {
                             href: '/',
                             className: 'text-lg font-bold md:text-xl',
                             children: ['⚛️ ', t],
@@ -57,7 +65,7 @@
                             className: 'hidden items-center gap-x-2 md:flex',
                             children: a.map((e) => {
                               let { id: t = '', href: a = '', text: l = '' } = e;
-                              return (0, s.jsx)(i(), { href: a, className: 'text-sm md:text-base', children: l }, t);
+                              return (0, s.jsx)(c(), { href: a, className: 'text-sm md:text-base', children: l }, t);
                             }),
                           }),
                         ],
@@ -65,7 +73,7 @@
                       (0, s.jsxs)('div', {
                         className: 'flex items-center gap-x-4',
                         children: [
-                          c &&
+                          !i &&
                             (0, s.jsx)('div', {
                               className: 'hidden grow md:block',
                               children: (0, s.jsx)('input', {
@@ -79,7 +87,7 @@
                                 },
                               }),
                             }),
-                          (0, s.jsx)(i(), {
+                          (0, s.jsx)(c(), {
                             href: 'https://github.com/hieudoanm/atomic',
                             target: '_blank',
                             className: 'font-semibold',
@@ -108,7 +116,7 @@
                       }),
                     ],
                   }),
-                  c &&
+                  i &&
                     (0, s.jsx)('div', {
                       className: 'block md:hidden',
                       children: (0, s.jsx)('input', {
@@ -139,137 +147,6 @@
         { id: 'ui', href: '/ui', text: 'ui' },
       ];
     },
-    4598: (e, t, a) => {
-      'use strict';
-      a.r(t), a.d(t, { __N_SSG: () => x, default: () => h });
-      var s = a(5640),
-        l = a(6453),
-        r = a(8604),
-        n = a(148),
-        d = a(8809);
-      let c = (e) => {
-          navigator.clipboard
-            .writeText(e)
-            .then(() => {
-              alert('Copied to clipboard!');
-            })
-            .catch((e) => {
-              console.error('Failed to copy: ', e);
-            });
-        },
-        i = (e) => {
-          let { name: t = '', code: a = '' } = e,
-            [l, r] = (0, n.useState)('');
-          return (
-            (0, n.useEffect)(() => {
-              r((0, d.A)(window).sanitize(a));
-            }, [a]),
-            (0, s.jsx)('button', {
-              type: 'button',
-              title: t,
-              className: 'cursor-pointer',
-              onClick: () => {
-                c(a);
-              },
-              children: (0, s.jsx)('div', {
-                className:
-                  'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 p-2 shadow md:p-4 lg:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10',
-                children: (0, s.jsx)('div', {
-                  className:
-                    'h-fit w-fit [&>svg]:h-8 [&>svg]:fill-current [&>svg]:text-neutral-900 dark:[&>svg]:text-neutral-100',
-                  dangerouslySetInnerHTML: { __html: l },
-                }),
-              }),
-            })
-          );
-        };
-      var o = a(767),
-        u = a(1461),
-        x = !0;
-      let h = (e) => {
-        let { icons: t = [] } = e,
-          [{ query: a = '' }, d] = (0, n.useState)({ query: '' }),
-          c = t.filter((e) => {
-            let { id: t, name: s } = e;
-            return t.toLowerCase().includes(a.toLowerCase()) || s.toLowerCase().includes(a.toLowerCase());
-          });
-        return (0, s.jsxs)('div', {
-          className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
-          children: [
-            (0, s.jsx)(o.F, {
-              links: u.l.filter((e) => {
-                let { id: t } = e;
-                return 'icons' !== t;
-              }),
-              title: 'atomic/icons',
-              query: a,
-              setState: d,
-            }),
-            (0, s.jsxs)('div', {
-              className: 'grow overflow-auto',
-              children: [
-                (0, s.jsxs)('main', {
-                  className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                  children: [
-                    (0, s.jsx)(r.l, {
-                      title: 'atomic/icons',
-                      subtitle: 'Free and Open Source SVG Icons',
-                      description:
-                        'is a free collection of carefully designed SVG icons crafted for modern interfaces. It provides a flexible and scalable set of visual assets that integrate seamlessly into any project — making it easy to build clean, consistent, and visually engaging UIs.',
-                      features: ['Copy / Paste', 'Pure SVG', 'Custom Colors'],
-                    }),
-                    (0, s.jsx)('section', {
-                      className: 'py-4 md:py-8',
-                      children: (0, s.jsx)('div', {
-                        className: 'container mx-auto px-8',
-                        children: (0, s.jsxs)('div', {
-                          className: 'flex flex-col gap-y-4 md:gap-y-8',
-                          children: [
-                            (0, s.jsxs)('h2', {
-                              className: 'text-2xl font-bold',
-                              children: [
-                                (0, s.jsx)('span', { className: 'capitalize', children: 'Icons' }),
-                                ' (',
-                                c.length,
-                                ')',
-                              ],
-                            }),
-                            c.length > 0 &&
-                              (0, s.jsx)('div', {
-                                className:
-                                  'grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-6 md:gap-8 lg:grid-cols-8 xl:grid-cols-10',
-                                children: c.map((e) => {
-                                  let { id: t = '', name: a = '', code: l } = e;
-                                  return (0, s.jsxs)(
-                                    'div',
-                                    {
-                                      className: 'col-span-1 flex flex-col gap-y-2',
-                                      children: [
-                                        (0, s.jsx)(i, { name: a, code: l }),
-                                        (0, s.jsx)('p', {
-                                          title: 'name',
-                                          className: 'w-full truncate text-center text-xs',
-                                          children: a,
-                                        }),
-                                      ],
-                                    },
-                                    t
-                                  );
-                                }),
-                              }),
-                          ],
-                        }),
-                      }),
-                    }),
-                  ],
-                }),
-                (0, s.jsx)(l.w, { title: 'atomic/icons' }),
-              ],
-            }),
-          ],
-        });
-      };
-    },
     6453: (e, t, a) => {
       'use strict';
       a.d(t, { w: () => l });
@@ -285,13 +162,48 @@
         });
       };
     },
-    6881: (e, t, a) => {
-      (window.__NEXT_P = window.__NEXT_P || []).push([
-        '/icons',
-        function () {
-          return a(4598);
-        },
-      ]);
+    8330: (e, t, a) => {
+      'use strict';
+      a.r(t), a.d(t, { default: () => c });
+      var s = a(5640),
+        l = a(6453),
+        r = a(8604),
+        n = a(767),
+        d = a(1461),
+        i = a(148);
+      let c = () => {
+        let [{ query: e = '' }, t] = (0, i.useState)({ query: '' });
+        return (0, s.jsxs)('div', {
+          className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
+          children: [
+            (0, s.jsx)(n.F, {
+              links: d.l.filter((e) => {
+                let { id: t } = e;
+                return 'templates' !== t;
+              }),
+              title: 'atomic/templates',
+              query: e,
+              setState: t,
+            }),
+            (0, s.jsxs)('div', {
+              className: 'grow overflow-auto',
+              children: [
+                (0, s.jsx)('main', {
+                  className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
+                  children: (0, s.jsx)(r.l, {
+                    title: 'atomic/templates',
+                    subtitle: 'Free and Open Source Web/App Templates',
+                    description:
+                      'is a curated collection of responsive web and app templates designed specifically for SaaS products and marketing sites. Built for speed, scalability, and conversion, each template helps you launch polished, professional interfaces with ease — so you can focus on growing your business.',
+                    features: ['Copy / Paste', 'Pure TailwindCSS', 'UI Components'],
+                  }),
+                }),
+                (0, s.jsx)(l.w, { title: 'atomic/templates' }),
+              ],
+            }),
+          ],
+        });
+      };
     },
     8604: (e, t, a) => {
       'use strict';
@@ -344,6 +256,6 @@
   },
   (e) => {
     var t = (t) => e((e.s = t));
-    e.O(0, [6826, 8809, 636, 6593, 8792], () => t(6881)), (_N_E = e.O());
+    e.O(0, [6826, 636, 6593, 8792], () => t(145)), (_N_E = e.O());
   },
 ]);

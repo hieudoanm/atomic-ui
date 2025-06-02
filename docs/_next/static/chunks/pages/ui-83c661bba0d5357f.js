@@ -65,7 +65,7 @@
                       (0, s.jsxs)('div', {
                         className: 'flex items-center gap-x-4',
                         children: [
-                          i &&
+                          !i &&
                             (0, s.jsx)('div', {
                               className: 'hidden grow md:block',
                               children: (0, s.jsx)('input', {
