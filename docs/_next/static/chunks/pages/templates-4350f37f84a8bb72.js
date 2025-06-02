@@ -12,12 +12,12 @@
     767: (e, t, a) => {
       'use strict';
       a.d(t, { F: () => o });
-      var s = a(5640),
-        l = a(148);
+      var l = a(5640),
+        s = a(148);
       let r = () => {
-        let [e, t] = (0, l.useState)(!1);
+        let [e, t] = (0, s.useState)(!1);
         return (
-          (0, l.useEffect)(() => {
+          (0, s.useEffect)(() => {
             'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), t(!0));
           }, []),
           {
@@ -37,49 +37,49 @@
       };
       var n = a(1668),
         d = a.n(n),
-        i = a(6826),
-        c = a.n(i);
+        c = a(6826),
+        i = a.n(c);
       let o = (e) => {
-        let { title: t = '', links: a = [], query: l = '', setState: n, disabledSearch: i = !1 } = e,
+        let { title: t = '', links: a = [], query: s = '', setState: n, disabledSearch: c = !1 } = e,
           { darkMode: o = !1, toggleDarkMode: u } = r();
-        return (0, s.jsxs)(s.Fragment, {
+        return (0, l.jsxs)(l.Fragment, {
           children: [
-            (0, s.jsx)(d(), { children: (0, s.jsx)('title', { children: t }) }),
-            (0, s.jsx)('nav', {
+            (0, l.jsx)(d(), { children: (0, l.jsx)('title', { children: t }) }),
+            (0, l.jsx)('nav', {
               className: 'border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-              children: (0, s.jsxs)('div', {
+              children: (0, l.jsxs)('div', {
                 className: 'container mx-auto flex flex-col gap-y-2 px-8 py-4',
                 children: [
-                  (0, s.jsxs)('div', {
+                  (0, l.jsxs)('div', {
                     className: 'flex items-center justify-between gap-x-4',
                     children: [
-                      (0, s.jsxs)('div', {
+                      (0, l.jsxs)('div', {
                         className: 'flex items-center gap-x-4',
                         children: [
-                          (0, s.jsxs)(c(), {
+                          (0, l.jsxs)(i(), {
                             href: '/',
                             className: 'text-lg font-bold md:text-xl',
                             children: ['⚛️ ', t],
                           }),
-                          (0, s.jsx)('div', {
+                          (0, l.jsx)('div', {
                             className: 'hidden items-center gap-x-2 md:flex',
                             children: a.map((e) => {
-                              let { id: t = '', href: a = '', text: l = '' } = e;
-                              return (0, s.jsx)(c(), { href: a, className: 'text-sm md:text-base', children: l }, t);
+                              let { id: t = '', href: a = '', text: s = '' } = e;
+                              return (0, l.jsx)(i(), { href: a, className: 'text-sm md:text-base', children: s }, t);
                             }),
                           }),
                         ],
                       }),
-                      (0, s.jsxs)('div', {
+                      (0, l.jsxs)('div', {
                         className: 'flex items-center gap-x-4',
                         children: [
-                          !i &&
-                            (0, s.jsx)('div', {
+                          !c &&
+                            (0, l.jsx)('div', {
                               className: 'hidden grow md:block',
-                              children: (0, s.jsx)('input', {
+                              children: (0, l.jsx)('input', {
                                 type: 'text',
                                 placeholder: 'Search',
-                                value: l,
+                                value: s,
                                 className:
                                   'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
                                 onChange: (e) => {
@@ -87,18 +87,18 @@
                                 },
                               }),
                             }),
-                          (0, s.jsx)(c(), {
+                          (0, l.jsx)(i(), {
                             href: 'https://github.com/hieudoanm/atomic',
                             target: '_blank',
                             className: 'font-semibold',
                             children: 'GitHub',
                           }),
-                          (0, s.jsxs)('label', {
+                          (0, l.jsxs)('label', {
                             className:
                               'relative block h-8 w-14 rounded-full bg-neutral-200 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-purple-500 dark:bg-neutral-800 dark:has-checked:bg-purple-700',
                             'aria-label': 'Toggle dark mode',
                             children: [
-                              (0, s.jsx)('input', {
+                              (0, l.jsx)('input', {
                                 type: 'checkbox',
                                 checked: o,
                                 className: 'peer sr-only',
@@ -106,7 +106,7 @@
                                   u();
                                 },
                               }),
-                              (0, s.jsx)('span', {
+                              (0, l.jsx)('span', {
                                 className:
                                   'absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-white transition-[inset-inline-start] peer-checked:start-6 dark:bg-neutral-900',
                               }),
@@ -116,13 +116,13 @@
                       }),
                     ],
                   }),
-                  !i &&
-                    (0, s.jsx)('div', {
+                  !c &&
+                    (0, l.jsx)('div', {
                       className: 'block md:hidden',
-                      children: (0, s.jsx)('input', {
+                      children: (0, l.jsx)('input', {
                         type: 'text',
                         placeholder: 'Search Components',
-                        value: l,
+                        value: s,
                         className:
                           'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
                         onChange: (e) => {
@@ -139,8 +139,9 @@
     },
     1461: (e, t, a) => {
       'use strict';
-      a.d(t, { l: () => s });
-      let s = [
+      a.d(t, { l: () => l });
+      let l = [
+        { id: 'charts', href: '/charts', text: 'charts' },
         { id: 'hooks', href: '/hooks', text: 'hooks' },
         { id: 'icons', href: '/icons', text: 'icons' },
         { id: 'templates', href: '/templates', text: 'templates' },
@@ -149,56 +150,92 @@
     },
     6453: (e, t, a) => {
       'use strict';
-      a.d(t, { w: () => l });
-      var s = a(5640);
-      let l = (e) => {
+      a.d(t, { w: () => s });
+      var l = a(5640);
+      let s = (e) => {
         let { title: t = '' } = e;
-        return (0, s.jsx)('footer', {
+        return (0, l.jsx)('footer', {
           className: 'border-t border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-          children: (0, s.jsxs)('div', {
+          children: (0, l.jsxs)('div', {
             className: 'container mx-auto px-8 py-4',
-            children: ['\xa9 ', new Date().getFullYear(), ' ⚛️ ', (0, s.jsx)('strong', { children: t })],
+            children: ['\xa9 ', new Date().getFullYear(), ' ⚛️ ', (0, l.jsx)('strong', { children: t })],
           }),
         });
       };
     },
     8330: (e, t, a) => {
       'use strict';
-      a.r(t), a.d(t, { default: () => c });
-      var s = a(5640),
-        l = a(6453),
+      a.r(t), a.d(t, { __N_SSG: () => u, default: () => x });
+      var l = a(5640),
+        s = a(6453),
         r = a(8604),
         n = a(767),
         d = a(1461),
-        i = a(148);
-      let c = () => {
-        let [{ query: e = '' }, t] = (0, i.useState)({ query: '' });
-        return (0, s.jsxs)('div', {
+        c = a(6826),
+        i = a.n(c),
+        o = a(148),
+        u = !0;
+      let x = (e) => {
+        let { templates: t = [] } = e,
+          [{ query: a = '' }, c] = (0, o.useState)({ query: '' });
+        return (0, l.jsxs)('div', {
           className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
           children: [
-            (0, s.jsx)(n.F, {
+            (0, l.jsx)(n.F, {
               links: d.l.filter((e) => {
                 let { id: t } = e;
                 return 'templates' !== t;
               }),
               title: 'atomic/templates',
-              query: e,
-              setState: t,
+              query: a,
+              setState: c,
             }),
-            (0, s.jsxs)('div', {
+            (0, l.jsxs)('div', {
               className: 'grow overflow-auto',
               children: [
-                (0, s.jsx)('main', {
+                (0, l.jsxs)('main', {
                   className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                  children: (0, s.jsx)(r.l, {
-                    title: 'atomic/templates',
-                    subtitle: 'Free and Open Source Web/App Templates',
-                    description:
-                      'is a curated collection of responsive web and app templates designed specifically for SaaS products and marketing sites. Built for speed, scalability, and conversion, each template helps you launch polished, professional interfaces with ease — so you can focus on growing your business.',
-                    features: ['Copy / Paste', 'Pure TailwindCSS', 'UI Components'],
-                  }),
+                  children: [
+                    (0, l.jsx)(r.l, {
+                      title: 'atomic/templates',
+                      subtitle: 'Free and Open Source Web/App Templates',
+                      description:
+                        'is a curated collection of responsive web and app templates designed specifically for SaaS products and marketing sites. Built for speed, scalability, and conversion, each template helps you launch polished, professional interfaces with ease — so you can focus on growing your business.',
+                      features: ['Copy / Paste', 'Pure TailwindCSS', 'UI Components'],
+                    }),
+                    (0, l.jsx)('section', {
+                      className: 'py-4 md:py-8',
+                      children: (0, l.jsx)('div', {
+                        className: 'container mx-auto px-8',
+                        children: (0, l.jsx)('div', {
+                          className: 'flex flex-col gap-y-4 md:gap-y-8',
+                          children: t.map((e) => {
+                            let { id: t = '', name: a = '', code: s } = e;
+                            return (0, l.jsx)(
+                              i(),
+                              {
+                                href: '/templates/'.concat(t),
+                                children: (0, l.jsxs)('div', {
+                                  className: 'flex flex-col gap-y-4 md:gap-y-8',
+                                  children: [
+                                    (0, l.jsx)('h2', { className: 'text-2xl font-bold capitalize', children: a }),
+                                    (0, l.jsx)('div', {
+                                      className:
+                                        'h-128 overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+                                      children: (0, l.jsx)('div', { dangerouslySetInnerHTML: { __html: s } }),
+                                    }),
+                                  ],
+                                }),
+                              },
+                              t
+                            );
+                          }),
+                        }),
+                      }),
+                    }),
+                  ],
                 }),
-                (0, s.jsx)(l.w, { title: 'atomic/templates' }),
+                (0, l.jsx)(s.w, { title: 'atomic/templates' }),
               ],
             }),
           ],
@@ -207,44 +244,44 @@
     },
     8604: (e, t, a) => {
       'use strict';
-      a.d(t, { l: () => l });
-      var s = a(5640);
-      let l = (e) => {
-        let { title: t = '', subtitle: a = '', description: l = '', features: r = [] } = e;
-        return (0, s.jsx)('section', {
+      a.d(t, { l: () => s });
+      var l = a(5640);
+      let s = (e) => {
+        let { title: t = '', subtitle: a = '', description: s = '', features: r = [] } = e;
+        return (0, l.jsx)('section', {
           className: 'py-8 md:py-16',
-          children: (0, s.jsx)('div', {
+          children: (0, l.jsx)('div', {
             className: 'container mx-auto flex flex-col items-center justify-center gap-y-4 px-8',
-            children: (0, s.jsxs)('div', {
+            children: (0, l.jsxs)('div', {
               className: 'flex w-full max-w-lg flex-col gap-y-4 text-center md:gap-y-8',
               children: [
-                (0, s.jsxs)('header', {
+                (0, l.jsxs)('header', {
                   className: 'flex flex-col gap-y-1',
                   children: [
-                    (0, s.jsxs)('h1', { className: 'text-4xl font-black whitespace-nowrap', children: ['⚛️ ', t] }),
-                    (0, s.jsx)('h5', {
+                    (0, l.jsxs)('h1', { className: 'text-4xl font-black whitespace-nowrap', children: ['⚛️ ', t] }),
+                    (0, l.jsx)('h5', {
                       className: 'text-base font-medium text-neutral-700 md:text-lg dark:text-neutral-300',
                       children: a,
                     }),
                   ],
                 }),
-                (0, s.jsxs)('p', {
+                (0, l.jsxs)('p', {
                   className: 'text-neutral-900 dark:text-neutral-100',
                   children: [
-                    (0, s.jsx)('code', {
+                    (0, l.jsx)('code', {
                       className:
                         'mr-1 rounded bg-neutral-900 px-1 py-0.5 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900',
                       children: t,
                     }),
-                    (0, s.jsx)('span', { children: l }),
+                    (0, l.jsx)('span', { children: s }),
                   ],
                 }),
                 r.length > 0 &&
-                  (0, s.jsx)('div', {
+                  (0, l.jsx)('div', {
                     className:
                       'flex flex-col justify-center gap-x-6 text-sm font-black text-neutral-900 md:flex-row dark:text-neutral-100',
                     children: r.map((e) =>
-                      (0, s.jsxs)('p', { className: 'whitespace-nowrap', children: ['\uD83D\uDD2E ', e] }, e)
+                      (0, l.jsxs)('p', { className: 'whitespace-nowrap', children: ['\uD83D\uDD2E ', e] }, e)
                     ),
                   }),
               ],

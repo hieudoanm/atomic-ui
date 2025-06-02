@@ -2,7 +2,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [3845],
   {
-    3845: (e, t, o) => {
+    6226: (e, t, o) => {
       o.r(t), o.d(t, { default: () => r });
       let r = Object.freeze(
         JSON.parse(

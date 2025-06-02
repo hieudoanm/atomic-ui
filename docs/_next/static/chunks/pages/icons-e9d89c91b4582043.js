@@ -133,6 +133,7 @@
       'use strict';
       a.d(t, { l: () => s });
       let s = [
+        { id: 'charts', href: '/charts', text: 'charts' },
         { id: 'hooks', href: '/hooks', text: 'hooks' },
         { id: 'icons', href: '/icons', text: 'icons' },
         { id: 'templates', href: '/templates', text: 'templates' },

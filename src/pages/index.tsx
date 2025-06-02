@@ -19,8 +19,9 @@ const HomePage: NextPage = () => {
           />
           <section className="py-4 md:py-8">
             <div className="container mx-auto px-8">
-              <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
                 {[
+                  { id: 'charts', href: '/charts', text: 'Charts' },
                   { id: 'hooks', href: '/hooks', text: 'React Hooks' },
                   { id: 'icons', href: '/icons', text: 'SVG Icons' },
                   { id: 'templates', href: '/templates', text: 'Page Templates' },

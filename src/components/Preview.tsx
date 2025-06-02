@@ -25,7 +25,7 @@ export const Preview: FC<{
           <span className="text-4xl">{emoji}</span>
           <div>
             <p className="text-xs capitalize">{group}</p>
-            <h3 className="text-xl font-bold md:text-2xl">{name}</h3>
+            <h3 className="text-xl font-bold capitalize md:text-2xl">{name}</h3>
           </div>
         </div>
         {!codeOnly && (

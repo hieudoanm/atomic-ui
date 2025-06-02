@@ -1,15 +1,15 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [3332],
+  [3413],
   {
     767: (e, t, a) => {
       'use strict';
       a.d(t, { F: () => o });
       var s = a(5640),
-        r = a(148);
-      let l = () => {
-        let [e, t] = (0, r.useState)(!1);
+        l = a(148);
+      let r = () => {
+        let [e, t] = (0, l.useState)(!1);
         return (
-          (0, r.useEffect)(() => {
+          (0, l.useEffect)(() => {
             'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), t(!0));
           }, []),
           {
@@ -32,8 +32,8 @@
         i = a(6826),
         c = a.n(i);
       let o = (e) => {
-        let { title: t = '', links: a = [], query: r = '', setState: n, disabledSearch: i = !1 } = e,
-          { darkMode: o = !1, toggleDarkMode: u } = l();
+        let { title: t = '', links: a = [], query: l = '', setState: n, disabledSearch: i = !1 } = e,
+          { darkMode: o = !1, toggleDarkMode: u } = r();
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(d(), { children: (0, s.jsx)('title', { children: t }) }),
@@ -56,8 +56,8 @@
                           (0, s.jsx)('div', {
                             className: 'hidden items-center gap-x-2 md:flex',
                             children: a.map((e) => {
-                              let { id: t = '', href: a = '', text: r = '' } = e;
-                              return (0, s.jsx)(c(), { href: a, className: 'text-sm md:text-base', children: r }, t);
+                              let { id: t = '', href: a = '', text: l = '' } = e;
+                              return (0, s.jsx)(c(), { href: a, className: 'text-sm md:text-base', children: l }, t);
                             }),
                           }),
                         ],
@@ -71,7 +71,7 @@
                               children: (0, s.jsx)('input', {
                                 type: 'text',
                                 placeholder: 'Search',
-                                value: r,
+                                value: l,
                                 className:
                                   'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
                                 onChange: (e) => {
@@ -114,7 +114,7 @@
                       children: (0, s.jsx)('input', {
                         type: 'text',
                         placeholder: 'Search Components',
-                        value: r,
+                        value: l,
                         className:
                           'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
                         onChange: (e) => {
@@ -129,95 +129,164 @@
         });
       };
     },
+    1366: (e, t, a) => {
+      'use strict';
+      a.r(t), a.d(t, { __N_SSG: () => c, default: () => o });
+      var s = a(5640),
+        l = a(6453),
+        r = a(8604),
+        n = a(767),
+        d = a(5196),
+        i = a(1461),
+        c = !0;
+      let o = (e) => {
+        let { template: t = { id: '', name: '', code: '' } } = e,
+          { id: a = '', name: c = '', code: o = '' } = t;
+        return (0, s.jsxs)('div', {
+          className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
+          children: [
+            (0, s.jsx)(n.F, {
+              links: i.l.filter((e) => {
+                let { id: t } = e;
+                return 'templates' !== t;
+              }),
+              title: 'atomic/templates',
+              disabledSearch: !0,
+              query: '',
+              setState: () => {},
+            }),
+            (0, s.jsxs)('div', {
+              className: 'grow overflow-auto',
+              children: [
+                (0, s.jsx)('main', {
+                  className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
+                  children: (0, s.jsx)(r.l, {
+                    title: 'atomic/templates',
+                    subtitle: 'Free and Open Source Web/App Templates',
+                    description:
+                      'is a curated collection of responsive web and app templates designed specifically for SaaS products and marketing sites. Built for speed, scalability, and conversion, each template helps you launch polished, professional interfaces with ease — so you can focus on growing your business.',
+                    features: ['Copy / Paste', 'Pure TailwindCSS', 'UI Components'],
+                  }),
+                }),
+                (0, s.jsx)('section', {
+                  className: 'py-4 md:py-8',
+                  children: (0, s.jsx)('div', {
+                    className: 'container mx-auto px-8',
+                    children: (0, s.jsx)('div', {
+                      className: 'flex flex-col gap-y-4 md:gap-y-8',
+                      children: (0, s.jsx)(d.l, { id: a, emoji: '\uD83D\uDCDD', group: 'Template', name: c, code: o }),
+                    }),
+                  }),
+                }),
+                (0, s.jsx)(l.w, { title: 'atomic/templates' }),
+              ],
+            }),
+          ],
+        });
+      };
+    },
     1461: (e, t, a) => {
       'use strict';
       a.d(t, { l: () => s });
       let s = [
+        { id: 'charts', href: '/charts', text: 'charts' },
         { id: 'hooks', href: '/hooks', text: 'hooks' },
         { id: 'icons', href: '/icons', text: 'icons' },
         { id: 'templates', href: '/templates', text: 'templates' },
         { id: 'ui', href: '/ui', text: 'ui' },
       ];
     },
-    3396: (e, t, a) => {
+    3105: (e, t, a) => {
       (window.__NEXT_P = window.__NEXT_P || []).push([
-        '/',
+        '/templates/[id]',
         function () {
-          return a(6310);
+          return a(1366);
         },
       ]);
     },
-    6310: (e, t, a) => {
+    5196: (e, t, a) => {
       'use strict';
-      a.r(t), a.d(t, { default: () => o });
+      a.d(t, { l: () => i });
       var s = a(5640),
-        r = a(6453),
-        l = a(8604),
-        n = a(767),
-        d = a(1461),
-        i = a(6826),
-        c = a.n(i);
-      let o = () =>
-        (0, s.jsxs)('div', {
-          className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
-          children: [
-            (0, s.jsx)(n.F, { links: d.l, title: 'atomic', query: '', setState: () => {}, disabledSearch: !0 }),
-            (0, s.jsx)('div', {
-              className: 'grow overflow-auto',
-              children: (0, s.jsxs)('main', {
-                className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                children: [
-                  (0, s.jsx)(l.l, {
-                    title: 'atomic',
-                    subtitle: 'Free and Open Source Front-end Code',
-                    description:
-                      'is a free, modern collection of Tailwind CSS UI components and reusable React Hooks, built with atomic design principles. It includes 44+ customizable components and practical hooks with built-in dark mode and responsive behavior—helping you build fast, accessible, and maintainable interfaces with ease.',
-                    features: ['Copy / Paste', 'Pure TailwindCSS', 'Pure React Hooks'],
-                  }),
-                  (0, s.jsx)('section', {
-                    className: 'py-4 md:py-8',
-                    children: (0, s.jsx)('div', {
-                      className: 'container mx-auto px-8',
-                      children: (0, s.jsx)('div', {
-                        className: 'grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8',
-                        children: [
-                          { id: 'hooks', href: '/hooks', text: 'React Hooks' },
-                          { id: 'icons', href: '/icons', text: 'SVG Icons' },
-                          { id: 'templates', href: '/templates', text: 'Page Templates' },
-                          { id: 'ui', href: '/ui', text: 'UI Components' },
-                        ].map((e) => {
-                          let { href: t = '', text: a = '' } = e;
-                          return (0, s.jsx)(
-                            'div',
-                            {
-                              className: 'col-span-1',
-                              children: (0, s.jsx)(c(), {
-                                href: t,
-                                children: (0, s.jsx)('button', {
-                                  className:
-                                    'w-full cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow dark:bg-purple-700 dark:shadow-neutral-100/10',
-                                  children: a,
-                                }),
-                              }),
-                            },
-                            t
-                          );
-                        }),
-                      }),
-                    }),
-                  }),
-                ],
-              }),
+        l = a(8809),
+        r = a(148),
+        n = a(5031);
+      let d = (e) => {
+          let { code: t, lang: a } = e,
+            [l, d] = (0, r.useState)('');
+          return (
+            (0, r.useEffect)(() => {
+              (async () => {
+                d(await (0, n.Yz)(t, { lang: a, theme: 'github-dark' }));
+              })();
             }),
-            (0, s.jsx)(r.w, { title: 'atomic' }),
-          ],
-        });
+            (0, s.jsx)('div', {
+              dangerouslySetInnerHTML: { __html: l },
+              className: 'w-full overflow-x-auto bg-neutral-900 p-4',
+            })
+          );
+        },
+        i = (e) => {
+          let { id: t = '', emoji: a = '', group: n = '', name: i = '', code: c = '', codeOnly: o = !1 } = e,
+            [u, x] = (0, r.useState)(''),
+            [h, m] = (0, r.useState)(!0);
+          return (
+            (0, r.useEffect)(() => {
+              x((0, l.A)(window).sanitize(c));
+            }, [c]),
+            (0, s.jsxs)('div', {
+              id: t,
+              className: 'flex flex-col gap-y-4 md:gap-y-8',
+              children: [
+                (0, s.jsxs)('div', {
+                  className: 'flex items-center justify-between gap-x-2',
+                  children: [
+                    (0, s.jsxs)('div', {
+                      className: 'flex items-center gap-x-2',
+                      children: [
+                        (0, s.jsx)('span', { className: 'text-4xl', children: a }),
+                        (0, s.jsxs)('div', {
+                          children: [
+                            (0, s.jsx)('p', { className: 'text-xs capitalize', children: n }),
+                            (0, s.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: i }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    !o &&
+                      (0, s.jsx)('button', {
+                        type: 'button',
+                        className:
+                          'cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10',
+                        onClick: () => m((e) => !e),
+                        children: h ? 'Preview' : 'Code',
+                      }),
+                  ],
+                }),
+                (0, s.jsx)('div', {
+                  className:
+                    'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+                  children: o
+                    ? (0, s.jsx)(d, { code: c, lang: 'tsx' })
+                    : (0, s.jsx)(s.Fragment, {
+                        children: h
+                          ? (0, s.jsx)('div', {
+                              className: 'w-full p-4 md:p-8',
+                              dangerouslySetInnerHTML: { __html: u },
+                            })
+                          : (0, s.jsx)(d, { code: c, lang: 'html' }),
+                      }),
+                }),
+              ],
+            })
+          );
+        };
     },
     6453: (e, t, a) => {
       'use strict';
-      a.d(t, { w: () => r });
+      a.d(t, { w: () => l });
       var s = a(5640);
-      let r = (e) => {
+      let l = (e) => {
         let { title: t = '' } = e;
         return (0, s.jsx)('footer', {
           className: 'border-t border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
@@ -230,10 +299,10 @@
     },
     8604: (e, t, a) => {
       'use strict';
-      a.d(t, { l: () => r });
+      a.d(t, { l: () => l });
       var s = a(5640);
-      let r = (e) => {
-        let { title: t = '', subtitle: a = '', description: r = '', features: l = [] } = e;
+      let l = (e) => {
+        let { title: t = '', subtitle: a = '', description: l = '', features: r = [] } = e;
         return (0, s.jsx)('section', {
           className: 'py-8 md:py-16',
           children: (0, s.jsx)('div', {
@@ -259,14 +328,14 @@
                         'mr-1 rounded bg-neutral-900 px-1 py-0.5 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900',
                       children: t,
                     }),
-                    (0, s.jsx)('span', { children: r }),
+                    (0, s.jsx)('span', { children: l }),
                   ],
                 }),
-                l.length > 0 &&
+                r.length > 0 &&
                   (0, s.jsx)('div', {
                     className:
                       'flex flex-col justify-center gap-x-6 text-sm font-black text-neutral-900 md:flex-row dark:text-neutral-100',
-                    children: l.map((e) =>
+                    children: r.map((e) =>
                       (0, s.jsxs)('p', { className: 'whitespace-nowrap', children: ['\uD83D\uDD2E ', e] }, e)
                     ),
                   }),
@@ -279,6 +348,6 @@
   },
   (e) => {
     var t = (t) => e((e.s = t));
-    e.O(0, [6826, 636, 6593, 8792], () => t(3396)), (_N_E = e.O());
+    e.O(0, [6826, 8809, 5031, 636, 6593, 8792], () => t(3105)), (_N_E = e.O());
   },
 ]);

@@ -69,7 +69,7 @@ const UIPage: NextPage<{ components: Component[] }> = ({ components = [] }) => {
                         );
                       })}
                     </div>
-                    <div className="flex flex-col gap-y-8">
+                    <div className="flex flex-col gap-y-4 md:gap-y-8">
                       {filteredComponents.map(({ id = '', emoji = '', group = '', name = '', code = '' }) => {
                         return (
                           <div key={id} className="flex flex-col gap-y-4">

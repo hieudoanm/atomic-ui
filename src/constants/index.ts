@@ -1,4 +1,5 @@
 export const NAVBAR_LINKS: { id: string; href: string; text: string }[] = [
+  { id: 'charts', href: '/charts', text: 'charts' },
   { id: 'hooks', href: '/hooks', text: 'hooks' },
   { id: 'icons', href: '/icons', text: 'icons' },
   { id: 'templates', href: '/templates', text: 'templates' },

@@ -6852,7 +6852,7 @@
               id: 'dracula-soft',
               displayName: 'Dracula Theme Soft',
               type: 'dark',
-              import: () => n.e(3845).then(n.bind(n, 3845)),
+              import: () => n.e(3845).then(n.bind(n, 6226)),
             },
             {
               id: 'everforest-dark',
