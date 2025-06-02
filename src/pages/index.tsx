@@ -21,17 +21,18 @@ const HomePage: NextPage = () => {
             <div className="container mx-auto px-8">
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
                 {[
-                  { id: 'charts', href: '/charts', text: 'Charts' },
-                  { id: 'hooks', href: '/hooks', text: 'React Hooks' },
-                  { id: 'icons', href: '/icons', text: 'SVG Icons' },
-                  { id: 'templates', href: '/templates', text: 'Page Templates' },
-                  { id: 'ui', href: '/ui', text: 'UI Components' },
-                ].map(({ href = '', text = '' }) => {
+                  { id: 'charts', href: '/charts', name: 'Charts', shortName: 'Charts' },
+                  { id: 'hooks', href: '/hooks', name: 'React Hooks', shortName: 'Hooks' },
+                  { id: 'icons', href: '/icons', name: 'SVG Icons', shortName: 'Icons' },
+                  { id: 'templates', href: '/templates', name: 'Page Templates', shortName: 'Templates' },
+                  { id: 'ui', href: '/ui', name: 'UI Components', shortName: 'UI' },
+                ].map(({ href = '', name = '', shortName = '' }) => {
                   return (
                     <div key={href} className="col-span-1">
                       <Link href={href}>
                         <button className="w-full cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow dark:bg-purple-700 dark:shadow-neutral-100/10">
-                          {text}
+                          <span className="hidden md:inline">{name}</span>
+                          <span className="inline md:hidden">{shortName}</span>
                         </button>
                       </Link>
                     </div>

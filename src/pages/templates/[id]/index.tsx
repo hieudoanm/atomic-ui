@@ -7,9 +7,8 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 
-const NODE_ENV = process.env.NODE_ENV ?? 'development';
-const devPath = NODE_ENV === 'development' ? '../../../../..' : '../../../..';
-const __dirname = join(dirname(__filename), devPath);
+const DEV_PATH = '../../../..';
+const __dirname = join(dirname(__filename), DEV_PATH);
 
 type TemplateType = { id: string; name: string; code: string };
 

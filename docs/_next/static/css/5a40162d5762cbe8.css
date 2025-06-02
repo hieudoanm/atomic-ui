@@ -99,7 +99,6 @@
     --color-neutral-700: oklch(37.1% 0 0);
     --color-neutral-800: oklch(26.9% 0 0);
     --color-neutral-900: oklch(20.5% 0 0);
-    --color-neutral-950: oklch(14.5% 0 0);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -547,6 +546,9 @@
   }
   .hidden {
     display: none;
+  }
+  .inline {
+    display: inline;
   }
   .inline-block {
     display: inline-block;
@@ -1603,6 +1605,9 @@
     .md\:hidden {
       display: none;
     }
+    .md\:inline {
+      display: inline;
+    }
     .md\:grid-cols-1 {
       grid-template-columns: repeat(1, minmax(0, 1fr));
     }
@@ -1843,9 +1848,6 @@
   }
   .dark\:bg-neutral-900:where(.dark, .dark *) {
     background-color: var(--color-neutral-900);
-  }
-  .dark\:bg-neutral-950:where(.dark, .dark *) {
-    background-color: var(--color-neutral-950);
   }
   .dark\:bg-orange-700:where(.dark, .dark *) {
     background-color: var(--color-orange-700);

@@ -1,4 +1,5 @@
 self.__SSG_MANIFEST = new Set([
+  '\u002Fcharts',
   '\u002Fhooks',
   '\u002Ficons',
   '\u002Ftemplates',

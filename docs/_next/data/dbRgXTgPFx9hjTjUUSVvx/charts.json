@@ -1,0 +1,15 @@
+{
+  "pageProps": {
+    "charts": [
+      { "id": "area", "name": "area", "code": "" },
+      { "id": "bar", "name": "bar", "code": "" },
+      { "id": "bubble", "name": "bubble", "code": "" },
+      { "id": "doughnut", "name": "doughnut", "code": "" },
+      { "id": "line", "name": "line", "code": "" },
+      { "id": "polar-area", "name": "polar-area", "code": "" },
+      { "id": "radar", "name": "radar", "code": "" },
+      { "id": "scatter", "name": "scatter", "code": "" }
+    ]
+  },
+  "__N_SSG": true
+}

@@ -1,5 +1,6 @@
 import { Footer } from '@atomic/components/Footer';
 import { Hero } from '@atomic/components/Hero';
+import { HTMLPreview } from '@atomic/components/HTML';
 import { Navbar } from '@atomic/components/Navbar';
 import { NAVBAR_LINKS } from '@atomic/constants';
 import { NextPage } from 'next';
@@ -41,8 +42,8 @@ const TemplatesPage: NextPage<{ templates: TemplateType[] }> = ({ templates = []
                     <Link key={id} href={`/templates/${id}`}>
                       <div className="flex flex-col gap-y-4 md:gap-y-8">
                         <h2 className="text-2xl font-bold capitalize">{name}</h2>
-                        <div className="h-128 overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
-                          <div dangerouslySetInnerHTML={{ __html: code }}></div>
+                        <div className="h-128 overflow-hidden rounded-lg border border-neutral-200 p-4 shadow md:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10">
+                          <HTMLPreview code={code} />
                         </div>
                       </div>
                     </Link>
@@ -62,8 +63,8 @@ export const getStaticProps = () => {
   const files = readdirSync(join(__dirname, 'src/html/templates'));
   const templates = files.map((file: string) => {
     const id: string = file?.replaceAll('.html', '');
-    const filePath = join(__dirname, `src/html/templates/${file}`);
-    const code = readFileSync(filePath, 'utf-8');
+    const filePath: string = join(__dirname, `src/html/templates/${file}`);
+    const code: string = readFileSync(filePath, 'utf-8');
     return { id, name: id, code };
   });
   return { props: { templates } };
