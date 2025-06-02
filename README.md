@@ -9,6 +9,7 @@
   - [Introduction](#introduction)
   - [Code](#code)
     - [Charts](#charts)
+    - [React Contexts](#react-contexts)
     - [React Hooks](#react-hooks)
     - [SVG Icons](#svg-icons)
     - [Page Templates](#page-templates)
@@ -47,6 +48,17 @@ Status: `In Progress` - `Completed`
 | 6   | Polar Area     | In Progress |
 | 7   | Radar          | In Progress |
 | 8   | Scatter        | In Progress |
+
+### React Contexts
+
+`atomic/contexts`
+
+1. `LanguageContext`
+2. `ModalContext`
+3. `NotificationsContext`
+4. `SettingsContext`
+5. `ThemeContext`
+6. `UserContext`
 
 ### React Hooks
 

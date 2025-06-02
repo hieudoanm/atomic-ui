@@ -27,16 +27,16 @@
           }
         );
       };
-      var n = l(1668),
-        i = l.n(n),
+      var i = l(1668),
+        n = l.n(i),
         o = l(6826),
         d = l.n(o);
       let h = (e) => {
-        let { title: t = '', links: l = [], query: r = '', setState: n, disabledSearch: o = !1 } = e,
+        let { title: t = '', links: l = [], query: r = '', setState: i, disabledSearch: o = !1 } = e,
           { darkMode: h = !1, toggleDarkMode: c } = s();
         return (0, a.jsxs)(a.Fragment, {
           children: [
-            (0, a.jsx)(i(), { children: (0, a.jsx)('title', { children: t }) }),
+            (0, a.jsx)(n(), { children: (0, a.jsx)('title', { children: t }) }),
             (0, a.jsx)('nav', {
               className: 'border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
               children: (0, a.jsxs)('div', {
@@ -45,45 +45,82 @@
                   (0, a.jsxs)('div', {
                     className: 'flex items-center justify-between gap-x-4',
                     children: [
-                      (0, a.jsxs)('div', {
-                        className: 'flex items-center gap-x-4',
-                        children: [
-                          (0, a.jsxs)(d(), {
-                            href: '/',
-                            className: 'text-lg font-bold md:text-xl',
-                            children: ['⚛️ ', t],
-                          }),
-                          (0, a.jsx)('div', {
-                            className: 'hidden items-center gap-x-2 md:flex',
-                            children: l.map((e) => {
-                              let { id: t = '', href: l = '', text: r = '' } = e;
-                              return (0, a.jsx)(d(), { href: l, className: 'text-sm md:text-base', children: r }, t);
-                            }),
-                          }),
-                        ],
-                      }),
-                      (0, a.jsxs)('div', {
-                        className: 'flex items-center gap-x-4',
-                        children: [
-                          !o &&
-                            (0, a.jsx)('div', {
-                              className: 'hidden grow md:block',
-                              children: (0, a.jsx)('input', {
-                                type: 'text',
-                                placeholder: 'Search',
-                                value: r,
-                                className:
-                                  'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
-                                onChange: (e) => {
-                                  n((t) => ({ ...t, query: e.target.value }));
-                                },
+                      (0, a.jsx)('div', {
+                        className: 'inline-block md:hidden',
+                        children: (0, a.jsxs)('div', {
+                          className: 'group relative inline-block text-left',
+                          children: [
+                            (0, a.jsx)('button', {
+                              type: 'button',
+                              className:
+                                'inline-flex items-center justify-center gap-1 rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 shadow-sm hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800',
+                              children: (0, a.jsx)('svg', {
+                                xmlns: 'http://www.w3.org/2000/svg',
+                                viewBox: '0 0 448 512',
+                                className: 'w-4',
+                                fill: 'currentColor',
+                                children: (0, a.jsx)('path', {
+                                  d: 'M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z',
+                                }),
                               }),
                             }),
-                          (0, a.jsx)(d(), {
-                            href: 'https://github.com/hieudoanm/atomic',
-                            target: '_blank',
-                            className: 'font-semibold',
-                            children: 'GitHub',
+                            (0, a.jsxs)('div', {
+                              className:
+                                'invisible absolute left-0 z-50 mt-2 w-40 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100',
+                              children: [
+                                l.map((e) => {
+                                  let { id: t = '', href: l = '', emoji: r = '', text: s = '' } = e;
+                                  return (0, a.jsxs)(
+                                    d(),
+                                    {
+                                      href: l,
+                                      className:
+                                        'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
+                                      children: [r, ' ', s],
+                                    },
+                                    t
+                                  );
+                                }),
+                                (0, a.jsx)(d(), {
+                                  href: 'https://github.com/hieudoanm/atomic',
+                                  target: '_blank',
+                                  className: 'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
+                                  children: '\uD83D\uDC19 github',
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      }),
+                      (0, a.jsx)('div', {
+                        className: 'flex items-center gap-x-4',
+                        children: (0, a.jsxs)(d(), {
+                          href: '/',
+                          className: 'text-lg font-bold md:text-xl',
+                          children: ['⚛️ ', t],
+                        }),
+                      }),
+                      (0, a.jsxs)('div', {
+                        className: 'flex items-center gap-x-2 md:gap-x-4',
+                        children: [
+                          (0, a.jsxs)('div', {
+                            className: 'hidden items-center gap-x-2 md:flex md:gap-x-4',
+                            children: [
+                              l.map((e) => {
+                                let { id: t = '', href: l = '', emoji: r = '', text: s = '' } = e;
+                                return (0, a.jsxs)(
+                                  d(),
+                                  { href: l, className: 'text-sm md:text-base', children: [r, ' ', s] },
+                                  t
+                                );
+                              }),
+                              (0, a.jsx)(d(), {
+                                href: 'https://github.com/hieudoanm/atomic',
+                                target: '_blank',
+                                className: 'text-sm md:text-base',
+                                children: '\uD83D\uDC19 github',
+                              }),
+                            ],
                           }),
                           (0, a.jsxs)('label', {
                             className:
@@ -109,18 +146,15 @@
                     ],
                   }),
                   !o &&
-                    (0, a.jsx)('div', {
-                      className: 'block md:hidden',
-                      children: (0, a.jsx)('input', {
-                        type: 'text',
-                        placeholder: 'Search Components',
-                        value: r,
-                        className:
-                          'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
-                        onChange: (e) => {
-                          n((t) => ({ ...t, query: e.target.value }));
-                        },
-                      }),
+                    (0, a.jsx)('input', {
+                      type: 'text',
+                      placeholder: 'Search',
+                      value: r,
+                      className:
+                        'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
+                      onChange: (e) => {
+                        i((t) => ({ ...t, query: e.target.value }));
+                      },
                     }),
                 ],
               }),
@@ -133,30 +167,31 @@
       'use strict';
       l.d(t, { l: () => a });
       let a = [
-        { id: 'charts', href: '/charts', text: 'charts' },
-        { id: 'hooks', href: '/hooks', text: 'hooks' },
-        { id: 'icons', href: '/icons', text: 'icons' },
-        { id: 'templates', href: '/templates', text: 'templates' },
-        { id: 'ui', href: '/ui', text: 'ui' },
+        { id: 'charts', emoji: '\uD83D\uDCCA', href: '/charts', text: 'charts' },
+        { id: 'react-contexts', emoji: '\uD83D\uDD17', href: '/react/contexts', text: 'contexts' },
+        { id: 'react-hooks', emoji: '\uD83E\uDE9D', href: '/react/hooks', text: 'hooks' },
+        { id: 'icons', emoji: '\uD83D\uDDBC️', href: '/icons', text: 'icons' },
+        { id: 'templates', emoji: '\uD83D\uDCDD', href: '/templates', text: 'templates' },
+        { id: 'ui', emoji: '\uD83C\uDFA8', href: '/ui', text: 'ui' },
       ];
     },
     3719: (e, t, l) => {
       'use strict';
-      l.d(t, { C: () => n });
+      l.d(t, { C: () => i });
       var a = l(5640),
         r = l(148),
         s = l(5031);
-      let n = (e) => {
+      let i = (e) => {
         let { code: t, lang: l } = e,
-          [n, i] = (0, r.useState)('');
+          [i, n] = (0, r.useState)('');
         return (
           (0, r.useEffect)(() => {
             (async () => {
-              i(await (0, s.Yz)(t, { lang: l, theme: 'github-dark' }));
+              n(await (0, s.Yz)(t, { lang: l, theme: 'github-dark' }));
             })();
           }),
           (0, a.jsx)('div', {
-            dangerouslySetInnerHTML: { __html: n },
+            dangerouslySetInnerHTML: { __html: i },
             className: 'w-full overflow-x-auto bg-neutral-900 p-4',
           })
         );
@@ -176,8 +211,8 @@
       var a = l(5640),
         r = l(148),
         s = l(3719);
-      let n = (e) => {
-        let { id: t = '', emoji: l = '', name: n = '', code: i = '', chart: o = (0, a.jsx)(a.Fragment, {}) } = e,
+      let i = (e) => {
+        let { id: t = '', emoji: l = '', name: i = '', code: n = '', chart: o = (0, a.jsx)(a.Fragment, {}) } = e,
           [d, h] = (0, r.useState)(!0);
         return (0, a.jsxs)('div', {
           id: t,
@@ -193,7 +228,7 @@
                     (0, a.jsxs)('div', {
                       children: [
                         (0, a.jsx)('p', { className: 'text-xs capitalize', children: 'Chart' }),
-                        (0, a.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: n }),
+                        (0, a.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: i }),
                       ],
                     }),
                   ],
@@ -212,12 +247,12 @@
                 'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
               children: d
                 ? (0, a.jsx)('div', { className: 'flex w-full items-center justify-center p-4 md:p-8', children: o })
-                : (0, a.jsx)(s.C, { code: i, lang: 'html' }),
+                : (0, a.jsx)(s.C, { code: n, lang: 'html' }),
             }),
           ],
         });
       };
-      var i = l(6453),
+      var n = l(6453),
         o = l(8604),
         d = l(767),
         h = l(1461),
@@ -255,12 +290,12 @@
                   let a = e.getContext('2d');
                   if (!a) return;
                   let r = e.width,
-                    n = e.height;
-                  a.clearRect(0, 0, r, n);
-                  let i = r - 60 - 40,
-                    o = n - 60 - 40,
+                    i = e.height;
+                  a.clearRect(0, 0, r, i);
+                  let n = r - 60 - 40,
+                    o = i - 60 - 40,
                     d = Math.max(...t),
-                    h = (e) => 60 + (i / (t.length - 1)) * e,
+                    h = (e) => 60 + (n / (t.length - 1)) * e,
                     c = (e) => 40 + ((d - e) / (d - 0)) * o;
                   (a.strokeStyle = '#e5e7eb'), (a.lineWidth = 1);
                   for (let e = 0; e <= 5; e++) {
@@ -269,7 +304,7 @@
                   }
                   for (let e = 0; e < l.length; e++) {
                     let t = h(e);
-                    a.beginPath(), a.moveTo(t, 40), a.lineTo(t, n - 60), a.stroke();
+                    a.beginPath(), a.moveTo(t, 40), a.lineTo(t, i - 60), a.stroke();
                   }
                   (a.fillStyle = '#374151'),
                     (a.font = '12px sans-serif'),
@@ -281,21 +316,21 @@
                     a.fillText(l.toFixed(0), 52, t);
                   }
                   (a.textAlign = 'center'), (a.textBaseline = 'top');
-                  for (let e = 0; e < l.length; e++) a.fillText(l[e], h(e), n - 60 + 6);
+                  for (let e = 0; e < l.length; e++) a.fillText(l[e], h(e), i - 60 + 6);
                   (a.strokeStyle = '#9ca3af'),
                     (a.lineWidth = 2),
                     a.beginPath(),
                     a.moveTo(60, 40),
-                    a.lineTo(60, n - 60),
+                    a.lineTo(60, i - 60),
                     a.stroke(),
                     a.beginPath(),
-                    a.moveTo(60, n - 60),
-                    a.lineTo(r - 40, n - 60),
+                    a.moveTo(60, i - 60),
+                    a.lineTo(r - 40, i - 60),
                     a.stroke(),
                     a.beginPath(),
-                    a.moveTo(h(0), n - 60);
+                    a.moveTo(h(0), i - 60);
                   for (let e = 0; e < t.length; e++) a.lineTo(h(e), c(t[e]));
-                  a.lineTo(h(t.length - 1), n - 60),
+                  a.lineTo(h(t.length - 1), i - 60),
                     a.closePath(),
                     (a.fillStyle = 'rgba(59, 130, 246, 0.3)'),
                     a.fill(),
@@ -313,9 +348,9 @@
                     (a.fillStyle = '#374151'),
                     (a.font = '14px sans-serif'),
                     (a.textAlign = 'center'),
-                    a.fillText('Month', r / 2, n - 10),
+                    a.fillText('Month', r / 2, i - 10),
                     a.save(),
-                    a.translate(16, n / 2),
+                    a.translate(16, i / 2),
                     a.rotate(-Math.PI / 2),
                     a.fillText('Revenue ($)', 0, 0),
                     a.restore(),
@@ -346,10 +381,10 @@
                   let a = e.getContext('2d');
                   if (!a) return;
                   let r = e.width,
-                    n = e.height;
-                  a.clearRect(0, 0, r, n);
-                  let i = r - 60 - 40,
-                    o = n - 60 - 40,
+                    i = e.height;
+                  a.clearRect(0, 0, r, i);
+                  let n = r - 60 - 40,
+                    o = i - 60 - 40,
                     d = Math.max(...t);
                   (a.strokeStyle = '#e5e7eb'), (a.lineWidth = 1);
                   for (let e = 0; e <= 5; e++) {
@@ -358,8 +393,8 @@
                   }
                   let h = l.length;
                   for (let e = 0; e < h; e++) {
-                    let t = 60 + (i / h) * e + i / h / 2;
-                    a.beginPath(), a.moveTo(t, 40), a.lineTo(t, n - 60), a.stroke();
+                    let t = 60 + (n / h) * e + n / h / 2;
+                    a.beginPath(), a.moveTo(t, 40), a.lineTo(t, i - 60), a.stroke();
                   }
                   (a.fillStyle = '#374151'),
                     (a.font = '12px sans-serif'),
@@ -372,33 +407,33 @@
                   }
                   (a.textAlign = 'center'), (a.textBaseline = 'top');
                   for (let e = 0; e < l.length; e++) {
-                    let t = 60 + (i / h) * e + i / h / 2;
-                    a.fillText(l[e], t, n - 60 + 6);
+                    let t = 60 + (n / h) * e + n / h / 2;
+                    a.fillText(l[e], t, i - 60 + 6);
                   }
                   (a.strokeStyle = '#9ca3af'),
                     (a.lineWidth = 2),
                     a.beginPath(),
                     a.moveTo(60, 40),
-                    a.lineTo(60, n - 60),
+                    a.lineTo(60, i - 60),
                     a.stroke(),
                     a.beginPath(),
-                    a.moveTo(60, n - 60),
-                    a.lineTo(r - 40, n - 60),
+                    a.moveTo(60, i - 60),
+                    a.lineTo(r - 40, i - 60),
                     a.stroke();
-                  let c = i / h / 2;
+                  let c = n / h / 2;
                   a.fillStyle = '#3b82f6';
                   for (let e = 0; e < t.length; e++) {
-                    let l = 60 + (i / h) * e + i / h / 2 - c / 2,
+                    let l = 60 + (n / h) * e + n / h / 2 - c / 2,
                       r = 40 + ((d - t[e]) / (d - 0)) * o,
-                      s = n - 60 - r;
+                      s = i - 60 - r;
                     a.fillRect(l, r, c, s);
                   }
                   (a.fillStyle = '#374151'),
                     (a.font = '14px sans-serif'),
                     (a.textAlign = 'center'),
-                    a.fillText('Month', r / 2, n - 10),
+                    a.fillText('Month', r / 2, i - 10),
                     a.save(),
-                    a.translate(16, n / 2),
+                    a.translate(16, i / 2),
                     a.rotate(-Math.PI / 2),
                     a.fillText('Revenue ($)', 0, 0),
                     a.restore();
@@ -422,7 +457,7 @@
           ),
           bubble: (0, a.jsx)(
             (e) => {
-              let { data: t = [], xLabels: l = [], yLabels: s = [], xName: n = 'X Axis', yName: i = 'Y Axis' } = e,
+              let { data: t = [], xLabels: l = [], yLabels: s = [], xName: i = 'X Axis', yName: n = 'Y Axis' } = e,
                 o = (0, r.useRef)(null);
               return (
                 (0, r.useEffect)(() => {
@@ -456,9 +491,9 @@
                     let l = s[p - e] || (g + ((b - g) / p) * (p - e)).toFixed(0);
                     a.fillText(l.toString(), 52, t);
                   }
-                  let y = l.length - 1 || 5;
-                  for (let e = 0; e <= y; e++) {
-                    let t = 60 + (h / y) * e;
+                  let k = l.length - 1 || 5;
+                  for (let e = 0; e <= k; e++) {
+                    let t = 60 + (h / k) * e;
                     a.beginPath(),
                       a.moveTo(t, 40),
                       a.lineTo(t, d - 60),
@@ -467,7 +502,7 @@
                       (a.font = '12px sans-serif'),
                       (a.textAlign = 'center'),
                       (a.textBaseline = 'top');
-                    let r = l[e] || (u + ((m - u) / y) * e).toFixed(0);
+                    let r = l[e] || (u + ((m - u) / k) * e).toFixed(0);
                     a.fillText(r.toString(), t, d - 60 + 6);
                   }
                   (a.strokeStyle = '#9ca3af'),
@@ -493,26 +528,26 @@
                     (a.fillStyle = '#374151'),
                     (a.font = '14px sans-serif'),
                     (a.textAlign = 'center'),
-                    a.fillText(n, r / 2, d - 10),
+                    a.fillText(i, r / 2, d - 10),
                     a.save(),
                     a.translate(16, d / 2),
                     a.rotate(-Math.PI / 2),
-                    a.fillText(i, 0, 0),
+                    a.fillText(n, 0, 0),
                     a.restore();
-                  let k = r / 2 - 16;
+                  let y = r / 2 - 16;
                   a.beginPath(),
                     (a.fillStyle = 'rgba(59, 130, 246, 0.6)'),
                     (a.strokeStyle = '#3b82f6'),
                     (a.lineWidth = 1),
-                    a.arc(k + 8, 8, 8, 0, 2 * Math.PI),
+                    a.arc(y + 8, 8, 8, 0, 2 * Math.PI),
                     a.fill(),
                     a.stroke(),
                     (a.fillStyle = '#374151'),
                     (a.font = '12px sans-serif'),
                     (a.textAlign = 'left'),
                     (a.textBaseline = 'middle'),
-                    a.fillText('Bubble Size = Radius', k + 16 + 8, 8);
-                }, [t, l, s, n, i]),
+                    a.fillText('Bubble Size = Radius', y + 16 + 8, 8);
+                }, [t, l, s, i, n]),
                 (0, a.jsx)('div', {
                   className:
                     'w-full max-w-md rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
@@ -536,12 +571,12 @@
           ),
           doughnut: (0, a.jsx)(
             (e) => {
-              let { data: t = [], labels: l = [], colors: s, title: n = 'Doughnut Chart' } = e,
-                i = (0, r.useRef)(null),
+              let { data: t = [], labels: l = [], colors: s, title: i = 'Doughnut Chart' } = e,
+                n = (0, r.useRef)(null),
                 o = s || ['#3b82f6', '#ef4444', '#f59e0b', '#10b981', '#8b5cf6', '#ec4899', '#14b8a6'];
               return (
                 (0, r.useEffect)(() => {
-                  let e = i.current;
+                  let e = n.current;
                   if (!e) return;
                   let a = e.getContext('2d');
                   if (!a) return;
@@ -583,12 +618,12 @@
                     (a.fillStyle = '#374151'),
                     (a.font = '16px sans-serif'),
                     (a.textAlign = 'center'),
-                    a.fillText(n, d, 20);
-                }, [t, l, o, n]),
+                    a.fillText(i, d, 20);
+                }, [t, l, o, i]),
                 (0, a.jsx)('div', {
                   className:
                     'w-full max-w-md rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-                  children: (0, a.jsx)('canvas', { ref: i, width: 400, height: 300, className: 'h-auto w-full' }),
+                  children: (0, a.jsx)('canvas', { ref: n, width: 400, height: 300, className: 'h-auto w-full' }),
                 })
               );
             },
@@ -600,11 +635,11 @@
           ),
           polar: (0, a.jsx)(
             (e) => {
-              let { data: t, labels: l, maxValue: s, title: n } = e,
-                i = (0, r.useRef)(null);
+              let { data: t, labels: l, maxValue: s, title: i } = e,
+                n = (0, r.useRef)(null);
               return (
                 (0, r.useEffect)(() => {
-                  let e = i.current;
+                  let e = n.current;
                   if (!e) return;
                   let a = e.getContext('2d');
                   if (!a) return;
@@ -632,9 +667,9 @@
                       r = d + c * Math.cos(t),
                       s = h + c * Math.sin(t);
                     a.beginPath(), a.moveTo(d, h), a.lineTo(r, s), a.stroke();
-                    let n = d + (c + 20) * Math.cos(t),
-                      i = h + (c + 20) * Math.sin(t);
-                    a.fillText(l[e], n, i);
+                    let i = d + (c + 20) * Math.cos(t),
+                      n = h + (c + 20) * Math.sin(t);
+                    a.fillText(l[e], i, n);
                   }
                   let m = ['#3b82f6', '#ef4444', '#f59e0b', '#10b981', '#8b5cf6', '#ec4899', '#22d3ee'];
                   for (let e = 0; e < f; e++) {
@@ -651,11 +686,11 @@
                       (a.lineWidth = 2),
                       a.stroke();
                   }
-                  n &&
+                  i &&
                     ((a.fillStyle = '#374151'),
                     (a.font = '16px sans-serif'),
                     (a.textAlign = 'center'),
-                    a.fillText(n, d, 30));
+                    a.fillText(i, d, 30));
                   let g = r - 140,
                     b = 40;
                   (a.font = '12px sans-serif'), (a.textAlign = 'left'), (a.textBaseline = 'middle');
@@ -667,11 +702,11 @@
                       (a.fillStyle = '#374151'),
                       a.fillText(l[e], g + 16 + 8, b + 8),
                       (b += 28);
-                }, [t, l, s, n]),
+                }, [t, l, s, i]),
                 (0, a.jsx)('div', {
                   className:
                     'w-full max-w-md rounded-lg border border-neutral-200 p-4 shadow md:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10',
-                  children: (0, a.jsx)('canvas', { ref: i, width: 400, height: 400, className: 'h-auto w-full' }),
+                  children: (0, a.jsx)('canvas', { ref: n, width: 400, height: 400, className: 'h-auto w-full' }),
                 })
               );
             },
@@ -692,10 +727,10 @@
                   let a = e.getContext('2d');
                   if (!a) return;
                   let r = e.width,
-                    n = e.height;
-                  a.clearRect(0, 0, r, n);
-                  let i = Math.max(...t),
-                    o = n - 60 - 40,
+                    i = e.height;
+                  a.clearRect(0, 0, r, i);
+                  let n = Math.max(...t),
+                    o = i - 60 - 40,
                     d = r - 60 - 40;
                   (a.strokeStyle = '#e5e7eb'), (a.lineWidth = 1);
                   for (let e = 0; e <= 5; e++) {
@@ -705,7 +740,7 @@
                   let h = l.length;
                   for (let e = 0; e < h; e++) {
                     let t = 60 + (d / (h - 1)) * e;
-                    a.beginPath(), a.moveTo(t, 40), a.lineTo(t, n - 60), a.stroke();
+                    a.beginPath(), a.moveTo(t, 40), a.lineTo(t, i - 60), a.stroke();
                   }
                   (a.fillStyle = '#374151'),
                     (a.font = '12px sans-serif'),
@@ -713,39 +748,39 @@
                     (a.textBaseline = 'middle');
                   for (let e = 0; e <= 5; e++) {
                     let t = 40 + (o / 5) * e,
-                      l = i - ((i - 0) / 5) * e;
+                      l = n - ((n - 0) / 5) * e;
                     a.fillText(l.toFixed(0), 52, t);
                   }
                   (a.textAlign = 'center'), (a.textBaseline = 'top');
                   for (let e = 0; e < l.length; e++) {
                     let t = 60 + (d / (l.length - 1)) * e;
-                    a.fillText(l[e], t, n - 60 + 6);
+                    a.fillText(l[e], t, i - 60 + 6);
                   }
                   (a.strokeStyle = '#9ca3af'),
                     (a.lineWidth = 2),
                     a.beginPath(),
                     a.moveTo(60, 40),
-                    a.lineTo(60, n - 60),
+                    a.lineTo(60, i - 60),
                     a.stroke(),
                     a.beginPath(),
-                    a.moveTo(60, n - 60),
-                    a.lineTo(r - 40, n - 60),
+                    a.moveTo(60, i - 60),
+                    a.lineTo(r - 40, i - 60),
                     a.stroke(),
                     (a.strokeStyle = '#3b82f6'),
                     (a.lineWidth = 2),
                     a.beginPath(),
                     t.forEach((e, l) => {
                       let r = 60 + (d / (t.length - 1)) * l,
-                        s = 40 + ((i - e) / (i - 0)) * o;
+                        s = 40 + ((n - e) / (n - 0)) * o;
                       0 === l ? a.moveTo(r, s) : a.lineTo(r, s);
                     }),
                     a.stroke(),
                     (a.fillStyle = '#374151'),
                     (a.font = '14px sans-serif'),
                     (a.textAlign = 'center'),
-                    a.fillText('Month', r / 2, n - 10),
+                    a.fillText('Month', r / 2, i - 10),
                     a.save(),
-                    a.translate(16, n / 2),
+                    a.translate(16, i / 2),
                     a.rotate(-Math.PI / 2),
                     a.fillText('Revenue ($)', 0, 0),
                     a.restore();
@@ -769,11 +804,11 @@
           ),
           radar: (0, a.jsx)(
             (e) => {
-              let { data: t, labels: l, maxValue: s, title: n } = e,
-                i = (0, r.useRef)(null);
+              let { data: t, labels: l, maxValue: s, title: i } = e,
+                n = (0, r.useRef)(null);
               return (
                 (0, r.useEffect)(() => {
-                  let e = i.current;
+                  let e = n.current;
                   if (!e) return;
                   let a = e.getContext('2d');
                   if (!a) return;
@@ -808,9 +843,9 @@
                       r = d + c * Math.cos(t),
                       s = h + c * Math.sin(t);
                     a.beginPath(), a.moveTo(d, h), a.lineTo(r, s), a.stroke();
-                    let n = d + (c + 20) * Math.cos(t),
-                      i = h + (c + 20) * Math.sin(t);
-                    a.fillText(l[e], n, i);
+                    let i = d + (c + 20) * Math.cos(t),
+                      n = h + (c + 20) * Math.sin(t);
+                    a.fillText(l[e], i, n);
                   }
                   (a.strokeStyle = '#3b82f6'),
                     (a.fillStyle = 'rgba(59, 130, 246, 0.4)'),
@@ -820,22 +855,22 @@
                     let l = c * ((t[e] - 0) / (u - 0)),
                       r = e * x - Math.PI / 2,
                       s = d + l * Math.cos(r),
-                      n = h + l * Math.sin(r);
-                    0 === e ? a.moveTo(s, n) : a.lineTo(s, n);
+                      i = h + l * Math.sin(r);
+                    0 === e ? a.moveTo(s, i) : a.lineTo(s, i);
                   }
                   a.closePath(), a.fill(), a.stroke(), (a.fillStyle = '#1e40af');
                   for (let e = 0; e < f; e++) {
                     let l = c * ((t[e] - 0) / (u - 0)),
                       r = e * x - Math.PI / 2,
                       s = d + l * Math.cos(r),
-                      n = h + l * Math.sin(r);
-                    a.beginPath(), a.arc(s, n, 4, 0, 2 * Math.PI), a.fill();
+                      i = h + l * Math.sin(r);
+                    a.beginPath(), a.arc(s, i, 4, 0, 2 * Math.PI), a.fill();
                   }
-                  n &&
+                  i &&
                     ((a.fillStyle = '#374151'),
                     (a.font = '16px sans-serif'),
                     (a.textAlign = 'center'),
-                    a.fillText(n, d, 30));
+                    a.fillText(i, d, 30));
                   let m = r - 140;
                   (a.fillStyle = '#3b82f6'),
                     a.beginPath(),
@@ -846,11 +881,11 @@
                     (a.textAlign = 'left'),
                     (a.textBaseline = 'middle'),
                     a.fillText('Dataset 1', m + 16 + 8, 48);
-                }, [t, l, s, n]),
+                }, [t, l, s, i]),
                 (0, a.jsx)('div', {
                   className:
                     'w-full max-w-md rounded-lg border border-neutral-200 p-4 shadow md:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10',
-                  children: (0, a.jsx)('canvas', { ref: i, width: 400, height: 400, className: 'h-auto w-full' }),
+                  children: (0, a.jsx)('canvas', { ref: n, width: 400, height: 400, className: 'h-auto w-full' }),
                 })
               );
             },
@@ -866,8 +901,8 @@
                   data: t = [],
                   xLabel: l = 'X Axis',
                   yLabel: s = 'Y Axis',
-                  title: n = 'Scatter Chart',
-                  pointColor: i = '#3b82f6',
+                  title: i = 'Scatter Chart',
+                  pointColor: n = '#3b82f6',
                 } = e,
                 o = (0, r.useRef)(null);
               return (
@@ -921,7 +956,7 @@
                       l = f + ((x - f) / 5) * e;
                     a.fillText(l.toFixed(2), t, d - 70 + 6);
                   }
-                  (a.fillStyle = i),
+                  (a.fillStyle = n),
                     t.forEach((e) => {
                       let { x: t, y: l } = e;
                       a.beginPath(),
@@ -937,9 +972,9 @@
                     a.rotate(-Math.PI / 2),
                     a.fillText(s, 0, 0),
                     a.restore(),
-                    a.fillText(n, r / 2, 30);
+                    a.fillText(i, r / 2, 30);
                   let p = r - 150;
-                  (a.fillStyle = i),
+                  (a.fillStyle = n),
                     a.beginPath(),
                     a.arc(p + 8, 48, 8, 0, 2 * Math.PI),
                     a.fill(),
@@ -948,7 +983,7 @@
                     (a.textAlign = 'left'),
                     (a.textBaseline = 'middle'),
                     a.fillText('Data Points', p + 16 + 8, 48);
-                }, [t, l, s, n, i]),
+                }, [t, l, s, i, n]),
                 (0, a.jsx)('div', {
                   className:
                     'w-full max-w-md rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
@@ -1051,7 +1086,7 @@
                                     className: 'flex flex-col gap-y-4 md:gap-y-8',
                                     children: c.map((e) => {
                                       var t, l;
-                                      let { id: r = '', name: s = '', code: i = '' } = e;
+                                      let { id: r = '', name: s = '', code: n = '' } = e;
                                       return (0, a.jsxs)(
                                         'div',
                                         {
@@ -1061,11 +1096,11 @@
                                               className: 'text-2xl font-bold capitalize',
                                               children: [null != (t = x[r]) ? t : '', ' ', s],
                                             }),
-                                            (0, a.jsx)(n, {
+                                            (0, a.jsx)(i, {
                                               id: r,
                                               emoji: null != (l = x[r]) ? l : '',
                                               name: s,
-                                              code: i,
+                                              code: n,
                                               chart: g[s],
                                             }),
                                           ],
@@ -1082,7 +1117,7 @@
                     }),
                   ],
                 }),
-                (0, a.jsx)(i.w, { title: 'atomic/charts' }),
+                (0, a.jsx)(n.w, { title: 'atomic/charts' }),
               ],
             }),
           ],

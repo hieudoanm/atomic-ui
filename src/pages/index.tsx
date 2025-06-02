@@ -22,7 +22,8 @@ const HomePage: NextPage = () => {
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
                 {[
                   { id: 'charts', href: '/charts', name: 'Charts', shortName: 'Charts' },
-                  { id: 'hooks', href: '/hooks', name: 'React Hooks', shortName: 'Hooks' },
+                  { id: 'react-context', href: '/react/contexts', name: 'React Contexts', shortName: 'React Contexts' },
+                  { id: 'react-hooks', href: '/react/hooks', name: 'React Hooks', shortName: 'React Hooks' },
                   { id: 'icons', href: '/icons', name: 'SVG Icons', shortName: 'Icons' },
                   { id: 'templates', href: '/templates', name: 'Page Templates', shortName: 'Templates' },
                   { id: 'ui', href: '/ui', name: 'UI Components', shortName: 'UI' },

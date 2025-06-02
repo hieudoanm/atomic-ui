@@ -9,9 +9,8 @@ import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { useState } from 'react';
 
-const NODE_ENV = process.env.NODE_ENV ?? 'development';
-const devPath = NODE_ENV === 'development' ? '../../../..' : '../../..';
-const __dirname = join(dirname(__filename), devPath);
+const DEV_PATH = '../../../..';
+const __dirname = join(dirname(__filename), DEV_PATH);
 
 type Hook = {
   id: string;
@@ -31,7 +30,7 @@ const HooksPage: NextPage<{ hooks: Hook[] }> = ({ hooks = [] }) => {
   return (
     <div className="flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
       <Navbar
-        links={NAVBAR_LINKS.filter(({ id }) => id !== 'hooks')}
+        links={NAVBAR_LINKS.filter(({ id }) => id !== 'react-hooks')}
         title="atomic/hooks"
         query={query}
         setState={setState}
