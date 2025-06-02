@@ -1,7 +1,7 @@
 import { Footer } from '@atomic/components/Footer';
 import { Hero } from '@atomic/components/Hero';
 import { Navbar } from '@atomic/components/Navbar';
-import { Preview } from '@atomic/components/Preview';
+import { Preview } from '@atomic/components/CodePreview';
 import { NAVBAR_LINKS } from '@atomic/constants';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -181,8 +181,8 @@ export const getStaticProps = () => {
     { path: 'auth/sign-in', emoji: '🔓', name: 'Sign In' },
     { path: 'auth/sign-up', emoji: '📝', name: 'Sign Up' },
     { path: 'button/button', emoji: '🔘', name: 'Button' },
-    { path: 'button/button-icon', emoji: '🖱️', name: 'Icon Button' },
-    { path: 'button/button-dropdown', emoji: '🔽', name: 'Dropdown' },
+    { path: 'button/button-icon', emoji: '🖱️', name: 'Button Icon' },
+    { path: 'button/button-dropdown', emoji: '🔽', name: 'Button Dropdown' },
     { path: 'button/button-group', emoji: '👆', name: 'Button Group' },
     { path: 'data/list', emoji: '📋', name: 'List' },
     { path: 'data/stats', emoji: '📊', name: 'Stats' },

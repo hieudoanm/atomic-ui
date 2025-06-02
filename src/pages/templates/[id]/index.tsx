@@ -1,7 +1,7 @@
 import { Footer } from '@atomic/components/Footer';
 import { Hero } from '@atomic/components/Hero';
 import { Navbar } from '@atomic/components/Navbar';
-import { Preview } from '@atomic/components/Preview';
+import { Preview } from '@atomic/components/CodePreview';
 import { NAVBAR_LINKS } from '@atomic/constants';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { readFileSync } from 'node:fs';

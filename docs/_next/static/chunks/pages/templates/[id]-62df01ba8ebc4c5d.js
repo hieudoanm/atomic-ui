@@ -136,7 +136,7 @@
         l = a(6453),
         r = a(8604),
         n = a(767),
-        d = a(5196),
+        d = a(7921),
         i = a(1461),
         c = !0;
       let o = (e) => {
@@ -204,83 +204,27 @@
         },
       ]);
     },
-    5196: (e, t, a) => {
+    3719: (e, t, a) => {
       'use strict';
-      a.d(t, { l: () => i });
+      a.d(t, { C: () => n });
       var s = a(5640),
-        l = a(8809),
-        r = a(148),
-        n = a(5031);
-      let d = (e) => {
-          let { code: t, lang: a } = e,
-            [l, d] = (0, r.useState)('');
-          return (
-            (0, r.useEffect)(() => {
-              (async () => {
-                d(await (0, n.Yz)(t, { lang: a, theme: 'github-dark' }));
-              })();
-            }),
-            (0, s.jsx)('div', {
-              dangerouslySetInnerHTML: { __html: l },
-              className: 'w-full overflow-x-auto bg-neutral-900 p-4',
-            })
-          );
-        },
-        i = (e) => {
-          let { id: t = '', emoji: a = '', group: n = '', name: i = '', code: c = '', codeOnly: o = !1 } = e,
-            [u, x] = (0, r.useState)(''),
-            [h, m] = (0, r.useState)(!0);
-          return (
-            (0, r.useEffect)(() => {
-              x((0, l.A)(window).sanitize(c));
-            }, [c]),
-            (0, s.jsxs)('div', {
-              id: t,
-              className: 'flex flex-col gap-y-4 md:gap-y-8',
-              children: [
-                (0, s.jsxs)('div', {
-                  className: 'flex items-center justify-between gap-x-2',
-                  children: [
-                    (0, s.jsxs)('div', {
-                      className: 'flex items-center gap-x-2',
-                      children: [
-                        (0, s.jsx)('span', { className: 'text-4xl', children: a }),
-                        (0, s.jsxs)('div', {
-                          children: [
-                            (0, s.jsx)('p', { className: 'text-xs capitalize', children: n }),
-                            (0, s.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: i }),
-                          ],
-                        }),
-                      ],
-                    }),
-                    !o &&
-                      (0, s.jsx)('button', {
-                        type: 'button',
-                        className:
-                          'cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10',
-                        onClick: () => m((e) => !e),
-                        children: h ? 'Preview' : 'Code',
-                      }),
-                  ],
-                }),
-                (0, s.jsx)('div', {
-                  className:
-                    'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-                  children: o
-                    ? (0, s.jsx)(d, { code: c, lang: 'tsx' })
-                    : (0, s.jsx)(s.Fragment, {
-                        children: h
-                          ? (0, s.jsx)('div', {
-                              className: 'w-full p-4 md:p-8',
-                              dangerouslySetInnerHTML: { __html: u },
-                            })
-                          : (0, s.jsx)(d, { code: c, lang: 'html' }),
-                      }),
-                }),
-              ],
-            })
-          );
-        };
+        l = a(148),
+        r = a(5031);
+      let n = (e) => {
+        let { code: t, lang: a } = e,
+          [n, d] = (0, l.useState)('');
+        return (
+          (0, l.useEffect)(() => {
+            (async () => {
+              d(await (0, r.Yz)(t, { lang: a, theme: 'github-dark' }));
+            })();
+          }),
+          (0, s.jsx)('div', {
+            dangerouslySetInnerHTML: { __html: n },
+            className: 'w-full overflow-x-auto bg-neutral-900 p-4',
+          })
+        );
+      };
     },
     6453: (e, t, a) => {
       'use strict';
@@ -295,6 +239,66 @@
             children: ['\xa9 ', new Date().getFullYear(), ' ⚛️ ', (0, s.jsx)('strong', { children: t })],
           }),
         });
+      };
+    },
+    7921: (e, t, a) => {
+      'use strict';
+      a.d(t, { l: () => d });
+      var s = a(5640),
+        l = a(8809),
+        r = a(148),
+        n = a(3719);
+      let d = (e) => {
+        let { id: t = '', emoji: a = '', group: d = '', name: i = '', code: c = '', codeOnly: o = !1 } = e,
+          [u, x] = (0, r.useState)(''),
+          [h, m] = (0, r.useState)(!0);
+        return (
+          (0, r.useEffect)(() => {
+            x((0, l.A)(window).sanitize(c));
+          }, [c]),
+          (0, s.jsxs)('div', {
+            id: t,
+            className: 'flex flex-col gap-y-4 md:gap-y-8',
+            children: [
+              (0, s.jsxs)('div', {
+                className: 'flex items-center justify-between gap-x-2',
+                children: [
+                  (0, s.jsxs)('div', {
+                    className: 'flex items-center gap-x-2',
+                    children: [
+                      (0, s.jsx)('span', { className: 'text-4xl', children: a }),
+                      (0, s.jsxs)('div', {
+                        children: [
+                          (0, s.jsx)('p', { className: 'text-xs capitalize', children: d }),
+                          (0, s.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: i }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  !o &&
+                    (0, s.jsx)('button', {
+                      type: 'button',
+                      className:
+                        'cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10',
+                      onClick: () => m((e) => !e),
+                      children: h ? 'Preview' : 'Code',
+                    }),
+                ],
+              }),
+              (0, s.jsx)('div', {
+                className:
+                  'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+                children: o
+                  ? (0, s.jsx)(n.C, { code: c, lang: 'tsx' })
+                  : (0, s.jsx)(s.Fragment, {
+                      children: h
+                        ? (0, s.jsx)('div', { className: 'w-full p-4 md:p-8', dangerouslySetInnerHTML: { __html: u } })
+                        : (0, s.jsx)(n.C, { code: c, lang: 'html' }),
+                    }),
+              }),
+            ],
+          })
+        );
       };
     },
     8604: (e, t, a) => {

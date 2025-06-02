@@ -5,12 +5,12 @@
     __routerFilterDynamic: { numItems: t, errorRate: 1e-4, numBits: t, numHashes: null, bitArray: [] },
     '/': [s, 'static/chunks/pages/index-38a6c8ba03c826ba.js'],
     '/_error': ['static/chunks/pages/_error-6ee6de26e6bc46a7.js'],
-    '/charts': [s, 'static/chunks/pages/charts-82549058f9061c1a.js'],
-    '/hooks': [s, e, a, 'static/chunks/pages/hooks-bd6703e65ff1dc7d.js'],
+    '/charts': [s, a, 'static/chunks/pages/charts-a68b7ad7d59bb65c.js'],
+    '/hooks': [s, e, a, 'static/chunks/pages/hooks-9b47cd4e07f6f9b2.js'],
     '/icons': [s, e, 'static/chunks/pages/icons-e9d89c91b4582043.js'],
     '/templates': [s, e, 'static/chunks/pages/templates-2d26211b4b3f9d04.js'],
-    '/templates/[id]': [s, e, a, 'static/chunks/pages/templates/[id]-38f71ab57ac6c516.js'],
-    '/ui': [s, e, a, 'static/chunks/pages/ui-daffe7a3df7cb8d5.js'],
+    '/templates/[id]': [s, e, a, 'static/chunks/pages/templates/[id]-62df01ba8ebc4c5d.js'],
+    '/ui': [s, e, a, 'static/chunks/pages/ui-52158e734063cb43.js'],
     sortedPages: ['/', '/_app', '/_error', '/charts', '/hooks', '/icons', '/templates', '/templates/[id]', '/ui'],
   };
 })(

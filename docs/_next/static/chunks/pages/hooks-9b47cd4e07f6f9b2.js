@@ -148,83 +148,27 @@
         },
       ]);
     },
-    5196: (e, t, a) => {
+    3719: (e, t, a) => {
       'use strict';
-      a.d(t, { l: () => c });
+      a.d(t, { C: () => d });
       var s = a(5640),
-        l = a(8809),
-        r = a(148),
-        d = a(5031);
-      let n = (e) => {
-          let { code: t, lang: a } = e,
-            [l, n] = (0, r.useState)('');
-          return (
-            (0, r.useEffect)(() => {
-              (async () => {
-                n(await (0, d.Yz)(t, { lang: a, theme: 'github-dark' }));
-              })();
-            }),
-            (0, s.jsx)('div', {
-              dangerouslySetInnerHTML: { __html: l },
-              className: 'w-full overflow-x-auto bg-neutral-900 p-4',
-            })
-          );
-        },
-        c = (e) => {
-          let { id: t = '', emoji: a = '', group: d = '', name: c = '', code: i = '', codeOnly: o = !1 } = e,
-            [x, u] = (0, r.useState)(''),
-            [h, m] = (0, r.useState)(!0);
-          return (
-            (0, r.useEffect)(() => {
-              u((0, l.A)(window).sanitize(i));
-            }, [i]),
-            (0, s.jsxs)('div', {
-              id: t,
-              className: 'flex flex-col gap-y-4 md:gap-y-8',
-              children: [
-                (0, s.jsxs)('div', {
-                  className: 'flex items-center justify-between gap-x-2',
-                  children: [
-                    (0, s.jsxs)('div', {
-                      className: 'flex items-center gap-x-2',
-                      children: [
-                        (0, s.jsx)('span', { className: 'text-4xl', children: a }),
-                        (0, s.jsxs)('div', {
-                          children: [
-                            (0, s.jsx)('p', { className: 'text-xs capitalize', children: d }),
-                            (0, s.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: c }),
-                          ],
-                        }),
-                      ],
-                    }),
-                    !o &&
-                      (0, s.jsx)('button', {
-                        type: 'button',
-                        className:
-                          'cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10',
-                        onClick: () => m((e) => !e),
-                        children: h ? 'Preview' : 'Code',
-                      }),
-                  ],
-                }),
-                (0, s.jsx)('div', {
-                  className:
-                    'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-                  children: o
-                    ? (0, s.jsx)(n, { code: i, lang: 'tsx' })
-                    : (0, s.jsx)(s.Fragment, {
-                        children: h
-                          ? (0, s.jsx)('div', {
-                              className: 'w-full p-4 md:p-8',
-                              dangerouslySetInnerHTML: { __html: x },
-                            })
-                          : (0, s.jsx)(n, { code: i, lang: 'html' }),
-                      }),
-                }),
-              ],
-            })
-          );
-        };
+        l = a(148),
+        r = a(5031);
+      let d = (e) => {
+        let { code: t, lang: a } = e,
+          [d, n] = (0, l.useState)('');
+        return (
+          (0, l.useEffect)(() => {
+            (async () => {
+              n(await (0, r.Yz)(t, { lang: a, theme: 'github-dark' }));
+            })();
+          }),
+          (0, s.jsx)('div', {
+            dangerouslySetInnerHTML: { __html: d },
+            className: 'w-full overflow-x-auto bg-neutral-900 p-4',
+          })
+        );
+      };
     },
     6453: (e, t, a) => {
       'use strict';
@@ -241,6 +185,66 @@
         });
       };
     },
+    7921: (e, t, a) => {
+      'use strict';
+      a.d(t, { l: () => n });
+      var s = a(5640),
+        l = a(8809),
+        r = a(148),
+        d = a(3719);
+      let n = (e) => {
+        let { id: t = '', emoji: a = '', group: n = '', name: c = '', code: i = '', codeOnly: o = !1 } = e,
+          [x, u] = (0, r.useState)(''),
+          [h, m] = (0, r.useState)(!0);
+        return (
+          (0, r.useEffect)(() => {
+            u((0, l.A)(window).sanitize(i));
+          }, [i]),
+          (0, s.jsxs)('div', {
+            id: t,
+            className: 'flex flex-col gap-y-4 md:gap-y-8',
+            children: [
+              (0, s.jsxs)('div', {
+                className: 'flex items-center justify-between gap-x-2',
+                children: [
+                  (0, s.jsxs)('div', {
+                    className: 'flex items-center gap-x-2',
+                    children: [
+                      (0, s.jsx)('span', { className: 'text-4xl', children: a }),
+                      (0, s.jsxs)('div', {
+                        children: [
+                          (0, s.jsx)('p', { className: 'text-xs capitalize', children: n }),
+                          (0, s.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: c }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  !o &&
+                    (0, s.jsx)('button', {
+                      type: 'button',
+                      className:
+                        'cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10',
+                      onClick: () => m((e) => !e),
+                      children: h ? 'Preview' : 'Code',
+                    }),
+                ],
+              }),
+              (0, s.jsx)('div', {
+                className:
+                  'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+                children: o
+                  ? (0, s.jsx)(d.C, { code: i, lang: 'tsx' })
+                  : (0, s.jsx)(s.Fragment, {
+                      children: h
+                        ? (0, s.jsx)('div', { className: 'w-full p-4 md:p-8', dangerouslySetInnerHTML: { __html: x } })
+                        : (0, s.jsx)(d.C, { code: i, lang: 'html' }),
+                    }),
+              }),
+            ],
+          })
+        );
+      };
+    },
     8079: (e, t, a) => {
       'use strict';
       a.r(t), a.d(t, { __N_SSG: () => u, default: () => h });
@@ -248,7 +252,7 @@
         l = a(6453),
         r = a(8604),
         d = a(767),
-        n = a(5196),
+        n = a(7921),
         c = a(1461),
         i = a(6826),
         o = a.n(i),

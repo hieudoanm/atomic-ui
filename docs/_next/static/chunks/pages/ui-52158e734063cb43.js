@@ -140,83 +140,27 @@
         { id: 'ui', href: '/ui', text: 'ui' },
       ];
     },
-    5196: (e, a, s) => {
+    3719: (e, a, s) => {
       'use strict';
-      s.d(a, { l: () => i });
+      s.d(a, { C: () => d });
       var l = s(5640),
-        t = s(8809),
-        r = s(148),
-        d = s(5031);
-      let n = (e) => {
-          let { code: a, lang: s } = e,
-            [t, n] = (0, r.useState)('');
-          return (
-            (0, r.useEffect)(() => {
-              (async () => {
-                n(await (0, d.Yz)(a, { lang: s, theme: 'github-dark' }));
-              })();
-            }),
-            (0, l.jsx)('div', {
-              dangerouslySetInnerHTML: { __html: t },
-              className: 'w-full overflow-x-auto bg-neutral-900 p-4',
-            })
-          );
-        },
-        i = (e) => {
-          let { id: a = '', emoji: s = '', group: d = '', name: i = '', code: c = '', codeOnly: o = !1 } = e,
-            [x, u] = (0, r.useState)(''),
-            [h, m] = (0, r.useState)(!0);
-          return (
-            (0, r.useEffect)(() => {
-              u((0, t.A)(window).sanitize(c));
-            }, [c]),
-            (0, l.jsxs)('div', {
-              id: a,
-              className: 'flex flex-col gap-y-4 md:gap-y-8',
-              children: [
-                (0, l.jsxs)('div', {
-                  className: 'flex items-center justify-between gap-x-2',
-                  children: [
-                    (0, l.jsxs)('div', {
-                      className: 'flex items-center gap-x-2',
-                      children: [
-                        (0, l.jsx)('span', { className: 'text-4xl', children: s }),
-                        (0, l.jsxs)('div', {
-                          children: [
-                            (0, l.jsx)('p', { className: 'text-xs capitalize', children: d }),
-                            (0, l.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: i }),
-                          ],
-                        }),
-                      ],
-                    }),
-                    !o &&
-                      (0, l.jsx)('button', {
-                        type: 'button',
-                        className:
-                          'cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10',
-                        onClick: () => m((e) => !e),
-                        children: h ? 'Preview' : 'Code',
-                      }),
-                  ],
-                }),
-                (0, l.jsx)('div', {
-                  className:
-                    'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-                  children: o
-                    ? (0, l.jsx)(n, { code: c, lang: 'tsx' })
-                    : (0, l.jsx)(l.Fragment, {
-                        children: h
-                          ? (0, l.jsx)('div', {
-                              className: 'w-full p-4 md:p-8',
-                              dangerouslySetInnerHTML: { __html: x },
-                            })
-                          : (0, l.jsx)(n, { code: c, lang: 'html' }),
-                      }),
-                }),
-              ],
-            })
-          );
-        };
+        t = s(148),
+        r = s(5031);
+      let d = (e) => {
+        let { code: a, lang: s } = e,
+          [d, n] = (0, t.useState)('');
+        return (
+          (0, t.useEffect)(() => {
+            (async () => {
+              n(await (0, r.Yz)(a, { lang: s, theme: 'github-dark' }));
+            })();
+          }),
+          (0, l.jsx)('div', {
+            dangerouslySetInnerHTML: { __html: d },
+            className: 'w-full overflow-x-auto bg-neutral-900 p-4',
+          })
+        );
+      };
     },
     6453: (e, a, s) => {
       'use strict';
@@ -240,6 +184,66 @@
           return s(8797);
         },
       ]);
+    },
+    7921: (e, a, s) => {
+      'use strict';
+      s.d(a, { l: () => n });
+      var l = s(5640),
+        t = s(8809),
+        r = s(148),
+        d = s(3719);
+      let n = (e) => {
+        let { id: a = '', emoji: s = '', group: n = '', name: i = '', code: c = '', codeOnly: o = !1 } = e,
+          [x, u] = (0, r.useState)(''),
+          [h, m] = (0, r.useState)(!0);
+        return (
+          (0, r.useEffect)(() => {
+            u((0, t.A)(window).sanitize(c));
+          }, [c]),
+          (0, l.jsxs)('div', {
+            id: a,
+            className: 'flex flex-col gap-y-4 md:gap-y-8',
+            children: [
+              (0, l.jsxs)('div', {
+                className: 'flex items-center justify-between gap-x-2',
+                children: [
+                  (0, l.jsxs)('div', {
+                    className: 'flex items-center gap-x-2',
+                    children: [
+                      (0, l.jsx)('span', { className: 'text-4xl', children: s }),
+                      (0, l.jsxs)('div', {
+                        children: [
+                          (0, l.jsx)('p', { className: 'text-xs capitalize', children: n }),
+                          (0, l.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: i }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  !o &&
+                    (0, l.jsx)('button', {
+                      type: 'button',
+                      className:
+                        'cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10',
+                      onClick: () => m((e) => !e),
+                      children: h ? 'Preview' : 'Code',
+                    }),
+                ],
+              }),
+              (0, l.jsx)('div', {
+                className:
+                  'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+                children: o
+                  ? (0, l.jsx)(d.C, { code: c, lang: 'tsx' })
+                  : (0, l.jsx)(l.Fragment, {
+                      children: h
+                        ? (0, l.jsx)('div', { className: 'w-full p-4 md:p-8', dangerouslySetInnerHTML: { __html: x } })
+                        : (0, l.jsx)(d.C, { code: c, lang: 'html' }),
+                    }),
+              }),
+            ],
+          })
+        );
+      };
     },
     8604: (e, a, s) => {
       'use strict';
@@ -296,7 +300,7 @@
         t = s(6453),
         r = s(8604),
         d = s(767),
-        n = s(5196),
+        n = s(7921),
         i = s(1461),
         c = s(6826),
         o = s.n(c),
