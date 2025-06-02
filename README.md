@@ -8,6 +8,7 @@
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Code](#code)
+    - [Charts](#charts)
     - [React Hooks](#react-hooks)
     - [SVG Icons](#svg-icons)
     - [Page Templates](#page-templates)
@@ -33,6 +34,19 @@ Browse the website for the components/hooks you need, copy the code and paste it
 ## Code
 
 Status: `In Progress` - `Completed`
+
+### Charts
+
+| No  | Name           | Status      |
+| --- | -------------- | ----------- |
+| 1   | Area           | In Progress |
+| 2   | Bar            | In Progress |
+| 3   | Bubble         | In Progress |
+| 4   | Doughnut / Pie | In Progress |
+| 5   | Line           | In Progress |
+| 6   | Polar Area     | In Progress |
+| 7   | Radar          | In Progress |
+| 8   | Scatter        | In Progress |
 
 ### React Hooks
 
@@ -67,58 +81,62 @@ Status: `In Progress` - `Completed`
 
 | No  | Group No | Group Name | Component            | Status      |
 | --- | -------- | ---------- | -------------------- | ----------- |
-| 01  | 1.01     | Button     | Button               | Completed   |
-| 02  | 1.02     | Button     | Button Group         | Completed   |
-| 03  | 1.03     | Button     | Button - Dropdown    | Completed   |
-| 04  | 1.04     | Button     | Icon Button          | Completed   |
-| 05  | 2.01     | Data       | List                 | Completed   |
-| 06  | 2.02     | Data       | Stats                | Completed   |
-| 07  | 2.03     | Data       | Table                | Completed   |
-| 08  | 2.04     | Data       | Tooltip              | Completed   |
-| 09  | 2.05     | Feedback   | Alert                | Completed   |
-| 10  | 2.06     | Feedback   | Badge                | Completed   |
-| 11  | 2.07     | Feedback   | Loading              | Completed   |
-| 12  | 2.08     | Feedback   | Progress             | Completed   |
-| 13  | 2.09     | Feedback   | Skeleton             | Completed   |
-| 14  | 2.10     | Feedback   | Toast                | Completed   |
-| 15  | 3.01     | Form       | Calendar             | Completed   |
-| 16  | 3.02     | Form       | Checkbox             | Completed   |
-| 17  | 3.03     | Form       | Input                | Completed   |
-| 18  | 3.04     | Form       | Radio                | Completed   |
-| 19  | 3.05     | Form       | Range                | Completed   |
-| 20  | 3.06     | Form       | Select               | Completed   |
-| 21  | 3.07     | Form       | Textarea             | Completed   |
-| 22  | 3.08     | Form       | Toggle               | Completed   |
-| 23  | 4.01     | Layout     | Accordian            | Completed   |
-| 24  | 4.02     | Layout     | Card                 | Completed   |
-| 25  | 4.03     | Layout     | Collapse             | Completed   |
-| 26  | 4.04     | Layout     | Divider              | Completed   |
-| 27  | 4.05     | Layout     | Drawer               | In Progress |
-| 28  | 4.06     | Layout     | Footer               | Completed   |
-| 29  | 4.07     | Layout     | Hero                 | Completed   |
-| 30  | 4.08     | Layout     | Modal                | Completed   |
-| 31  | 5.01     | Marketing  | CTA (Call to Action) | Completed   |
-| 32  | 5.02     | Marketing  | Features             | Completed   |
-| 33  | 5.03     | Marketing  | Pricing              | Completed   |
-| 34  | 5.04     | Marketing  | Testimonials         | Completed   |
-| 35  | 6.01     | Media      | Avatar               | Completed   |
-| 36  | 6.02     | Media      | Carousel             | Completed   |
-| 37  | 6.03     | Media      | Diff                 | In Progress |
-| 38  | 6.04     | Media      | File                 | Completed   |
-| 39  | 7.01     | Mockup     | Browser              | Completed   |
-| 40  | 7.02     | Mockup     | Phone                | Completed   |
-| 41  | 7.03     | Mockup     | Terminal             | Completed   |
-| 42  | 7.04     | Mockup     | Window               | Completed   |
-| 43  | 8.01     | Navigation | Breadcrumbs          | Completed   |
-| 44  | 8.02     | Navigation | Menu                 | Completed   |
-| 45  | 8.03     | Navigation | Navbar               | Completed   |
-| 46  | 8.04     | Navigation | Pagination           | Completed   |
-| 47  | 8.05     | Navigation | Steps                | Completed   |
-| 48  | 8.06     | Navigation | Tabs                 | Completed   |
-| 49  | 9.01     | Typography | Code                 | Completed   |
-| 50  | 9.02     | Typography | KBD (Keyboard)       | Completed   |
-| 51  | 9.03     | Typography | Heading              | Completed   |
-| 52  | 9.04     | Typography | Text                 | Completed   |
+| 01  | 01.01    | Auth       | Sign In              | Completed   |
+| 02  | 01.02    | Auth       | Sign Up              | Completed   |
+| 03  | 01.03    | Auth       | Forget Password      | Completed   |
+| 04  | 01.04    | Auth       | Reset Password       | Completed   |
+| 05  | 02.01    | Button     | Button               | Completed   |
+| 06  | 02.02    | Button     | Button Group         | Completed   |
+| 07  | 02.03    | Button     | Button - Dropdown    | Completed   |
+| 08  | 02.04    | Button     | Icon Button          | Completed   |
+| 09  | 03.01    | Data       | List                 | Completed   |
+| 10  | 03.02    | Data       | Stats                | Completed   |
+| 11  | 03.03    | Data       | Table                | Completed   |
+| 12  | 03.04    | Data       | Tooltip              | Completed   |
+| 13  | 03.05    | Feedback   | Alert                | Completed   |
+| 14  | 03.06    | Feedback   | Badge                | Completed   |
+| 15  | 03.07    | Feedback   | Loading              | Completed   |
+| 16  | 03.08    | Feedback   | Progress             | Completed   |
+| 17  | 03.09    | Feedback   | Skeleton             | Completed   |
+| 18  | 03.10    | Feedback   | Toast                | Completed   |
+| 19  | 04.01    | Form       | Calendar             | Completed   |
+| 20  | 04.02    | Form       | Checkbox             | Completed   |
+| 21  | 04.03    | Form       | Input                | Completed   |
+| 22  | 04.04    | Form       | Radio                | Completed   |
+| 23  | 04.05    | Form       | Range                | Completed   |
+| 24  | 04.06    | Form       | Select               | Completed   |
+| 25  | 04.07    | Form       | Textarea             | Completed   |
+| 26  | 04.08    | Form       | Toggle               | Completed   |
+| 27  | 05.01    | Layout     | Accordian            | Completed   |
+| 28  | 05.02    | Layout     | Card                 | Completed   |
+| 29  | 05.03    | Layout     | Collapse             | Completed   |
+| 30  | 05.04    | Layout     | Divider              | Completed   |
+| 31  | 05.05    | Layout     | Drawer               | In Progress |
+| 32  | 05.06    | Layout     | Footer               | Completed   |
+| 33  | 05.07    | Layout     | Hero                 | Completed   |
+| 34  | 05.08    | Layout     | Modal                | Completed   |
+| 35  | 06.01    | Marketing  | CTA (Call to Action) | Completed   |
+| 36  | 06.02    | Marketing  | Features             | Completed   |
+| 37  | 06.03    | Marketing  | Pricing              | Completed   |
+| 38  | 06.04    | Marketing  | Testimonials         | Completed   |
+| 39  | 07.01    | Media      | Avatar               | Completed   |
+| 40  | 07.02    | Media      | Carousel             | Completed   |
+| 41  | 07.03    | Media      | Diff                 | In Progress |
+| 42  | 07.04    | Media      | File                 | Completed   |
+| 43  | 08.01    | Mockup     | Browser              | Completed   |
+| 44  | 08.02    | Mockup     | Phone                | Completed   |
+| 45  | 08.03    | Mockup     | Terminal             | Completed   |
+| 46  | 08.04    | Mockup     | Window               | Completed   |
+| 47  | 09.01    | Navigation | Breadcrumbs          | Completed   |
+| 48  | 09.02    | Navigation | Menu                 | Completed   |
+| 49  | 09.03    | Navigation | Navbar               | Completed   |
+| 50  | 09.04    | Navigation | Pagination           | Completed   |
+| 51  | 09.05    | Navigation | Steps                | Completed   |
+| 52  | 09.06    | Navigation | Tabs                 | Completed   |
+| 53  | 10.01    | Typography | Code                 | Completed   |
+| 54  | 10.02    | Typography | KBD (Keyboard)       | Completed   |
+| 55  | 10.03    | Typography | Heading              | Completed   |
+| 56  | 10.04    | Typography | Text                 | Completed   |
 
 ### Inspired By
 
@@ -153,7 +171,7 @@ Status: `In Progress` - `Completed`
 
 ## Roadmap
 
-- [ ] Add more Components from 38 to 52
+- [ ] Add more Components from 50 to 52
 - [ ] Add Comments
 
 ## Contributing

@@ -176,10 +176,14 @@ const UIPage: NextPage<{ components: Component[] }> = ({ components = [] }) => {
 
 export const getStaticProps = () => {
   const components = [
+    { path: 'auth/password-forget', emoji: '🧠', name: 'Forget Password' },
+    { path: 'auth/password-reset', emoji: '🔁', name: 'Reset Password' },
+    { path: 'auth/sign-in', emoji: '🔓', name: 'Sign In' },
+    { path: 'auth/sign-up', emoji: '📝', name: 'Sign Up' },
     { path: 'button/button', emoji: '🔘', name: 'Button' },
+    { path: 'button/button-icon', emoji: '🖱️', name: 'Icon Button' },
+    { path: 'button/button-dropdown', emoji: '🔽', name: 'Dropdown' },
     { path: 'button/button-group', emoji: '👆', name: 'Button Group' },
-    { path: 'button/dropdown', emoji: '🔽', name: 'Dropdown' },
-    { path: 'button/icon-button', emoji: '🖱️', name: 'Icon Button' },
     { path: 'data/list', emoji: '📋', name: 'List' },
     { path: 'data/stats', emoji: '📊', name: 'Stats' },
     { path: 'data/table', emoji: '📈', name: 'Table' },

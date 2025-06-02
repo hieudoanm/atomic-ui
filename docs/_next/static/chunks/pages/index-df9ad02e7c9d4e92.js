@@ -108,7 +108,7 @@
                       }),
                     ],
                   }),
-                  i &&
+                  !i &&
                     (0, s.jsx)('div', {
                       className: 'block md:hidden',
                       children: (0, s.jsx)('input', {

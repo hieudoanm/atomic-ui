@@ -512,6 +512,9 @@
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
   }
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
+  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -1484,6 +1487,9 @@
   @media (hover: hover) {
     .hover\:border-neutral-400:hover {
       border-color: var(--color-neutral-400);
+    }
+    .hover\:bg-blue-700:hover {
+      background-color: var(--color-blue-700);
     }
     .hover\:bg-neutral-50:hover {
       background-color: var(--color-neutral-50);

@@ -71,7 +71,7 @@ export const Navbar: FC<{
               </label>
             </div>
           </div>
-          {disabledSearch && (
+          {!disabledSearch && (
             <div className="block md:hidden">
               <input
                 type="text"
