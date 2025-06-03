@@ -9,15 +9,68 @@
         },
       ]);
     },
-    767: (a, e, n) => {
+    3286: (a, e, n) => {
       'use strict';
-      n.d(e, { F: () => c });
-      var i = n(5640),
-        o = n(148);
-      let r = () => {
-        let [a, e] = (0, o.useState)(!1);
+      n.d(e, { U: () => f });
+      var i = n(5640);
+      let o = (a) => {
+          let { title: e = '' } = a;
+          return (0, i.jsx)('footer', {
+            className: 'border-t border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+            children: (0, i.jsxs)('div', {
+              className: 'container mx-auto px-8 py-4',
+              children: ['\xa9 ', new Date().getFullYear(), ' ⚛️ ', (0, i.jsx)('strong', { children: e })],
+            }),
+          });
+        },
+        r = (a) => {
+          let { title: e = '', subtitle: n = '', description: o = '', features: r = [] } = a;
+          return (0, i.jsx)('section', {
+            className: 'py-8 md:py-16',
+            children: (0, i.jsx)('div', {
+              className: 'container mx-auto flex flex-col items-center justify-center gap-y-4 px-8',
+              children: (0, i.jsxs)('div', {
+                className: 'flex w-full max-w-lg flex-col gap-y-4 text-center md:gap-y-8',
+                children: [
+                  (0, i.jsxs)('header', {
+                    className: 'flex flex-col gap-y-1',
+                    children: [
+                      (0, i.jsxs)('h1', { className: 'text-4xl font-black whitespace-nowrap', children: ['⚛️ ', e] }),
+                      (0, i.jsx)('h5', {
+                        className: 'text-base font-medium text-neutral-700 md:text-lg dark:text-neutral-300',
+                        children: n,
+                      }),
+                    ],
+                  }),
+                  (0, i.jsxs)('p', {
+                    className: 'text-neutral-900 dark:text-neutral-100',
+                    children: [
+                      (0, i.jsx)('code', {
+                        className:
+                          'mr-1 rounded bg-neutral-900 px-1 py-0.5 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900',
+                        children: e,
+                      }),
+                      (0, i.jsx)('span', { children: o }),
+                    ],
+                  }),
+                  r.length > 0 &&
+                    (0, i.jsx)('div', {
+                      className:
+                        'flex flex-col justify-center gap-x-6 text-sm font-black text-neutral-900 md:flex-row dark:text-neutral-100',
+                      children: r.map((a) =>
+                        (0, i.jsxs)('p', { className: 'whitespace-nowrap', children: ['\uD83D\uDD2E ', a] }, a)
+                      ),
+                    }),
+                ],
+              }),
+            }),
+          });
+        };
+      var t = n(148);
+      let l = () => {
+        let [a, e] = (0, t.useState)(!1);
         return (
-          (0, o.useEffect)(() => {
+          (0, t.useEffect)(() => {
             'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), e(!0));
           }, []),
           {
@@ -35,270 +88,196 @@
           }
         );
       };
-      var t = n(1668),
-        l = n.n(t),
-        s = n(6826),
-        g = n.n(s);
-      let c = (a) => {
-        let { title: e = '', links: n = [], query: o = '', setState: t, disabledSearch: s = !1 } = a,
-          { darkMode: c = !1, toggleDarkMode: m } = r();
-        return (0, i.jsxs)(i.Fragment, {
-          children: [
-            (0, i.jsx)(l(), { children: (0, i.jsx)('title', { children: e }) }),
-            (0, i.jsx)('nav', {
-              className: 'border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-              children: (0, i.jsxs)('div', {
-                className: 'container mx-auto flex flex-col gap-y-2 px-8 py-4',
-                children: [
-                  (0, i.jsxs)('div', {
-                    className: 'flex items-center justify-between gap-x-4',
-                    children: [
-                      (0, i.jsx)('div', {
-                        className: 'inline-block md:hidden',
-                        children: (0, i.jsxs)('div', {
-                          className: 'group relative inline-block text-left',
-                          children: [
-                            (0, i.jsx)('button', {
-                              type: 'button',
-                              className:
-                                'inline-flex items-center justify-center gap-1 rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 shadow-sm hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800',
-                              children: (0, i.jsx)('svg', {
-                                xmlns: 'http://www.w3.org/2000/svg',
-                                viewBox: '0 0 448 512',
-                                className: 'w-4',
-                                fill: 'currentColor',
-                                children: (0, i.jsx)('path', {
-                                  d: 'M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z',
+      var s = n(1668),
+        g = n.n(s),
+        c = n(6826),
+        m = n.n(c);
+      let h = (a) => {
+          let { title: e = '', links: n = [], query: o = '', setState: r, disabledSearch: t = !1 } = a,
+            { darkMode: s = !1, toggleDarkMode: c } = l();
+          return (0, i.jsxs)(i.Fragment, {
+            children: [
+              (0, i.jsx)(g(), { children: (0, i.jsx)('title', { children: e }) }),
+              (0, i.jsx)('nav', {
+                className: 'border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+                children: (0, i.jsxs)('div', {
+                  className: 'container mx-auto flex flex-col gap-y-2 px-8 py-4',
+                  children: [
+                    (0, i.jsxs)('div', {
+                      className: 'flex items-center justify-between gap-x-4',
+                      children: [
+                        (0, i.jsx)('div', {
+                          className: 'inline-block md:hidden',
+                          children: (0, i.jsxs)('div', {
+                            className: 'group relative inline-block text-left',
+                            children: [
+                              (0, i.jsx)('button', {
+                                type: 'button',
+                                className:
+                                  'inline-flex items-center justify-center gap-1 rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 shadow-sm hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800',
+                                children: (0, i.jsx)('svg', {
+                                  xmlns: 'http://www.w3.org/2000/svg',
+                                  viewBox: '0 0 448 512',
+                                  className: 'w-4',
+                                  fill: 'currentColor',
+                                  children: (0, i.jsx)('path', {
+                                    d: 'M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z',
+                                  }),
                                 }),
                               }),
-                            }),
+                              (0, i.jsxs)('div', {
+                                className:
+                                  'invisible absolute left-0 z-50 mt-2 w-40 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100',
+                                children: [
+                                  n.map((a) => {
+                                    let { id: e = '', href: n = '', emoji: o = '', text: r = '' } = a;
+                                    return (0, i.jsxs)(
+                                      m(),
+                                      {
+                                        href: n,
+                                        className:
+                                          'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
+                                        children: [o, ' ', r],
+                                      },
+                                      e
+                                    );
+                                  }),
+                                  (0, i.jsx)(m(), {
+                                    href: 'https://github.com/hieudoanm/atomic',
+                                    target: '_blank',
+                                    className: 'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
+                                    children: '\uD83D\uDC19 github',
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                        }),
+                        (0, i.jsx)('div', {
+                          className: 'flex items-center gap-x-4',
+                          children: (0, i.jsx)(m(), {
+                            href: '/',
+                            className: 'truncate text-lg font-bold md:text-xl',
+                            children: e,
+                          }),
+                        }),
+                        (0, i.jsxs)('div', {
+                          className: 'flex items-center gap-x-2 md:gap-x-4',
+                          children: [
                             (0, i.jsxs)('div', {
-                              className:
-                                'invisible absolute left-0 z-50 mt-2 w-40 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100',
+                              className: 'hidden items-center gap-x-2 md:flex md:gap-x-4',
                               children: [
                                 n.map((a) => {
                                   let { id: e = '', href: n = '', emoji: o = '', text: r = '' } = a;
                                   return (0, i.jsxs)(
-                                    g(),
-                                    {
-                                      href: n,
-                                      className:
-                                        'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
-                                      children: [o, ' ', r],
-                                    },
+                                    m(),
+                                    { href: n, className: 'text-sm md:text-base', children: [o, ' ', r] },
                                     e
                                   );
                                 }),
-                                (0, i.jsx)(g(), {
+                                (0, i.jsx)(m(), {
                                   href: 'https://github.com/hieudoanm/atomic',
                                   target: '_blank',
-                                  className: 'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
+                                  className: 'text-sm md:text-base',
                                   children: '\uD83D\uDC19 github',
+                                }),
+                              ],
+                            }),
+                            (0, i.jsxs)('label', {
+                              className:
+                                'relative block h-8 w-14 rounded-full bg-neutral-200 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-purple-500 dark:bg-neutral-800 dark:has-checked:bg-purple-700',
+                              'aria-label': 'Toggle dark mode',
+                              children: [
+                                (0, i.jsx)('input', {
+                                  type: 'checkbox',
+                                  checked: s,
+                                  className: 'peer sr-only',
+                                  onChange: () => {
+                                    c();
+                                  },
+                                }),
+                                (0, i.jsx)('span', {
+                                  className:
+                                    'absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-white transition-[inset-inline-start] peer-checked:start-6 dark:bg-neutral-900',
                                 }),
                               ],
                             }),
                           ],
                         }),
-                      }),
-                      (0, i.jsx)('div', {
-                        className: 'flex items-center gap-x-4',
-                        children: (0, i.jsx)(g(), {
-                          href: '/',
-                          className: 'truncate text-lg font-bold md:text-xl',
-                          children: e,
-                        }),
-                      }),
-                      (0, i.jsxs)('div', {
-                        className: 'flex items-center gap-x-2 md:gap-x-4',
-                        children: [
-                          (0, i.jsxs)('div', {
-                            className: 'hidden items-center gap-x-2 md:flex md:gap-x-4',
-                            children: [
-                              n.map((a) => {
-                                let { id: e = '', href: n = '', emoji: o = '', text: r = '' } = a;
-                                return (0, i.jsxs)(
-                                  g(),
-                                  { href: n, className: 'text-sm md:text-base', children: [o, ' ', r] },
-                                  e
-                                );
-                              }),
-                              (0, i.jsx)(g(), {
-                                href: 'https://github.com/hieudoanm/atomic',
-                                target: '_blank',
-                                className: 'text-sm md:text-base',
-                                children: '\uD83D\uDC19 github',
-                              }),
-                            ],
-                          }),
-                          (0, i.jsxs)('label', {
-                            className:
-                              'relative block h-8 w-14 rounded-full bg-neutral-200 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-purple-500 dark:bg-neutral-800 dark:has-checked:bg-purple-700',
-                            'aria-label': 'Toggle dark mode',
-                            children: [
-                              (0, i.jsx)('input', {
-                                type: 'checkbox',
-                                checked: c,
-                                className: 'peer sr-only',
-                                onChange: () => {
-                                  m();
-                                },
-                              }),
-                              (0, i.jsx)('span', {
-                                className:
-                                  'absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-white transition-[inset-inline-start] peer-checked:start-6 dark:bg-neutral-900',
-                              }),
-                            ],
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                  !s &&
-                    (0, i.jsx)('input', {
-                      type: 'text',
-                      placeholder: 'Search',
-                      value: o,
-                      className:
-                        'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
-                      onChange: (a) => {
-                        t((e) => ({ ...e, query: a.target.value }));
-                      },
+                      ],
                     }),
+                    !t &&
+                      (0, i.jsx)('input', {
+                        type: 'text',
+                        placeholder: 'Search',
+                        value: o,
+                        className:
+                          'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
+                        onChange: (a) => {
+                          r((e) => ({ ...e, query: a.target.value }));
+                        },
+                      }),
+                  ],
+                }),
+              }),
+            ],
+          });
+        },
+        d = [
+          { id: 'components-charts', emoji: '\uD83D\uDCCA', href: '/components/charts', text: 'charts' },
+          { id: 'components-ui', emoji: '\uD83C\uDFA8', href: '/components/ui', text: 'ui' },
+          { id: 'react-contexts', emoji: '\uD83D\uDD17', href: '/react/contexts', text: 'contexts' },
+          { id: 'react-hooks', emoji: '\uD83E\uDE9D', href: '/react/hooks', text: 'hooks' },
+          { id: 'visual-emojis', emoji: '\uD83D\uDE04', href: '/visual/emojis', text: 'emojis' },
+          { id: 'visual-icons', emoji: '\uD83D\uDDBC️', href: '/visual/icons', text: 'icons' },
+          { id: 'templates', emoji: '\uD83D\uDCDD', href: '/templates', text: 'templates' },
+          { id: 'utils', emoji: '\uD83E\uDDF0', href: '/utils', text: 'utils' },
+        ],
+        f = (a) => {
+          let {
+            disabledSearch: e = !1,
+            query: n = '',
+            setState: t = () => {},
+            id: l = '',
+            emoji: s = '',
+            title: g = '',
+            subtitle: c = '',
+            description: m = '',
+            features: f = [],
+            children: u = (0, i.jsx)(i.Fragment, {}),
+          } = a;
+          return (0, i.jsxs)('div', {
+            className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
+            children: [
+              (0, i.jsx)(h, {
+                disabledSearch: e,
+                links: d.filter((a) => {
+                  let { id: e = '' } = a;
+                  return l !== e;
+                }),
+                title: ''.concat(s, ' ').concat(g),
+                query: n,
+                setState: t,
+              }),
+              (0, i.jsxs)('div', {
+                className: 'grow overflow-auto',
+                children: [
+                  (0, i.jsxs)('main', {
+                    className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
+                    children: [(0, i.jsx)(r, { title: g, subtitle: c, description: m, features: f }), u],
+                  }),
+                  (0, i.jsx)(o, { title: g }),
                 ],
               }),
-            }),
-          ],
-        });
-      };
-    },
-    1461: (a, e, n) => {
-      'use strict';
-      n.d(e, { l: () => i });
-      let i = [
-        { id: 'components-charts', emoji: '\uD83D\uDCCA', href: '/components/charts', text: 'charts' },
-        { id: 'components-ui', emoji: '\uD83C\uDFA8', href: '/components/ui', text: 'ui' },
-        { id: 'react-contexts', emoji: '\uD83D\uDD17', href: '/react/contexts', text: 'contexts' },
-        { id: 'react-hooks', emoji: '\uD83E\uDE9D', href: '/react/hooks', text: 'hooks' },
-        { id: 'visual-emojis', emoji: '\uD83D\uDE04', href: '/visual/emojis', text: 'emojis' },
-        { id: 'visual-icons', emoji: '\uD83D\uDDBC️', href: '/visual/icons', text: 'icons' },
-        { id: 'templates', emoji: '\uD83D\uDCDD', href: '/templates', text: 'templates' },
-        { id: 'utils', emoji: '\uD83E\uDDF0', href: '/utils', text: 'utils' },
-      ];
-    },
-    6453: (a, e, n) => {
-      'use strict';
-      n.d(e, { w: () => o });
-      var i = n(5640);
-      let o = (a) => {
-        let { title: e = '' } = a;
-        return (0, i.jsx)('footer', {
-          className: 'border-t border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-          children: (0, i.jsxs)('div', {
-            className: 'container mx-auto px-8 py-4',
-            children: ['\xa9 ', new Date().getFullYear(), ' ⚛️ ', (0, i.jsx)('strong', { children: e })],
-          }),
-        });
-      };
-    },
-    8546: (a, e, n) => {
-      'use strict';
-      n.d(e, { U: () => s });
-      var i = n(5640),
-        o = n(6453),
-        r = n(8604),
-        t = n(767),
-        l = n(1461);
-      let s = (a) => {
-        let {
-          query: e = '',
-          setState: n = () => {},
-          id: s = '',
-          emoji: g = '',
-          title: c = '',
-          subtitle: m = '',
-          description: h = '',
-          features: d = [],
-          children: f = (0, i.jsx)(i.Fragment, {}),
-        } = a;
-        return (0, i.jsxs)('div', {
-          className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
-          children: [
-            (0, i.jsx)(t.F, {
-              links: l.l.filter((a) => {
-                let { id: e = '' } = a;
-                return s !== e;
-              }),
-              title: ''.concat(g, ' ').concat(c),
-              query: e,
-              setState: n,
-            }),
-            (0, i.jsxs)('div', {
-              className: 'grow overflow-auto',
-              children: [
-                (0, i.jsxs)('main', {
-                  className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                  children: [(0, i.jsx)(r.l, { title: c, subtitle: m, description: h, features: d }), f],
-                }),
-                (0, i.jsx)(o.w, { title: c }),
-              ],
-            }),
-          ],
-        });
-      };
-    },
-    8604: (a, e, n) => {
-      'use strict';
-      n.d(e, { l: () => o });
-      var i = n(5640);
-      let o = (a) => {
-        let { title: e = '', subtitle: n = '', description: o = '', features: r = [] } = a;
-        return (0, i.jsx)('section', {
-          className: 'py-8 md:py-16',
-          children: (0, i.jsx)('div', {
-            className: 'container mx-auto flex flex-col items-center justify-center gap-y-4 px-8',
-            children: (0, i.jsxs)('div', {
-              className: 'flex w-full max-w-lg flex-col gap-y-4 text-center md:gap-y-8',
-              children: [
-                (0, i.jsxs)('header', {
-                  className: 'flex flex-col gap-y-1',
-                  children: [
-                    (0, i.jsxs)('h1', { className: 'text-4xl font-black whitespace-nowrap', children: ['⚛️ ', e] }),
-                    (0, i.jsx)('h5', {
-                      className: 'text-base font-medium text-neutral-700 md:text-lg dark:text-neutral-300',
-                      children: n,
-                    }),
-                  ],
-                }),
-                (0, i.jsxs)('p', {
-                  className: 'text-neutral-900 dark:text-neutral-100',
-                  children: [
-                    (0, i.jsx)('code', {
-                      className:
-                        'mr-1 rounded bg-neutral-900 px-1 py-0.5 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900',
-                      children: e,
-                    }),
-                    (0, i.jsx)('span', { children: o }),
-                  ],
-                }),
-                r.length > 0 &&
-                  (0, i.jsx)('div', {
-                    className:
-                      'flex flex-col justify-center gap-x-6 text-sm font-black text-neutral-900 md:flex-row dark:text-neutral-100',
-                    children: r.map((a) =>
-                      (0, i.jsxs)('p', { className: 'whitespace-nowrap', children: ['\uD83D\uDD2E ', a] }, a)
-                    ),
-                  }),
-              ],
-            }),
-          }),
-        });
-      };
+            ],
+          });
+        };
     },
     8802: (a, e, n) => {
       'use strict';
       n.r(e), n.d(e, { default: () => l });
       var i = n(5640),
-        o = n(8546),
+        o = n(3286),
         r = n(148);
       let t = Object.entries({
           'grinning face': '\uD83D\uDE00',

@@ -1,6 +1,11 @@
 import { createContext, ReactNode, useContext, useMemo, useState } from 'react';
 
-type NotificationType = 'info' | 'success' | 'error' | 'warning';
+export enum NotificationType {
+  Info = 'info',
+  Success = 'success',
+  Warning = 'warning',
+  Error = 'error',
+}
 
 interface Notification {
   id: string;

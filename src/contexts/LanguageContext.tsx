@@ -1,6 +1,38 @@
-import { createContext, useContext, useState, ReactNode, useMemo } from 'react';
+import { createContext, ReactNode, useContext, useMemo, useState } from 'react';
 
-type Language = 'en' | 'vi'; // extend with other supported languages
+export enum Language {
+  English = 'en',
+  Spanish = 'es',
+  French = 'fr',
+  German = 'de',
+  Italian = 'it',
+  Portuguese = 'pt',
+  Russian = 'ru',
+  ChineseSimplified = 'zh',
+  ChineseTraditional = 'zh-TW',
+  Japanese = 'ja',
+  Korean = 'ko',
+  Arabic = 'ar',
+  Hindi = 'hi',
+  Vietnamese = 'vi',
+  Dutch = 'nl',
+  Greek = 'el',
+  Turkish = 'tr',
+  Polish = 'pl',
+  Hebrew = 'he',
+  Swedish = 'sv',
+  Danish = 'da',
+  Norwegian = 'no',
+  Finnish = 'fi',
+  Thai = 'th',
+  Indonesian = 'id',
+  Malay = 'ms',
+  Czech = 'cs',
+  Hungarian = 'hu',
+  Romanian = 'ro',
+  Ukrainian = 'uk',
+  Persian = 'fa',
+}
 
 interface LanguageContextProps {
   language: Language;
@@ -10,7 +42,7 @@ interface LanguageContextProps {
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>(Language.English);
 
   const value = useMemo(() => ({ language, setLanguage }), [language]);
 
