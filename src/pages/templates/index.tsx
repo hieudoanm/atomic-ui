@@ -1,8 +1,5 @@
-import { Footer } from '@atomic/components/Footer';
-import { Hero } from '@atomic/components/Hero';
 import { HTMLPreview } from '@atomic/components/HTML';
-import { Navbar } from '@atomic/components/Navbar';
-import { NAVBAR_LINKS } from '@atomic/constants';
+import { PageTemplate } from '@atomic/templates/PageTemplate';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { readdirSync, readFileSync } from 'node:fs';
@@ -18,44 +15,39 @@ type TemplateType = { id: string; name: string; code: string };
 const TemplatesPage: NextPage<{ templates: TemplateType[] }> = ({ templates = [] }) => {
   const [{ query = '' }, setState] = useState<{ query: string }>({ query: '' });
 
+  const filteredTemplates = templates.filter(({ id, name }) => {
+    return id.toLowerCase().includes(query.toLowerCase()) || name.toLowerCase().includes(query.toLowerCase());
+  });
+
   return (
-    <div className="flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
-      <Navbar
-        links={NAVBAR_LINKS.filter(({ id }) => id !== 'templates')}
-        title="atomic/templates"
-        query={query}
-        setState={setState}
-      />
-      <div className="grow overflow-auto">
-        <main className="divide-y divide-neutral-200 dark:divide-neutral-800">
-          <Hero
-            title="atomic/templates"
-            subtitle="Free and Open Source Web/App Templates"
-            description="are responsive, professionally designed web and app templates created for SaaS platforms and marketing landing pages."
-            features={['Copy / Paste', 'Pure TailwindCSS', 'UI Components']}
-          />
-          <section className="py-4 md:py-8">
-            <div className="container mx-auto px-8">
-              <div className="flex flex-col gap-y-4 md:gap-y-8">
-                {templates.map(({ id = '', name = '', code }) => {
-                  return (
-                    <Link key={id} href={`/templates/${id}`}>
-                      <div className="flex flex-col gap-y-4 md:gap-y-8">
-                        <h2 className="text-2xl font-bold capitalize">📝 {name}</h2>
-                        <div className="h-128 overflow-hidden rounded-lg border border-neutral-200 p-4 shadow md:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10">
-                          <HTMLPreview code={code} />
-                        </div>
-                      </div>
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          </section>
-        </main>
-        <Footer title="atomic/templates" />
-      </div>
-    </div>
+    <PageTemplate
+      query={query}
+      setState={setState}
+      id="templates"
+      emoji="📝"
+      title="atomic/templates"
+      subtitle="Free and Open Source Web/App Templates"
+      description="are responsive, professionally designed web and app templates created for SaaS platforms and marketing landing pages."
+      features={['Copy / Paste', 'Pure TailwindCSS', 'UI Components']}>
+      <section className="py-4 md:py-8">
+        <div className="container mx-auto px-8">
+          <div className="flex flex-col gap-y-4 md:gap-y-8">
+            {filteredTemplates.map(({ id = '', name = '', code }) => {
+              return (
+                <Link key={id} href={`/templates/${id}`}>
+                  <div className="flex flex-col gap-y-4 md:gap-y-8">
+                    <h2 className="text-2xl font-bold capitalize">📝 {name}</h2>
+                    <div className="h-128 overflow-hidden rounded-lg border border-neutral-200 p-4 shadow md:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10">
+                      <HTMLPreview code={code} />
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </PageTemplate>
   );
 };
 

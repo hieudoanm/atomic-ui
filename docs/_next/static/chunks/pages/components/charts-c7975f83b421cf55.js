@@ -94,10 +94,10 @@
                       }),
                       (0, a.jsx)('div', {
                         className: 'flex items-center gap-x-4',
-                        children: (0, a.jsxs)(d(), {
+                        children: (0, a.jsx)(d(), {
                           href: '/',
-                          className: 'text-lg font-bold md:text-xl',
-                          children: ['⚛️ ', t],
+                          className: 'truncate text-lg font-bold md:text-xl',
+                          children: t,
                         }),
                       }),
                       (0, a.jsxs)('div', {
@@ -165,7 +165,7 @@
     },
     1283: (e, t, l) => {
       'use strict';
-      l.r(t), l.d(t, { __N_SSG: () => b, default: () => p });
+      l.r(t), l.d(t, { __N_SSG: () => u, default: () => m });
       var a = l(5640),
         r = l(148),
         s = l(3719);
@@ -210,13 +210,10 @@
           ],
         });
       };
-      var n = l(6453),
-        o = l(8604),
-        d = l(767),
-        h = l(1461),
-        c = l(6826),
-        f = l.n(c);
-      let x = {
+      var n = l(8546),
+        o = l(6826),
+        d = l.n(o);
+      let h = {
           line: '\uD83D\uDCC8',
           bar: '\uD83D\uDCCA',
           pie: '\uD83E\uDD67',
@@ -234,9 +231,9 @@
           gauge: '⏱️',
           funnel: '⏬',
         },
-        u = [120, 180, 150, 200, 250, 300, 220],
-        m = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-        g = {
+        c = [120, 180, 150, 200, 250, 300, 220],
+        f = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        x = {
           area: (0, a.jsx)(
             (e) => {
               let { data: t = [], labels: l = [] } = e,
@@ -326,7 +323,7 @@
                 })
               );
             },
-            { data: u, labels: m }
+            { data: c, labels: f }
           ),
           bar: (0, a.jsx)(
             (e) => {
@@ -411,7 +408,7 @@
                 })
               );
             },
-            { data: u, labels: m }
+            { data: c, labels: f }
           ),
           bubble: (0, a.jsx)(
             (e) => {
@@ -758,7 +755,7 @@
                 })
               );
             },
-            { data: u, labels: m }
+            { data: c, labels: f }
           ),
           radar: (0, a.jsx)(
             (e) => {
@@ -963,122 +960,101 @@
             }
           ),
         };
-      var b = !0;
-      let p = (e) => {
+      var u = !0;
+      let m = (e) => {
         let { charts: t = [] } = e,
           [{ query: l = '' }, s] = (0, r.useState)({ query: '' }),
-          c = t.filter((e) => {
+          o = t.filter((e) => {
             let { id: t, name: a } = e;
             return t.toLowerCase().includes(l.toLowerCase()) || a.toLowerCase().includes(l.toLowerCase());
           });
-        return (0, a.jsxs)('div', {
-          className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
-          children: [
-            (0, a.jsx)(d.F, {
-              links: h.l.filter((e) => {
-                let { id: t } = e;
-                return 'charts' !== t;
-              }),
-              title: 'atomic/charts',
-              query: l,
-              setState: s,
-            }),
-            (0, a.jsxs)('div', {
-              className: 'grow overflow-auto',
-              children: [
-                (0, a.jsxs)('main', {
-                  className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                  children: [
-                    (0, a.jsx)(o.l, {
-                      title: 'atomic/charts',
-                      subtitle: 'Free and Open Source Charts',
-                      description:
-                        'is a curated set of responsive, customizable charts tailored specifically for SaaS products and marketing websites.',
-                      features: ['Copy / Paste', 'Pure Canvas', 'Pure JavaScript'],
-                    }),
-                    (0, a.jsx)('section', {
-                      className: 'py-4 md:py-8',
-                      children: (0, a.jsx)('div', {
-                        className: 'container mx-auto px-8',
-                        children: (0, a.jsxs)('div', {
-                          className: 'flex flex-col gap-y-4 md:gap-y-8',
-                          children: [
-                            (0, a.jsxs)('h2', {
-                              className: 'text-2xl font-bold',
-                              children: [
-                                (0, a.jsx)('span', { className: 'capitalize', children: 'Charts' }),
-                                ' (',
-                                c.length,
-                                ')',
-                              ],
-                            }),
-                            c.length > 0 &&
-                              (0, a.jsxs)(a.Fragment, {
-                                children: [
-                                  (0, a.jsx)('div', {
-                                    className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4',
-                                    children: c.map((e) => {
-                                      var t;
-                                      let { id: l = '', name: r = '' } = e;
-                                      return (0, a.jsx)(
-                                        f(),
-                                        {
-                                          href: '#'.concat(l),
-                                          children: (0, a.jsx)('div', {
-                                            className: 'col-span-1',
-                                            children: (0, a.jsx)('div', {
-                                              className:
-                                                'flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-                                              children: (0, a.jsxs)('p', {
-                                                className: 'font-semibold capitalize',
-                                                children: [null != (t = x[l]) ? t : '', ' ', r],
-                                              }),
-                                            }),
-                                          }),
-                                        },
-                                        l
-                                      );
+        return (0, a.jsx)(n.U, {
+          query: l,
+          setState: s,
+          id: 'components-charts',
+          emoji: '\uD83D\uDCCA',
+          title: 'atomic/charts',
+          subtitle: 'Free and Open Source Charts',
+          description:
+            'is a curated set of responsive, customizable charts tailored specifically for SaaS products and marketing websites.',
+          features: ['Copy / Paste', 'Pure Canvas', 'Pure JavaScript'],
+          children: (0, a.jsx)('section', {
+            className: 'py-4 md:py-8',
+            children: (0, a.jsx)('div', {
+              className: 'container mx-auto px-8',
+              children: (0, a.jsxs)('div', {
+                className: 'flex flex-col gap-y-4 md:gap-y-8',
+                children: [
+                  (0, a.jsxs)('h2', {
+                    className: 'text-2xl font-bold',
+                    children: [
+                      (0, a.jsx)('span', { className: 'capitalize', children: 'Charts' }),
+                      ' (',
+                      o.length,
+                      ')',
+                    ],
+                  }),
+                  o.length > 0 &&
+                    (0, a.jsxs)(a.Fragment, {
+                      children: [
+                        (0, a.jsx)('div', {
+                          className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4',
+                          children: o.map((e) => {
+                            var t;
+                            let { id: l = '', name: r = '' } = e;
+                            return (0, a.jsx)(
+                              d(),
+                              {
+                                href: '#'.concat(l),
+                                children: (0, a.jsx)('div', {
+                                  className: 'col-span-1',
+                                  children: (0, a.jsx)('div', {
+                                    className:
+                                      'flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+                                    children: (0, a.jsxs)('p', {
+                                      className: 'font-semibold capitalize',
+                                      children: [null != (t = h[l]) ? t : '', ' ', r],
                                     }),
                                   }),
-                                  (0, a.jsx)('div', {
-                                    className: 'flex flex-col gap-y-4 md:gap-y-8',
-                                    children: c.map((e) => {
-                                      var t, l;
-                                      let { id: r = '', name: s = '', code: n = '' } = e;
-                                      return (0, a.jsxs)(
-                                        'div',
-                                        {
-                                          className: 'flex flex-col gap-y-4',
-                                          children: [
-                                            (0, a.jsxs)('h2', {
-                                              className: 'text-2xl font-bold capitalize',
-                                              children: [null != (t = x[r]) ? t : '', ' ', s],
-                                            }),
-                                            (0, a.jsx)(i, {
-                                              id: r,
-                                              emoji: null != (l = x[r]) ? l : '',
-                                              name: s,
-                                              code: n,
-                                              chart: g[s],
-                                            }),
-                                          ],
-                                        },
-                                        r
-                                      );
-                                    }),
+                                }),
+                              },
+                              l
+                            );
+                          }),
+                        }),
+                        (0, a.jsx)('div', {
+                          className: 'flex flex-col gap-y-4 md:gap-y-8',
+                          children: o.map((e) => {
+                            var t, l;
+                            let { id: r = '', name: s = '', code: n = '' } = e;
+                            return (0, a.jsxs)(
+                              'div',
+                              {
+                                className: 'flex flex-col gap-y-4',
+                                children: [
+                                  (0, a.jsxs)('h2', {
+                                    className: 'text-2xl font-bold capitalize',
+                                    children: [null != (t = h[r]) ? t : '', ' ', s],
+                                  }),
+                                  (0, a.jsx)(i, {
+                                    id: r,
+                                    emoji: null != (l = h[r]) ? l : '',
+                                    name: s,
+                                    code: n,
+                                    chart: x[s],
                                   }),
                                 ],
-                              }),
-                          ],
+                              },
+                              r
+                            );
+                          }),
                         }),
-                      }),
+                      ],
                     }),
-                  ],
-                }),
-                (0, a.jsx)(n.w, { title: 'atomic/charts' }),
-              ],
+                ],
+              }),
             }),
-          ],
+          }),
         });
       };
     },
@@ -1140,6 +1116,52 @@
           return l(1283);
         },
       ]);
+    },
+    8546: (e, t, l) => {
+      'use strict';
+      l.d(t, { U: () => o });
+      var a = l(5640),
+        r = l(6453),
+        s = l(8604),
+        i = l(767),
+        n = l(1461);
+      let o = (e) => {
+        let {
+          query: t = '',
+          setState: l = () => {},
+          id: o = '',
+          emoji: d = '',
+          title: h = '',
+          subtitle: c = '',
+          description: f = '',
+          features: x = [],
+          children: u = (0, a.jsx)(a.Fragment, {}),
+        } = e;
+        return (0, a.jsxs)('div', {
+          className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
+          children: [
+            (0, a.jsx)(i.F, {
+              links: n.l.filter((e) => {
+                let { id: t = '' } = e;
+                return o !== t;
+              }),
+              title: ''.concat(d, ' ').concat(h),
+              query: t,
+              setState: l,
+            }),
+            (0, a.jsxs)('div', {
+              className: 'grow overflow-auto',
+              children: [
+                (0, a.jsxs)('main', {
+                  className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
+                  children: [(0, a.jsx)(s.l, { title: h, subtitle: c, description: f, features: x }), u],
+                }),
+                (0, a.jsx)(r.w, { title: h }),
+              ],
+            }),
+          ],
+        });
+      };
     },
     8604: (e, t, l) => {
       'use strict';

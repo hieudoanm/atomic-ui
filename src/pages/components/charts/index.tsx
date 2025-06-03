@@ -7,10 +7,7 @@ import { LineChart } from '@atomic/components/charts/Line';
 import { PolarChart } from '@atomic/components/charts/Polar';
 import { RadarChart } from '@atomic/components/charts/Radar';
 import { ScatterChart } from '@atomic/components/charts/Scatter';
-import { Footer } from '@atomic/components/Footer';
-import { Hero } from '@atomic/components/Hero';
-import { Navbar } from '@atomic/components/Navbar';
-import { NAVBAR_LINKS } from '@atomic/constants';
+import { PageTemplate } from '@atomic/templates/PageTemplate';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { readdirSync, readFileSync } from 'node:fs';
@@ -108,71 +105,62 @@ const ChartsPage: NextPage<{ charts: ChartType[] }> = ({ charts = [] }) => {
   });
 
   return (
-    <div className="flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
-      <Navbar
-        links={NAVBAR_LINKS.filter(({ id }) => id !== 'charts')}
-        title="atomic/charts"
-        query={query}
-        setState={setState}
-      />
-      <div className="grow overflow-auto">
-        <main className="divide-y divide-neutral-200 dark:divide-neutral-800">
-          <Hero
-            title="atomic/charts"
-            subtitle="Free and Open Source Charts"
-            description="is a curated set of responsive, customizable charts tailored specifically for SaaS products and marketing websites."
-            features={['Copy / Paste', 'Pure Canvas', 'Pure JavaScript']}
-          />
-          <section className="py-4 md:py-8">
-            <div className="container mx-auto px-8">
-              <div className="flex flex-col gap-y-4 md:gap-y-8">
-                <h2 className="text-2xl font-bold">
-                  <span className="capitalize">Charts</span> ({filteredCharts.length})
-                </h2>
-                {filteredCharts.length > 0 && (
-                  <>
-                    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
-                      {filteredCharts.map(({ id = '', name = '' }) => {
-                        return (
-                          <Link href={`#${id}`} key={id}>
-                            <div className="col-span-1">
-                              <div className="flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
-                                <p className="font-semibold capitalize">
-                                  {emojis[id] ?? ''} {name}
-                                </p>
-                              </div>
-                            </div>
-                          </Link>
-                        );
-                      })}
-                    </div>
-                    <div className="flex flex-col gap-y-4 md:gap-y-8">
-                      {filteredCharts.map(({ id = '', name = '', code = '' }) => {
-                        return (
-                          <div key={id} className="flex flex-col gap-y-4">
-                            <h2 className="text-2xl font-bold capitalize">
+    <PageTemplate
+      query={query}
+      setState={setState}
+      id="components-charts"
+      emoji="📊"
+      title="atomic/charts"
+      subtitle="Free and Open Source Charts"
+      description="is a curated set of responsive, customizable charts tailored specifically for SaaS products and marketing websites."
+      features={['Copy / Paste', 'Pure Canvas', 'Pure JavaScript']}>
+      <section className="py-4 md:py-8">
+        <div className="container mx-auto px-8">
+          <div className="flex flex-col gap-y-4 md:gap-y-8">
+            <h2 className="text-2xl font-bold">
+              <span className="capitalize">Charts</span> ({filteredCharts.length})
+            </h2>
+            {filteredCharts.length > 0 && (
+              <>
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
+                  {filteredCharts.map(({ id = '', name = '' }) => {
+                    return (
+                      <Link href={`#${id}`} key={id}>
+                        <div className="col-span-1">
+                          <div className="flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+                            <p className="font-semibold capitalize">
                               {emojis[id] ?? ''} {name}
-                            </h2>
-                            <ChartPreview
-                              id={id}
-                              emoji={emojis[id] ?? ''}
-                              name={name}
-                              code={code}
-                              chart={reactCharts[name]}
-                            />
+                            </p>
                           </div>
-                        );
-                      })}
-                    </div>
-                  </>
-                )}
-              </div>
-            </div>
-          </section>
-        </main>
-        <Footer title="atomic/charts" />
-      </div>
-    </div>
+                        </div>
+                      </Link>
+                    );
+                  })}
+                </div>
+                <div className="flex flex-col gap-y-4 md:gap-y-8">
+                  {filteredCharts.map(({ id = '', name = '', code = '' }) => {
+                    return (
+                      <div key={id} className="flex flex-col gap-y-4">
+                        <h2 className="text-2xl font-bold capitalize">
+                          {emojis[id] ?? ''} {name}
+                        </h2>
+                        <ChartPreview
+                          id={id}
+                          emoji={emojis[id] ?? ''}
+                          name={name}
+                          code={code}
+                          chart={reactCharts[name]}
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      </section>
+    </PageTemplate>
   );
 };
 

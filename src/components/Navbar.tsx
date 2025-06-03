@@ -52,8 +52,8 @@ export const Navbar: FC<{
               </div>
             </div>
             <div className="flex items-center gap-x-4">
-              <Link href="/" className="text-lg font-bold md:text-xl">
-                ⚛️ {title}
+              <Link href="/" className="truncate text-lg font-bold md:text-xl">
+                {title}
               </Link>
             </div>
             <div className="flex items-center gap-x-2 md:gap-x-4">

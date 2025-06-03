@@ -8,7 +8,7 @@ import Link from 'next/link';
 const HomePage: NextPage = () => {
   return (
     <div className="flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
-      <Navbar links={NAVBAR_LINKS} title="atomic" query="" setState={() => {}} disabledSearch />
+      <Navbar links={NAVBAR_LINKS} title="⚛️ atomic" query="" setState={() => {}} disabledSearch />
       <div className="grow overflow-auto">
         <main className="divide-y divide-neutral-200 dark:divide-neutral-800">
           <Hero
@@ -28,7 +28,7 @@ const HomePage: NextPage = () => {
                   { id: 'visual-emojis', href: '/visual/emojis', name: 'Emojis', shortName: 'Emojis' },
                   { id: 'visual-icons', href: '/visual/icons', name: 'Icons', shortName: 'Icons' },
                   { id: 'templates', href: '/templates', name: 'Page Templates', shortName: 'Templates' },
-                  { id: 'utils', href: '/utils', name: 'Utilities', shortName: 'Utils' },
+                  { id: 'templates', href: '/utils', name: 'Utilities', shortName: 'Utils' },
                 ].map(({ href = '', name = '', shortName = '' }) => {
                   return (
                     <div key={href} className="col-span-1">

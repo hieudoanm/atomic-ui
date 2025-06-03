@@ -94,10 +94,10 @@
                       }),
                       (0, a.jsx)('div', {
                         className: 'flex items-center gap-x-4',
-                        children: (0, a.jsxs)(d(), {
+                        children: (0, a.jsx)(d(), {
                           href: '/',
-                          className: 'text-lg font-bold md:text-xl',
-                          children: ['⚛️ ', t],
+                          className: 'truncate text-lg font-bold md:text-xl',
+                          children: t,
                         }),
                       }),
                       (0, a.jsxs)('div', {
@@ -165,13 +165,11 @@
     },
     1004: (e, t, r) => {
       'use strict';
-      r.r(t), r.d(t, { __N_SSG: () => x, default: () => h });
+      r.r(t), r.d(t, { __N_SSG: () => d, default: () => o });
       var a = r(5640),
-        s = r(6453),
-        l = r(8604),
-        n = r(148),
-        i = r(8809);
-      let c = (e) => {
+        s = r(148),
+        l = r(8809);
+      let n = (e) => {
           navigator.clipboard
             .writeText(e)
             .then(() => {
@@ -181,19 +179,19 @@
               console.error('Failed to copy: ', e);
             });
         },
-        d = (e) => {
+        i = (e) => {
           let { name: t = '', code: r = '' } = e,
-            [s, l] = (0, n.useState)('');
+            [i, c] = (0, s.useState)('');
           return (
-            (0, n.useEffect)(() => {
-              l((0, i.A)(window).sanitize(r));
+            (0, s.useEffect)(() => {
+              c((0, l.A)(window).sanitize(r));
             }, [r]),
             (0, a.jsx)('button', {
               type: 'button',
               title: t,
               className: 'cursor-pointer',
               onClick: () => {
-                c(r);
+                n(r);
               },
               children: (0, a.jsx)('div', {
                 className:
@@ -201,96 +199,69 @@
                 children: (0, a.jsx)('div', {
                   className:
                     'h-fit w-fit [&>svg]:h-8 [&>svg]:fill-current [&>svg]:text-neutral-900 dark:[&>svg]:text-neutral-100',
-                  dangerouslySetInnerHTML: { __html: s },
+                  dangerouslySetInnerHTML: { __html: i },
                 }),
               }),
             })
           );
         };
-      var o = r(767),
-        u = r(1461),
-        x = !0;
-      let h = (e) => {
+      var c = r(8546),
+        d = !0;
+      let o = (e) => {
         let { icons: t = [] } = e,
-          [{ query: r = '' }, i] = (0, n.useState)({ query: '' }),
-          c = t.filter((e) => {
+          [{ query: r = '' }, l] = (0, s.useState)({ query: '' }),
+          n = t.filter((e) => {
             let { id: t, name: a } = e;
             return t.toLowerCase().includes(r.toLowerCase()) || a.toLowerCase().includes(r.toLowerCase());
           });
-        return (0, a.jsxs)('div', {
-          className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
-          children: [
-            (0, a.jsx)(o.F, {
-              links: u.l.filter((e) => {
-                let { id: t } = e;
-                return 'icons' !== t;
-              }),
-              title: 'atomic/icons',
-              query: r,
-              setState: i,
-            }),
-            (0, a.jsxs)('div', {
-              className: 'grow overflow-auto',
-              children: [
-                (0, a.jsxs)('main', {
-                  className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                  children: [
-                    (0, a.jsx)(l.l, {
-                      title: 'atomic/icons',
-                      subtitle: 'Free and Open Source SVG Icons',
-                      description:
-                        'is a free collection of carefully crafted SVG icons, designed to enhance modern user interfaces with scalable visuals.',
-                      features: ['Copy / Paste', 'Pure SVG', 'Custom Colors'],
-                    }),
-                    (0, a.jsx)('section', {
-                      className: 'py-4 md:py-8',
-                      children: (0, a.jsx)('div', {
-                        className: 'container mx-auto px-8',
-                        children: (0, a.jsxs)('div', {
-                          className: 'flex flex-col gap-y-4 md:gap-y-8',
-                          children: [
-                            (0, a.jsxs)('h2', {
-                              className: 'text-2xl font-bold',
-                              children: [
-                                (0, a.jsx)('span', { className: 'capitalize', children: 'Icons' }),
-                                ' (',
-                                c.length,
-                                ')',
-                              ],
-                            }),
-                            c.length > 0 &&
-                              (0, a.jsx)('div', {
-                                className:
-                                  'grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-6 md:gap-8 lg:grid-cols-8 xl:grid-cols-10',
-                                children: c.map((e) => {
-                                  let { id: t = '', name: r = '', code: s } = e;
-                                  return (0, a.jsxs)(
-                                    'div',
-                                    {
-                                      className: 'col-span-1 flex flex-col gap-y-2',
-                                      children: [
-                                        (0, a.jsx)(d, { name: r, code: s }),
-                                        (0, a.jsx)('p', {
-                                          title: 'name',
-                                          className: 'w-full truncate text-center text-xs',
-                                          children: r,
-                                        }),
-                                      ],
-                                    },
-                                    t
-                                  );
-                                }),
+        return (0, a.jsx)(c.U, {
+          query: r,
+          setState: l,
+          id: 'visual-icons',
+          emoji: '\uD83D\uDDBC️',
+          title: 'atomic/icons',
+          subtitle: 'Free and Open Source SVG Icons',
+          description:
+            'is a free collection of carefully crafted SVG icons, designed to enhance modern user interfaces with scalable visuals.',
+          features: ['Copy / Paste', 'Pure SVG', 'Custom Colors'],
+          children: (0, a.jsx)('section', {
+            className: 'py-4 md:py-8',
+            children: (0, a.jsx)('div', {
+              className: 'container mx-auto px-8',
+              children: (0, a.jsxs)('div', {
+                className: 'flex flex-col gap-y-4 md:gap-y-8',
+                children: [
+                  (0, a.jsxs)('h2', {
+                    className: 'text-2xl font-bold',
+                    children: [(0, a.jsx)('span', { className: 'capitalize', children: 'Icons' }), ' (', n.length, ')'],
+                  }),
+                  n.length > 0 &&
+                    (0, a.jsx)('div', {
+                      className:
+                        'grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-6 md:gap-8 lg:grid-cols-8 xl:grid-cols-10',
+                      children: n.map((e) => {
+                        let { id: t = '', name: r = '', code: s } = e;
+                        return (0, a.jsxs)(
+                          'div',
+                          {
+                            className: 'col-span-1 flex flex-col gap-y-2',
+                            children: [
+                              (0, a.jsx)(i, { name: r, code: s }),
+                              (0, a.jsx)('p', {
+                                title: 'name',
+                                className: 'w-full truncate text-center text-xs',
+                                children: r,
                               }),
-                          ],
-                        }),
+                            ],
+                          },
+                          t
+                        );
                       }),
                     }),
-                  ],
-                }),
-                (0, a.jsx)(s.w, { title: 'atomic/icons' }),
-              ],
+                ],
+              }),
             }),
-          ],
+          }),
         });
       };
     },
@@ -330,6 +301,52 @@
           return r(1004);
         },
       ]);
+    },
+    8546: (e, t, r) => {
+      'use strict';
+      r.d(t, { U: () => c });
+      var a = r(5640),
+        s = r(6453),
+        l = r(8604),
+        n = r(767),
+        i = r(1461);
+      let c = (e) => {
+        let {
+          query: t = '',
+          setState: r = () => {},
+          id: c = '',
+          emoji: d = '',
+          title: o = '',
+          subtitle: u = '',
+          description: x = '',
+          features: h = [],
+          children: m = (0, a.jsx)(a.Fragment, {}),
+        } = e;
+        return (0, a.jsxs)('div', {
+          className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
+          children: [
+            (0, a.jsx)(n.F, {
+              links: i.l.filter((e) => {
+                let { id: t = '' } = e;
+                return c !== t;
+              }),
+              title: ''.concat(d, ' ').concat(o),
+              query: t,
+              setState: r,
+            }),
+            (0, a.jsxs)('div', {
+              className: 'grow overflow-auto',
+              children: [
+                (0, a.jsxs)('main', {
+                  className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
+                  children: [(0, a.jsx)(l.l, { title: o, subtitle: u, description: x, features: h }), m],
+                }),
+                (0, a.jsx)(s.w, { title: o }),
+              ],
+            }),
+          ],
+        });
+      };
     },
     8604: (e, t, r) => {
       'use strict';

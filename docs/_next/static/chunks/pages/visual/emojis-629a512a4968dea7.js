@@ -102,10 +102,10 @@
                       }),
                       (0, i.jsx)('div', {
                         className: 'flex items-center gap-x-4',
-                        children: (0, i.jsxs)(g(), {
+                        children: (0, i.jsx)(g(), {
                           href: '/',
-                          className: 'text-lg font-bold md:text-xl',
-                          children: ['⚛️ ', e],
+                          className: 'truncate text-lg font-bold md:text-xl',
+                          children: e,
                         }),
                       }),
                       (0, i.jsxs)('div', {
@@ -200,6 +200,52 @@
         });
       };
     },
+    8546: (a, e, n) => {
+      'use strict';
+      n.d(e, { U: () => s });
+      var i = n(5640),
+        o = n(6453),
+        r = n(8604),
+        t = n(767),
+        l = n(1461);
+      let s = (a) => {
+        let {
+          query: e = '',
+          setState: n = () => {},
+          id: s = '',
+          emoji: g = '',
+          title: c = '',
+          subtitle: m = '',
+          description: h = '',
+          features: d = [],
+          children: f = (0, i.jsx)(i.Fragment, {}),
+        } = a;
+        return (0, i.jsxs)('div', {
+          className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
+          children: [
+            (0, i.jsx)(t.F, {
+              links: l.l.filter((a) => {
+                let { id: e = '' } = a;
+                return s !== e;
+              }),
+              title: ''.concat(g, ' ').concat(c),
+              query: e,
+              setState: n,
+            }),
+            (0, i.jsxs)('div', {
+              className: 'grow overflow-auto',
+              children: [
+                (0, i.jsxs)('main', {
+                  className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
+                  children: [(0, i.jsx)(r.l, { title: c, subtitle: m, description: h, features: d }), f],
+                }),
+                (0, i.jsx)(o.w, { title: c }),
+              ],
+            }),
+          ],
+        });
+      };
+    },
     8604: (a, e, n) => {
       'use strict';
       n.d(e, { l: () => o });
@@ -250,14 +296,11 @@
     },
     8802: (a, e, n) => {
       'use strict';
-      n.r(e), n.d(e, { default: () => c });
+      n.r(e), n.d(e, { default: () => l });
       var i = n(5640),
-        o = n(6453),
-        r = n(8604),
-        t = n(767),
-        l = n(1461),
-        s = n(148);
-      let g = Object.entries({
+        o = n(8546),
+        r = n(148);
+      let t = Object.entries({
           'grinning face': '\uD83D\uDE00',
           'grinning face with big eyes': '\uD83D\uDE03',
           'grinning face with smiling eyes': '\uD83D\uDE04',
@@ -2172,80 +2215,59 @@
           let [e, n] = a;
           return { name: e, emoji: n };
         }),
-        c = () => {
-          let [{ query: a = '' }, e] = (0, s.useState)({ query: '' }),
-            n = g.filter((e) => {
+        l = () => {
+          let [{ query: a = '' }, e] = (0, r.useState)({ query: '' }),
+            n = t.filter((e) => {
               let { name: n } = e;
               return n.toLowerCase().includes(a.toLowerCase());
             });
-          return (0, i.jsxs)('div', {
-            className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
-            children: [
-              (0, i.jsx)(t.F, {
-                links: l.l.filter((a) => {
-                  let { id: e } = a;
-                  return 'emojis' !== e;
-                }),
-                title: 'atomic/emojis',
-                query: a,
-                setState: e,
-              }),
-              (0, i.jsxs)('div', {
-                className: 'grow overflow-auto',
-                children: [
-                  (0, i.jsxs)('main', {
-                    className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                    children: [
-                      (0, i.jsx)(r.l, {
-                        title: 'atomic/emojis',
-                        subtitle: 'Emojis is the backbone of software development',
-                        description:
-                          'is an easy-to-access, curated collection of diverse emojis to enhance user experience and add personality to your interfaces.',
-                        features: ['Copy / Paste', 'Pure SVG', 'Custom Colors'],
-                      }),
-                      (0, i.jsx)('section', {
-                        className: 'py-4 md:py-8',
-                        children: (0, i.jsx)('div', {
-                          className: 'container mx-auto px-8',
-                          children: (0, i.jsxs)('div', {
-                            className: 'flex flex-col gap-y-4 md:gap-y-8',
-                            children: [
-                              (0, i.jsxs)('h2', {
-                                className: 'text-2xl font-bold',
-                                children: [
-                                  (0, i.jsx)('span', { className: 'capitalize', children: 'Emojis' }),
-                                  ' (',
-                                  n.length,
-                                  ')',
-                                ],
-                              }),
-                              n.length > 0 &&
-                                (0, i.jsx)('div', {
-                                  className: 'flex flex-wrap',
-                                  children: n.map((a) => {
-                                    let { name: e, emoji: n } = a;
-                                    return (0, i.jsx)(
-                                      'button',
-                                      {
-                                        title: e,
-                                        className:
-                                          'cursor-pointer rounded-lg p-2 text-4xl hover:bg-neutral-200 dark:hover:bg-neutral-800',
-                                        children: n,
-                                      },
-                                      n
-                                    );
-                                  }),
-                                }),
-                            ],
-                          }),
+          return (0, i.jsx)(o.U, {
+            query: a,
+            setState: e,
+            id: 'visual-emojis',
+            emoji: '\uD83D\uDE04',
+            title: 'atomic/emojis',
+            subtitle: 'Emojis is the backbone of software development',
+            description:
+              'is an easy-to-access, curated collection of diverse emojis to enhance user experience and add personality to your interfaces.',
+            features: ['Copy / Paste', 'Pure SVG', 'Custom Colors'],
+            children: (0, i.jsx)('section', {
+              className: 'py-4 md:py-8',
+              children: (0, i.jsx)('div', {
+                className: 'container mx-auto px-8',
+                children: (0, i.jsxs)('div', {
+                  className: 'flex flex-col gap-y-4 md:gap-y-8',
+                  children: [
+                    (0, i.jsxs)('h2', {
+                      className: 'text-2xl font-bold',
+                      children: [
+                        (0, i.jsx)('span', { className: 'capitalize', children: 'Emojis' }),
+                        ' (',
+                        n.length,
+                        ')',
+                      ],
+                    }),
+                    n.length > 0 &&
+                      (0, i.jsx)('div', {
+                        className: 'flex flex-wrap',
+                        children: n.map((a) => {
+                          let { name: e, emoji: n } = a;
+                          return (0, i.jsx)(
+                            'button',
+                            {
+                              title: e,
+                              className:
+                                'cursor-pointer rounded-lg p-2 text-4xl hover:bg-neutral-200 dark:hover:bg-neutral-800',
+                              children: n,
+                            },
+                            n
+                          );
                         }),
                       }),
-                    ],
-                  }),
-                  (0, i.jsx)(o.w, { title: 'atomic/icons' }),
-                ],
+                  ],
+                }),
               }),
-            ],
+            }),
           });
         };
     },

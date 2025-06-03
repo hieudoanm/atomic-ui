@@ -1,8 +1,5 @@
 import { CodePreview } from '@atomic/components/CodePreview';
-import { Footer } from '@atomic/components/Footer';
-import { Hero } from '@atomic/components/Hero';
-import { Navbar } from '@atomic/components/Navbar';
-import { NAVBAR_LINKS } from '@atomic/constants';
+import { PageTemplate } from '@atomic/templates/PageTemplate';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -16,33 +13,23 @@ const TemplatePage: NextPage<{ template: TemplateType }> = ({ template = { id: '
   const { id = '', name = '', code = '' } = template;
 
   return (
-    <div className="flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
-      <Navbar
-        links={NAVBAR_LINKS.filter(({ id }) => id !== 'templates')}
-        title="atomic/templates"
-        disabledSearch
-        query={''}
-        setState={() => {}}
-      />
-      <div className="grow overflow-auto">
-        <main className="divide-y divide-neutral-200 dark:divide-neutral-800">
-          <Hero
-            title="atomic/templates"
-            subtitle="Free and Open Source Web/App Templates"
-            description="are responsive, professionally designed web and app templates created for SaaS platforms and marketing landing pages."
-            features={['Copy / Paste', 'Pure TailwindCSS', 'UI Components']}
-          />
-        </main>
-        <section className="py-4 md:py-8">
-          <div className="container mx-auto px-8">
-            <div className="flex flex-col gap-y-4 md:gap-y-8">
-              <CodePreview id={id} emoji={'📝'} group="Template" name={name} code={code} />
-            </div>
+    <PageTemplate
+      query={''}
+      setState={() => {}}
+      id="templates"
+      emoji="📝"
+      title="atomic/templates"
+      subtitle="Free and Open Source Web/App Templates"
+      description="are responsive, professionally designed web and app templates created for SaaS platforms and marketing landing pages."
+      features={['Copy / Paste', 'Pure TailwindCSS', 'UI Components']}>
+      <section className="py-4 md:py-8">
+        <div className="container mx-auto px-8">
+          <div className="flex flex-col gap-y-4 md:gap-y-8">
+            <CodePreview id={id} emoji={'📝'} group="Template" name={name} code={code} />
           </div>
-        </section>
-        <Footer title="atomic/templates" />
-      </div>
-    </div>
+        </div>
+      </section>
+    </PageTemplate>
   );
 };
 
