@@ -33,7 +33,7 @@ const IconsPage: NextPage<{ icons: IconType[] }> = ({ icons = [] }) => {
           <Hero
             title="atomic/icons"
             subtitle="Free and Open Source SVG Icons"
-            description="is a free collection of carefully designed SVG icons crafted for modern interfaces. It provides a flexible and scalable set of visual assets that integrate seamlessly into any project — making it easy to build clean, consistent, and visually engaging UIs."
+            description="is a free collection of carefully crafted SVG icons, designed to enhance modern user interfaces with scalable visuals."
             features={['Copy / Paste', 'Pure SVG', 'Custom Colors']}
           />
           <section className="py-4 md:py-8">

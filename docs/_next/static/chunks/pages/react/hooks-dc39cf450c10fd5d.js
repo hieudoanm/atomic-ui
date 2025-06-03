@@ -5,11 +5,11 @@
       'use strict';
       a.d(t, { F: () => o });
       var s = a(5640),
-        l = a(148);
-      let r = () => {
-        let [e, t] = (0, l.useState)(!1);
+        r = a(148);
+      let l = () => {
+        let [e, t] = (0, r.useState)(!1);
         return (
-          (0, l.useEffect)(() => {
+          (0, r.useEffect)(() => {
             'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), t(!0));
           }, []),
           {
@@ -32,8 +32,8 @@
         i = a(6826),
         c = a.n(i);
       let o = (e) => {
-        let { title: t = '', links: a = [], query: l = '', setState: n, disabledSearch: i = !1 } = e,
-          { darkMode: o = !1, toggleDarkMode: x } = r();
+        let { title: t = '', links: a = [], query: r = '', setState: n, disabledSearch: i = !1 } = e,
+          { darkMode: o = !1, toggleDarkMode: x } = l();
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(d(), { children: (0, s.jsx)('title', { children: t }) }),
@@ -69,14 +69,14 @@
                                 'invisible absolute left-0 z-50 mt-2 w-40 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100',
                               children: [
                                 a.map((e) => {
-                                  let { id: t = '', href: a = '', emoji: l = '', text: r = '' } = e;
+                                  let { id: t = '', href: a = '', emoji: r = '', text: l = '' } = e;
                                   return (0, s.jsxs)(
                                     c(),
                                     {
                                       href: a,
                                       className:
                                         'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
-                                      children: [l, ' ', r],
+                                      children: [r, ' ', l],
                                     },
                                     t
                                   );
@@ -107,10 +107,10 @@
                             className: 'hidden items-center gap-x-2 md:flex md:gap-x-4',
                             children: [
                               a.map((e) => {
-                                let { id: t = '', href: a = '', emoji: l = '', text: r = '' } = e;
+                                let { id: t = '', href: a = '', emoji: r = '', text: l = '' } = e;
                                 return (0, s.jsxs)(
                                   c(),
-                                  { href: a, className: 'text-sm md:text-base', children: [l, ' ', r] },
+                                  { href: a, className: 'text-sm md:text-base', children: [r, ' ', l] },
                                   t
                                 );
                               }),
@@ -149,7 +149,7 @@
                     (0, s.jsx)('input', {
                       type: 'text',
                       placeholder: 'Search',
-                      value: l,
+                      value: r,
                       className:
                         'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
                       onChange: (e) => {
@@ -180,8 +180,8 @@
       'use strict';
       a.r(t), a.d(t, { __N_SSG: () => u, default: () => h });
       var s = a(5640),
-        l = a(7921),
-        r = a(6453),
+        r = a(7921),
+        l = a(6453),
         n = a(8604),
         d = a(767),
         i = a(1461),
@@ -217,7 +217,7 @@
                     title: 'atomic/hooks',
                     subtitle: 'Free and Open Source React v19 Hooks',
                     description:
-                      'is a free collection of React hooks built with simplicity and reusability in mind. It offers a flexible set of essential utilities to help you manage state, side effects, and async logic more effectively — all with a focus on clean, scalable React code.',
+                      'is a collection of reusable React hooks built for simplicity, efficiency, and ease of integration.',
                     features: ['Copy / Paste', 'Pure React Hooks', 'Cross Browser Compatible'],
                   }),
                   (0, s.jsx)('section', {
@@ -242,7 +242,7 @@
                                 (0, s.jsx)('div', {
                                   className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4',
                                   children: u.map((e) => {
-                                    let { id: t = '', emoji: a = '', group: l, name: r = '' } = e;
+                                    let { id: t = '', emoji: a = '', group: r, name: l = '' } = e;
                                     return (0, s.jsx)(
                                       o(),
                                       {
@@ -257,10 +257,10 @@
                                               (0, s.jsxs)('div', {
                                                 className: 'flex flex-col gap-y-0.25',
                                                 children: [
-                                                  (0, s.jsx)('p', { className: 'text-xs capitalize', children: l }),
+                                                  (0, s.jsx)('p', { className: 'text-xs capitalize', children: r }),
                                                   (0, s.jsx)('p', {
                                                     className: 'font-semibold capitalize',
-                                                    children: r,
+                                                    children: l,
                                                   }),
                                                 ],
                                               }),
@@ -275,15 +275,15 @@
                                 (0, s.jsx)('div', {
                                   className: 'flex flex-col gap-y-8',
                                   children: u.map((e) => {
-                                    let { id: t = '', emoji: a = '', group: r = '', name: n = '', code: d = '' } = e;
+                                    let { id: t = '', emoji: a = '', group: l = '', name: n = '', code: d = '' } = e;
                                     return (0, s.jsx)(
                                       'div',
                                       {
                                         className: 'flex flex-col gap-y-4',
-                                        children: (0, s.jsx)(l.O, {
+                                        children: (0, s.jsx)(r.O, {
                                           id: t,
                                           emoji: a,
-                                          group: r,
+                                          group: l,
                                           name: n,
                                           code: d,
                                           codeOnly: !0,
@@ -302,7 +302,7 @@
                 ],
               }),
             }),
-            (0, s.jsx)(r.w, { title: 'atomic/hooks' }),
+            (0, s.jsx)(l.w, { title: 'atomic/hooks' }),
           ],
         });
       };
@@ -311,15 +311,15 @@
       'use strict';
       a.d(t, { C: () => n });
       var s = a(5640),
-        l = a(148),
-        r = a(5031);
+        r = a(148),
+        l = a(5031);
       let n = (e) => {
         let { code: t, lang: a } = e,
-          [n, d] = (0, l.useState)('');
+          [n, d] = (0, r.useState)('');
         return (
-          (0, l.useEffect)(() => {
+          (0, r.useEffect)(() => {
             (async () => {
-              d(await (0, r.Yz)(t, { lang: a, theme: 'github-dark' }));
+              d(await (0, l.Yz)(t, { lang: a, theme: 'github-dark' }));
             })();
           }),
           (0, s.jsx)('div', {
@@ -331,9 +331,9 @@
     },
     6453: (e, t, a) => {
       'use strict';
-      a.d(t, { w: () => l });
+      a.d(t, { w: () => r });
       var s = a(5640);
-      let l = (e) => {
+      let r = (e) => {
         let { title: t = '' } = e;
         return (0, s.jsx)('footer', {
           className: 'border-t border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
@@ -356,16 +356,16 @@
       'use strict';
       a.d(t, { O: () => d });
       var s = a(5640),
-        l = a(8809),
-        r = a(148),
+        r = a(8809),
+        l = a(148),
         n = a(3719);
       let d = (e) => {
         let { id: t = '', emoji: a = '', group: d = '', name: i = '', code: c = '', codeOnly: o = !1 } = e,
-          [x, u] = (0, r.useState)(''),
-          [h, m] = (0, r.useState)(!0);
+          [x, u] = (0, l.useState)(''),
+          [h, m] = (0, l.useState)(!0);
         return (
-          (0, r.useEffect)(() => {
-            u((0, l.A)(window).sanitize(c));
+          (0, l.useEffect)(() => {
+            u((0, r.A)(window).sanitize(c));
           }, [c]),
           (0, s.jsxs)('div', {
             id: t,
@@ -414,10 +414,10 @@
     },
     8604: (e, t, a) => {
       'use strict';
-      a.d(t, { l: () => l });
+      a.d(t, { l: () => r });
       var s = a(5640);
-      let l = (e) => {
-        let { title: t = '', subtitle: a = '', description: l = '', features: r = [] } = e;
+      let r = (e) => {
+        let { title: t = '', subtitle: a = '', description: r = '', features: l = [] } = e;
         return (0, s.jsx)('section', {
           className: 'py-8 md:py-16',
           children: (0, s.jsx)('div', {
@@ -443,14 +443,14 @@
                         'mr-1 rounded bg-neutral-900 px-1 py-0.5 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900',
                       children: t,
                     }),
-                    (0, s.jsx)('span', { children: l }),
+                    (0, s.jsx)('span', { children: r }),
                   ],
                 }),
-                r.length > 0 &&
+                l.length > 0 &&
                   (0, s.jsx)('div', {
                     className:
                       'flex flex-col justify-center gap-x-6 text-sm font-black text-neutral-900 md:flex-row dark:text-neutral-100',
-                    children: r.map((e) =>
+                    children: l.map((e) =>
                       (0, s.jsxs)('p', { className: 'whitespace-nowrap', children: ['\uD83D\uDD2E ', e] }, e)
                     ),
                   }),

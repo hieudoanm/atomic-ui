@@ -30,7 +30,7 @@ const EmojisPage: NextPage = () => {
           <Hero
             title="atomic/emojis"
             subtitle="Emojis is the backbone of software development"
-            description="is an easy-to-access emojis collection 🎉😊, featuring a wide variety of expressive symbols 🎭✨ that bring fun and clarity to your projects 💻🎨."
+            description="is an easy-to-access, curated collection of diverse emojis to enhance user experience and add personality to your interfaces."
             features={['Copy / Paste', 'Pure SVG', 'Custom Colors']}
           />
           <section className="py-4 md:py-8">

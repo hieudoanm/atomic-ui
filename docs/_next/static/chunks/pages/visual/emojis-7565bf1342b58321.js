@@ -2199,7 +2199,7 @@
                         title: 'atomic/emojis',
                         subtitle: 'Emojis is the backbone of software development',
                         description:
-                          'is an easy-to-access emojis collection \uD83C\uDF89\uD83D\uDE0A, featuring a wide variety of expressive symbols \uD83C\uDFAD✨ that bring fun and clarity to your projects \uD83D\uDCBB\uD83C\uDFA8.',
+                          'is an easy-to-access, curated collection of diverse emojis to enhance user experience and add personality to your interfaces.',
                         features: ['Copy / Paste', 'Pure SVG', 'Custom Colors'],
                       }),
                       (0, i.jsx)('section', {

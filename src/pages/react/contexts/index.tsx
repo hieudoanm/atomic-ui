@@ -40,7 +40,7 @@ const ContextsPage: NextPage<{ contexts: Context[] }> = ({ contexts = [] }) => {
           <Hero
             title="atomic/contexts"
             subtitle="Free and Open Source React v19 Contexts"
-            description="is a free collection of essential context providers designed with simplicity, reusability, and scalability in mind. It offers a flexible set of tools to help you manage global state, side effects, and async logic efficiently—enabling clean, maintainable React applications without external dependencies."
+            description="are essential React context providers focused on simplicity, reusability, and scalability for better state management."
             features={['Copy / Paste', 'Pure React Contexts', 'Cross Browser Compatible']}
           />
           <section className="py-4 md:py-8">

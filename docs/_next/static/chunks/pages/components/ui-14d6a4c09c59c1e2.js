@@ -371,7 +371,7 @@
                       title: 'atomic/ui',
                       subtitle: 'Free and Open Source TailwindCSS v4 Components',
                       description:
-                        'is a free collection of Tailwind CSS components designed with atomic design principles in mind. It offers a flexible set of customizable components with built-in dark mode support to help you quickly build modern, responsive UIs.',
+                        'is a free set of Tailwind CSS components built following atomic design principles for consistent UI development.',
                       features: ['Copy / Paste', 'Pure TailwindCSS', 'Atoms / Molecules / Organisms'],
                     }),
                     (0, s.jsx)('section', {

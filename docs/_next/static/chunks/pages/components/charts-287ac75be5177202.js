@@ -993,7 +993,7 @@
                       title: 'atomic/charts',
                       subtitle: 'Free and Open Source Charts',
                       description:
-                        'is a curated collection of responsive web and app charts designed specifically for SaaS products and marketing sites. Built for speed, scalability, and conversion, each template helps you launch polished, professional interfaces with ease — so you can focus on growing your business.',
+                        'is a curated set of responsive, customizable charts tailored specifically for SaaS products and marketing websites.',
                       features: ['Copy / Paste', 'Pure Canvas', 'Pure JavaScript'],
                     }),
                     (0, a.jsx)('section', {

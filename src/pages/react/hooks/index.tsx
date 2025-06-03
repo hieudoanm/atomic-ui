@@ -40,7 +40,7 @@ const HooksPage: NextPage<{ hooks: Hook[] }> = ({ hooks = [] }) => {
           <Hero
             title="atomic/hooks"
             subtitle="Free and Open Source React v19 Hooks"
-            description="is a free collection of React hooks built with simplicity and reusability in mind. It offers a flexible set of essential utilities to help you manage state, side effects, and async logic more effectively — all with a focus on clean, scalable React code."
+            description="is a collection of reusable React hooks built for simplicity, efficiency, and ease of integration."
             features={['Copy / Paste', 'Pure React Hooks', 'Cross Browser Compatible']}
           />
           <section className="py-4 md:py-8">

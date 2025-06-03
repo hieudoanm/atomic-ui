@@ -1,6 +1,14 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [9695],
+  [1377],
   {
+    145: (e, t, a) => {
+      (window.__NEXT_P = window.__NEXT_P || []).push([
+        '/templates',
+        function () {
+          return a(3997);
+        },
+      ]);
+    },
     767: (e, t, a) => {
       'use strict';
       a.d(t, { F: () => o });
@@ -28,15 +36,15 @@
         );
       };
       var n = a(1668),
-        i = a.n(n),
-        c = a(6826),
-        d = a.n(c);
+        d = a.n(n),
+        i = a(6826),
+        c = a.n(i);
       let o = (e) => {
-        let { title: t = '', links: a = [], query: s = '', setState: n, disabledSearch: c = !1 } = e,
+        let { title: t = '', links: a = [], query: s = '', setState: n, disabledSearch: i = !1 } = e,
           { darkMode: o = !1, toggleDarkMode: u } = l();
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(i(), { children: (0, r.jsx)('title', { children: t }) }),
+            (0, r.jsx)(d(), { children: (0, r.jsx)('title', { children: t }) }),
             (0, r.jsx)('nav', {
               className: 'border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
               children: (0, r.jsxs)('div', {
@@ -71,7 +79,7 @@
                                 a.map((e) => {
                                   let { id: t = '', href: a = '', emoji: s = '', text: l = '' } = e;
                                   return (0, r.jsxs)(
-                                    d(),
+                                    c(),
                                     {
                                       href: a,
                                       className:
@@ -81,7 +89,7 @@
                                     t
                                   );
                                 }),
-                                (0, r.jsx)(d(), {
+                                (0, r.jsx)(c(), {
                                   href: 'https://github.com/hieudoanm/atomic',
                                   target: '_blank',
                                   className: 'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
@@ -94,7 +102,7 @@
                       }),
                       (0, r.jsx)('div', {
                         className: 'flex items-center gap-x-4',
-                        children: (0, r.jsxs)(d(), {
+                        children: (0, r.jsxs)(c(), {
                           href: '/',
                           className: 'text-lg font-bold md:text-xl',
                           children: ['⚛️ ', t],
@@ -109,12 +117,12 @@
                               a.map((e) => {
                                 let { id: t = '', href: a = '', emoji: s = '', text: l = '' } = e;
                                 return (0, r.jsxs)(
-                                  d(),
+                                  c(),
                                   { href: a, className: 'text-sm md:text-base', children: [s, ' ', l] },
                                   t
                                 );
                               }),
-                              (0, r.jsx)(d(), {
+                              (0, r.jsx)(c(), {
                                 href: 'https://github.com/hieudoanm/atomic',
                                 target: '_blank',
                                 className: 'text-sm md:text-base',
@@ -145,7 +153,7 @@
                       }),
                     ],
                   }),
-                  !c &&
+                  !i &&
                     (0, r.jsx)('input', {
                       type: 'text',
                       placeholder: 'Search',
@@ -158,137 +166,6 @@
                     }),
                 ],
               }),
-            }),
-          ],
-        });
-      };
-    },
-    1279: (e, t, a) => {
-      'use strict';
-      a.r(t), a.d(t, { __N_SSG: () => x, default: () => m });
-      var r = a(5640),
-        s = a(6453),
-        l = a(8604),
-        n = a(148),
-        i = a(8809);
-      let c = (e) => {
-          navigator.clipboard
-            .writeText(e)
-            .then(() => {
-              alert('Copied to clipboard!');
-            })
-            .catch((e) => {
-              console.error('Failed to copy: ', e);
-            });
-        },
-        d = (e) => {
-          let { name: t = '', code: a = '' } = e,
-            [s, l] = (0, n.useState)('');
-          return (
-            (0, n.useEffect)(() => {
-              l((0, i.A)(window).sanitize(a));
-            }, [a]),
-            (0, r.jsx)('button', {
-              type: 'button',
-              title: t,
-              className: 'cursor-pointer',
-              onClick: () => {
-                c(a);
-              },
-              children: (0, r.jsx)('div', {
-                className:
-                  'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 p-2 shadow md:p-4 lg:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10',
-                children: (0, r.jsx)('div', {
-                  className:
-                    'h-fit w-fit [&>svg]:h-8 [&>svg]:fill-current [&>svg]:text-neutral-900 dark:[&>svg]:text-neutral-100',
-                  dangerouslySetInnerHTML: { __html: s },
-                }),
-              }),
-            })
-          );
-        };
-      var o = a(767),
-        u = a(1461),
-        x = !0;
-      let m = (e) => {
-        let { icons: t = [] } = e,
-          [{ query: a = '' }, i] = (0, n.useState)({ query: '' }),
-          c = t.filter((e) => {
-            let { id: t, name: r } = e;
-            return t.toLowerCase().includes(a.toLowerCase()) || r.toLowerCase().includes(a.toLowerCase());
-          });
-        return (0, r.jsxs)('div', {
-          className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
-          children: [
-            (0, r.jsx)(o.F, {
-              links: u.l.filter((e) => {
-                let { id: t } = e;
-                return 'icons' !== t;
-              }),
-              title: 'atomic/icons',
-              query: a,
-              setState: i,
-            }),
-            (0, r.jsxs)('div', {
-              className: 'grow overflow-auto',
-              children: [
-                (0, r.jsxs)('main', {
-                  className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                  children: [
-                    (0, r.jsx)(l.l, {
-                      title: 'atomic/icons',
-                      subtitle: 'Free and Open Source SVG Icons',
-                      description:
-                        'is a free collection of carefully designed SVG icons crafted for modern interfaces. It provides a flexible and scalable set of visual assets that integrate seamlessly into any project — making it easy to build clean, consistent, and visually engaging UIs.',
-                      features: ['Copy / Paste', 'Pure SVG', 'Custom Colors'],
-                    }),
-                    (0, r.jsx)('section', {
-                      className: 'py-4 md:py-8',
-                      children: (0, r.jsx)('div', {
-                        className: 'container mx-auto px-8',
-                        children: (0, r.jsxs)('div', {
-                          className: 'flex flex-col gap-y-4 md:gap-y-8',
-                          children: [
-                            (0, r.jsxs)('h2', {
-                              className: 'text-2xl font-bold',
-                              children: [
-                                (0, r.jsx)('span', { className: 'capitalize', children: 'Icons' }),
-                                ' (',
-                                c.length,
-                                ')',
-                              ],
-                            }),
-                            c.length > 0 &&
-                              (0, r.jsx)('div', {
-                                className:
-                                  'grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-6 md:gap-8 lg:grid-cols-8 xl:grid-cols-10',
-                                children: c.map((e) => {
-                                  let { id: t = '', name: a = '', code: s } = e;
-                                  return (0, r.jsxs)(
-                                    'div',
-                                    {
-                                      className: 'col-span-1 flex flex-col gap-y-2',
-                                      children: [
-                                        (0, r.jsx)(d, { name: a, code: s }),
-                                        (0, r.jsx)('p', {
-                                          title: 'name',
-                                          className: 'w-full truncate text-center text-xs',
-                                          children: a,
-                                        }),
-                                      ],
-                                    },
-                                    t
-                                  );
-                                }),
-                              }),
-                          ],
-                        }),
-                      }),
-                    }),
-                  ],
-                }),
-                (0, r.jsx)(s.w, { title: 'atomic/icons' }),
-              ],
             }),
           ],
         });
@@ -307,6 +184,99 @@
         { id: 'templates', emoji: '\uD83D\uDCDD', href: '/templates', text: 'templates' },
       ];
     },
+    3997: (e, t, a) => {
+      'use strict';
+      a.r(t), a.d(t, { __N_SSG: () => m, default: () => h });
+      var r = a(5640),
+        s = a(6453),
+        l = a(8604),
+        n = a(148),
+        d = a(8809);
+      let i = (e) => {
+        let { code: t = '' } = e,
+          [a, s] = (0, n.useState)('');
+        return (
+          (0, n.useEffect)(() => {
+            s((0, d.A)(window).sanitize(t));
+          }, [t]),
+          (0, r.jsx)('div', { dangerouslySetInnerHTML: { __html: a } })
+        );
+      };
+      var c = a(767),
+        o = a(1461),
+        u = a(6826),
+        x = a.n(u),
+        m = !0;
+      let h = (e) => {
+        let { templates: t = [] } = e,
+          [{ query: a = '' }, d] = (0, n.useState)({ query: '' });
+        return (0, r.jsxs)('div', {
+          className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
+          children: [
+            (0, r.jsx)(c.F, {
+              links: o.l.filter((e) => {
+                let { id: t } = e;
+                return 'templates' !== t;
+              }),
+              title: 'atomic/templates',
+              query: a,
+              setState: d,
+            }),
+            (0, r.jsxs)('div', {
+              className: 'grow overflow-auto',
+              children: [
+                (0, r.jsxs)('main', {
+                  className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
+                  children: [
+                    (0, r.jsx)(l.l, {
+                      title: 'atomic/templates',
+                      subtitle: 'Free and Open Source Web/App Templates',
+                      description:
+                        'are responsive, professionally designed web and app templates created for SaaS platforms and marketing landing pages.',
+                      features: ['Copy / Paste', 'Pure TailwindCSS', 'UI Components'],
+                    }),
+                    (0, r.jsx)('section', {
+                      className: 'py-4 md:py-8',
+                      children: (0, r.jsx)('div', {
+                        className: 'container mx-auto px-8',
+                        children: (0, r.jsx)('div', {
+                          className: 'flex flex-col gap-y-4 md:gap-y-8',
+                          children: t.map((e) => {
+                            let { id: t = '', name: a = '', code: s } = e;
+                            return (0, r.jsx)(
+                              x(),
+                              {
+                                href: '/templates/'.concat(t),
+                                children: (0, r.jsxs)('div', {
+                                  className: 'flex flex-col gap-y-4 md:gap-y-8',
+                                  children: [
+                                    (0, r.jsxs)('h2', {
+                                      className: 'text-2xl font-bold capitalize',
+                                      children: ['\uD83D\uDCDD ', a],
+                                    }),
+                                    (0, r.jsx)('div', {
+                                      className:
+                                        'h-128 overflow-hidden rounded-lg border border-neutral-200 p-4 shadow md:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10',
+                                      children: (0, r.jsx)(i, { code: s }),
+                                    }),
+                                  ],
+                                }),
+                              },
+                              t
+                            );
+                          }),
+                        }),
+                      }),
+                    }),
+                  ],
+                }),
+                (0, r.jsx)(s.w, { title: 'atomic/templates' }),
+              ],
+            }),
+          ],
+        });
+      };
+    },
     6453: (e, t, a) => {
       'use strict';
       a.d(t, { w: () => s });
@@ -321,14 +291,6 @@
           }),
         });
       };
-    },
-    7529: (e, t, a) => {
-      (window.__NEXT_P = window.__NEXT_P || []).push([
-        '/visual/icons',
-        function () {
-          return a(1279);
-        },
-      ]);
     },
     8604: (e, t, a) => {
       'use strict';
@@ -381,6 +343,6 @@
   },
   (e) => {
     var t = (t) => e((e.s = t));
-    e.O(0, [6826, 8809, 636, 6593, 8792], () => t(7529)), (_N_E = e.O());
+    e.O(0, [6826, 8809, 636, 6593, 8792], () => t(145)), (_N_E = e.O());
   },
 ]);

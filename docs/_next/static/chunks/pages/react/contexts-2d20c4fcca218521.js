@@ -5,18 +5,18 @@
       'use strict';
       a.r(t), a.d(t, { __N_SSG: () => u, default: () => m });
       var s = a(5640),
-        l = a(7921),
-        r = a(6453),
+        r = a(7921),
+        l = a(6453),
         n = a(8604),
         d = a(767),
-        i = a(1461),
-        c = a(6826),
-        o = a.n(c),
+        c = a(1461),
+        i = a(6826),
+        o = a.n(i),
         x = a(148),
         u = !0;
       let m = (e) => {
         let { contexts: t = [] } = e,
-          [{ query: a = '' }, c] = (0, x.useState)({ query: '' }),
+          [{ query: a = '' }, i] = (0, x.useState)({ query: '' }),
           u = t.filter((e) => {
             let { id: t, name: s } = e;
             return t.toLowerCase().includes(a.toLowerCase()) || s.toLowerCase().includes(a.toLowerCase());
@@ -25,13 +25,13 @@
           className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
           children: [
             (0, s.jsx)(d.F, {
-              links: i.l.filter((e) => {
+              links: c.l.filter((e) => {
                 let { id: t } = e;
                 return 'react-contexts' !== t;
               }),
               title: 'atomic/contexts',
               query: a,
-              setState: c,
+              setState: i,
             }),
             (0, s.jsx)('div', {
               className: 'grow overflow-auto',
@@ -42,7 +42,7 @@
                     title: 'atomic/contexts',
                     subtitle: 'Free and Open Source React v19 Contexts',
                     description:
-                      'is a free collection of essential context providers designed with simplicity, reusability, and scalability in mind. It offers a flexible set of tools to help you manage global state, side effects, and async logic efficiently—enabling clean, maintainable React applications without external dependencies.',
+                      'are essential React context providers focused on simplicity, reusability, and scalability for better state management.',
                     features: ['Copy / Paste', 'Pure React Contexts', 'Cross Browser Compatible'],
                   }),
                   (0, s.jsx)('section', {
@@ -67,7 +67,7 @@
                                 (0, s.jsx)('div', {
                                   className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3',
                                   children: u.map((e) => {
-                                    let { id: t = '', emoji: a = '', group: l, name: r = '' } = e;
+                                    let { id: t = '', emoji: a = '', group: r, name: l = '' } = e;
                                     return (0, s.jsx)(
                                       o(),
                                       {
@@ -82,10 +82,10 @@
                                               (0, s.jsxs)('div', {
                                                 className: 'flex flex-col gap-y-0.25',
                                                 children: [
-                                                  (0, s.jsx)('p', { className: 'text-xs capitalize', children: l }),
+                                                  (0, s.jsx)('p', { className: 'text-xs capitalize', children: r }),
                                                   (0, s.jsx)('p', {
                                                     className: 'font-semibold capitalize',
-                                                    children: r,
+                                                    children: l,
                                                   }),
                                                 ],
                                               }),
@@ -100,15 +100,15 @@
                                 (0, s.jsx)('div', {
                                   className: 'flex flex-col gap-y-8',
                                   children: u.map((e) => {
-                                    let { id: t = '', emoji: a = '', group: r = '', name: n = '', code: d = '' } = e;
+                                    let { id: t = '', emoji: a = '', group: l = '', name: n = '', code: d = '' } = e;
                                     return (0, s.jsx)(
                                       'div',
                                       {
                                         className: 'flex flex-col gap-y-4',
-                                        children: (0, s.jsx)(l.O, {
+                                        children: (0, s.jsx)(r.O, {
                                           id: t,
                                           emoji: a,
-                                          group: r,
+                                          group: l,
                                           name: n,
                                           code: d,
                                           codeOnly: !0,
@@ -127,7 +127,7 @@
                 ],
               }),
             }),
-            (0, s.jsx)(r.w, { title: 'atomic/contexts' }),
+            (0, s.jsx)(l.w, { title: 'atomic/contexts' }),
           ],
         });
       };
@@ -136,11 +136,11 @@
       'use strict';
       a.d(t, { F: () => o });
       var s = a(5640),
-        l = a(148);
-      let r = () => {
-        let [e, t] = (0, l.useState)(!1);
+        r = a(148);
+      let l = () => {
+        let [e, t] = (0, r.useState)(!1);
         return (
-          (0, l.useEffect)(() => {
+          (0, r.useEffect)(() => {
             'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), t(!0));
           }, []),
           {
@@ -160,11 +160,11 @@
       };
       var n = a(1668),
         d = a.n(n),
-        i = a(6826),
-        c = a.n(i);
+        c = a(6826),
+        i = a.n(c);
       let o = (e) => {
-        let { title: t = '', links: a = [], query: l = '', setState: n, disabledSearch: i = !1 } = e,
-          { darkMode: o = !1, toggleDarkMode: x } = r();
+        let { title: t = '', links: a = [], query: r = '', setState: n, disabledSearch: c = !1 } = e,
+          { darkMode: o = !1, toggleDarkMode: x } = l();
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(d(), { children: (0, s.jsx)('title', { children: t }) }),
@@ -200,19 +200,19 @@
                                 'invisible absolute left-0 z-50 mt-2 w-40 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100',
                               children: [
                                 a.map((e) => {
-                                  let { id: t = '', href: a = '', emoji: l = '', text: r = '' } = e;
+                                  let { id: t = '', href: a = '', emoji: r = '', text: l = '' } = e;
                                   return (0, s.jsxs)(
-                                    c(),
+                                    i(),
                                     {
                                       href: a,
                                       className:
                                         'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
-                                      children: [l, ' ', r],
+                                      children: [r, ' ', l],
                                     },
                                     t
                                   );
                                 }),
-                                (0, s.jsx)(c(), {
+                                (0, s.jsx)(i(), {
                                   href: 'https://github.com/hieudoanm/atomic',
                                   target: '_blank',
                                   className: 'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
@@ -225,7 +225,7 @@
                       }),
                       (0, s.jsx)('div', {
                         className: 'flex items-center gap-x-4',
-                        children: (0, s.jsxs)(c(), {
+                        children: (0, s.jsxs)(i(), {
                           href: '/',
                           className: 'text-lg font-bold md:text-xl',
                           children: ['⚛️ ', t],
@@ -238,14 +238,14 @@
                             className: 'hidden items-center gap-x-2 md:flex md:gap-x-4',
                             children: [
                               a.map((e) => {
-                                let { id: t = '', href: a = '', emoji: l = '', text: r = '' } = e;
+                                let { id: t = '', href: a = '', emoji: r = '', text: l = '' } = e;
                                 return (0, s.jsxs)(
-                                  c(),
-                                  { href: a, className: 'text-sm md:text-base', children: [l, ' ', r] },
+                                  i(),
+                                  { href: a, className: 'text-sm md:text-base', children: [r, ' ', l] },
                                   t
                                 );
                               }),
-                              (0, s.jsx)(c(), {
+                              (0, s.jsx)(i(), {
                                 href: 'https://github.com/hieudoanm/atomic',
                                 target: '_blank',
                                 className: 'text-sm md:text-base',
@@ -276,11 +276,11 @@
                       }),
                     ],
                   }),
-                  !i &&
+                  !c &&
                     (0, s.jsx)('input', {
                       type: 'text',
                       placeholder: 'Search',
-                      value: l,
+                      value: r,
                       className:
                         'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
                       onChange: (e) => {
@@ -311,15 +311,15 @@
       'use strict';
       a.d(t, { C: () => n });
       var s = a(5640),
-        l = a(148),
-        r = a(5031);
+        r = a(148),
+        l = a(5031);
       let n = (e) => {
         let { code: t, lang: a } = e,
-          [n, d] = (0, l.useState)('');
+          [n, d] = (0, r.useState)('');
         return (
-          (0, l.useEffect)(() => {
+          (0, r.useEffect)(() => {
             (async () => {
-              d(await (0, r.Yz)(t, { lang: a, theme: 'github-dark' }));
+              d(await (0, l.Yz)(t, { lang: a, theme: 'github-dark' }));
             })();
           }),
           (0, s.jsx)('div', {
@@ -331,9 +331,9 @@
     },
     6453: (e, t, a) => {
       'use strict';
-      a.d(t, { w: () => l });
+      a.d(t, { w: () => r });
       var s = a(5640);
-      let l = (e) => {
+      let r = (e) => {
         let { title: t = '' } = e;
         return (0, s.jsx)('footer', {
           className: 'border-t border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
@@ -356,17 +356,17 @@
       'use strict';
       a.d(t, { O: () => d });
       var s = a(5640),
-        l = a(8809),
-        r = a(148),
+        r = a(8809),
+        l = a(148),
         n = a(3719);
       let d = (e) => {
-        let { id: t = '', emoji: a = '', group: d = '', name: i = '', code: c = '', codeOnly: o = !1 } = e,
-          [x, u] = (0, r.useState)(''),
-          [m, h] = (0, r.useState)(!0);
+        let { id: t = '', emoji: a = '', group: d = '', name: c = '', code: i = '', codeOnly: o = !1 } = e,
+          [x, u] = (0, l.useState)(''),
+          [m, h] = (0, l.useState)(!0);
         return (
-          (0, r.useEffect)(() => {
-            u((0, l.A)(window).sanitize(c));
-          }, [c]),
+          (0, l.useEffect)(() => {
+            u((0, r.A)(window).sanitize(i));
+          }, [i]),
           (0, s.jsxs)('div', {
             id: t,
             className: 'flex flex-col gap-y-4 md:gap-y-8',
@@ -381,7 +381,7 @@
                       (0, s.jsxs)('div', {
                         children: [
                           (0, s.jsx)('p', { className: 'text-xs capitalize', children: d }),
-                          (0, s.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: i }),
+                          (0, s.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: c }),
                         ],
                       }),
                     ],
@@ -400,11 +400,11 @@
                 className:
                   'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
                 children: o
-                  ? (0, s.jsx)(n.C, { code: c, lang: 'tsx' })
+                  ? (0, s.jsx)(n.C, { code: i, lang: 'tsx' })
                   : (0, s.jsx)(s.Fragment, {
                       children: m
                         ? (0, s.jsx)('div', { className: 'w-full p-4 md:p-8', dangerouslySetInnerHTML: { __html: x } })
-                        : (0, s.jsx)(n.C, { code: c, lang: 'html' }),
+                        : (0, s.jsx)(n.C, { code: i, lang: 'html' }),
                     }),
               }),
             ],
@@ -414,10 +414,10 @@
     },
     8604: (e, t, a) => {
       'use strict';
-      a.d(t, { l: () => l });
+      a.d(t, { l: () => r });
       var s = a(5640);
-      let l = (e) => {
-        let { title: t = '', subtitle: a = '', description: l = '', features: r = [] } = e;
+      let r = (e) => {
+        let { title: t = '', subtitle: a = '', description: r = '', features: l = [] } = e;
         return (0, s.jsx)('section', {
           className: 'py-8 md:py-16',
           children: (0, s.jsx)('div', {
@@ -443,14 +443,14 @@
                         'mr-1 rounded bg-neutral-900 px-1 py-0.5 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900',
                       children: t,
                     }),
-                    (0, s.jsx)('span', { children: l }),
+                    (0, s.jsx)('span', { children: r }),
                   ],
                 }),
-                r.length > 0 &&
+                l.length > 0 &&
                   (0, s.jsx)('div', {
                     className:
                       'flex flex-col justify-center gap-x-6 text-sm font-black text-neutral-900 md:flex-row dark:text-neutral-100',
-                    children: r.map((e) =>
+                    children: l.map((e) =>
                       (0, s.jsxs)('p', { className: 'whitespace-nowrap', children: ['\uD83D\uDD2E ', e] }, e)
                     ),
                   }),
