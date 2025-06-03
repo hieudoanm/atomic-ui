@@ -1,6 +1,6 @@
-# [`atomic`](https://hieudoanm.github.io/atomic/)
+# [`atomic`][atomic]
 
-![cover](./images/cover.jpg)
+![cover](./images/cover.png)
 
 ## Table of Contents
 
@@ -25,7 +25,7 @@
 
 ## Introduction
 
-- `atomic` is a modern, free collection of Tailwind UI, React Hooks, Contexts, Utilities, Icons, Charts, and Templates—built for fast, accessible, and maintainable interfaces.
+- [`atomic`][atomic] is a modern, free collection of Tailwind UI, React Hooks, Contexts, Utilities, Icons, Charts, and Templates—built for fast, accessible, and maintainable interfaces.
   - [`atomic/charts`][atomic-components-charts]: is a curated set of responsive, customizable charts tailored specifically for SaaS products and marketing websites.
   - [`atomic/ui`][atomic-components-ui]: is a free set of Tailwind CSS components built following atomic design principles for consistent UI development.
   - [`atomic/react-contexts`][atomic-react-contexts]: are essential React context providers focused on simplicity, reusability, and scalability for better state management.
@@ -33,6 +33,7 @@
   - [`atomic/emojis`][atomic-visual-emojis]: is an easy-to-access, curated collection of diverse emojis to enhance user experience and add personality to your interfaces.
   - [`atomic/icons`][atomic-visual-icons]: is a free collection of carefully crafted SVG icons, designed to enhance modern user interfaces with scalable visuals.
   - [`atomic/templates`][atomic-templates]: are responsive, professionally designed web and app templates created for SaaS platforms and marketing landing pages.
+  - [`atomic/utils`][atomic-utils]: is a free set of reusable utility functions designed to simplify common tasks and improve code efficiency and maintainability.
 
 Browse the website for the components/hooks you need, copy the code and paste it into your project.
 
@@ -232,6 +233,7 @@ You can create a new branch and submit your changes in a PR. Please note that al
 
 `atomic` is an open source project licensed under the [GPL-3.0](./LICENSE) license.
 
+[atomic]: https://hieudoanm.github.io/atomic/
 [atomic-components-charts]: https://hieudoanm.github.io/atomic/components/charts/
 [atomic-components-ui]: https://hieudoanm.github.io/atomic/components/ui/
 [atomic-react-contexts]: https://hieudoanm.github.io/atomic/react/contexts/
@@ -239,3 +241,4 @@ You can create a new branch and submit your changes in a PR. Please note that al
 [atomic-visual-emojis]: https://hieudoanm.github.io/atomic/visual/emojis/
 [atomic-visual-icons]: https://hieudoanm.github.io/atomic/visual/icons/
 [atomic-templates]: https://hieudoanm.github.io/atomic/templates/
+[atomic-utils]: https://hieudoanm.github.io/atomic/utils/
