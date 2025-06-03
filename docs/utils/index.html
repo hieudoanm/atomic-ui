@@ -31,8 +31,8 @@
     <script src="/atomic/_next/static/chunks/8809-018e494d6cb6fa4d.js" defer=""></script>
     <script src="/atomic/_next/static/chunks/5031-cfd6069ab4c4cdf0.js" defer=""></script>
     <script src="/atomic/_next/static/chunks/pages/utils-2b976425d97f5acd.js" defer=""></script>
-    <script src="/atomic/_next/static/0eBdEOO7BICpZNC-E4uJo/_buildManifest.js" defer=""></script>
-    <script src="/atomic/_next/static/0eBdEOO7BICpZNC-E4uJo/_ssgManifest.js" defer=""></script>
+    <script src="/atomic/_next/static/hiMGQVy8Wdvqj6VPpmKxz/_buildManifest.js" defer=""></script>
+    <script src="/atomic/_next/static/hiMGQVy8Wdvqj6VPpmKxz/_ssgManifest.js" defer=""></script>
   </head>
   <body class="antialiased">
     <div id="__next">
@@ -710,14 +710,14 @@
                 "group": "functional",
                 "name": "Memoize",
                 "emoji": "🧠",
-                "code": "// Memoize function results based on JSON-stringified arguments\nexport const memoize = \u003cT extends (...args: any[]) =\u003e any\u003e(fn: T): T =\u003e {\n  const cache = new Map\u003cstring, ReturnType\u003cT\u003e\u003e();\n  return ((...args: Parameters\u003cT\u003e): ReturnType\u003cT\u003e =\u003e {\n    const key = JSON.stringify(args);\n    if (cache.has(key)) {\n      return cache.get(key)!;\n    }\n    const result = fn(...args);\n    cache.set(key, result);\n    return result;\n  }) as T;\n};\n"
+                "code": "/* eslint-disable @typescript-eslint/no-explicit-any */\n\n// Memoize function results based on JSON-stringified arguments\nexport const memoize = \u003cT extends (...args: any[]) =\u003e any\u003e(fn: T): T =\u003e {\n  const cache = new Map\u003cstring, ReturnType\u003cT\u003e\u003e();\n  return ((...args: Parameters\u003cT\u003e): ReturnType\u003cT\u003e =\u003e {\n    const key = JSON.stringify(args);\n    if (cache.has(key)) {\n      return cache.get(key)!;\n    }\n    const result = fn(...args);\n    cache.set(key, result);\n    return result;\n  }) as T;\n};\n"
               },
               {
                 "id": "functional-once",
                 "group": "functional",
                 "name": "Once",
                 "emoji": "☝️",
-                "code": "// Run a function only once, then always return the cached result\nexport const once = \u003cT extends (...args: any[]) =\u003e any\u003e(fn: T): T =\u003e {\n  let called = false;\n  let result: ReturnType\u003cT\u003e;\n  return ((...args: Parameters\u003cT\u003e): ReturnType\u003cT\u003e =\u003e {\n    if (!called) {\n      result = fn(...args);\n      called = true;\n    }\n    return result;\n  }) as T;\n};\n"
+                "code": "/* eslint-disable @typescript-eslint/no-explicit-any */\n\n// Run a function only once, then always return the cached result\nexport const once = \u003cT extends (...args: any[]) =\u003e any\u003e(fn: T): T =\u003e {\n  let called = false;\n  let result: ReturnType\u003cT\u003e;\n  return ((...args: Parameters\u003cT\u003e): ReturnType\u003cT\u003e =\u003e {\n    if (!called) {\n      result = fn(...args);\n      called = true;\n    }\n    return result;\n  }) as T;\n};\n"
               },
               {
                 "id": "number-clamp",
@@ -752,21 +752,21 @@
                 "group": "performance",
                 "name": "Debounce",
                 "emoji": "🕒",
-                "code": "export const debounce = \u003cT extends (...args: any[]) =\u003e void\u003e(\n  fn: T,\n  delay: number\n): ((...args: Parameters\u003cT\u003e) =\u003e void) =\u003e {\n  let timeoutId: ReturnType\u003ctypeof setTimeout\u003e;\n\n  return (...args: Parameters\u003cT\u003e) =\u003e {\n    clearTimeout(timeoutId);\n    timeoutId = setTimeout(() =\u003e fn(...args), delay);\n  };\n};\n"
+                "code": "/* eslint-disable @typescript-eslint/no-explicit-any */\n\nexport const debounce = \u003cT extends (...args: any[]) =\u003e void\u003e(\n  fn: T,\n  delay: number\n): ((...args: Parameters\u003cT\u003e) =\u003e void) =\u003e {\n  let timeoutId: ReturnType\u003ctypeof setTimeout\u003e;\n\n  return (...args: Parameters\u003cT\u003e) =\u003e {\n    clearTimeout(timeoutId);\n    timeoutId = setTimeout(() =\u003e fn(...args), delay);\n  };\n};\n"
               },
               {
                 "id": "performance-throttle",
                 "group": "performance",
                 "name": "Throttle",
                 "emoji": "🚦",
-                "code": "export const throttle = \u003cT extends (...args: any[]) =\u003e void\u003e(\n  fn: T,\n  limit: number\n): ((...args: Parameters\u003cT\u003e) =\u003e void) =\u003e {\n  let lastCall = 0;\n\n  return (...args: Parameters\u003cT\u003e) =\u003e {\n    const now = Date.now();\n    if (now - lastCall \u003e= limit) {\n      lastCall = now;\n      fn(...args);\n    }\n  };\n};\n"
+                "code": "/* eslint-disable @typescript-eslint/no-explicit-any */\n\nexport const throttle = \u003cT extends (...args: any[]) =\u003e void\u003e(\n  fn: T,\n  limit: number\n): ((...args: Parameters\u003cT\u003e) =\u003e void) =\u003e {\n  let lastCall = 0;\n\n  return (...args: Parameters\u003cT\u003e) =\u003e {\n    const now = Date.now();\n    if (now - lastCall \u003e= limit) {\n      lastCall = now;\n      fn(...args);\n    }\n  };\n};\n"
               },
               {
                 "id": "storage-cookies",
                 "group": "storage",
                 "name": "Cookies",
                 "emoji": "🍪",
-                "code": "// Set a cookie\nconst setCookie = (name: string, value: string, days?: number): void =\u003e {\n  let expires = '';\n  if (days) {\n    const date = new Date();\n    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);\n    expires = `; expires=${date.toUTCString()}`;\n  }\n  document.cookie = `${name}=${encodeURIComponent(value)}${expires}; path=/`;\n};\n\n// Get a cookie by name\nconst getCookie = (name: string): string | null =\u003e {\n  const regex = new RegExp('(^| )' + name + '=([^;]+)');\n  const result = regex.exec(document.cookie);\n  return result ? decodeURIComponent(result[2]) : null;\n};\n\n// Delete a cookie by name\nconst deleteCookie = (name: string): void =\u003e {\n  setCookie(name, '', -1);\n};\n"
+                "code": "// Set a cookie\nexport const setCookie = (name: string, value: string, days?: number): void =\u003e {\n  let expires = '';\n  if (days) {\n    const date = new Date();\n    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);\n    expires = `; expires=${date.toUTCString()}`;\n  }\n  document.cookie = `${name}=${encodeURIComponent(value)}${expires}; path=/`;\n};\n\n// Get a cookie by name\nexport const getCookie = (name: string): string | null =\u003e {\n  const regex = new RegExp('(^| )' + name + '=([^;]+)');\n  const result = regex.exec(document.cookie);\n  return result ? decodeURIComponent(result[2]) : null;\n};\n\n// Delete a cookie by name\nexport const deleteCookie = (name: string): void =\u003e {\n  setCookie(name, '', -1);\n};\n"
               },
               {
                 "id": "storage-indexed.db",
@@ -781,7 +781,7 @@
         },
         "page": "/utils",
         "query": {},
-        "buildId": "0eBdEOO7BICpZNC-E4uJo",
+        "buildId": "hiMGQVy8Wdvqj6VPpmKxz",
         "assetPrefix": "/atomic",
         "isFallback": false,
         "gsp": true,

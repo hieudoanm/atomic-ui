@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 // Run a function only once, then always return the cached result
 export const once = <T extends (...args: any[]) => any>(fn: T): T => {
   let called = false;
