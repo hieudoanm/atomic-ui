@@ -1,0 +1,119 @@
+{
+  "pageProps": {
+    "utils": [
+      {
+        "id": "array-chunk",
+        "group": "array",
+        "name": "Chunk",
+        "emoji": "📦",
+        "code": "export const chunk = <T>(array: T[], size: number): T[][] => {\n  const result: T[][] = [];\n  for (let i = 0; i < array.length; i += size) {\n    result.push(array.slice(i, i + size));\n  }\n  return result;\n};\n"
+      },
+      {
+        "id": "array-shuffle",
+        "group": "array",
+        "name": "Shuffle",
+        "emoji": "🔀",
+        "code": "export const shuffle = <T>(array: T[]): T[] => {\n  const result = [...array];\n  for (let i = result.length - 1; i > 0; i--) {\n    const j = Math.floor(Math.random() * (i + 1));\n    [result[i], result[j]] = [result[j], result[i]];\n  }\n  return result;\n};\n"
+      },
+      {
+        "id": "array-union",
+        "group": "array",
+        "name": "Union",
+        "emoji": "⚡",
+        "code": "export const union = <T>(...arrays: T[][]): T[] => {\n  const set = new Set<T>();\n  for (const array of arrays) {\n    array.forEach((item) => set.add(item));\n  }\n  return Array.from(set);\n};\n"
+      },
+      {
+        "id": "array-unique",
+        "group": "array",
+        "name": "Unique",
+        "emoji": "🔑",
+        "code": "export const unique = <T>(array: T[]): T[] => {\n  return Array.from(new Set(array));\n};\n"
+      },
+      {
+        "id": "clipboard-copy",
+        "group": "clipboard",
+        "name": "Copy",
+        "emoji": "📋",
+        "code": "export const copy = (text: string): void => {\n  navigator.clipboard\n    .writeText(text)\n    .then(() => {\n      alert('Copied to clipboard!');\n    })\n    .catch((error) => {\n      console.error('Failed to copy: ', error);\n    });\n};\n"
+      },
+      {
+        "id": "clipboard-paste",
+        "group": "clipboard",
+        "name": "Paste",
+        "emoji": "📥",
+        "code": "export const paste = async (): Promise<string> => {\n  try {\n    const text = await navigator.clipboard.readText();\n    return text;\n  } catch (error) {\n    console.error('Failed to read clipboard contents:', error);\n    return '';\n  }\n};\n"
+      },
+      {
+        "id": "functional-memoize",
+        "group": "functional",
+        "name": "Memoize",
+        "emoji": "🧠",
+        "code": "/* eslint-disable @typescript-eslint/no-explicit-any */\n\n// Memoize function results based on JSON-stringified arguments\nexport const memoize = <T extends (...args: any[]) => any>(fn: T): T => {\n  const cache = new Map<string, ReturnType<T>>();\n  return ((...args: Parameters<T>): ReturnType<T> => {\n    const key = JSON.stringify(args);\n    if (cache.has(key)) {\n      return cache.get(key)!;\n    }\n    const result = fn(...args);\n    cache.set(key, result);\n    return result;\n  }) as T;\n};\n"
+      },
+      {
+        "id": "functional-once",
+        "group": "functional",
+        "name": "Once",
+        "emoji": "☝️",
+        "code": "/* eslint-disable @typescript-eslint/no-explicit-any */\n\n// Run a function only once, then always return the cached result\nexport const once = <T extends (...args: any[]) => any>(fn: T): T => {\n  let called = false;\n  let result: ReturnType<T>;\n  return ((...args: Parameters<T>): ReturnType<T> => {\n    if (!called) {\n      result = fn(...args);\n      called = true;\n    }\n    return result;\n  }) as T;\n};\n"
+      },
+      {
+        "id": "number-clamp",
+        "group": "number",
+        "name": "Clamp",
+        "emoji": "🧮",
+        "code": "export const clamp = (num: number, min: number, max: number): number => Math.min(Math.max(num, min), max);\n"
+      },
+      {
+        "id": "number-commas",
+        "group": "number",
+        "name": "Commas",
+        "emoji": "🔢",
+        "code": "export const commas = (num: number) => {\n  if (typeof num !== 'number') return '';\n  return num.toLocaleString('en-US');\n};\n"
+      },
+      {
+        "id": "number-currency",
+        "group": "number",
+        "name": "Currency",
+        "emoji": "💰",
+        "code": "// Format number as currency (default USD, configurable)\nexport const currency = (value: number, currency = 'USD', locale = 'en-US') => {\n  if (typeof value !== 'number') return '';\n  return new Intl.NumberFormat(locale, { style: 'currency', currency }).format(value);\n};\n"
+      },
+      {
+        "id": "number-random",
+        "group": "number",
+        "name": "Random",
+        "emoji": "🎲",
+        "code": "export const random = (min: number, max: number): number => Math.floor(Math.random() * (max - min + 1)) + min;\n"
+      },
+      {
+        "id": "performance-debounce",
+        "group": "performance",
+        "name": "Debounce",
+        "emoji": "🕒",
+        "code": "/* eslint-disable @typescript-eslint/no-explicit-any */\n\nexport const debounce = <T extends (...args: any[]) => void>(\n  fn: T,\n  delay: number\n): ((...args: Parameters<T>) => void) => {\n  let timeoutId: ReturnType<typeof setTimeout>;\n\n  return (...args: Parameters<T>) => {\n    clearTimeout(timeoutId);\n    timeoutId = setTimeout(() => fn(...args), delay);\n  };\n};\n"
+      },
+      {
+        "id": "performance-throttle",
+        "group": "performance",
+        "name": "Throttle",
+        "emoji": "🚦",
+        "code": "/* eslint-disable @typescript-eslint/no-explicit-any */\n\nexport const throttle = <T extends (...args: any[]) => void>(\n  fn: T,\n  limit: number\n): ((...args: Parameters<T>) => void) => {\n  let lastCall = 0;\n\n  return (...args: Parameters<T>) => {\n    const now = Date.now();\n    if (now - lastCall >= limit) {\n      lastCall = now;\n      fn(...args);\n    }\n  };\n};\n"
+      },
+      {
+        "id": "storage-cookies",
+        "group": "storage",
+        "name": "Cookies",
+        "emoji": "🍪",
+        "code": "// Set a cookie\nexport const setCookie = (name: string, value: string, days?: number): void => {\n  let expires = '';\n  if (days) {\n    const date = new Date();\n    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);\n    expires = `; expires=${date.toUTCString()}`;\n  }\n  document.cookie = `${name}=${encodeURIComponent(value)}${expires}; path=/`;\n};\n\n// Get a cookie by name\nexport const getCookie = (name: string): string | null => {\n  const regex = new RegExp('(^| )' + name + '=([^;]+)');\n  const result = regex.exec(document.cookie);\n  return result ? decodeURIComponent(result[2]) : null;\n};\n\n// Delete a cookie by name\nexport const deleteCookie = (name: string): void => {\n  setCookie(name, '', -1);\n};\n"
+      },
+      {
+        "id": "storage-indexed.db",
+        "group": "storage",
+        "name": "Indexed DB",
+        "emoji": "💾",
+        "code": "interface IDBOptions {\n  dbName: string;\n  storeName: string;\n  version?: number;\n}\n\nconst openDB = ({ dbName, storeName, version = 1 }: IDBOptions): Promise<IDBDatabase> => {\n  return new Promise((resolve, reject) => {\n    const request = indexedDB.open(dbName, version);\n\n    request.onupgradeneeded = () => {\n      const db = request.result;\n      if (!db.objectStoreNames.contains(storeName)) {\n        db.createObjectStore(storeName);\n      }\n    };\n\n    request.onsuccess = () => resolve(request.result);\n    request.onerror = () => {\n      const err = request.error;\n      reject(err instanceof Error ? err : new Error(String(err)));\n    };\n  });\n};\n\nexport const setItem = async <T>(key: string, value: T, options: IDBOptions): Promise<void> => {\n  const db = await openDB(options);\n  return new Promise((resolve, reject) => {\n    const transaction = db.transaction(options.storeName, 'readwrite');\n    const store = transaction.objectStore(options.storeName);\n    const request = store.put(value, key);\n\n    request.onsuccess = () => resolve();\n    request.onerror = () => {\n      const err = request.error;\n      reject(err instanceof Error ? err : new Error(String(err)));\n    };\n  });\n};\n\nexport const getItem = async <T>(key: string, options: IDBOptions): Promise<T | null> => {\n  const db = await openDB(options);\n  return new Promise((resolve, reject) => {\n    const transaction = db.transaction(options.storeName, 'readonly');\n    const store = transaction.objectStore(options.storeName);\n    const request = store.get(key);\n\n    request.onsuccess = () => resolve(request.result ?? null);\n    request.onerror = () => {\n      const err = request.error;\n      reject(err instanceof Error ? err : new Error(String(err)));\n    };\n  });\n};\n\nexport const deleteItem = async (key: string, options: IDBOptions): Promise<void> => {\n  const db = await openDB(options);\n  return new Promise((resolve, reject) => {\n    const transaction = db.transaction(options.storeName, 'readwrite');\n    const store = transaction.objectStore(options.storeName);\n    const request = store.delete(key);\n\n    request.onsuccess = () => resolve();\n    request.onerror = () => {\n      const err = request.error;\n      reject(err instanceof Error ? err : new Error(String(err)));\n    };\n  });\n};\n"
+      }
+    ]
+  },
+  "__N_SSG": true
+}
