@@ -4,7 +4,7 @@ export const useDarkMode = (): {
   darkMode: boolean;
   toggleDarkMode: () => void;
 } => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [darkMode, setDarkMode] = useState<boolean>(true);
 
   useEffect(() => {
     const saved = localStorage.getItem('theme');

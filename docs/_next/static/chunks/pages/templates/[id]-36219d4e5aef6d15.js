@@ -1,21 +1,13 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [1377],
+  [3413],
   {
-    145: (e, t, a) => {
-      (window.__NEXT_P = window.__NEXT_P || []).push([
-        '/templates',
-        function () {
-          return a(3997);
-        },
-      ]);
-    },
     767: (e, t, a) => {
       'use strict';
       a.d(t, { F: () => o });
       var r = a(5640),
         s = a(148);
       let l = () => {
-        let [e, t] = (0, s.useState)(!1);
+        let [e, t] = (0, s.useState)(!0);
         return (
           (0, s.useEffect)(() => {
             'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), t(!0));
@@ -171,6 +163,62 @@
         });
       };
     },
+    1366: (e, t, a) => {
+      'use strict';
+      a.r(t), a.d(t, { __N_SSG: () => c, default: () => o });
+      var r = a(5640),
+        s = a(7921),
+        l = a(6453),
+        n = a(8604),
+        d = a(767),
+        i = a(1461),
+        c = !0;
+      let o = (e) => {
+        let { template: t = { id: '', name: '', code: '' } } = e,
+          { id: a = '', name: c = '', code: o = '' } = t;
+        return (0, r.jsxs)('div', {
+          className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
+          children: [
+            (0, r.jsx)(d.F, {
+              links: i.l.filter((e) => {
+                let { id: t } = e;
+                return 'templates' !== t;
+              }),
+              title: 'atomic/templates',
+              disabledSearch: !0,
+              query: '',
+              setState: () => {},
+            }),
+            (0, r.jsxs)('div', {
+              className: 'grow overflow-auto',
+              children: [
+                (0, r.jsx)('main', {
+                  className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
+                  children: (0, r.jsx)(n.l, {
+                    title: 'atomic/templates',
+                    subtitle: 'Free and Open Source Web/App Templates',
+                    description:
+                      'are responsive, professionally designed web and app templates created for SaaS platforms and marketing landing pages.',
+                    features: ['Copy / Paste', 'Pure TailwindCSS', 'UI Components'],
+                  }),
+                }),
+                (0, r.jsx)('section', {
+                  className: 'py-4 md:py-8',
+                  children: (0, r.jsx)('div', {
+                    className: 'container mx-auto px-8',
+                    children: (0, r.jsx)('div', {
+                      className: 'flex flex-col gap-y-4 md:gap-y-8',
+                      children: (0, r.jsx)(s.O, { id: a, emoji: '\uD83D\uDCDD', group: 'Template', name: c, code: o }),
+                    }),
+                  }),
+                }),
+                (0, r.jsx)(l.w, { title: 'atomic/templates' }),
+              ],
+            }),
+          ],
+        });
+      };
+    },
     1461: (e, t, a) => {
       'use strict';
       a.d(t, { l: () => r });
@@ -182,99 +230,37 @@
         { id: 'visual-emojis', emoji: '\uD83D\uDE04', href: '/visual/emojis', text: 'emojis' },
         { id: 'visual-icons', emoji: '\uD83D\uDDBC️', href: '/visual/icons', text: 'icons' },
         { id: 'templates', emoji: '\uD83D\uDCDD', href: '/templates', text: 'templates' },
+        { id: 'utils', emoji: '\uD83E\uDDF0', href: '/utils', text: 'utils' },
       ];
     },
-    3997: (e, t, a) => {
+    3105: (e, t, a) => {
+      (window.__NEXT_P = window.__NEXT_P || []).push([
+        '/templates/[id]',
+        function () {
+          return a(1366);
+        },
+      ]);
+    },
+    3719: (e, t, a) => {
       'use strict';
-      a.r(t), a.d(t, { __N_SSG: () => m, default: () => h });
+      a.d(t, { C: () => n });
       var r = a(5640),
-        s = a(6453),
-        l = a(8604),
-        n = a(148),
-        d = a(8809);
-      let i = (e) => {
-        let { code: t = '' } = e,
-          [a, s] = (0, n.useState)('');
+        s = a(148),
+        l = a(5031);
+      let n = (e) => {
+        let { code: t, lang: a } = e,
+          [n, d] = (0, s.useState)('');
         return (
-          (0, n.useEffect)(() => {
-            s((0, d.A)(window).sanitize(t));
-          }, [t]),
-          (0, r.jsx)('div', { dangerouslySetInnerHTML: { __html: a } })
+          (0, s.useEffect)(() => {
+            (async () => {
+              d(await (0, l.Yz)(t, { lang: a, theme: 'github-dark' }));
+            })();
+          }),
+          (0, r.jsx)('div', {
+            dangerouslySetInnerHTML: { __html: n },
+            className: 'w-full overflow-x-auto bg-neutral-900 p-4',
+          })
         );
-      };
-      var c = a(767),
-        o = a(1461),
-        u = a(6826),
-        x = a.n(u),
-        m = !0;
-      let h = (e) => {
-        let { templates: t = [] } = e,
-          [{ query: a = '' }, d] = (0, n.useState)({ query: '' });
-        return (0, r.jsxs)('div', {
-          className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
-          children: [
-            (0, r.jsx)(c.F, {
-              links: o.l.filter((e) => {
-                let { id: t } = e;
-                return 'templates' !== t;
-              }),
-              title: 'atomic/templates',
-              query: a,
-              setState: d,
-            }),
-            (0, r.jsxs)('div', {
-              className: 'grow overflow-auto',
-              children: [
-                (0, r.jsxs)('main', {
-                  className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                  children: [
-                    (0, r.jsx)(l.l, {
-                      title: 'atomic/templates',
-                      subtitle: 'Free and Open Source Web/App Templates',
-                      description:
-                        'are responsive, professionally designed web and app templates created for SaaS platforms and marketing landing pages.',
-                      features: ['Copy / Paste', 'Pure TailwindCSS', 'UI Components'],
-                    }),
-                    (0, r.jsx)('section', {
-                      className: 'py-4 md:py-8',
-                      children: (0, r.jsx)('div', {
-                        className: 'container mx-auto px-8',
-                        children: (0, r.jsx)('div', {
-                          className: 'flex flex-col gap-y-4 md:gap-y-8',
-                          children: t.map((e) => {
-                            let { id: t = '', name: a = '', code: s } = e;
-                            return (0, r.jsx)(
-                              x(),
-                              {
-                                href: '/templates/'.concat(t),
-                                children: (0, r.jsxs)('div', {
-                                  className: 'flex flex-col gap-y-4 md:gap-y-8',
-                                  children: [
-                                    (0, r.jsxs)('h2', {
-                                      className: 'text-2xl font-bold capitalize',
-                                      children: ['\uD83D\uDCDD ', a],
-                                    }),
-                                    (0, r.jsx)('div', {
-                                      className:
-                                        'h-128 overflow-hidden rounded-lg border border-neutral-200 p-4 shadow md:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10',
-                                      children: (0, r.jsx)(i, { code: s }),
-                                    }),
-                                  ],
-                                }),
-                              },
-                              t
-                            );
-                          }),
-                        }),
-                      }),
-                    }),
-                  ],
-                }),
-                (0, r.jsx)(s.w, { title: 'atomic/templates' }),
-              ],
-            }),
-          ],
-        });
       };
     },
     6453: (e, t, a) => {
@@ -290,6 +276,66 @@
             children: ['\xa9 ', new Date().getFullYear(), ' ⚛️ ', (0, r.jsx)('strong', { children: t })],
           }),
         });
+      };
+    },
+    7921: (e, t, a) => {
+      'use strict';
+      a.d(t, { O: () => d });
+      var r = a(5640),
+        s = a(8809),
+        l = a(148),
+        n = a(3719);
+      let d = (e) => {
+        let { id: t = '', emoji: a = '', group: d = '', name: i = '', code: c = '', codeOnly: o = !1 } = e,
+          [u, x] = (0, l.useState)(''),
+          [m, h] = (0, l.useState)(!0);
+        return (
+          (0, l.useEffect)(() => {
+            x((0, s.A)(window).sanitize(c));
+          }, [c]),
+          (0, r.jsxs)('div', {
+            id: t,
+            className: 'flex flex-col gap-y-4 md:gap-y-8',
+            children: [
+              (0, r.jsxs)('div', {
+                className: 'flex items-center justify-between gap-x-2',
+                children: [
+                  (0, r.jsxs)('div', {
+                    className: 'flex items-center gap-x-2',
+                    children: [
+                      (0, r.jsx)('span', { className: 'text-4xl', children: a }),
+                      (0, r.jsxs)('div', {
+                        children: [
+                          (0, r.jsx)('p', { className: 'text-xs capitalize', children: d }),
+                          (0, r.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: i }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  !o &&
+                    (0, r.jsx)('button', {
+                      type: 'button',
+                      className:
+                        'cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10',
+                      onClick: () => h((e) => !e),
+                      children: m ? 'Preview' : 'Code',
+                    }),
+                ],
+              }),
+              (0, r.jsx)('div', {
+                className:
+                  'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+                children: o
+                  ? (0, r.jsx)(n.C, { code: c, lang: 'tsx' })
+                  : (0, r.jsx)(r.Fragment, {
+                      children: m
+                        ? (0, r.jsx)('div', { className: 'w-full p-4 md:p-8', dangerouslySetInnerHTML: { __html: u } })
+                        : (0, r.jsx)(n.C, { code: c, lang: 'html' }),
+                    }),
+              }),
+            ],
+          })
+        );
       };
     },
     8604: (e, t, a) => {
@@ -343,6 +389,6 @@
   },
   (e) => {
     var t = (t) => e((e.s = t));
-    e.O(0, [6826, 8809, 636, 6593, 8792], () => t(145)), (_N_E = e.O());
+    e.O(0, [6826, 8809, 5031, 636, 6593, 8792], () => t(3105)), (_N_E = e.O());
   },
 ]);

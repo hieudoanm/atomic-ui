@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import createDOMPurify from 'dompurify';
-import { copyToClipboard } from '@atomic/utils/copy';
+import { copy } from '@atomic/utils/clipboard/copy';
 
 export const Icon: FC<{ name: string; code: string }> = ({ name = '', code = '' }) => {
   const [html, setHtml] = useState('');
@@ -16,7 +16,7 @@ export const Icon: FC<{ name: string; code: string }> = ({ name = '', code = '' 
       title={name}
       className="cursor-pointer"
       onClick={() => {
-        copyToClipboard(code);
+        copy(code);
       }}>
       <div className="flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 p-2 shadow md:p-4 lg:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10">
         <div

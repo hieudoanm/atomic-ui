@@ -6,4 +6,5 @@ export const NAVBAR_LINKS: { id: string; emoji: string; href: string; text: stri
   { id: 'visual-emojis', emoji: '😄', href: '/visual/emojis', text: 'emojis' },
   { id: 'visual-icons', emoji: '🖼️', href: '/visual/icons', text: 'icons' },
   { id: 'templates', emoji: '📝', href: '/templates', text: 'templates' },
+  { id: 'utils', emoji: '🧰', href: '/utils', text: 'utils' },
 ];

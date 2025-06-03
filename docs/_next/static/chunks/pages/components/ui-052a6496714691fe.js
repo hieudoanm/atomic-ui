@@ -7,7 +7,7 @@
       var s = t(5640),
         r = t(148);
       let l = () => {
-        let [e, a] = (0, r.useState)(!1);
+        let [e, a] = (0, r.useState)(!0);
         return (
           (0, r.useEffect)(() => {
             'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), a(!0));
@@ -174,6 +174,7 @@
         { id: 'visual-emojis', emoji: '\uD83D\uDE04', href: '/visual/emojis', text: 'emojis' },
         { id: 'visual-icons', emoji: '\uD83D\uDDBC️', href: '/visual/icons', text: 'icons' },
         { id: 'templates', emoji: '\uD83D\uDCDD', href: '/templates', text: 'templates' },
+        { id: 'utils', emoji: '\uD83E\uDDF0', href: '/utils', text: 'utils' },
       ];
     },
     3719: (e, a, t) => {

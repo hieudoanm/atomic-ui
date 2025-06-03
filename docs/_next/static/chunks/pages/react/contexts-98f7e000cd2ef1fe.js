@@ -9,14 +9,14 @@
         l = a(6453),
         n = a(8604),
         d = a(767),
-        c = a(1461),
-        i = a(6826),
-        o = a.n(i),
+        i = a(1461),
+        c = a(6826),
+        o = a.n(c),
         x = a(148),
         u = !0;
       let m = (e) => {
         let { contexts: t = [] } = e,
-          [{ query: a = '' }, i] = (0, x.useState)({ query: '' }),
+          [{ query: a = '' }, c] = (0, x.useState)({ query: '' }),
           u = t.filter((e) => {
             let { id: t, name: s } = e;
             return t.toLowerCase().includes(a.toLowerCase()) || s.toLowerCase().includes(a.toLowerCase());
@@ -25,13 +25,13 @@
           className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
           children: [
             (0, s.jsx)(d.F, {
-              links: c.l.filter((e) => {
+              links: i.l.filter((e) => {
                 let { id: t } = e;
                 return 'react-contexts' !== t;
               }),
               title: 'atomic/contexts',
               query: a,
-              setState: i,
+              setState: c,
             }),
             (0, s.jsx)('div', {
               className: 'grow overflow-auto',
@@ -138,7 +138,7 @@
       var s = a(5640),
         r = a(148);
       let l = () => {
-        let [e, t] = (0, r.useState)(!1);
+        let [e, t] = (0, r.useState)(!0);
         return (
           (0, r.useEffect)(() => {
             'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), t(!0));
@@ -160,10 +160,10 @@
       };
       var n = a(1668),
         d = a.n(n),
-        c = a(6826),
-        i = a.n(c);
+        i = a(6826),
+        c = a.n(i);
       let o = (e) => {
-        let { title: t = '', links: a = [], query: r = '', setState: n, disabledSearch: c = !1 } = e,
+        let { title: t = '', links: a = [], query: r = '', setState: n, disabledSearch: i = !1 } = e,
           { darkMode: o = !1, toggleDarkMode: x } = l();
         return (0, s.jsxs)(s.Fragment, {
           children: [
@@ -202,7 +202,7 @@
                                 a.map((e) => {
                                   let { id: t = '', href: a = '', emoji: r = '', text: l = '' } = e;
                                   return (0, s.jsxs)(
-                                    i(),
+                                    c(),
                                     {
                                       href: a,
                                       className:
@@ -212,7 +212,7 @@
                                     t
                                   );
                                 }),
-                                (0, s.jsx)(i(), {
+                                (0, s.jsx)(c(), {
                                   href: 'https://github.com/hieudoanm/atomic',
                                   target: '_blank',
                                   className: 'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
@@ -225,7 +225,7 @@
                       }),
                       (0, s.jsx)('div', {
                         className: 'flex items-center gap-x-4',
-                        children: (0, s.jsxs)(i(), {
+                        children: (0, s.jsxs)(c(), {
                           href: '/',
                           className: 'text-lg font-bold md:text-xl',
                           children: ['⚛️ ', t],
@@ -240,12 +240,12 @@
                               a.map((e) => {
                                 let { id: t = '', href: a = '', emoji: r = '', text: l = '' } = e;
                                 return (0, s.jsxs)(
-                                  i(),
+                                  c(),
                                   { href: a, className: 'text-sm md:text-base', children: [r, ' ', l] },
                                   t
                                 );
                               }),
-                              (0, s.jsx)(i(), {
+                              (0, s.jsx)(c(), {
                                 href: 'https://github.com/hieudoanm/atomic',
                                 target: '_blank',
                                 className: 'text-sm md:text-base',
@@ -276,7 +276,7 @@
                       }),
                     ],
                   }),
-                  !c &&
+                  !i &&
                     (0, s.jsx)('input', {
                       type: 'text',
                       placeholder: 'Search',
@@ -305,6 +305,7 @@
         { id: 'visual-emojis', emoji: '\uD83D\uDE04', href: '/visual/emojis', text: 'emojis' },
         { id: 'visual-icons', emoji: '\uD83D\uDDBC️', href: '/visual/icons', text: 'icons' },
         { id: 'templates', emoji: '\uD83D\uDCDD', href: '/templates', text: 'templates' },
+        { id: 'utils', emoji: '\uD83E\uDDF0', href: '/utils', text: 'utils' },
       ];
     },
     3719: (e, t, a) => {
@@ -360,13 +361,13 @@
         l = a(148),
         n = a(3719);
       let d = (e) => {
-        let { id: t = '', emoji: a = '', group: d = '', name: c = '', code: i = '', codeOnly: o = !1 } = e,
+        let { id: t = '', emoji: a = '', group: d = '', name: i = '', code: c = '', codeOnly: o = !1 } = e,
           [x, u] = (0, l.useState)(''),
           [m, h] = (0, l.useState)(!0);
         return (
           (0, l.useEffect)(() => {
-            u((0, r.A)(window).sanitize(i));
-          }, [i]),
+            u((0, r.A)(window).sanitize(c));
+          }, [c]),
           (0, s.jsxs)('div', {
             id: t,
             className: 'flex flex-col gap-y-4 md:gap-y-8',
@@ -381,7 +382,7 @@
                       (0, s.jsxs)('div', {
                         children: [
                           (0, s.jsx)('p', { className: 'text-xs capitalize', children: d }),
-                          (0, s.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: c }),
+                          (0, s.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: i }),
                         ],
                       }),
                     ],
@@ -400,11 +401,11 @@
                 className:
                   'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
                 children: o
-                  ? (0, s.jsx)(n.C, { code: i, lang: 'tsx' })
+                  ? (0, s.jsx)(n.C, { code: c, lang: 'tsx' })
                   : (0, s.jsx)(s.Fragment, {
                       children: m
                         ? (0, s.jsx)('div', { className: 'w-full p-4 md:p-8', dangerouslySetInnerHTML: { __html: x } })
-                        : (0, s.jsx)(n.C, { code: i, lang: 'html' }),
+                        : (0, s.jsx)(n.C, { code: c, lang: 'html' }),
                     }),
               }),
             ],

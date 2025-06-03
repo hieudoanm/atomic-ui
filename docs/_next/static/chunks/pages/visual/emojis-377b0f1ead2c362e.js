@@ -15,7 +15,7 @@
       var i = n(5640),
         o = n(148);
       let r = () => {
-        let [a, e] = (0, o.useState)(!1);
+        let [a, e] = (0, o.useState)(!0);
         return (
           (0, o.useEffect)(() => {
             'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), e(!0));
@@ -182,6 +182,7 @@
         { id: 'visual-emojis', emoji: '\uD83D\uDE04', href: '/visual/emojis', text: 'emojis' },
         { id: 'visual-icons', emoji: '\uD83D\uDDBC️', href: '/visual/icons', text: 'icons' },
         { id: 'templates', emoji: '\uD83D\uDCDD', href: '/templates', text: 'templates' },
+        { id: 'utils', emoji: '\uD83E\uDDF0', href: '/utils', text: 'utils' },
       ];
     },
     6453: (a, e, n) => {
