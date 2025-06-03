@@ -19,14 +19,15 @@ const HomePage: NextPage = () => {
           />
           <section className="py-4 md:py-8">
             <div className="container mx-auto px-8">
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
                 {[
-                  { id: 'charts', href: '/charts', name: 'Charts', shortName: 'Charts' },
+                  { id: 'charts', href: '/components/charts', name: 'Charts Components', shortName: 'Charts' },
+                  { id: 'ui', href: '/components/ui', name: 'UI Components', shortName: 'UI' },
                   { id: 'react-context', href: '/react/contexts', name: 'React Contexts', shortName: 'React Contexts' },
                   { id: 'react-hooks', href: '/react/hooks', name: 'React Hooks', shortName: 'React Hooks' },
-                  { id: 'icons', href: '/icons', name: 'SVG Icons', shortName: 'Icons' },
+                  { id: 'visual-emojis', href: '/visual/emojis', name: 'Emojis', shortName: 'Emojis' },
+                  { id: 'visual-icons', href: '/visual/icons', name: 'Icons', shortName: 'Icons' },
                   { id: 'templates', href: '/templates', name: 'Page Templates', shortName: 'Templates' },
-                  { id: 'ui', href: '/ui', name: 'UI Components', shortName: 'UI' },
                 ].map(({ href = '', name = '', shortName = '' }) => {
                   return (
                     <div key={href} className="col-span-1">
