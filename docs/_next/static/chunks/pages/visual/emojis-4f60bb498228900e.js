@@ -15,7 +15,7 @@
       var i = n(5640),
         o = n(148);
       let r = () => {
-        let [a, e] = (0, o.useState)(!0);
+        let [a, e] = (0, o.useState)(!1);
         return (
           (0, o.useEffect)(() => {
             'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), e(!0));

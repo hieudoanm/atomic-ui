@@ -15,7 +15,7 @@ const HomePage: NextPage = () => {
             title="atomic"
             subtitle="Free and Open Source Front-end Code"
             description="is a modern, free collection of Tailwind UI, React Hooks, Icons, Charts, and Templates—built for fast, accessible, maintainable interfaces."
-            features={['Copy / Paste', 'Pure TailwindCSS', 'Pure React Hooks']}
+            features={['Copy / Paste', 'Pure TailwindCSS', 'Pure React Code']}
           />
           <section className="py-4 md:py-8">
             <div className="container mx-auto px-8">

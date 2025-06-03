@@ -8,27 +8,31 @@
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Code](#code)
-    - [Charts](#charts)
-    - [React Contexts](#react-contexts)
-    - [React Hooks](#react-hooks)
-    - [SVG Icons](#svg-icons)
-    - [Page Templates](#page-templates)
-    - [UI Components](#ui-components)
-    - [Inspired By](#inspired-by)
-  - [Themes / Preview](#themes--preview)
-    - [Dark](#dark)
-    - [Light](#light)
+    - [Assets](#assets)
+      - [SVG Icons](#svg-icons)
+      - [Emojis](#emojis)
+    - [Components](#components)
+      - [Charts](#charts)
+      - [UI](#ui)
+        - [Inspired By](#inspired-by)
+      - [Page Templates](#page-templates)
+    - [React](#react)
+      - [React Contexts](#react-contexts)
+      - [React Hooks](#react-hooks)
   - [Roadmap](#roadmap)
   - [Contributing](#contributing)
   - [License](#license)
 
 ## Introduction
 
-`atomic` is a free, modern collection of Tailwind CSS UI components and reusable React Hooks, built with atomic design principles. It includes 44+ customizable components and practical hooks with built-in dark mode and responsive behavior—helping you build fast, accessible, and maintainable interfaces with ease.
-
-`atomic/hooks` is a free collection of React hooks built with simplicity and reusability in mind. It offers a flexible set of essential utilities to help you manage state, side effects, and async logic more effectively — all with a focus on clean, scalable React code.
-
-`atomic/ui` is a free collection of Tailwind CSS components designed with atomic design principles in mind. It offers a flexible set of 44 free, customizable components with built-in dark mode support to help you quickly build modern, responsive UI.
+- `atomic` is a modern, free collection of Tailwind UI, React Hooks, Contexts, Utilities, Icons, Charts, and Templates—built for fast, accessible, and maintainable interfaces.
+  - [`atomic/charts`][atomic-components-charts]: is a curated set of responsive, customizable charts tailored specifically for SaaS products and marketing websites.
+  - [`atomic/ui`][atomic-components-ui]: is a free set of Tailwind CSS components built following atomic design principles for consistent UI development.
+  - [`atomic/react-contexts`][atomic-react-contexts]: are essential React context providers focused on simplicity, reusability, and scalability for better state management.
+  - [`atomic/react-hooks`][atomic-react-hooks]: is a collection of reusable React hooks built for simplicity, efficiency, and ease of integration.
+  - [`atomic/emojis`][atomic-visual-emojis]: is an easy-to-access, curated collection of diverse emojis to enhance user experience and add personality to your interfaces.
+  - [`atomic/icons`][atomic-visual-icons]: is a free collection of carefully crafted SVG icons, designed to enhance modern user interfaces with scalable visuals.
+  - [`atomic/templates`][atomic-templates]: are responsive, professionally designed web and app templates created for SaaS platforms and marketing landing pages.
 
 Browse the website for the components/hooks you need, copy the code and paste it into your project.
 
@@ -36,7 +40,52 @@ Browse the website for the components/hooks you need, copy the code and paste it
 
 Status: `In Progress` - `Completed`
 
-### Charts
+```txt
+atomic
+├── public
+│   ├── assets
+│   │   ├── fonts
+│   │   ├── images
+│   │   └── svg
+│   ├── favicon.ico
+│   ├── manifest.json
+│   ├── robots.txt
+│   └── sitemap.xml
+├── src
+│   ├── assets
+│   │   ├── fonts
+│   │   ├── images
+│   │   └── svg
+│   ├── components
+│   │   ├── charts
+│   │   └── ui
+│   ├── constants
+│   ├── contexts
+│   ├── environments
+│   ├── hooks
+│   ├── templates
+│   └── utils
+├── .gitattributes
+├── .gitignore
+├── .node-version
+├── .npmrc
+├── .nvmrc
+├── .prettierignore
+├── .prettierrc.json
+├── package.json
+├── README.md
+└── tsconfig.json
+```
+
+### Assets
+
+#### SVG Icons
+
+#### Emojis
+
+### Components
+
+#### Charts
 
 | No  | Name           | Status      |
 | --- | -------------- | ----------- |
@@ -49,45 +98,7 @@ Status: `In Progress` - `Completed`
 | 7   | Radar          | In Progress |
 | 8   | Scatter        | In Progress |
 
-### React Contexts
-
-`atomic/contexts`
-
-1. `LanguageContext`
-2. `ModalContext`
-3. `NotificationsContext`
-4. `SettingsContext`
-5. `ThemeContext`
-6. `UserContext`
-
-### React Hooks
-
-`atomic/hooks` offer 16 components for free.
-
-| No  | Group No | Group Name | Hook                  | Status    |
-| --- | -------- | ---------- | --------------------- | --------- |
-| 01  | 1.1      | Boolean    | `use-boolean`         | Completed |
-| 02  | 1.2      | Boolean    | `use-toggle`          | Completed |
-| 03  | 2.1      | Events     | `use-keyboard`        | Completed |
-| 04  | 2.2      | Events     | `use-online`          | Completed |
-| 05  | 2.3      | Events     | `use-resize`          | Completed |
-| 06  | 2.4      | Events     | `use-scroll`          | Completed |
-| 07  | 3.1      | Info       | `use-battery`         | Completed |
-| 08  | 3.2      | Info       | `use-browser`         | Completed |
-| 09  | 3.3      | Info       | `use-language`        | Completed |
-| 10  | 3.4      | Info       | `use-screen`          | Completed |
-| 11  | 4.1      | Navigator  | `use-clipboard`       | Completed |
-| 12  | 4.2      | Navigator  | `use-geolocation`     | Completed |
-| 13  | 5.1      | Storage    | `use-local-storage`   | Completed |
-| 14  | 5.2      | Storage    | `use-session-storage` | Completed |
-| 15  | 6.1      | Time       | `use-timeout`         | Completed |
-| 16  | 6.2      | Time       | `use-interval`        | Completed |
-
-### SVG Icons
-
-### Page Templates
-
-### UI Components
+#### UI
 
 `atomic/ui` offer 44 components for free.
 
@@ -150,7 +161,7 @@ Status: `In Progress` - `Completed`
 | 55  | 10.03    | Typography | Heading              | Completed   |
 | 56  | 10.04    | Typography | Text                 | Completed   |
 
-### Inspired By
+##### Inspired By
 
 - React Hooks
   - [useHooks](https://usehooks.com/)
@@ -171,20 +182,47 @@ Status: `In Progress` - `Completed`
     - [Radix UI](https://www.radix-ui.com/)
     - [shadcn/ui](https://ui.shadcn.com/)
 
-## Themes / Preview
+#### Page Templates
 
-### Dark
+### React
 
-![dark](./images/dark.png)
+#### React Contexts
 
-### Light
+`atomic/contexts`
 
-![light](./images/light.png)
+1. `LanguageContext`
+2. `ModalContext`
+3. `NotificationsContext`
+4. `SettingsContext`
+5. `ThemeContext`
+6. `UserContext`
+
+#### React Hooks
+
+`atomic/hooks` offer 16 components for free.
+
+| No  | Group No | Group Name | Hook                  | Status    |
+| --- | -------- | ---------- | --------------------- | --------- |
+| 01  | 1.1      | Boolean    | `use-boolean`         | Completed |
+| 02  | 1.2      | Boolean    | `use-toggle`          | Completed |
+| 03  | 2.1      | Events     | `use-keyboard`        | Completed |
+| 04  | 2.2      | Events     | `use-online`          | Completed |
+| 05  | 2.3      | Events     | `use-resize`          | Completed |
+| 06  | 2.4      | Events     | `use-scroll`          | Completed |
+| 07  | 3.1      | Info       | `use-battery`         | Completed |
+| 08  | 3.2      | Info       | `use-browser`         | Completed |
+| 09  | 3.3      | Info       | `use-language`        | Completed |
+| 10  | 3.4      | Info       | `use-screen`          | Completed |
+| 11  | 4.1      | Navigator  | `use-clipboard`       | Completed |
+| 12  | 4.2      | Navigator  | `use-geolocation`     | Completed |
+| 13  | 5.1      | Storage    | `use-local-storage`   | Completed |
+| 14  | 5.2      | Storage    | `use-session-storage` | Completed |
+| 15  | 6.1      | Time       | `use-timeout`         | Completed |
+| 16  | 6.2      | Time       | `use-interval`        | Completed |
 
 ## Roadmap
 
-- [ ] Add more Components from 50 to 52
-- [ ] Add Comments
+- [ ] `fetch`
 
 ## Contributing
 
@@ -192,4 +230,12 @@ You can create a new branch and submit your changes in a PR. Please note that al
 
 ## License
 
-`atomic/ui` is an open source project licensed under the [GPL-3.0](./LICENSE) license.
+`atomic` is an open source project licensed under the [GPL-3.0](./LICENSE) license.
+
+[atomic-components-charts]: https://hieudoanm.github.io/atomic/components/charts/
+[atomic-components-ui]: https://hieudoanm.github.io/atomic/components/ui/
+[atomic-react-contexts]: https://hieudoanm.github.io/atomic/react/contexts/
+[atomic-react-hooks]: https://hieudoanm.github.io/atomic/react/hooks/
+[atomic-visual-emojis]: https://hieudoanm.github.io/atomic/visual/emojis/
+[atomic-visual-icons]: https://hieudoanm.github.io/atomic/visual/icons/
+[atomic-templates]: https://hieudoanm.github.io/atomic/templates/

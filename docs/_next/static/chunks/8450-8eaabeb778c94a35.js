@@ -7,7 +7,7 @@
       var a = r(5640),
         l = r(148);
       let s = () => {
-        let [e, t] = (0, l.useState)(!0);
+        let [e, t] = (0, l.useState)(!1);
         return (
           (0, l.useEffect)(() => {
             'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), t(!0));
