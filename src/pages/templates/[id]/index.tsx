@@ -29,7 +29,7 @@ const TemplatePage: NextPage<{ template: TemplateType }> = ({ template = { id: '
           <Hero
             title="atomic/templates"
             subtitle="Free and Open Source Web/App Templates"
-            description="is a curated collection of responsive web and app templates designed specifically for SaaS products and marketing sites. Built for speed, scalability, and conversion, each template helps you launch polished, professional interfaces with ease — so you can focus on growing your business."
+            description="are responsive, professionally designed web and app templates created for SaaS platforms and marketing landing pages."
             features={['Copy / Paste', 'Pure TailwindCSS', 'UI Components']}
           />
         </main>
