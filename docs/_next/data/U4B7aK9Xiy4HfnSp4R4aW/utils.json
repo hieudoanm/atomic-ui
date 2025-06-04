@@ -58,6 +58,20 @@
         "code": "/* eslint-disable @typescript-eslint/no-explicit-any */\n\n// Run a function only once, then always return the cached result\nexport const once = <T extends (...args: any[]) => any>(fn: T): T => {\n  let called = false;\n  let result: ReturnType<T>;\n  return ((...args: Parameters<T>): ReturnType<T> => {\n    if (!called) {\n      result = fn(...args);\n      called = true;\n    }\n    return result;\n  }) as T;\n};\n"
       },
       {
+        "id": "functional-request",
+        "group": "functional",
+        "name": "Request",
+        "emoji": "📡",
+        "code": "type FetchOptions = RequestInit & {\n  timeout?: number; // Optional timeout in milliseconds\n};\n\nexport const request = async <T = unknown>(url: string, options: FetchOptions = {}): Promise<T> => {\n  const { timeout = 8000, ...fetchOptions } = options;\n  const controller = new AbortController();\n  const timer = setTimeout(() => controller.abort(), timeout);\n\n  try {\n    const response = await fetch(url, {\n      ...fetchOptions,\n      signal: controller.signal,\n      headers: {\n        'Content-Type': 'application/json',\n        ...(fetchOptions.headers || {}),\n      },\n    });\n\n    clearTimeout(timer);\n\n    if (!response.ok) {\n      const errorBody = await response.text();\n      throw new Error(`HTTP ${response.status} - ${response.statusText}\\n${errorBody}`);\n    }\n\n    const contentType = response.headers.get('content-type');\n    if (contentType?.includes('application/json')) {\n      return (await response.json()) as T;\n    } else {\n      return (await response.text()) as unknown as T;\n    }\n  } catch (error) {\n    clearTimeout(timer);\n\n    if (error instanceof DOMException && error.name === 'AbortError') {\n      throw new Error('Request timed out');\n    } else if (error instanceof TypeError) {\n      throw new Error(`Network error or invalid URL: ${error.message}`);\n    } else {\n      throw error;\n    }\n  }\n};\n"
+      },
+      {
+        "id": "functional-try-catch",
+        "group": "functional",
+        "name": "Try/Catch",
+        "emoji": "🛡️",
+        "code": "// Types for the result object with discriminated union\ntype Success<T> = {\n  data: T;\n  error: null;\n};\n\ntype Failure<E> = {\n  data: null;\n  error: E;\n};\n\ntype Result<T, E = Error> = Success<T> | Failure<E>;\n\n// Main wrapper function\nexport async function tryCatch<T, E = Error>(\n  promise: Promise<T>\n): Promise<Result<T, E>> {\n  try {\n    const data = await promise;\n    return { data, error: null };\n  } catch (error) {\n    return { data: null, error: error as E };\n  }\n}\n"
+      },
+      {
         "id": "number-clamp",
         "group": "number",
         "name": "Clamp",
@@ -91,6 +105,20 @@
         "name": "Debounce",
         "emoji": "🕒",
         "code": "/* eslint-disable @typescript-eslint/no-explicit-any */\n\nexport const debounce = <T extends (...args: any[]) => void>(\n  fn: T,\n  delay: number\n): ((...args: Parameters<T>) => void) => {\n  let timeoutId: ReturnType<typeof setTimeout>;\n\n  return (...args: Parameters<T>) => {\n    clearTimeout(timeoutId);\n    timeoutId = setTimeout(() => fn(...args), delay);\n  };\n};\n"
+      },
+      {
+        "id": "performance-rate-limit",
+        "group": "performance",
+        "name": "Rate Limit",
+        "emoji": "⏳",
+        "code": "/* eslint-disable @typescript-eslint/no-explicit-any */\n\nexport const rateLimit = <T extends (...args: any[]) => any>(\n  fn: T,\n  limitMs: number\n): ((...args: Parameters<T>) => Promise<ReturnType<T>>) => {\n  let lastCallTime = 0;\n\n  return async function (...args: Parameters<T>): Promise<ReturnType<T>> {\n    const now = Date.now();\n    const timeSinceLastCall = now - lastCallTime;\n\n    if (timeSinceLastCall < limitMs) {\n      await new Promise((res) => setTimeout(res, limitMs - timeSinceLastCall));\n    }\n\n    lastCallTime = Date.now();\n    return fn(...args);\n  };\n};\n"
+      },
+      {
+        "id": "performance-sleep",
+        "group": "performance",
+        "name": "Sleep",
+        "emoji": "😴",
+        "code": "export const sleep = (milliseconds: number): Promise<void> =>\n  new Promise((resolve) => setTimeout(resolve, milliseconds));\n"
       },
       {
         "id": "performance-throttle",

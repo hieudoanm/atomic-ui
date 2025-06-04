@@ -3,15 +3,16 @@
   {
     1366: (e, a, s) => {
       'use strict';
-      s.r(a), s.d(a, { __N_SSG: () => l, default: () => p });
+      s.r(a), s.d(a, { __N_SSG: () => d, default: () => l });
       var t = s(5640),
-        n = s(7921),
-        i = s(3286),
-        l = !0;
-      let p = (e) => {
+        i = s(7921),
+        n = s(3286),
+        d = !0;
+      let l = (e) => {
         let { template: a = { id: '', name: '', code: '' } } = e,
-          { id: s = '', name: l = '', code: p = '' } = a;
-        return (0, t.jsx)(i.U, {
+          { id: s = '', name: d = '', code: l = '' } = a;
+        return (0, t.jsx)(n.U, {
+          disabledSearch: !0,
           query: '',
           setState: () => {},
           id: 'templates',
@@ -27,7 +28,7 @@
               className: 'container mx-auto px-8',
               children: (0, t.jsx)('div', {
                 className: 'flex flex-col gap-y-4 md:gap-y-8',
-                children: (0, t.jsx)(n.O, { id: s, emoji: '\uD83D\uDCDD', group: 'Template', name: l, code: p }),
+                children: (0, t.jsx)(i.O, { id: s, emoji: '\uD83D\uDCDD', group: 'Template', name: d, code: l }),
               }),
             }),
           }),

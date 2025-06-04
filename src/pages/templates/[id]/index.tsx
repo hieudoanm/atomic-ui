@@ -14,6 +14,7 @@ const TemplatePage: NextPage<{ template: TemplateType }> = ({ template = { id: '
 
   return (
     <PageTemplate
+      disabledSearch
       query={''}
       setState={() => {}}
       id="templates"

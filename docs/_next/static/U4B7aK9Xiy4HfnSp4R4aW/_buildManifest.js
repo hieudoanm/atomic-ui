@@ -13,7 +13,7 @@
     '/react/contexts': [s, e, t, a, 'static/chunks/pages/react/contexts-3df5ee97e50c37d1.js'],
     '/react/hooks': [s, e, t, a, 'static/chunks/pages/react/hooks-6f12a84b6d3ac794.js'],
     '/templates': [s, e, 'static/chunks/pages/templates-e1e837c7633eb741.js'],
-    '/templates/[id]': [s, e, t, a, 'static/chunks/pages/templates/[id]-a940e10222209eeb.js'],
+    '/templates/[id]': [s, e, t, a, 'static/chunks/pages/templates/[id]-3a8c65340e5d8784.js'],
     '/utils': [s, e, t, a, 'static/chunks/pages/utils-26136ca7475ba51b.js'],
     '/visual/emojis': [s, 'static/chunks/pages/visual/emojis-ee2c4a2860474cb0.js'],
     '/visual/icons': [s, e, 'static/chunks/pages/visual/icons-2dc8074dc37a2c45.js'],
