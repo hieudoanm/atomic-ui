@@ -1,6 +1,8 @@
 {
   "pageProps": {
     "templates": [
+      { "id": "chat", "name": "chat", "code": "" },
+      { "id": "dashboard", "name": "dashboard", "code": "" },
       {
         "id": "error",
         "name": "error",

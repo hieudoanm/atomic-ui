@@ -89,15 +89,15 @@
         );
       };
       var i = a(1668),
-        o = a.n(i),
-        c = a(6826),
-        u = a.n(c);
-      let x = (e) => {
+        c = a.n(i),
+        o = a(6826),
+        x = a.n(o);
+      let u = (e) => {
           let { title: t = '', links: a = [], query: s = '', setState: l, disabledSearch: n = !1 } = e,
-            { darkMode: i = !1, toggleDarkMode: c } = d();
+            { darkMode: i = !1, toggleDarkMode: o } = d();
           return (0, r.jsxs)(r.Fragment, {
             children: [
-              (0, r.jsx)(o(), { children: (0, r.jsx)('title', { children: t }) }),
+              (0, r.jsx)(c(), { children: (0, r.jsx)('title', { children: t }) }),
               (0, r.jsx)('nav', {
                 className: 'border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
                 children: (0, r.jsxs)('div', {
@@ -132,7 +132,7 @@
                                   a.map((e) => {
                                     let { id: t = '', href: a = '', emoji: s = '', text: l = '' } = e;
                                     return (0, r.jsxs)(
-                                      u(),
+                                      x(),
                                       {
                                         href: a,
                                         className:
@@ -142,7 +142,7 @@
                                       t
                                     );
                                   }),
-                                  (0, r.jsx)(u(), {
+                                  (0, r.jsx)(x(), {
                                     href: 'https://github.com/hieudoanm/atomic',
                                     target: '_blank',
                                     className: 'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
@@ -155,7 +155,7 @@
                         }),
                         (0, r.jsx)('div', {
                           className: 'flex items-center gap-x-4',
-                          children: (0, r.jsx)(u(), {
+                          children: (0, r.jsx)(x(), {
                             href: '/',
                             className: 'truncate text-lg font-bold md:text-xl',
                             children: t,
@@ -170,12 +170,12 @@
                                 a.map((e) => {
                                   let { id: t = '', href: a = '', emoji: s = '', text: l = '' } = e;
                                   return (0, r.jsxs)(
-                                    u(),
+                                    x(),
                                     { href: a, className: 'text-sm md:text-base', children: [s, ' ', l] },
                                     t
                                   );
                                 }),
-                                (0, r.jsx)(u(), {
+                                (0, r.jsx)(x(), {
                                   href: 'https://github.com/hieudoanm/atomic',
                                   target: '_blank',
                                   className: 'text-sm md:text-base',
@@ -193,7 +193,7 @@
                                   checked: i,
                                   className: 'peer sr-only',
                                   onChange: () => {
-                                    c();
+                                    o();
                                   },
                                 }),
                                 (0, r.jsx)('span', {
@@ -240,22 +240,22 @@
             setState: n = () => {},
             id: d = '',
             emoji: i = '',
-            title: o = '',
-            subtitle: c = '',
-            description: u = '',
+            title: c = '',
+            subtitle: o = '',
+            description: x = '',
             features: h = [],
             children: p = (0, r.jsx)(r.Fragment, {}),
           } = e;
           return (0, r.jsxs)('div', {
             className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
             children: [
-              (0, r.jsx)(x, {
+              (0, r.jsx)(u, {
                 disabledSearch: t,
                 links: m.filter((e) => {
                   let { id: t = '' } = e;
                   return d !== t;
                 }),
-                title: ''.concat(i, ' ').concat(o),
+                title: ''.concat(i, ' ').concat(c),
                 query: a,
                 setState: n,
               }),
@@ -264,9 +264,9 @@
                 children: [
                   (0, r.jsxs)('main', {
                     className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                    children: [(0, r.jsx)(l, { title: o, subtitle: c, description: u, features: h }), p],
+                    children: [(0, r.jsx)(l, { title: c, subtitle: o, description: x, features: h }), p],
                   }),
-                  (0, r.jsx)(s, { title: o }),
+                  (0, r.jsx)(s, { title: c }),
                 ],
               }),
             ],
@@ -275,7 +275,7 @@
     },
     3997: (e, t, a) => {
       'use strict';
-      a.r(t), a.d(t, { __N_SSG: () => c, default: () => u });
+      a.r(t), a.d(t, { __N_SSG: () => x, default: () => u });
       var r = a(5640),
         s = a(148),
         l = a(8809);
@@ -291,8 +291,9 @@
       };
       var d = a(3286),
         i = a(6826),
-        o = a.n(i),
-        c = !0;
+        c = a.n(i);
+      let o = { chat: '\uD83D\uDCAC', dashboard: '\uD83D\uDCCA', error: '❌', landing: '\uD83C\uDFE0' };
+      var x = !0;
       let u = (e) => {
         let { templates: t = [] } = e,
           [{ query: a = '' }, l] = (0, s.useState)({ query: '' }),
@@ -314,32 +315,82 @@
             className: 'py-4 md:py-8',
             children: (0, r.jsx)('div', {
               className: 'container mx-auto px-8',
-              children: (0, r.jsx)('div', {
+              children: (0, r.jsxs)('div', {
                 className: 'flex flex-col gap-y-4 md:gap-y-8',
-                children: i.map((e) => {
-                  let { id: t = '', name: a = '', code: s } = e;
-                  return (0, r.jsx)(
-                    o(),
-                    {
-                      href: '/templates/'.concat(t),
-                      children: (0, r.jsxs)('div', {
-                        className: 'flex flex-col gap-y-4 md:gap-y-8',
-                        children: [
-                          (0, r.jsxs)('h2', {
-                            className: 'text-2xl font-bold capitalize',
-                            children: ['\uD83D\uDCDD ', a],
+                children: [
+                  (0, r.jsxs)('h2', {
+                    className: 'text-2xl font-bold',
+                    children: [
+                      (0, r.jsx)('span', { className: 'capitalize', children: 'Templates' }),
+                      ' (',
+                      i.length,
+                      ')',
+                    ],
+                  }),
+                  i.length > 0 &&
+                    (0, r.jsxs)(r.Fragment, {
+                      children: [
+                        (0, r.jsx)('div', {
+                          className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4',
+                          children: i.map((e) => {
+                            var t;
+                            let { id: a = '', name: s = '' } = e;
+                            return (0, r.jsx)(
+                              c(),
+                              {
+                                href: '#'.concat(a),
+                                children: (0, r.jsx)('div', {
+                                  className: 'col-span-1',
+                                  children: (0, r.jsxs)('div', {
+                                    className:
+                                      'flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+                                    children: [
+                                      (0, r.jsx)('p', { className: 'text-2xl', children: null != (t = o[a]) ? t : '' }),
+                                      (0, r.jsxs)('div', {
+                                        className: 'flex flex-col gap-y-0.25',
+                                        children: [
+                                          (0, r.jsx)('p', { className: 'text-xs capitalize', children: 'Templates' }),
+                                          (0, r.jsx)('p', { className: 'font-semibold capitalize', children: s }),
+                                        ],
+                                      }),
+                                    ],
+                                  }),
+                                }),
+                              },
+                              a
+                            );
                           }),
-                          (0, r.jsx)('div', {
-                            className:
-                              'h-128 overflow-hidden rounded-lg border border-neutral-200 p-4 shadow md:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10',
-                            children: (0, r.jsx)(n, { code: s }),
+                        }),
+                        (0, r.jsx)('div', {
+                          className: 'flex flex-col gap-y-4 md:gap-y-8',
+                          children: i.map((e) => {
+                            let { id: t = '', name: a = '', code: s } = e;
+                            return (0, r.jsx)(
+                              c(),
+                              {
+                                href: '/templates/'.concat(t),
+                                children: (0, r.jsxs)('div', {
+                                  className: 'flex flex-col gap-y-4 md:gap-y-8',
+                                  children: [
+                                    (0, r.jsxs)('h2', {
+                                      className: 'text-2xl font-bold capitalize',
+                                      children: ['\uD83D\uDCDD ', a],
+                                    }),
+                                    (0, r.jsx)('div', {
+                                      className:
+                                        'h-128 overflow-hidden rounded-lg border border-neutral-200 p-4 shadow md:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10',
+                                      children: (0, r.jsx)(n, { code: s }),
+                                    }),
+                                  ],
+                                }),
+                              },
+                              t
+                            );
                           }),
-                        ],
-                      }),
-                    },
-                    t
-                  );
-                }),
+                        }),
+                      ],
+                    }),
+                ],
               }),
             }),
           }),
