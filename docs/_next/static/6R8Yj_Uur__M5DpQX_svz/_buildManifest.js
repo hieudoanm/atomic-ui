@@ -12,7 +12,7 @@
     '/components/ui': [s, e, t, a, 'static/chunks/pages/components/ui-ee19dcfe197f0c72.js'],
     '/react/contexts': [s, e, t, a, 'static/chunks/pages/react/contexts-3df5ee97e50c37d1.js'],
     '/react/hooks': [s, e, t, a, 'static/chunks/pages/react/hooks-6f12a84b6d3ac794.js'],
-    '/templates': [s, e, 'static/chunks/pages/templates-e1e837c7633eb741.js'],
+    '/templates': [s, e, 'static/chunks/pages/templates-761453cf406d48ba.js'],
     '/templates/[id]': [s, e, t, a, 'static/chunks/pages/templates/[id]-3a8c65340e5d8784.js'],
     '/utils': [s, e, t, a, 'static/chunks/pages/utils-26136ca7475ba51b.js'],
     '/visual/emojis': [s, 'static/chunks/pages/visual/emojis-ee2c4a2860474cb0.js'],

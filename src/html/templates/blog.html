@@ -1,0 +1,61 @@
+<div class="min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+  <!-- Header -->
+  <header class="bg-white px-6 py-4 shadow dark:bg-gray-800">
+    <div class="mx-auto flex max-w-4xl items-center justify-between">
+      <h1 class="text-xl font-bold">My Blog</h1>
+      <nav class="space-x-4 text-sm">
+        <a href="#" class="hover:underline">Home</a>
+        <a href="#" class="hover:underline">Blog</a>
+        <a href="#" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Blog Post Content -->
+  <main class="mx-auto max-w-4xl px-6 py-12">
+    <article class="prose lg:prose-lg dark:prose-invert prose-neutral">
+      <h1>Understanding Tailwind CSS: A Beginner's Guide</h1>
+      <p class="mb-6 text-sm text-gray-500 dark:text-gray-400">
+        By <span class="font-medium">Jane Doe</span> · May 10, 2025 · 5 min read
+      </p>
+
+      <p>
+        Tailwind CSS is a utility-first framework that allows developers to build custom designs without ever leaving
+        their HTML. Unlike traditional CSS frameworks like Bootstrap, Tailwind doesn’t provide pre-styled components.
+        Instead, it provides low-level utility classes that let you build completely custom designs with ease.
+      </p>
+
+      <h2>Why Use Tailwind?</h2>
+      <ul>
+        <li>Speed up development with reusable utilities</li>
+        <li>No need to leave your HTML to style elements</li>
+        <li>Perfect for design systems and component libraries</li>
+      </ul>
+
+      <h2>Getting Started</h2>
+      <p>To get started, install Tailwind via npm:</p>
+
+      <pre><code>npm install -D tailwindcss
+  npx tailwindcss init</code></pre>
+
+      <p>Then add Tailwind to your CSS:</p>
+
+      <pre><code>@tailwind base;
+  @tailwind components;
+  @tailwind utilities;</code></pre>
+
+      <h2>Conclusion</h2>
+      <p>
+        Tailwind CSS is a modern approach to styling your applications. It’s especially useful for developers who value
+        customization, design freedom, and consistency. Whether you're building a personal blog or a complex dashboard,
+        Tailwind gives you the power to do it all.
+      </p>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer
+    class="border-t border-gray-200 bg-white px-6 py-6 text-center text-sm text-gray-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400">
+    © 2025 My Blog. All rights reserved.
+  </footer>
+</div>

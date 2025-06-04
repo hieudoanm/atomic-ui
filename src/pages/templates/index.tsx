@@ -13,6 +13,8 @@ const __dirname = join(dirname(__filename), devPath);
 type TemplateType = { id: string; name: string; code: string };
 
 const emojis: Record<string, string> = {
+  blog: '📝',
+  blogs: '📚',
   chat: '💬',
   dashboard: '📊',
   error: '❌',
@@ -44,7 +46,7 @@ const TemplatesPage: NextPage<{ templates: TemplateType[] }> = ({ templates = []
             </h2>
             {filteredTemplates.length > 0 && (
               <>
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-6">
                   {filteredTemplates.map(({ id = '', name = '' }) => {
                     return (
                       <Link href={`#${id}`} key={id}>
@@ -65,7 +67,7 @@ const TemplatesPage: NextPage<{ templates: TemplateType[] }> = ({ templates = []
                   {filteredTemplates.map(({ id = '', name = '', code }) => {
                     return (
                       <Link key={id} href={`/templates/${id}`}>
-                        <div className="flex flex-col gap-y-4 md:gap-y-8">
+                        <div id={id} className="flex flex-col gap-y-4 md:gap-y-8">
                           <h2 className="text-2xl font-bold capitalize">📝 {name}</h2>
                           <div className="h-128 overflow-hidden rounded-lg border border-neutral-200 p-4 shadow md:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10">
                             <HTMLPreview code={code} />
