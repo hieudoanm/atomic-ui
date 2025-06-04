@@ -35,7 +35,12 @@ const TemplatePage: NextPage<{ template: TemplateType }> = ({ template = { id: '
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [{ params: { id: 'error' } }, { params: { id: 'landing' } }],
+    paths: [
+      { params: { id: 'chat' } },
+      { params: { id: 'dashboard' } },
+      { params: { id: 'error' } },
+      { params: { id: 'landing' } },
+    ],
     fallback: false,
   };
 };

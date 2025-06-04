@@ -1,0 +1,30 @@
+<div
+  class="container mx-auto flex h-screen flex-col overflow-hidden rounded-lg border border-neutral-200 bg-white p-4 shadow md:p-8 dark:border-neutral-800 dark:bg-neutral-900 dark:shadow-neutral-100/10">
+  <!-- Chat Area -->
+  <div class="flex-1 space-y-4 overflow-y-auto">
+    <!-- User message -->
+    <div class="flex justify-end">
+      <div class="max-w-2xl rounded-xl bg-neutral-200 p-4 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
+        <p>I need help summarizing a document.</p>
+      </div>
+    </div>
+    <!-- Assistant message -->
+    <div class="flex justify-start">
+      <div class="bg-white dark:bg-neutral-900">Hi! I'm here to assist you with anything you need.</div>
+    </div>
+    <!-- More messages can be added here -->
+  </div>
+  <!-- Input Box -->
+  <div
+    class="flex items-center gap-2 rounded-full border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900">
+    <input type="text" placeholder="Type your message..." class="grow px-6 py-2 focus:outline-none" />
+    <div class="p-2">
+      <button class="rounded-full bg-neutral-100 p-4 dark:bg-neutral-800">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" class="h-4 w-4">
+          <path
+            d="M214.6 9.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 109.3 160 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-370.7 73.4 73.4c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-128-128z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
