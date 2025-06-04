@@ -51,7 +51,7 @@ const UIPage: NextPage<{ components: Component[] }> = ({ components = [] }) => {
                             <p className="text-2xl">{emoji}</p>
                             <div className="flex flex-col gap-y-0.25">
                               <p className="text-xs capitalize">{group}</p>
-                              <p className="font-semibold capitalize">{name}</p>
+                              <p className="text-sm font-semibold capitalize">{name}</p>
                             </div>
                           </div>
                         </div>
@@ -167,8 +167,16 @@ export const getStaticProps = () => {
     { path: 'auth/password-reset', emoji: '🔁', name: 'Reset Password' },
     { path: 'auth/sign-in', emoji: '🔓', name: 'Sign In' },
     { path: 'auth/sign-up', emoji: '📝', name: 'Sign Up' },
-    { path: 'button/button', emoji: '🔘', name: 'Button' },
-    { path: 'button/button-icon', emoji: '🖱️', name: 'Button Icon' },
+    { path: 'button/fill/small', emoji: '🔘', name: 'Button - Fill (Small)' },
+    { path: 'button/fill/medium', emoji: '🔘', name: 'Button - Fill (Medium)' },
+    { path: 'button/fill/large', emoji: '🔘', name: 'Button - Fill (Large)' },
+    { path: 'button/outline/small', emoji: '🔘', name: 'Button - Outline (Small)' },
+    { path: 'button/outline/medium', emoji: '🔘', name: 'Button - Outline (Medium)' },
+    { path: 'button/outline/large', emoji: '🔘', name: 'Button - Outline (Large)' },
+    { path: 'button/round/fill', emoji: '🔘', name: 'Button - Round - Fill' },
+    { path: 'button/round/outline', emoji: '🔘', name: 'Button - Round - Outline' },
+    { path: 'button/icon/fill', emoji: '🖱️', name: 'Button - Icon - Fill' },
+    { path: 'button/icon/outline', emoji: '🖱️', name: 'Button - Icon - Outline' },
     { path: 'button/button-dropdown', emoji: '🔽', name: 'Button Dropdown' },
     { path: 'button/button-group', emoji: '👆', name: 'Button Group' },
     { path: 'data/list', emoji: '📋', name: 'List' },
@@ -180,7 +188,7 @@ export const getStaticProps = () => {
     { path: 'feedback/loading', emoji: '⏳', name: 'Loading' },
     { path: 'feedback/progress', emoji: '🏁', name: 'Progress' },
     { path: 'feedback/skeleton', emoji: '🩻', name: 'Skeleton' },
-    { path: 'feedback/toast', emoji: '🥑', name: 'Toast' }, // humorous choice, you can change to 🔔 or 🍞
+    { path: 'feedback/toast', emoji: '🥑', name: 'Toast' },
     { path: 'form/calendar', emoji: '📅', name: 'Calendar' },
     { path: 'form/checkbox', emoji: '☑️', name: 'Checkbox' },
     { path: 'form/input', emoji: '⌨️', name: 'Input' },

@@ -89,15 +89,15 @@
         );
       };
       var s = n(1668),
-        g = n.n(s),
-        c = n(6826),
-        m = n.n(c);
+        c = n.n(s),
+        g = n(6826),
+        m = n.n(g);
       let h = (a) => {
           let { title: e = '', links: n = [], query: o = '', setState: r, disabledSearch: t = !1 } = a,
-            { darkMode: s = !1, toggleDarkMode: c } = l();
+            { darkMode: s = !1, toggleDarkMode: g } = l();
           return (0, i.jsxs)(i.Fragment, {
             children: [
-              (0, i.jsx)(g(), { children: (0, i.jsx)('title', { children: e }) }),
+              (0, i.jsx)(c(), { children: (0, i.jsx)('title', { children: e }) }),
               (0, i.jsx)('nav', {
                 className: 'border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
                 children: (0, i.jsxs)('div', {
@@ -193,7 +193,7 @@
                                   checked: s,
                                   className: 'peer sr-only',
                                   onChange: () => {
-                                    c();
+                                    g();
                                   },
                                 }),
                                 (0, i.jsx)('span', {
@@ -240,8 +240,8 @@
             setState: t = () => {},
             id: l = '',
             emoji: s = '',
-            title: g = '',
-            subtitle: c = '',
+            title: c = '',
+            subtitle: g = '',
             description: m = '',
             features: f = [],
             children: u = (0, i.jsx)(i.Fragment, {}),
@@ -255,7 +255,7 @@
                   let { id: e = '' } = a;
                   return l !== e;
                 }),
-                title: ''.concat(s, ' ').concat(g),
+                title: ''.concat(s, ' ').concat(c),
                 query: n,
                 setState: t,
               }),
@@ -264,22 +264,37 @@
                 children: [
                   (0, i.jsxs)('main', {
                     className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                    children: [(0, i.jsx)(r, { title: g, subtitle: c, description: m, features: f }), u],
+                    children: [(0, i.jsx)(r, { title: c, subtitle: g, description: m, features: f }), u],
                   }),
-                  (0, i.jsx)(o, { title: g }),
+                  (0, i.jsx)(o, { title: c }),
                 ],
               }),
             ],
           });
         };
     },
+    6921: (a, e, n) => {
+      'use strict';
+      n.d(e, { C: () => i });
+      let i = (a) => {
+        navigator.clipboard
+          .writeText(a)
+          .then(() => {
+            alert('Copied to clipboard!');
+          })
+          .catch((a) => {
+            console.error('Failed to copy: ', a);
+          });
+      };
+    },
     8802: (a, e, n) => {
       'use strict';
-      n.r(e), n.d(e, { default: () => l });
+      n.r(e), n.d(e, { default: () => s });
       var i = n(5640),
         o = n(3286),
-        r = n(148);
-      let t = Object.entries({
+        r = n(6921),
+        t = n(148);
+      let l = Object.entries({
           'grinning face': '\uD83D\uDE00',
           'grinning face with big eyes': '\uD83D\uDE03',
           'grinning face with smiling eyes': '\uD83D\uDE04',
@@ -2194,9 +2209,9 @@
           let [e, n] = a;
           return { name: e, emoji: n };
         }),
-        l = () => {
-          let [{ query: a = '' }, e] = (0, r.useState)({ query: '' }),
-            n = t.filter((e) => {
+        s = () => {
+          let [{ query: a = '' }, e] = (0, t.useState)({ query: '' }),
+            n = l.filter((e) => {
               let { name: n } = e;
               return n.toLowerCase().includes(a.toLowerCase());
             });
@@ -2237,6 +2252,7 @@
                               title: e,
                               className:
                                 'cursor-pointer rounded-lg p-2 text-4xl hover:bg-neutral-200 dark:hover:bg-neutral-800',
+                              onClick: () => (0, r.C)(n),
                               children: n,
                             },
                             n

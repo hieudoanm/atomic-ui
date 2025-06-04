@@ -14,21 +14,21 @@
       s.r(a), s.d(a, { __N_SSG: () => c, default: () => o });
       var l = s(5640),
         r = s(7921),
-        d = s(3286),
-        t = s(6826),
-        i = s.n(t),
+        t = s(3286),
+        d = s(6826),
+        i = s.n(d),
         n = s(148),
         c = !0;
       let o = (e) => {
         let { components: a = [] } = e,
-          [{ query: s = '' }, t] = (0, n.useState)({ query: '' }),
+          [{ query: s = '' }, d] = (0, n.useState)({ query: '' }),
           c = a.filter((e) => {
             let { id: a, name: l } = e;
             return a.toLowerCase().includes(s.toLowerCase()) || l.toLowerCase().includes(s.toLowerCase());
           });
-        return (0, l.jsxs)(d.U, {
+        return (0, l.jsxs)(t.U, {
           query: s,
-          setState: t,
+          setState: d,
           id: 'components-ui',
           emoji: '\uD83C\uDFA8',
           title: 'atomic/ui',
@@ -59,7 +59,7 @@
                           (0, l.jsx)('div', {
                             className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4',
                             children: c.map((e) => {
-                              let { id: a = '', emoji: s = '', group: r, name: d = '' } = e;
+                              let { id: a = '', emoji: s = '', group: r, name: t = '' } = e;
                               return (0, l.jsx)(
                                 i(),
                                 {
@@ -75,7 +75,10 @@
                                           className: 'flex flex-col gap-y-0.25',
                                           children: [
                                             (0, l.jsx)('p', { className: 'text-xs capitalize', children: r }),
-                                            (0, l.jsx)('p', { className: 'font-semibold capitalize', children: d }),
+                                            (0, l.jsx)('p', {
+                                              className: 'text-sm font-semibold capitalize',
+                                              children: t,
+                                            }),
                                           ],
                                         }),
                                       ],
@@ -89,12 +92,12 @@
                           (0, l.jsx)('div', {
                             className: 'flex flex-col gap-y-4 md:gap-y-8',
                             children: c.map((e) => {
-                              let { id: a = '', emoji: s = '', group: d = '', name: t = '', code: i = '' } = e;
+                              let { id: a = '', emoji: s = '', group: t = '', name: d = '', code: i = '' } = e;
                               return (0, l.jsx)(
                                 'div',
                                 {
                                   className: 'flex flex-col gap-y-4',
-                                  children: (0, l.jsx)(r.O, { id: a, emoji: s, group: d, name: t, code: i }),
+                                  children: (0, l.jsx)(r.O, { id: a, emoji: s, group: t, name: d, code: i }),
                                 },
                                 a
                               );
@@ -183,7 +186,7 @@
                               darkClass: 'dark:shadow-neutral-100/10',
                             },
                           ].map((e, a) => {
-                            let { id: s = '', name: r = '', lightClass: d = '', darkClass: t = '' } = e;
+                            let { id: s = '', name: r = '', lightClass: t = '', darkClass: d = '' } = e;
                             return (0, l.jsxs)(
                               'tr',
                               {
@@ -199,7 +202,7 @@
                                     children: (0, l.jsx)('code', {
                                       className:
                                         'mr-1 rounded bg-neutral-900 px-1 py-0.5 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900',
-                                      children: d,
+                                      children: t,
                                     }),
                                   }),
                                   (0, l.jsx)('td', {
@@ -207,7 +210,7 @@
                                     children: (0, l.jsx)('code', {
                                       className:
                                         'mr-1 rounded bg-neutral-900 px-1 py-0.5 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900',
-                                      children: t,
+                                      children: d,
                                     }),
                                   }),
                                 ],

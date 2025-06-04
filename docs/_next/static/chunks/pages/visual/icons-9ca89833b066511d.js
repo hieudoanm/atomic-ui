@@ -1,48 +1,39 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [9695],
   {
-    1004: (e, t, r) => {
+    833: (e, t, r) => {
       'use strict';
       r.r(t), r.d(t, { __N_SSG: () => c, default: () => o });
       var a = r(5640),
         s = r(148),
-        l = r(8809);
-      let n = (e) => {
-          navigator.clipboard
-            .writeText(e)
-            .then(() => {
-              alert('Copied to clipboard!');
-            })
-            .catch((e) => {
-              console.error('Failed to copy: ', e);
-            });
-        },
-        i = (e) => {
-          let { name: t = '', code: r = '' } = e,
-            [i, d] = (0, s.useState)('');
-          return (
-            (0, s.useEffect)(() => {
-              d((0, l.A)(window).sanitize(r));
-            }, [r]),
-            (0, a.jsx)('button', {
-              type: 'button',
-              title: t,
-              className: 'cursor-pointer',
-              onClick: () => {
-                n(r);
-              },
+        l = r(8809),
+        n = r(6921);
+      let i = (e) => {
+        let { name: t = '', code: r = '' } = e,
+          [i, d] = (0, s.useState)('');
+        return (
+          (0, s.useEffect)(() => {
+            d((0, l.A)(window).sanitize(r));
+          }, [r]),
+          (0, a.jsx)('button', {
+            type: 'button',
+            title: t,
+            className: 'cursor-pointer',
+            onClick: () => {
+              (0, n.C)(r);
+            },
+            children: (0, a.jsx)('div', {
+              className:
+                'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 p-2 shadow md:p-4 lg:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10',
               children: (0, a.jsx)('div', {
                 className:
-                  'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 p-2 shadow md:p-4 lg:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10',
-                children: (0, a.jsx)('div', {
-                  className:
-                    'h-fit w-fit [&>svg]:h-8 [&>svg]:fill-current [&>svg]:text-neutral-900 dark:[&>svg]:text-neutral-100',
-                  dangerouslySetInnerHTML: { __html: i },
-                }),
+                  'h-fit w-fit [&>svg]:h-8 [&>svg]:fill-current [&>svg]:text-neutral-900 dark:[&>svg]:text-neutral-100',
+                dangerouslySetInnerHTML: { __html: i },
               }),
-            })
-          );
-        };
+            }),
+          })
+        );
+      };
       var d = r(3286),
         c = !0;
       let o = (e) => {
@@ -367,11 +358,25 @@
           });
         };
     },
+    6921: (e, t, r) => {
+      'use strict';
+      r.d(t, { C: () => a });
+      let a = (e) => {
+        navigator.clipboard
+          .writeText(e)
+          .then(() => {
+            alert('Copied to clipboard!');
+          })
+          .catch((e) => {
+            console.error('Failed to copy: ', e);
+          });
+      };
+    },
     7529: (e, t, r) => {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         '/visual/icons',
         function () {
-          return r(1004);
+          return r(833);
         },
       ]);
     },

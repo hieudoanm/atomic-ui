@@ -1,5 +1,6 @@
 import { emojis } from '@atomic/database/emojis';
 import { PageTemplate } from '@atomic/templates/PageTemplate';
+import { copy } from '@atomic/utils/clipboard/copy';
 import { NextPage } from 'next';
 import { useState } from 'react';
 
@@ -36,7 +37,8 @@ const EmojisPage: NextPage = () => {
                   <button
                     key={emoji}
                     title={name}
-                    className="cursor-pointer rounded-lg p-2 text-4xl hover:bg-neutral-200 dark:hover:bg-neutral-800">
+                    className="cursor-pointer rounded-lg p-2 text-4xl hover:bg-neutral-200 dark:hover:bg-neutral-800"
+                    onClick={() => copy(emoji)}>
                     {emoji}
                   </button>
                 ))}
