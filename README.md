@@ -185,6 +185,13 @@ atomic
 
 #### Page Templates
 
+| No  | Name      | Status      |
+| --- | --------- | ----------- |
+| 01  | Chat      | In Progress |
+| 02  | Dashboard | In Progress |
+| 03  | Error     | Completed   |
+| 04  | Landing   | Completed   |
+
 ### React
 
 #### React Contexts
