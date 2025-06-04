@@ -69,7 +69,7 @@
         "group": "functional",
         "name": "Try/Catch",
         "emoji": "🛡️",
-        "code": "// Types for the result object with discriminated union\ntype Success<T> = {\n  data: T;\n  error: null;\n};\n\ntype Failure<E> = {\n  data: null;\n  error: E;\n};\n\ntype Result<T, E = Error> = Success<T> | Failure<E>;\n\n// Main wrapper function\nexport async function tryCatch<T, E = Error>(\n  promise: Promise<T>\n): Promise<Result<T, E>> {\n  try {\n    const data = await promise;\n    return { data, error: null };\n  } catch (error) {\n    return { data: null, error: error as E };\n  }\n}\n"
+        "code": "// Types for the result object with discriminated union\ntype Success<T> = {\n  data: T;\n  error: null;\n};\n\ntype Failure<E> = {\n  data: null;\n  error: E;\n};\n\ntype Result<T, E = Error> = Success<T> | Failure<E>;\n\n// Main wrapper function\nexport async function tryCatch<T, E = Error>(promise: Promise<T>): Promise<Result<T, E>> {\n  try {\n    const data = await promise;\n    return { data, error: null };\n  } catch (error) {\n    return { data: null, error: error as E };\n  }\n}\n"
       },
       {
         "id": "number-clamp",

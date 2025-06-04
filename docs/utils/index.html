@@ -32,8 +32,8 @@
     <script src="/atomic/_next/static/chunks/5031-cfd6069ab4c4cdf0.js" defer=""></script>
     <script src="/atomic/_next/static/chunks/2630-87cfd57c0c4b2ab4.js" defer=""></script>
     <script src="/atomic/_next/static/chunks/pages/utils-26136ca7475ba51b.js" defer=""></script>
-    <script src="/atomic/_next/static/U4B7aK9Xiy4HfnSp4R4aW/_buildManifest.js" defer=""></script>
-    <script src="/atomic/_next/static/U4B7aK9Xiy4HfnSp4R4aW/_ssgManifest.js" defer=""></script>
+    <script src="/atomic/_next/static/TWaxNQkiAwoA-HTA-3WvI/_buildManifest.js" defer=""></script>
+    <script src="/atomic/_next/static/TWaxNQkiAwoA-HTA-3WvI/_ssgManifest.js" defer=""></script>
   </head>
   <body class="antialiased">
     <div id="__next">
@@ -841,7 +841,7 @@
                 "group": "functional",
                 "name": "Try/Catch",
                 "emoji": "🛡️",
-                "code": "// Types for the result object with discriminated union\ntype Success\u003cT\u003e = {\n  data: T;\n  error: null;\n};\n\ntype Failure\u003cE\u003e = {\n  data: null;\n  error: E;\n};\n\ntype Result\u003cT, E = Error\u003e = Success\u003cT\u003e | Failure\u003cE\u003e;\n\n// Main wrapper function\nexport async function tryCatch\u003cT, E = Error\u003e(\n  promise: Promise\u003cT\u003e\n): Promise\u003cResult\u003cT, E\u003e\u003e {\n  try {\n    const data = await promise;\n    return { data, error: null };\n  } catch (error) {\n    return { data: null, error: error as E };\n  }\n}\n"
+                "code": "// Types for the result object with discriminated union\ntype Success\u003cT\u003e = {\n  data: T;\n  error: null;\n};\n\ntype Failure\u003cE\u003e = {\n  data: null;\n  error: E;\n};\n\ntype Result\u003cT, E = Error\u003e = Success\u003cT\u003e | Failure\u003cE\u003e;\n\n// Main wrapper function\nexport async function tryCatch\u003cT, E = Error\u003e(promise: Promise\u003cT\u003e): Promise\u003cResult\u003cT, E\u003e\u003e {\n  try {\n    const data = await promise;\n    return { data, error: null };\n  } catch (error) {\n    return { data: null, error: error as E };\n  }\n}\n"
               },
               {
                 "id": "number-clamp",
@@ -919,7 +919,7 @@
         },
         "page": "/utils",
         "query": {},
-        "buildId": "U4B7aK9Xiy4HfnSp4R4aW",
+        "buildId": "TWaxNQkiAwoA-HTA-3WvI",
         "assetPrefix": "/atomic",
         "isFallback": false,
         "gsp": true,
