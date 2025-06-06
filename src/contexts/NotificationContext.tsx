@@ -24,14 +24,14 @@ const NotificationContext = createContext<NotificationContextProps | undefined>(
 export const NotificationProvider = ({ children }: { children: ReactNode }) => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
-  const addNotification = (type: NotificationType, message: string) => {
+  const addNotification = (type: NotificationType, message: string, timeout: number = 3000) => {
     const id = Date.now().toString();
     setNotifications((prev) => [...prev, { id, type, message }]);
 
-    // auto-remove after 3s
+    // auto-remove after (timeout)s - default is 3s
     setTimeout(() => {
       setNotifications((prev) => prev.filter((n) => n.id !== id));
-    }, 3000);
+    }, timeout);
   };
 
   const removeNotification = (id: string) => {
