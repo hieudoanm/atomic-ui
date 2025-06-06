@@ -1,11 +1,8 @@
 import { FC } from 'react';
 
-export const Hero: FC<{
-  title: string;
-  subtitle: string;
-  description: string;
-  features: string[];
-}> = ({ title = '', subtitle = '', description = '', features = [] }) => {
+type HeroProps = { title: string; subtitle: string; description: string; features: string[] };
+
+export const Hero: FC<HeroProps> = ({ title = '', subtitle = '', description = '', features = [] }) => {
   return (
     <section className="py-8 md:py-16">
       <div className="container mx-auto flex flex-col items-center justify-center gap-y-4 px-8">

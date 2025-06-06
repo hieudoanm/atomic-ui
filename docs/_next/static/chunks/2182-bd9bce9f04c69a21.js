@@ -5803,7 +5803,7 @@
               id: 'github-dark-high-contrast',
               displayName: 'GitHub Dark High Contrast',
               type: 'dark',
-              import: () => n.e(9597).then(n.bind(n, 9597)),
+              import: () => n.e(9597).then(n.bind(n, 1978)),
             },
             {
               id: 'github-light',

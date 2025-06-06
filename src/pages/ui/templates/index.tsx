@@ -1,4 +1,4 @@
-import { HTMLPreview } from '@atomic/components/HTML';
+import { HTMLPreview } from '@atomic/components/preview/HTML';
 import { PageTemplate } from '@atomic/templates/PageTemplate';
 import { NextPage } from 'next';
 import Link from 'next/link';

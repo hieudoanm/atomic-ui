@@ -5,8 +5,8 @@
       'use strict';
       a.r(s), a.d(s, { __N_SSG: () => d, default: () => n });
       var l = a(5640),
-        r = a(7921),
-        c = a(3286),
+        r = a(6260),
+        c = a(9597),
         i = a(6826),
         t = a.n(i),
         o = a(148),
@@ -80,7 +80,7 @@
                               'div',
                               {
                                 className: 'flex flex-col gap-y-4',
-                                children: (0, l.jsx)(r.O, {
+                                children: (0, l.jsx)(r.C, {
                                   id: s,
                                   emoji: a,
                                   group: c,
@@ -113,6 +113,6 @@
   },
   (e) => {
     var s = (s) => e((e.s = s));
-    e.O(0, [6826, 1190, 2182, 2630, 636, 6593, 8792], () => s(7297)), (_N_E = e.O());
+    e.O(0, [6826, 1190, 2182, 3988, 636, 6593, 8792], () => s(7297)), (_N_E = e.O());
   },
 ]);

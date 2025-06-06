@@ -1,9 +1,9 @@
+import { copy } from '@atomic/utils/clipboard/copy';
 import createDOMPurify from 'dompurify';
 import { FC, useEffect, useState } from 'react';
-import { Code } from './Code';
-import { copy } from '@atomic/utils/clipboard/copy';
+import { Shiki } from './Shiki';
 
-export const CodePreview: FC<{
+export const Code: FC<{
   id: string;
   emoji: string;
   group: string;
@@ -50,13 +50,13 @@ export const CodePreview: FC<{
       </div>
       <div className="flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
         {codeOnly ? (
-          <Code code={code} lang="tsx" />
+          <Shiki code={code} lang="tsx" />
         ) : (
           <>
             {preview ? (
               <div className="w-full p-4 md:p-8" dangerouslySetInnerHTML={{ __html: html }} />
             ) : (
-              <Code code={code} lang="html" />
+              <Shiki code={code} lang="html" />
             )}
           </>
         )}

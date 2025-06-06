@@ -1,4 +1,4 @@
-import { CodePreview } from '@atomic/components/CodePreview';
+import { Code } from '@atomic/components/preview/Code';
 import { PageTemplate } from '@atomic/templates/PageTemplate';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { readFileSync } from 'node:fs';
@@ -26,7 +26,7 @@ const TemplatePage: NextPage<{ template: TemplateType }> = ({ template = { id: '
       <section className="py-4 md:py-8">
         <div className="container mx-auto px-8">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
-            <CodePreview id={id} emoji={'📝'} group="Template" name={name} code={code} />
+            <Code id={id} emoji={'📝'} group="Template" name={name} code={code} />
           </div>
         </div>
       </section>

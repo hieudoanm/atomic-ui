@@ -1,4 +1,4 @@
-import { CodePreview } from '@atomic/components/CodePreview';
+import { Code } from '@atomic/components/preview/Code';
 import { PageTemplate } from '@atomic/templates/PageTemplate';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -63,7 +63,7 @@ const UIKitPage: NextPage<{ components: Component[] }> = ({ components = [] }) =
                   {filteredComponents.map(({ id = '', emoji = '', group = '', name = '', code = '' }) => {
                     return (
                       <div key={id} className="flex flex-col gap-y-4">
-                        <CodePreview id={id} emoji={emoji} group={group} name={name} code={code} />
+                        <Code id={id} emoji={emoji} group={group} name={name} code={code} />
                       </div>
                     );
                   })}

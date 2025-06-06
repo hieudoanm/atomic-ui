@@ -5,7 +5,7 @@
       'use strict';
       n.r(e), n.d(e, { default: () => s });
       var i = n(5640),
-        o = n(3286),
+        o = n(9597),
         r = n(6921),
         t = n(148);
       let l = Object.entries({
@@ -1980,7 +1980,29 @@
           });
         };
     },
-    3286: (a, e, n) => {
+    5541: (a, e, n) => {
+      (window.__NEXT_P = window.__NEXT_P || []).push([
+        '/assets/emojis',
+        function () {
+          return n(3113);
+        },
+      ]);
+    },
+    6921: (a, e, n) => {
+      'use strict';
+      n.d(e, { C: () => i });
+      let i = (a) => {
+        navigator.clipboard
+          .writeText(a)
+          .then(() => {
+            alert('Copied to clipboard!');
+          })
+          .catch((a) => {
+            console.error('Failed to copy: ', a);
+          });
+      };
+    },
+    9597: (a, e, n) => {
       'use strict';
       n.d(e, { U: () => f });
       var i = n(5640);
@@ -2244,28 +2266,6 @@
             ],
           });
         };
-    },
-    5541: (a, e, n) => {
-      (window.__NEXT_P = window.__NEXT_P || []).push([
-        '/assets/emojis',
-        function () {
-          return n(3113);
-        },
-      ]);
-    },
-    6921: (a, e, n) => {
-      'use strict';
-      n.d(e, { C: () => i });
-      let i = (a) => {
-        navigator.clipboard
-          .writeText(a)
-          .then(() => {
-            alert('Copied to clipboard!');
-          })
-          .catch((a) => {
-            console.error('Failed to copy: ', a);
-          });
-      };
     },
   },
   (a) => {

@@ -1,7 +1,7 @@
 import { FC, ReactNode, useState } from 'react';
-import { Code } from './Code';
+import { Shiki } from './Shiki';
 
-export const ChartPreview: FC<{
+export const Chart: FC<{
   id: string;
   emoji: string;
   name: string;
@@ -31,7 +31,7 @@ export const ChartPreview: FC<{
         {preview ? (
           <div className="flex w-full items-center justify-center p-4 md:p-8">{chart}</div>
         ) : (
-          <Code code={code} lang="html" />
+          <Shiki code={code} lang="html" />
         )}
       </div>
     </div>

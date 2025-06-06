@@ -1,4 +1,4 @@
-import { Icon } from '@atomic/components/Icon';
+import { Icon } from '@atomic/components/preview/Icon';
 import { PageTemplate } from '@atomic/templates/PageTemplate';
 import { NextPage } from 'next';
 import { readdirSync, readFileSync } from 'node:fs';

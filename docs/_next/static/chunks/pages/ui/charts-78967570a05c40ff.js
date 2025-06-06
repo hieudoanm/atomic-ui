@@ -1,12 +1,12 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [3826],
   {
-    949: (e, t, l) => {
+    4261: (e, t, l) => {
       'use strict';
       l.r(t), l.d(t, { __N_SSG: () => u, default: () => m });
       var a = l(5640),
         r = l(148),
-        s = l(3719);
+        s = l(8899);
       let i = (e) => {
         let { id: t = '', emoji: l = '', name: i = '', code: n = '', chart: o = (0, a.jsx)(a.Fragment, {}) } = e,
           [d, h] = (0, r.useState)(!0);
@@ -43,12 +43,12 @@
                 'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
               children: d
                 ? (0, a.jsx)('div', { className: 'flex w-full items-center justify-center p-4 md:p-8', children: o })
-                : (0, a.jsx)(s.C, { code: n, lang: 'html' }),
+                : (0, a.jsx)(s.V, { code: n, lang: 'html' }),
             }),
           ],
         });
       };
-      var n = l(3286),
+      var n = l(9597),
         o = l(6826),
         d = l.n(o);
       let h = {
@@ -896,7 +896,29 @@
         });
       };
     },
-    3286: (e, t, l) => {
+    8899: (e, t, l) => {
+      'use strict';
+      l.d(t, { V: () => i });
+      var a = l(5640),
+        r = l(148),
+        s = l(2182);
+      let i = (e) => {
+        let { code: t, lang: l } = e,
+          [i, n] = (0, r.useState)('');
+        return (
+          (0, r.useEffect)(() => {
+            (async () => {
+              n(await (0, s.Yz)(t, { lang: l, theme: 'github-dark' }));
+            })();
+          }),
+          (0, a.jsx)('div', {
+            className: 'w-full overflow-x-auto bg-neutral-900 p-4',
+            dangerouslySetInnerHTML: { __html: i },
+          })
+        );
+      };
+    },
+    9597: (e, t, l) => {
       'use strict';
       l.d(t, { U: () => u });
       var a = l(5640);
@@ -1161,33 +1183,11 @@
           });
         };
     },
-    3719: (e, t, l) => {
-      'use strict';
-      l.d(t, { C: () => i });
-      var a = l(5640),
-        r = l(148),
-        s = l(2182);
-      let i = (e) => {
-        let { code: t, lang: l } = e,
-          [i, n] = (0, r.useState)('');
-        return (
-          (0, r.useEffect)(() => {
-            (async () => {
-              n(await (0, s.Yz)(t, { lang: l, theme: 'github-dark' }));
-            })();
-          }),
-          (0, a.jsx)('div', {
-            dangerouslySetInnerHTML: { __html: i },
-            className: 'w-full overflow-x-auto bg-neutral-900 p-4',
-          })
-        );
-      };
-    },
     9949: (e, t, l) => {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         '/ui/charts',
         function () {
-          return l(949);
+          return l(4261);
         },
       ]);
     },

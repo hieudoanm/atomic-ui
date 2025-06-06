@@ -1,6 +1,6 @@
-import { Footer } from '@atomic/components/Footer';
-import { Hero } from '@atomic/components/Hero';
-import { Navbar } from '@atomic/components/Navbar';
+import { Footer } from '@atomic/components/common/Footer';
+import { Hero } from '@atomic/components/common/Hero';
+import { Navbar } from '@atomic/components/common/Navbar';
 import { Dispatch, FC, ReactNode, SetStateAction } from 'react';
 
 const NAVBAR_LINKS: { id: string; emoji: string; href: string; text: string }[] = [

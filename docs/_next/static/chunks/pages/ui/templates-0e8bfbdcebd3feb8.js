@@ -1,15 +1,147 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [118],
   {
+    780: (e, t, a) => {
+      'use strict';
+      a.r(t), a.d(t, { __N_SSG: () => x, default: () => u });
+      var r = a(5640),
+        s = a(148),
+        l = a(8809);
+      let n = (e) => {
+        let { code: t = '' } = e,
+          [a, n] = (0, s.useState)('');
+        return (
+          (0, s.useEffect)(() => {
+            n((0, l.A)(window).sanitize(t));
+          }, [t]),
+          (0, r.jsx)('div', { dangerouslySetInnerHTML: { __html: a } })
+        );
+      };
+      var d = a(9597),
+        i = a(6826),
+        c = a.n(i);
+      let o = {
+        blog: '\uD83D\uDCDD',
+        blogs: '\uD83D\uDCDA',
+        chat: '\uD83D\uDCAC',
+        dashboard: '\uD83D\uDCCA',
+        error: '❌',
+        landing: '\uD83C\uDFE0',
+      };
+      var x = !0;
+      let u = (e) => {
+        let { templates: t = [] } = e,
+          [{ query: a = '' }, l] = (0, s.useState)({ query: '' }),
+          i = t.filter((e) => {
+            let { id: t, name: r } = e;
+            return t.toLowerCase().includes(a.toLowerCase()) || r.toLowerCase().includes(a.toLowerCase());
+          });
+        return (0, r.jsx)(d.U, {
+          query: a,
+          setState: l,
+          id: 'ui-templates',
+          emoji: '\uD83D\uDCDD',
+          title: 'atomic/templates',
+          subtitle: 'Free and Open Source Web/App Templates',
+          description:
+            'are responsive, professionally designed web and app templates created for SaaS platforms and marketing landing pages.',
+          features: ['Copy / Paste', 'Pure TailwindCSS', 'UI Components'],
+          children: (0, r.jsx)('section', {
+            className: 'py-4 md:py-8',
+            children: (0, r.jsx)('div', {
+              className: 'container mx-auto px-8',
+              children: (0, r.jsxs)('div', {
+                className: 'flex flex-col gap-y-4 md:gap-y-8',
+                children: [
+                  (0, r.jsxs)('h2', {
+                    className: 'text-2xl font-bold',
+                    children: [
+                      (0, r.jsx)('span', { className: 'capitalize', children: 'Templates' }),
+                      ' (',
+                      i.length,
+                      ')',
+                    ],
+                  }),
+                  i.length > 0 &&
+                    (0, r.jsxs)(r.Fragment, {
+                      children: [
+                        (0, r.jsx)('div', {
+                          className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-6',
+                          children: i.map((e) => {
+                            var t;
+                            let { id: a = '', name: s = '' } = e;
+                            return (0, r.jsx)(
+                              c(),
+                              {
+                                href: '#'.concat(a),
+                                children: (0, r.jsx)('div', {
+                                  className: 'col-span-1',
+                                  children: (0, r.jsxs)('div', {
+                                    className:
+                                      'flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+                                    children: [
+                                      (0, r.jsx)('p', { className: 'text-2xl', children: null != (t = o[a]) ? t : '' }),
+                                      (0, r.jsxs)('div', {
+                                        className: 'flex flex-col gap-y-0.25',
+                                        children: [
+                                          (0, r.jsx)('p', { className: 'text-xs capitalize', children: 'Templates' }),
+                                          (0, r.jsx)('p', { className: 'font-semibold capitalize', children: s }),
+                                        ],
+                                      }),
+                                    ],
+                                  }),
+                                }),
+                              },
+                              a
+                            );
+                          }),
+                        }),
+                        (0, r.jsx)('div', {
+                          className: 'flex flex-col gap-y-4 md:gap-y-8',
+                          children: i.map((e) => {
+                            let { id: t = '', name: a = '', code: s } = e;
+                            return (0, r.jsx)(
+                              c(),
+                              {
+                                href: '/templates/'.concat(t),
+                                children: (0, r.jsxs)('div', {
+                                  id: t,
+                                  className: 'flex flex-col gap-y-4 md:gap-y-8',
+                                  children: [
+                                    (0, r.jsxs)('h2', {
+                                      className: 'text-2xl font-bold capitalize',
+                                      children: ['\uD83D\uDCDD ', a],
+                                    }),
+                                    (0, r.jsx)('div', {
+                                      className:
+                                        'h-128 overflow-hidden rounded-lg border border-neutral-200 p-4 shadow md:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10',
+                                      children: (0, r.jsx)(n, { code: s }),
+                                    }),
+                                  ],
+                                }),
+                              },
+                              t
+                            );
+                          }),
+                        }),
+                      ],
+                    }),
+                ],
+              }),
+            }),
+          }),
+        });
+      };
+    },
     3075: (e, t, a) => {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         '/ui/templates',
         function () {
-          return a(4936);
+          return a(780);
         },
       ]);
     },
-    3286: (e, t, a) => {
+    9597: (e, t, a) => {
       'use strict';
       a.d(t, { U: () => m });
       var r = a(5640);
@@ -273,138 +405,6 @@
             ],
           });
         };
-    },
-    4936: (e, t, a) => {
-      'use strict';
-      a.r(t), a.d(t, { __N_SSG: () => x, default: () => u });
-      var r = a(5640),
-        s = a(148),
-        l = a(8809);
-      let n = (e) => {
-        let { code: t = '' } = e,
-          [a, n] = (0, s.useState)('');
-        return (
-          (0, s.useEffect)(() => {
-            n((0, l.A)(window).sanitize(t));
-          }, [t]),
-          (0, r.jsx)('div', { dangerouslySetInnerHTML: { __html: a } })
-        );
-      };
-      var d = a(3286),
-        i = a(6826),
-        c = a.n(i);
-      let o = {
-        blog: '\uD83D\uDCDD',
-        blogs: '\uD83D\uDCDA',
-        chat: '\uD83D\uDCAC',
-        dashboard: '\uD83D\uDCCA',
-        error: '❌',
-        landing: '\uD83C\uDFE0',
-      };
-      var x = !0;
-      let u = (e) => {
-        let { templates: t = [] } = e,
-          [{ query: a = '' }, l] = (0, s.useState)({ query: '' }),
-          i = t.filter((e) => {
-            let { id: t, name: r } = e;
-            return t.toLowerCase().includes(a.toLowerCase()) || r.toLowerCase().includes(a.toLowerCase());
-          });
-        return (0, r.jsx)(d.U, {
-          query: a,
-          setState: l,
-          id: 'ui-templates',
-          emoji: '\uD83D\uDCDD',
-          title: 'atomic/templates',
-          subtitle: 'Free and Open Source Web/App Templates',
-          description:
-            'are responsive, professionally designed web and app templates created for SaaS platforms and marketing landing pages.',
-          features: ['Copy / Paste', 'Pure TailwindCSS', 'UI Components'],
-          children: (0, r.jsx)('section', {
-            className: 'py-4 md:py-8',
-            children: (0, r.jsx)('div', {
-              className: 'container mx-auto px-8',
-              children: (0, r.jsxs)('div', {
-                className: 'flex flex-col gap-y-4 md:gap-y-8',
-                children: [
-                  (0, r.jsxs)('h2', {
-                    className: 'text-2xl font-bold',
-                    children: [
-                      (0, r.jsx)('span', { className: 'capitalize', children: 'Templates' }),
-                      ' (',
-                      i.length,
-                      ')',
-                    ],
-                  }),
-                  i.length > 0 &&
-                    (0, r.jsxs)(r.Fragment, {
-                      children: [
-                        (0, r.jsx)('div', {
-                          className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-6',
-                          children: i.map((e) => {
-                            var t;
-                            let { id: a = '', name: s = '' } = e;
-                            return (0, r.jsx)(
-                              c(),
-                              {
-                                href: '#'.concat(a),
-                                children: (0, r.jsx)('div', {
-                                  className: 'col-span-1',
-                                  children: (0, r.jsxs)('div', {
-                                    className:
-                                      'flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-                                    children: [
-                                      (0, r.jsx)('p', { className: 'text-2xl', children: null != (t = o[a]) ? t : '' }),
-                                      (0, r.jsxs)('div', {
-                                        className: 'flex flex-col gap-y-0.25',
-                                        children: [
-                                          (0, r.jsx)('p', { className: 'text-xs capitalize', children: 'Templates' }),
-                                          (0, r.jsx)('p', { className: 'font-semibold capitalize', children: s }),
-                                        ],
-                                      }),
-                                    ],
-                                  }),
-                                }),
-                              },
-                              a
-                            );
-                          }),
-                        }),
-                        (0, r.jsx)('div', {
-                          className: 'flex flex-col gap-y-4 md:gap-y-8',
-                          children: i.map((e) => {
-                            let { id: t = '', name: a = '', code: s } = e;
-                            return (0, r.jsx)(
-                              c(),
-                              {
-                                href: '/templates/'.concat(t),
-                                children: (0, r.jsxs)('div', {
-                                  id: t,
-                                  className: 'flex flex-col gap-y-4 md:gap-y-8',
-                                  children: [
-                                    (0, r.jsxs)('h2', {
-                                      className: 'text-2xl font-bold capitalize',
-                                      children: ['\uD83D\uDCDD ', a],
-                                    }),
-                                    (0, r.jsx)('div', {
-                                      className:
-                                        'h-128 overflow-hidden rounded-lg border border-neutral-200 p-4 shadow md:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10',
-                                      children: (0, r.jsx)(n, { code: s }),
-                                    }),
-                                  ],
-                                }),
-                              },
-                              t
-                            );
-                          }),
-                        }),
-                      ],
-                    }),
-                ],
-              }),
-            }),
-          }),
-        });
-      };
     },
   },
   (e) => {

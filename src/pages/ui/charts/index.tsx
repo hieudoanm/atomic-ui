@@ -1,4 +1,3 @@
-import { ChartPreview } from '@atomic/components/ChartPreview';
 import { AreaChart } from '@atomic/components/charts/Area';
 import { BarChart } from '@atomic/components/charts/Bar';
 import { BubbleChart } from '@atomic/components/charts/Bubble';
@@ -7,6 +6,7 @@ import { LineChart } from '@atomic/components/charts/Line';
 import { PolarChart } from '@atomic/components/charts/Polar';
 import { RadarChart } from '@atomic/components/charts/Radar';
 import { ScatterChart } from '@atomic/components/charts/Scatter';
+import { Chart } from '@atomic/components/preview/Chart';
 import { PageTemplate } from '@atomic/templates/PageTemplate';
 import { NextPage } from 'next';
 import Link from 'next/link';
@@ -144,13 +144,7 @@ const ChartsPage: NextPage<{ charts: ChartType[] }> = ({ charts = [] }) => {
                         <h2 className="text-2xl font-bold capitalize">
                           {emojis[id] ?? ''} {name}
                         </h2>
-                        <ChartPreview
-                          id={id}
-                          emoji={emojis[id] ?? ''}
-                          name={name}
-                          code={code}
-                          chart={reactCharts[name]}
-                        />
+                        <Chart id={id} emoji={emojis[id] ?? ''} name={name} code={code} chart={reactCharts[name]} />
                       </div>
                     );
                   })}

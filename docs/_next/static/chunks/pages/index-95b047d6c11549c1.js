@@ -1,7 +1,81 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [3332],
   {
-    3286: (e, t, a) => {
+    3396: (e, t, a) => {
+      (window.__NEXT_P = window.__NEXT_P || []).push([
+        '/',
+        function () {
+          return a(6310);
+        },
+      ]);
+    },
+    6310: (e, t, a) => {
+      'use strict';
+      a.r(t), a.d(t, { default: () => n });
+      var s = a(5640),
+        r = a(9597),
+        l = a(6826),
+        i = a.n(l);
+      let n = () =>
+        (0, s.jsx)(r.U, {
+          disabledSearch: !0,
+          query: '',
+          setState: () => {},
+          id: '',
+          emoji: '⚛️',
+          title: 'atomic',
+          subtitle: 'Free and Open Source Web Development Code',
+          description:
+            'is a modern, free collection of Tailwind UI, React Hooks, Contexts, Utilities, Icons, Charts, and Templates—built for fast, accessible, and maintainable interfaces.',
+          features: ['Copy / Paste', 'Pure TailwindCSS', 'Pure React Code'],
+          children: (0, s.jsx)('section', {
+            className: 'py-4 md:py-8',
+            children: (0, s.jsx)('div', {
+              className: 'container mx-auto px-8',
+              children: (0, s.jsx)('div', {
+                className: 'grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4 lg:grid-cols-4',
+                children: [
+                  { id: 'assets-emojis', href: '/assets/emojis', name: 'Emojis', shortName: 'Emojis' },
+                  { id: 'assets-icons', href: '/assets/icons', name: 'Icons', shortName: 'Icons' },
+                  {
+                    id: 'react-contexts',
+                    href: '/react/contexts',
+                    name: 'React Contexts',
+                    shortName: 'React Contexts',
+                  },
+                  { id: 'react-hooks', href: '/react/hooks', name: 'React Hooks', shortName: 'React Hooks' },
+                  { id: 'ui-charts', href: '/ui/charts', name: 'UI Charts', shortName: 'Charts' },
+                  { id: 'ui-kit', href: '/ui/ui', name: 'UI Kit', shortName: 'UIKit' },
+                  { id: 'ui-blocks', href: '/ui/block', name: 'UI Block', shortName: 'UI Block' },
+                  { id: 'ui-templates', href: '/ui/templates', name: 'UI Templates', shortName: 'Templates' },
+                  { id: 'utils', href: '/utils', name: 'Utilities', shortName: 'Utils' },
+                ].map((e) => {
+                  let { href: t = '', name: a = '', shortName: r = '' } = e;
+                  return (0, s.jsx)(
+                    'div',
+                    {
+                      className: 'col-span-1',
+                      children: (0, s.jsx)(i(), {
+                        href: t,
+                        children: (0, s.jsxs)('button', {
+                          className:
+                            'w-full cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow transition duration-200 hover:bg-purple-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-purple-700 dark:shadow-neutral-100/10 dark:hover:bg-purple-600',
+                          children: [
+                            (0, s.jsx)('span', { className: 'hidden md:inline', children: a }),
+                            (0, s.jsx)('span', { className: 'inline md:hidden', children: r }),
+                          ],
+                        }),
+                      }),
+                    },
+                    t
+                  );
+                }),
+              }),
+            }),
+          }),
+        });
+    },
+    9597: (e, t, a) => {
       'use strict';
       a.d(t, { U: () => x });
       var s = a(5640);
@@ -265,80 +339,6 @@
             ],
           });
         };
-    },
-    3396: (e, t, a) => {
-      (window.__NEXT_P = window.__NEXT_P || []).push([
-        '/',
-        function () {
-          return a(6310);
-        },
-      ]);
-    },
-    6310: (e, t, a) => {
-      'use strict';
-      a.r(t), a.d(t, { default: () => n });
-      var s = a(5640),
-        r = a(3286),
-        l = a(6826),
-        i = a.n(l);
-      let n = () =>
-        (0, s.jsx)(r.U, {
-          disabledSearch: !0,
-          query: '',
-          setState: () => {},
-          id: '',
-          emoji: '⚛️',
-          title: 'atomic',
-          subtitle: 'Free and Open Source Web Development Code',
-          description:
-            'is a modern, free collection of Tailwind UI, React Hooks, Contexts, Utilities, Icons, Charts, and Templates—built for fast, accessible, and maintainable interfaces.',
-          features: ['Copy / Paste', 'Pure TailwindCSS', 'Pure React Code'],
-          children: (0, s.jsx)('section', {
-            className: 'py-4 md:py-8',
-            children: (0, s.jsx)('div', {
-              className: 'container mx-auto px-8',
-              children: (0, s.jsx)('div', {
-                className: 'grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4 lg:grid-cols-4',
-                children: [
-                  { id: 'assets-emojis', href: '/assets/emojis', name: 'Emojis', shortName: 'Emojis' },
-                  { id: 'assets-icons', href: '/assets/icons', name: 'Icons', shortName: 'Icons' },
-                  {
-                    id: 'react-contexts',
-                    href: '/react/contexts',
-                    name: 'React Contexts',
-                    shortName: 'React Contexts',
-                  },
-                  { id: 'react-hooks', href: '/react/hooks', name: 'React Hooks', shortName: 'React Hooks' },
-                  { id: 'ui-charts', href: '/ui/charts', name: 'UI Charts', shortName: 'Charts' },
-                  { id: 'ui-kit', href: '/ui/ui', name: 'UI Kit', shortName: 'UIKit' },
-                  { id: 'ui-blocks', href: '/ui/block', name: 'UI Block', shortName: 'UI Block' },
-                  { id: 'ui-templates', href: '/ui/templates', name: 'UI Templates', shortName: 'Templates' },
-                  { id: 'utils', href: '/utils', name: 'Utilities', shortName: 'Utils' },
-                ].map((e) => {
-                  let { href: t = '', name: a = '', shortName: r = '' } = e;
-                  return (0, s.jsx)(
-                    'div',
-                    {
-                      className: 'col-span-1',
-                      children: (0, s.jsx)(i(), {
-                        href: t,
-                        children: (0, s.jsxs)('button', {
-                          className:
-                            'w-full cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow transition duration-200 hover:bg-purple-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-purple-700 dark:shadow-neutral-100/10 dark:hover:bg-purple-600',
-                          children: [
-                            (0, s.jsx)('span', { className: 'hidden md:inline', children: a }),
-                            (0, s.jsx)('span', { className: 'inline md:hidden', children: r }),
-                          ],
-                        }),
-                      }),
-                    },
-                    t
-                  );
-                }),
-              }),
-            }),
-          }),
-        });
     },
   },
   (e) => {
