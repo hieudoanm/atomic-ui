@@ -13,6 +13,7 @@ const HomePage: NextPage = () => {
       shortName: 'React Contexts',
     },
     { id: 'react-hooks', href: '/react/hooks', name: 'React Hooks', shortName: 'React Hooks' },
+    { id: 'react-virtual-table', href: '/react/hooks', name: 'React Virtual Table', shortName: 'React Virtual Table' },
     {
       id: 'ui-charts',
       href: '/ui/charts',
@@ -31,7 +32,7 @@ const HomePage: NextPage = () => {
       disabledSearch
       query={''}
       setState={() => {}}
-      id=""
+      id="atomic"
       emoji="⚛️"
       title="atomic"
       subtitle="Free and Open Source Web Development Code"
@@ -39,7 +40,7 @@ const HomePage: NextPage = () => {
       features={['Copy / Paste', 'Pure TailwindCSS', 'Pure React Code']}>
       <section className="py-4 md:py-8">
         <div className="container mx-auto px-8">
-          <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4 lg:grid-cols-5">
             {buttons.map(({ href = '', name = '', shortName = '' }) => {
               return (
                 <div key={href} className="col-span-1">

@@ -1,9 +1,14 @@
 import { useDarkMode } from '@atomic/hooks/use-dark-mode';
+import { unique } from '@atomic/utils/array/unique';
 import Head from 'next/head';
 import Link from 'next/link';
 import { ChangeEvent, Dispatch, FC, SetStateAction } from 'react';
 
-type NavbarLink = { id: string; emoji: string; href: string; text: string };
+type NavbarLink = { group: Group; id: string; emoji: string; href: string; text: string };
+
+export type Group = 'assets' | 'react' | 'ui' | 'utils';
+
+const groupEmojis: Record<Group, string> = { assets: '🖼️', react: '⚛️', ui: '🎨', utils: '🧰' };
 
 export const Navbar: FC<{
   title: string;
@@ -13,6 +18,11 @@ export const Navbar: FC<{
   setState: Dispatch<SetStateAction<{ query: string }>>;
 }> = ({ title = '', links = [], query = '', setState, disabledSearch = false }) => {
   const { darkMode = false, toggleDarkMode } = useDarkMode();
+
+  const groups: Group[] = unique(links.map(({ group }) => group));
+  const linksByGroups = groups.map((group) => {
+    return { group, links: links.filter(({ group: linkGroup }) => group === linkGroup) };
+  });
 
   return (
     <>
@@ -31,7 +41,7 @@ export const Navbar: FC<{
                     <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
                   </svg>
                 </button>
-                <div className="invisible absolute left-0 z-50 mt-2 w-40 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100">
+                <div className="invisible absolute left-0 z-50 mt-2 w-56 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100">
                   {links.map(({ id = '', href = '', emoji = '', text = '' }) => {
                     return (
                       <Link
@@ -58,11 +68,25 @@ export const Navbar: FC<{
             </div>
             <div className="flex items-center gap-x-2 md:gap-x-4">
               <div className="hidden items-center gap-x-2 md:flex md:gap-x-4">
-                {links.map(({ id = '', href = '', emoji = '', text = '' }) => {
+                {linksByGroups.map(({ group, links = [] }) => {
                   return (
-                    <Link key={id} href={href} className="text-sm md:text-base">
-                      {emoji} {text}
-                    </Link>
+                    <div key={group} className="group relative inline-block text-left">
+                      <button type="button">
+                        {groupEmojis[group] ?? ''} {group} ({links.length})
+                      </button>
+                      <div className="invisible absolute right-0 z-50 mt-2 w-56 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100">
+                        {links.map(({ id = '', href = '', emoji = '', text = '' }) => {
+                          return (
+                            <Link
+                              key={id}
+                              href={href}
+                              className="block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">
+                              {emoji} {text}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
                   );
                 })}
                 <Link href="https://github.com/hieudoanm/atomic" target="_blank" className="text-sm md:text-base">

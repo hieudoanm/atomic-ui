@@ -1,13 +1,14 @@
 import { FC, ReactNode, useState } from 'react';
 import { Shiki } from './Shiki';
 
-export const Chart: FC<{
+export const ReactPreview: FC<{
   id: string;
   emoji: string;
+  group: string;
   name: string;
   code: string;
   chart: ReactNode;
-}> = ({ id = '', emoji = '', name = '', code = '', chart = <></> }) => {
+}> = ({ id = '', emoji = '', group = '', name = '', code = '', chart = <></> }) => {
   const [preview, setPreview] = useState<boolean>(true);
 
   return (
@@ -16,7 +17,7 @@ export const Chart: FC<{
         <div className="flex items-center gap-x-2">
           <span className="text-4xl">{emoji}</span>
           <div>
-            <p className="text-xs capitalize">Chart</p>
+            <p className="text-xs capitalize">{group}</p>
             <h3 className="text-xl font-bold capitalize md:text-2xl">{name}</h3>
           </div>
         </div>
@@ -24,7 +25,7 @@ export const Chart: FC<{
           type="button"
           className="cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10"
           onClick={() => setPreview((previous: boolean) => !previous)}>
-          {preview ? 'Chart' : 'Code'}
+          {preview ? 'Preview' : 'Code'}
         </button>
       </div>
       <div className="flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">

@@ -1,18 +1,19 @@
 import { Footer } from '@atomic/components/common/Footer';
 import { Hero } from '@atomic/components/common/Hero';
-import { Navbar } from '@atomic/components/common/Navbar';
+import { Group, Navbar } from '@atomic/components/common/Navbar';
 import { Dispatch, FC, ReactNode, SetStateAction } from 'react';
 
-const NAVBAR_LINKS: { id: string; emoji: string; href: string; text: string }[] = [
-  { id: 'assets-emojis', emoji: '😄', href: '/assets/emojis', text: 'emojis' },
-  { id: 'assets-icons', emoji: '🖼️', href: '/assets/icons', text: 'icons' },
-  { id: 'react-contexts', emoji: '🔗', href: '/react/contexts', text: 'contexts' },
-  { id: 'react-hooks', emoji: '🪝', href: '/react/hooks', text: 'hooks' },
-  { id: 'ui-charts', emoji: '📊', href: '/ui/charts', text: 'charts' },
-  { id: 'ui-kit', emoji: '🎨', href: '/ui/kit', text: 'kit' },
-  { id: 'ui-blocks', emoji: '🧱', href: '/ui/block', text: 'block' },
-  { id: 'ui-templates', emoji: '📝', href: '/ui/templates', text: 'templates' },
-  { id: 'utils', emoji: '🧰', href: '/utils', text: 'utils' },
+const NAVBAR_LINKS: { group: Group; id: string; emoji: string; href: string; text: string }[] = [
+  { group: 'assets', id: 'assets-emojis', emoji: '😄', href: '/assets/emojis', text: 'Emojis' },
+  { group: 'assets', id: 'assets-icons', emoji: '🖼️', href: '/assets/icons', text: 'SVG Icons' },
+  { group: 'react', id: 'react-contexts', emoji: '🔗', href: '/react/contexts', text: 'React Contexts' },
+  { group: 'react', id: 'react-hooks', emoji: '🪝', href: '/react/hooks', text: 'React Hooks' },
+  { group: 'react', id: 'react-virtual-table', emoji: '📋', href: '/react/virtual-table', text: 'React Virtual Table' },
+  { group: 'ui', id: 'ui-charts', emoji: '📊', href: '/ui/charts', text: 'Charts' },
+  { group: 'ui', id: 'ui-kit', emoji: '🎨', href: '/ui/kit', text: 'UIKit' },
+  { group: 'ui', id: 'ui-blocks', emoji: '🧱', href: '/ui/block', text: 'UIBlock' },
+  { group: 'ui', id: 'ui-templates', emoji: '📝', href: '/ui/templates', text: 'Templates' },
+  { group: 'utils', id: 'utils', emoji: '🧰', href: '/utils', text: 'Utils' },
 ];
 
 export const PageTemplate: FC<{
