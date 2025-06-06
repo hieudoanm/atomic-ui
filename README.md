@@ -185,12 +185,12 @@ atomic
 
 #### Page Templates
 
-| No  | Name      | Status      |
-| --- | --------- | ----------- |
-| 01  | Chat      | In Progress |
-| 02  | Dashboard | In Progress |
-| 03  | Error     | Completed   |
-| 04  | Landing   | Completed   |
+| No  | Name      | Status    |
+| --- | --------- | --------- |
+| 01  | Chat      | Completed |
+| 02  | Dashboard | Completed |
+| 03  | Error     | Completed |
+| 04  | Landing   | Completed |
 
 ### React
 

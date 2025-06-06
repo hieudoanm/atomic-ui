@@ -3,6 +3,29 @@ import { NextPage } from 'next';
 import Link from 'next/link';
 
 const HomePage: NextPage = () => {
+  const buttons: { id: string; href: string; name: string; shortName: string }[] = [
+    { id: 'assets-emojis', href: '/assets/emojis', name: 'Emojis', shortName: 'Emojis' },
+    { id: 'assets-icons', href: '/assets/icons', name: 'Icons', shortName: 'Icons' },
+    {
+      id: 'react-contexts',
+      href: '/react/contexts',
+      name: 'React Contexts',
+      shortName: 'React Contexts',
+    },
+    { id: 'react-hooks', href: '/react/hooks', name: 'React Hooks', shortName: 'React Hooks' },
+    {
+      id: 'ui-charts',
+      href: '/ui/charts',
+      name: 'UI Charts',
+      shortName: 'Charts',
+    },
+    { id: 'ui-kit', href: '/ui/ui', name: 'UI Kit', shortName: 'UIKit' },
+    { id: 'ui-blocks', href: '/ui/block', name: 'UI Block', shortName: 'UI Block' },
+    { id: 'ui-templates', href: '/ui/templates', name: 'UI Templates', shortName: 'Templates' },
+
+    { id: 'utils', href: '/utils', name: 'Utilities', shortName: 'Utils' },
+  ];
+
   return (
     <PageTemplate
       disabledSearch
@@ -17,26 +40,7 @@ const HomePage: NextPage = () => {
       <section className="py-4 md:py-8">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4 lg:grid-cols-4">
-            {[
-              {
-                id: 'components-charts',
-                href: '/components/charts',
-                name: 'Charts Components',
-                shortName: 'Charts',
-              },
-              { id: 'components-ui', href: '/components/ui', name: 'UI Components', shortName: 'UI' },
-              {
-                id: 'react-contexts',
-                href: '/react/contexts',
-                name: 'React Contexts',
-                shortName: 'React Contexts',
-              },
-              { id: 'react-hooks', href: '/react/hooks', name: 'React Hooks', shortName: 'React Hooks' },
-              { id: 'visual-emojis', href: '/visual/emojis', name: 'Emojis', shortName: 'Emojis' },
-              { id: 'visual-icons', href: '/visual/icons', name: 'Icons', shortName: 'Icons' },
-              { id: 'templates', href: '/templates', name: 'Page Templates', shortName: 'Templates' },
-              { id: 'utils', href: '/utils', name: 'Utilities', shortName: 'Utils' },
-            ].map(({ href = '', name = '', shortName = '' }) => {
+            {buttons.map(({ href = '', name = '', shortName = '' }) => {
               return (
                 <div key={href} className="col-span-1">
                   <Link href={href}>
