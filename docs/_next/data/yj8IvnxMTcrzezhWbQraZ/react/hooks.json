@@ -100,6 +100,13 @@
         "code": "import { useState, useEffect } from 'react';\n\ntype FetchState<T> = {\n  data: T | null;\n  loading: boolean;\n  error: Error | null;\n};\n\nexport function useFetch<T = unknown>(url: string, options?: RequestInit) {\n  const [state, setState] = useState<FetchState<T>>({\n    data: null,\n    loading: true,\n    error: null,\n  });\n\n  useEffect(() => {\n    const controller = new AbortController();\n    const fetchData = async () => {\n      setState({ data: null, loading: true, error: null });\n\n      try {\n        const response = await fetch(url, {\n          ...options,\n          signal: controller.signal,\n        });\n\n        if (!response.ok) throw new Error(`HTTP error: ${response.status}`);\n\n        const data = (await response.json()) as T;\n        setState({ data, loading: false, error: null });\n      } catch (error) {\n        if ((error as Error).name !== 'AbortError') {\n          setState({ data: null, loading: false, error: error as Error });\n        }\n      }\n    };\n\n    fetchData();\n\n    return () => controller.abort();\n  }, [url, JSON.stringify(options)]); // re-run if URL or options change\n\n  return state;\n}\n"
       },
       {
+        "id": "ssr-use-isomorphic-layout-effect",
+        "group": "ssr",
+        "name": "useIsomorphicLayoutEffect",
+        "emoji": "⚙️",
+        "code": "import { useEffect, useLayoutEffect } from 'react';\n\nexport const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;\n"
+      },
+      {
         "id": "storage-use-local-storage",
         "group": "storage",
         "name": "useLocalStorage",
@@ -112,6 +119,13 @@
         "name": "useSessionStorage",
         "emoji": "🗂️",
         "code": "import { useEffect, useState } from 'react';\n\nexport const useSessionStorage = (key: string, initialValue: string) => {\n  // Get from session storage then parse stored json or return initial value\n  const readValue = () => {\n    if (typeof window === 'undefined') return initialValue;\n    try {\n      const item = window.sessionStorage.getItem(key);\n      return item ? JSON.parse(item) : initialValue;\n    } catch (error) {\n      console.warn(`Error reading sessionStorage key “${key}”:`, error);\n      return initialValue;\n    }\n  };\n\n  const [storedValue, setStoredValue] = useState(readValue);\n\n  // Update sessionStorage when the state changes\n  useEffect(() => {\n    if (typeof window === 'undefined') return;\n    try {\n      window.sessionStorage.setItem(key, JSON.stringify(storedValue));\n    } catch (error) {\n      console.warn(`Error setting sessionStorage key “${key}”:`, error);\n    }\n  }, [key, storedValue]);\n\n  return [storedValue, setStoredValue];\n};\n"
+      },
+      {
+        "id": "time-use-countdown",
+        "group": "time",
+        "name": "useCountdown",
+        "emoji": "⏳",
+        "code": "import { useCallback, useEffect, useRef, useState } from 'react';\n\ninterface UseCountdownOptions {\n  interval?: number; // tick interval in ms, default 1000\n  onComplete?: () => void; // called when countdown reaches 0\n}\n\nexport function useCountdown(initialSeconds: number, options?: UseCountdownOptions) {\n  const { interval = 1000, onComplete } = options || {};\n  const [secondsLeft, setSecondsLeft] = useState(initialSeconds);\n  const timerRef = useRef<NodeJS.Timeout | null>(null);\n  const isPausedRef = useRef(true);\n\n  const clearTimer = useCallback(() => {\n    if (timerRef.current) {\n      clearInterval(timerRef.current);\n      timerRef.current = null;\n    }\n  }, []);\n\n  const tick = useCallback(() => {\n    setSecondsLeft((prev) => {\n      if (prev <= 1) {\n        clearTimer();\n        isPausedRef.current = true;\n        if (onComplete) onComplete();\n        return 0;\n      }\n      return prev - 1;\n    });\n  }, [clearTimer, onComplete]);\n\n  const start = useCallback(() => {\n    clearTimer();\n    isPausedRef.current = false;\n    setSecondsLeft(initialSeconds);\n    timerRef.current = setInterval(tick, interval);\n  }, [clearTimer, initialSeconds, interval, tick]);\n\n  const stop = useCallback(() => {\n    clearTimer();\n    isPausedRef.current = true;\n  }, [clearTimer]);\n\n  const pause = useCallback(() => {\n    clearTimer();\n    isPausedRef.current = true;\n  }, [clearTimer]);\n\n  const resume = useCallback(() => {\n    if (secondsLeft > 0 && isPausedRef.current) {\n      isPausedRef.current = false;\n      clearTimer();\n      timerRef.current = setInterval(tick, interval);\n    }\n  }, [secondsLeft, clearTimer, interval, tick]);\n\n  const reset = useCallback(() => {\n    clearTimer();\n    isPausedRef.current = true;\n    setSecondsLeft(initialSeconds);\n  }, [clearTimer, initialSeconds]);\n\n  useEffect(() => {\n    return () => clearTimer();\n  }, [clearTimer]);\n\n  return { secondsLeft, start, stop, pause, resume, reset };\n}\n"
       },
       {
         "id": "time-use-interval",

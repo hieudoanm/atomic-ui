@@ -93,8 +93,10 @@ export const getStaticProps = () => {
     { path: 'navigator/use-geolocation', emoji: '📍', name: 'useGeolocation' },
     { path: 'network/use-online', emoji: '📶', name: 'useOnline' },
     { path: 'network/use-fetch', emoji: '🛰️', name: 'useFetch' },
+    { path: 'ssr/use-isomorphic-layout-effect', emoji: '⚙️', name: 'useIsomorphicLayoutEffect' },
     { path: 'storage/use-local-storage', emoji: '💾', name: 'useLocalStorage' },
     { path: 'storage/use-session-storage', emoji: '🗂️', name: 'useSessionStorage' },
+    { path: 'time/use-countdown', emoji: '⏳', name: 'useCountdown' },
     { path: 'time/use-interval', emoji: '⏱️', name: 'useInterval' },
     { path: 'time/use-timeout', emoji: '⏳', name: 'useTimeout' },
   ].map(({ path = '', emoji = '', name = '' }) => {

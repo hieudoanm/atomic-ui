@@ -32,8 +32,8 @@
     <script src="/atomic/_next/static/chunks/2182-d31d831ec692d180.js" defer=""></script>
     <script src="/atomic/_next/static/chunks/2630-c50a97518d83b726.js" defer=""></script>
     <script src="/atomic/_next/static/chunks/pages/react/hooks-8bf29f6e0e3bea0c.js" defer=""></script>
-    <script src="/atomic/_next/static/y5vNO4YJhjWbou-RtwYGW/_buildManifest.js" defer=""></script>
-    <script src="/atomic/_next/static/y5vNO4YJhjWbou-RtwYGW/_ssgManifest.js" defer=""></script>
+    <script src="/atomic/_next/static/yj8IvnxMTcrzezhWbQraZ/_buildManifest.js" defer=""></script>
+    <script src="/atomic/_next/static/yj8IvnxMTcrzezhWbQraZ/_ssgManifest.js" defer=""></script>
   </head>
   <body class="antialiased">
     <div id="__next">
@@ -187,7 +187,7 @@
               <section class="py-4 md:py-8">
                 <div class="container mx-auto px-8">
                   <div class="flex flex-col gap-y-4 md:gap-y-8">
-                    <h2 class="text-2xl font-bold"><span class="capitalize">Hooks</span> (<!-- -->18<!-- -->)</h2>
+                    <h2 class="text-2xl font-bold"><span class="capitalize">Hooks</span> (<!-- -->20<!-- -->)</h2>
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
                       <a href="/atomic/react/hooks/#boolean-use-boolean"
                         ><div class="col-span-1">
@@ -343,6 +343,17 @@
                             </div>
                           </div>
                         </div></a
+                      ><a href="/atomic/react/hooks/#ssr-use-isomorphic-layout-effect"
+                        ><div class="col-span-1">
+                          <div
+                            class="flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+                            <p class="text-2xl">⚙️</p>
+                            <div class="flex flex-col gap-y-0.25">
+                              <p class="text-xs capitalize">ssr</p>
+                              <p class="font-semibold capitalize">useIsomorphicLayoutEffect</p>
+                            </div>
+                          </div>
+                        </div></a
                       ><a href="/atomic/react/hooks/#storage-use-local-storage"
                         ><div class="col-span-1">
                           <div
@@ -362,6 +373,17 @@
                             <div class="flex flex-col gap-y-0.25">
                               <p class="text-xs capitalize">storage</p>
                               <p class="font-semibold capitalize">useSessionStorage</p>
+                            </div>
+                          </div>
+                        </div></a
+                      ><a href="/atomic/react/hooks/#time-use-countdown"
+                        ><div class="col-span-1">
+                          <div
+                            class="flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+                            <p class="text-2xl">⏳</p>
+                            <div class="flex flex-col gap-y-0.25">
+                              <p class="text-xs capitalize">time</p>
+                              <p class="font-semibold capitalize">useCountdown</p>
                             </div>
                           </div>
                         </div></a
@@ -629,6 +651,23 @@
                         </div>
                       </div>
                       <div class="flex flex-col gap-y-4">
+                        <div id="ssr-use-isomorphic-layout-effect" class="flex flex-col gap-y-4 md:gap-y-8">
+                          <div class="flex items-center justify-between gap-x-2">
+                            <div class="flex items-center gap-x-2">
+                              <span class="text-4xl">⚙️</span>
+                              <div>
+                                <p class="text-xs capitalize">ssr</p>
+                                <h3 class="text-xl font-bold capitalize md:text-2xl">useIsomorphicLayoutEffect</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+                            <div class="w-full overflow-x-auto bg-neutral-900 p-4"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-col gap-y-4">
                         <div id="storage-use-local-storage" class="flex flex-col gap-y-4 md:gap-y-8">
                           <div class="flex items-center justify-between gap-x-2">
                             <div class="flex items-center gap-x-2">
@@ -653,6 +692,23 @@
                               <div>
                                 <p class="text-xs capitalize">storage</p>
                                 <h3 class="text-xl font-bold capitalize md:text-2xl">useSessionStorage</h3>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+                            <div class="w-full overflow-x-auto bg-neutral-900 p-4"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-col gap-y-4">
+                        <div id="time-use-countdown" class="flex flex-col gap-y-4 md:gap-y-8">
+                          <div class="flex items-center justify-between gap-x-2">
+                            <div class="flex items-center gap-x-2">
+                              <span class="text-4xl">⏳</span>
+                              <div>
+                                <p class="text-xs capitalize">time</p>
+                                <h3 class="text-xl font-bold capitalize md:text-2xl">useCountdown</h3>
                               </div>
                             </div>
                           </div>
@@ -816,6 +872,13 @@
                 "code": "import { useState, useEffect } from 'react';\n\ntype FetchState\u003cT\u003e = {\n  data: T | null;\n  loading: boolean;\n  error: Error | null;\n};\n\nexport function useFetch\u003cT = unknown\u003e(url: string, options?: RequestInit) {\n  const [state, setState] = useState\u003cFetchState\u003cT\u003e\u003e({\n    data: null,\n    loading: true,\n    error: null,\n  });\n\n  useEffect(() =\u003e {\n    const controller = new AbortController();\n    const fetchData = async () =\u003e {\n      setState({ data: null, loading: true, error: null });\n\n      try {\n        const response = await fetch(url, {\n          ...options,\n          signal: controller.signal,\n        });\n\n        if (!response.ok) throw new Error(`HTTP error: ${response.status}`);\n\n        const data = (await response.json()) as T;\n        setState({ data, loading: false, error: null });\n      } catch (error) {\n        if ((error as Error).name !== 'AbortError') {\n          setState({ data: null, loading: false, error: error as Error });\n        }\n      }\n    };\n\n    fetchData();\n\n    return () =\u003e controller.abort();\n  }, [url, JSON.stringify(options)]); // re-run if URL or options change\n\n  return state;\n}\n"
               },
               {
+                "id": "ssr-use-isomorphic-layout-effect",
+                "group": "ssr",
+                "name": "useIsomorphicLayoutEffect",
+                "emoji": "⚙️",
+                "code": "import { useEffect, useLayoutEffect } from 'react';\n\nexport const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;\n"
+              },
+              {
                 "id": "storage-use-local-storage",
                 "group": "storage",
                 "name": "useLocalStorage",
@@ -828,6 +891,13 @@
                 "name": "useSessionStorage",
                 "emoji": "🗂️",
                 "code": "import { useEffect, useState } from 'react';\n\nexport const useSessionStorage = (key: string, initialValue: string) =\u003e {\n  // Get from session storage then parse stored json or return initial value\n  const readValue = () =\u003e {\n    if (typeof window === 'undefined') return initialValue;\n    try {\n      const item = window.sessionStorage.getItem(key);\n      return item ? JSON.parse(item) : initialValue;\n    } catch (error) {\n      console.warn(`Error reading sessionStorage key “${key}”:`, error);\n      return initialValue;\n    }\n  };\n\n  const [storedValue, setStoredValue] = useState(readValue);\n\n  // Update sessionStorage when the state changes\n  useEffect(() =\u003e {\n    if (typeof window === 'undefined') return;\n    try {\n      window.sessionStorage.setItem(key, JSON.stringify(storedValue));\n    } catch (error) {\n      console.warn(`Error setting sessionStorage key “${key}”:`, error);\n    }\n  }, [key, storedValue]);\n\n  return [storedValue, setStoredValue];\n};\n"
+              },
+              {
+                "id": "time-use-countdown",
+                "group": "time",
+                "name": "useCountdown",
+                "emoji": "⏳",
+                "code": "import { useCallback, useEffect, useRef, useState } from 'react';\n\ninterface UseCountdownOptions {\n  interval?: number; // tick interval in ms, default 1000\n  onComplete?: () =\u003e void; // called when countdown reaches 0\n}\n\nexport function useCountdown(initialSeconds: number, options?: UseCountdownOptions) {\n  const { interval = 1000, onComplete } = options || {};\n  const [secondsLeft, setSecondsLeft] = useState(initialSeconds);\n  const timerRef = useRef\u003cNodeJS.Timeout | null\u003e(null);\n  const isPausedRef = useRef(true);\n\n  const clearTimer = useCallback(() =\u003e {\n    if (timerRef.current) {\n      clearInterval(timerRef.current);\n      timerRef.current = null;\n    }\n  }, []);\n\n  const tick = useCallback(() =\u003e {\n    setSecondsLeft((prev) =\u003e {\n      if (prev \u003c= 1) {\n        clearTimer();\n        isPausedRef.current = true;\n        if (onComplete) onComplete();\n        return 0;\n      }\n      return prev - 1;\n    });\n  }, [clearTimer, onComplete]);\n\n  const start = useCallback(() =\u003e {\n    clearTimer();\n    isPausedRef.current = false;\n    setSecondsLeft(initialSeconds);\n    timerRef.current = setInterval(tick, interval);\n  }, [clearTimer, initialSeconds, interval, tick]);\n\n  const stop = useCallback(() =\u003e {\n    clearTimer();\n    isPausedRef.current = true;\n  }, [clearTimer]);\n\n  const pause = useCallback(() =\u003e {\n    clearTimer();\n    isPausedRef.current = true;\n  }, [clearTimer]);\n\n  const resume = useCallback(() =\u003e {\n    if (secondsLeft \u003e 0 \u0026\u0026 isPausedRef.current) {\n      isPausedRef.current = false;\n      clearTimer();\n      timerRef.current = setInterval(tick, interval);\n    }\n  }, [secondsLeft, clearTimer, interval, tick]);\n\n  const reset = useCallback(() =\u003e {\n    clearTimer();\n    isPausedRef.current = true;\n    setSecondsLeft(initialSeconds);\n  }, [clearTimer, initialSeconds]);\n\n  useEffect(() =\u003e {\n    return () =\u003e clearTimer();\n  }, [clearTimer]);\n\n  return { secondsLeft, start, stop, pause, resume, reset };\n}\n"
               },
               {
                 "id": "time-use-interval",
@@ -849,7 +919,7 @@
         },
         "page": "/react/hooks",
         "query": {},
-        "buildId": "y5vNO4YJhjWbou-RtwYGW",
+        "buildId": "yj8IvnxMTcrzezhWbQraZ",
         "assetPrefix": "/atomic",
         "isFallback": false,
         "gsp": true,
