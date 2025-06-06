@@ -81,15 +81,15 @@
         );
       };
       var i = r(1668),
-        c = r.n(i),
-        o = r(6826),
-        x = r.n(o);
-      let u = (e) => {
+        o = r.n(i),
+        c = r(6826),
+        u = r.n(c);
+      let x = (e) => {
           let { title: t = '', links: r = [], query: l = '', setState: s, disabledSearch: n = !1 } = e,
-            { darkMode: i = !1, toggleDarkMode: o } = d();
+            { darkMode: i = !1, toggleDarkMode: c } = d();
           return (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)(c(), { children: (0, a.jsx)('title', { children: t }) }),
+              (0, a.jsx)(o(), { children: (0, a.jsx)('title', { children: t }) }),
               (0, a.jsx)('nav', {
                 className: 'border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
                 children: (0, a.jsxs)('div', {
@@ -124,7 +124,7 @@
                                   r.map((e) => {
                                     let { id: t = '', href: r = '', emoji: l = '', text: s = '' } = e;
                                     return (0, a.jsxs)(
-                                      x(),
+                                      u(),
                                       {
                                         href: r,
                                         className:
@@ -134,7 +134,7 @@
                                       t
                                     );
                                   }),
-                                  (0, a.jsx)(x(), {
+                                  (0, a.jsx)(u(), {
                                     href: 'https://github.com/hieudoanm/atomic',
                                     target: '_blank',
                                     className: 'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
@@ -147,7 +147,7 @@
                         }),
                         (0, a.jsx)('div', {
                           className: 'flex items-center gap-x-4',
-                          children: (0, a.jsx)(x(), {
+                          children: (0, a.jsx)(u(), {
                             href: '/',
                             className: 'truncate text-lg font-bold md:text-xl',
                             children: t,
@@ -162,12 +162,12 @@
                                 r.map((e) => {
                                   let { id: t = '', href: r = '', emoji: l = '', text: s = '' } = e;
                                   return (0, a.jsxs)(
-                                    x(),
+                                    u(),
                                     { href: r, className: 'text-sm md:text-base', children: [l, ' ', s] },
                                     t
                                   );
                                 }),
-                                (0, a.jsx)(x(), {
+                                (0, a.jsx)(u(), {
                                   href: 'https://github.com/hieudoanm/atomic',
                                   target: '_blank',
                                   className: 'text-sm md:text-base',
@@ -185,7 +185,7 @@
                                   checked: i,
                                   className: 'peer sr-only',
                                   onChange: () => {
-                                    o();
+                                    c();
                                   },
                                 }),
                                 (0, a.jsx)('span', {
@@ -232,22 +232,22 @@
             setState: n = () => {},
             id: d = '',
             emoji: i = '',
-            title: c = '',
-            subtitle: o = '',
-            description: x = '',
+            title: o = '',
+            subtitle: c = '',
+            description: u = '',
             features: m = [],
             children: p = (0, a.jsx)(a.Fragment, {}),
           } = e;
           return (0, a.jsxs)('div', {
             className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
             children: [
-              (0, a.jsx)(u, {
+              (0, a.jsx)(x, {
                 disabledSearch: t,
                 links: h.filter((e) => {
                   let { id: t = '' } = e;
                   return d !== t;
                 }),
-                title: ''.concat(i, ' ').concat(c),
+                title: ''.concat(i, ' ').concat(o),
                 query: r,
                 setState: n,
               }),
@@ -256,9 +256,9 @@
                 children: [
                   (0, a.jsxs)('main', {
                     className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                    children: [(0, a.jsx)(s, { title: c, subtitle: o, description: x, features: m }), p],
+                    children: [(0, a.jsx)(s, { title: o, subtitle: c, description: u, features: m }), p],
                   }),
-                  (0, a.jsx)(l, { title: c }),
+                  (0, a.jsx)(l, { title: o }),
                 ],
               }),
             ],
@@ -286,19 +286,33 @@
         );
       };
     },
+    6921: (e, t, r) => {
+      r.d(t, { C: () => a });
+      let a = (e) => {
+        navigator.clipboard
+          .writeText(e)
+          .then(() => {
+            alert('Copied to clipboard!');
+          })
+          .catch((e) => {
+            console.error('Failed to copy: ', e);
+          });
+      };
+    },
     7921: (e, t, r) => {
-      r.d(t, { O: () => d });
+      r.d(t, { O: () => i });
       var a = r(5640),
         l = r(8809),
         s = r(148),
-        n = r(3719);
-      let d = (e) => {
-        let { id: t = '', emoji: r = '', group: d = '', name: i = '', code: c = '', codeOnly: o = !1 } = e,
-          [x, u] = (0, s.useState)(''),
-          [h, m] = (0, s.useState)(!0);
+        n = r(3719),
+        d = r(6921);
+      let i = (e) => {
+        let { id: t = '', emoji: r = '', group: i = '', name: o = '', code: c = '', codeOnly: u = !1 } = e,
+          [x, h] = (0, s.useState)(''),
+          [m, p] = (0, s.useState)(!0);
         return (
           (0, s.useEffect)(() => {
-            u((0, l.A)(window).sanitize(c));
+            h((0, l.A)(window).sanitize(c));
           }, [c]),
           (0, a.jsxs)('div', {
             id: t,
@@ -313,29 +327,42 @@
                       (0, a.jsx)('span', { className: 'text-4xl', children: r }),
                       (0, a.jsxs)('div', {
                         children: [
-                          (0, a.jsx)('p', { className: 'text-xs capitalize', children: d }),
-                          (0, a.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: i }),
+                          (0, a.jsx)('p', { className: 'text-xs capitalize', children: i }),
+                          (0, a.jsx)('h3', { className: 'text-xl font-bold md:text-2xl', children: o }),
                         ],
                       }),
                     ],
                   }),
-                  !o &&
-                    (0, a.jsx)('button', {
-                      type: 'button',
-                      className:
-                        'cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10',
-                      onClick: () => m((e) => !e),
-                      children: h ? 'Preview' : 'Code',
-                    }),
+                  (0, a.jsxs)('div', {
+                    className: 'flex items-center gap-x-2',
+                    children: [
+                      u &&
+                        (0, a.jsx)('button', {
+                          type: 'button',
+                          className:
+                            'cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow transition duration-200 hover:bg-purple-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-purple-700 dark:shadow-neutral-100/10 dark:hover:bg-purple-600',
+                          onClick: () => (0, d.C)(c),
+                          children: 'Copy',
+                        }),
+                      !u &&
+                        (0, a.jsx)('button', {
+                          type: 'button',
+                          className:
+                            'cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10',
+                          onClick: () => p((e) => !e),
+                          children: m ? 'Preview' : 'Code',
+                        }),
+                    ],
+                  }),
                 ],
               }),
               (0, a.jsx)('div', {
                 className:
                   'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-                children: o
+                children: u
                   ? (0, a.jsx)(n.C, { code: c, lang: 'tsx' })
                   : (0, a.jsx)(a.Fragment, {
-                      children: h
+                      children: m
                         ? (0, a.jsx)('div', { className: 'w-full p-4 md:p-8', dangerouslySetInnerHTML: { __html: x } })
                         : (0, a.jsx)(n.C, { code: c, lang: 'html' }),
                     }),

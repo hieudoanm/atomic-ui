@@ -39,7 +39,7 @@
   'static/chunks/6826-1b8246ce82a5e8e9.js',
   'static/chunks/1190-798dfbc567dad739.js',
   'static/chunks/2182-d31d831ec692d180.js',
-  'static/chunks/2630-c50a97518d83b726.js',
+  'static/chunks/2630-511b1853f9378669.js',
   0,
   1e-4,
   null
