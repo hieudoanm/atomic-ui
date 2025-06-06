@@ -32,8 +32,8 @@
     <script src="/atomic/_next/static/chunks/2182-d31d831ec692d180.js" defer=""></script>
     <script src="/atomic/_next/static/chunks/2630-2de40a35d636eeff.js" defer=""></script>
     <script src="/atomic/_next/static/chunks/pages/utils-47ff3d227e55cb7b.js" defer=""></script>
-    <script src="/atomic/_next/static/qMkL6ZEUGeUtJvJFeiryw/_buildManifest.js" defer=""></script>
-    <script src="/atomic/_next/static/qMkL6ZEUGeUtJvJFeiryw/_ssgManifest.js" defer=""></script>
+    <script src="/atomic/_next/static/J8YZmnTIe_lxG6NlGXVHF/_buildManifest.js" defer=""></script>
+    <script src="/atomic/_next/static/J8YZmnTIe_lxG6NlGXVHF/_ssgManifest.js" defer=""></script>
   </head>
   <body class="antialiased">
     <div id="__next">
@@ -187,7 +187,7 @@
               <section class="py-4 md:py-8">
                 <div class="container mx-auto px-8">
                   <div class="flex flex-col gap-y-4 md:gap-y-8">
-                    <h2 class="text-2xl font-bold"><span class="capitalize">Utils</span> (<!-- -->20<!-- -->)</h2>
+                    <h2 class="text-2xl font-bold"><span class="capitalize">Utils</span> (<!-- -->22<!-- -->)</h2>
                     <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
                       <a href="/atomic/utils/#array-chunk"
                         ><div class="col-span-1">
@@ -252,6 +252,28 @@
                             <div class="flex flex-col gap-y-0.25">
                               <p class="text-xs capitalize">clipboard</p>
                               <p class="font-semibold capitalize">Paste</p>
+                            </div>
+                          </div>
+                        </div></a
+                      ><a href="/atomic/utils/#date-format"
+                        ><div class="col-span-1">
+                          <div
+                            class="flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+                            <p class="text-2xl">📅</p>
+                            <div class="flex flex-col gap-y-0.25">
+                              <p class="text-xs capitalize">date</p>
+                              <p class="font-semibold capitalize">Date Format</p>
+                            </div>
+                          </div>
+                        </div></a
+                      ><a href="/atomic/utils/#date-diff"
+                        ><div class="col-span-1">
+                          <div
+                            class="flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+                            <p class="text-2xl">⏳</p>
+                            <div class="flex flex-col gap-y-0.25">
+                              <p class="text-xs capitalize">date</p>
+                              <p class="font-semibold capitalize">Date Diff</p>
                             </div>
                           </div>
                         </div></a
@@ -540,6 +562,54 @@
                               <div>
                                 <p class="text-xs capitalize">clipboard</p>
                                 <h3 class="text-xl font-bold md:text-2xl">Paste</h3>
+                              </div>
+                            </div>
+                            <div class="flex items-center gap-x-2">
+                              <button
+                                type="button"
+                                class="cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow transition duration-200 hover:bg-purple-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-purple-700 dark:shadow-neutral-100/10 dark:hover:bg-purple-600">
+                                Copy
+                              </button>
+                            </div>
+                          </div>
+                          <div
+                            class="flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+                            <div class="w-full overflow-x-auto bg-neutral-900 p-4"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-col gap-y-4">
+                        <div id="date-format" class="flex flex-col gap-y-4 md:gap-y-8">
+                          <div class="flex items-center justify-between gap-x-2">
+                            <div class="flex items-center gap-x-2">
+                              <span class="text-4xl">📅</span>
+                              <div>
+                                <p class="text-xs capitalize">date</p>
+                                <h3 class="text-xl font-bold md:text-2xl">Date Format</h3>
+                              </div>
+                            </div>
+                            <div class="flex items-center gap-x-2">
+                              <button
+                                type="button"
+                                class="cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow transition duration-200 hover:bg-purple-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-purple-700 dark:shadow-neutral-100/10 dark:hover:bg-purple-600">
+                                Copy
+                              </button>
+                            </div>
+                          </div>
+                          <div
+                            class="flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+                            <div class="w-full overflow-x-auto bg-neutral-900 p-4"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex flex-col gap-y-4">
+                        <div id="date-diff" class="flex flex-col gap-y-4 md:gap-y-8">
+                          <div class="flex items-center justify-between gap-x-2">
+                            <div class="flex items-center gap-x-2">
+                              <span class="text-4xl">⏳</span>
+                              <div>
+                                <p class="text-xs capitalize">date</p>
+                                <h3 class="text-xl font-bold md:text-2xl">Date Diff</h3>
                               </div>
                             </div>
                             <div class="flex items-center gap-x-2">
@@ -956,6 +1026,20 @@
                 "code": "export const paste = async (): Promise\u003cstring\u003e =\u003e {\n  try {\n    const text = await navigator.clipboard.readText();\n    return text;\n  } catch (error) {\n    console.error('Failed to read clipboard contents:', error);\n    return '';\n  }\n};\n"
               },
               {
+                "id": "date-format",
+                "group": "date",
+                "name": "Date Format",
+                "emoji": "📅",
+                "code": "export const padZero = (n: number) =\u003e String(n).padStart(2, '0');\n\nexport const formatDate = (date: Date, separator = '-') =\u003e {\n  const yyyy = date.getFullYear();\n  const mm = padZero(date.getMonth() + 1);\n  const dd = padZero(date.getDate());\n  return `${yyyy}${separator}${mm}${separator}${dd}`;\n};\n\nexport const formatTime = (date: Date, withSeconds = false) =\u003e {\n  const hh = padZero(date.getHours());\n  const mm = padZero(date.getMinutes());\n  const ss = padZero(date.getSeconds());\n  return withSeconds ? `${hh}:${mm}:${ss}` : `${hh}:${mm}`;\n};\n\nexport const formatDateTime = (date: Date) =\u003e {\n  return `${formatDate(date)} ${formatTime(date, true)}`;\n};\n\nexport const format = (date: Date) =\u003e {\n  return {\n    date: (separator = '-') =\u003e formatDate(date, separator),\n    time: (withSeconds = false) =\u003e formatTime(date, withSeconds),\n    dateTime: () =\u003e formatDate(date),\n  };\n};\n"
+              },
+              {
+                "id": "date-diff",
+                "group": "date",
+                "name": "Date Diff",
+                "emoji": "⏳",
+                "code": "const ONE_SECOND = 1000;\nconst ONE_MINUTE = ONE_SECOND * 60;\nconst ONE_HOUR = ONE_MINUTE * 60;\nconst ONE_DAY = ONE_HOUR * 24;\n\nexport const diffInTime = (a: Date, b: Date): number =\u003e {\n  return Math.abs(a.getTime() - b.getTime());\n};\n\nexport const diffInDays = (a: Date, b: Date): number =\u003e {\n  return Math.floor(diffInTime(a, b) / ONE_DAY);\n};\n\nexport const diffInHours = (a: Date, b: Date): number =\u003e {\n  return Math.floor(diffInTime(a, b) / ONE_HOUR);\n};\n\nexport const diffInMinutes = (a: Date, b: Date): number =\u003e {\n  return Math.floor(diffInTime(a, b) / ONE_MINUTE);\n};\n\nexport const diffInSeconds = (a: Date, b: Date): number =\u003e {\n  return Math.floor(diffInTime(a, b) / ONE_SECOND);\n};\n\nexport const diff = (a: Date, b: Date) =\u003e {\n  return {\n    days: () =\u003e diffInDays(a, b),\n    hours: () =\u003e diffInHours(a, b),\n    minutes: () =\u003e diffInMinutes(a, b),\n    seconds: () =\u003e diffInSeconds(a, b),\n  };\n};\n"
+              },
+              {
                 "id": "functional-memoize",
                 "group": "functional",
                 "name": "Memoize",
@@ -1059,7 +1143,7 @@
         },
         "page": "/utils",
         "query": {},
-        "buildId": "qMkL6ZEUGeUtJvJFeiryw",
+        "buildId": "J8YZmnTIe_lxG6NlGXVHF",
         "assetPrefix": "/atomic",
         "isFallback": false,
         "gsp": true,

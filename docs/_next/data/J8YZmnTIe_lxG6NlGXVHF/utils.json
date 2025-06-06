@@ -44,6 +44,20 @@
         "code": "export const paste = async (): Promise<string> => {\n  try {\n    const text = await navigator.clipboard.readText();\n    return text;\n  } catch (error) {\n    console.error('Failed to read clipboard contents:', error);\n    return '';\n  }\n};\n"
       },
       {
+        "id": "date-format",
+        "group": "date",
+        "name": "Date Format",
+        "emoji": "📅",
+        "code": "export const padZero = (n: number) => String(n).padStart(2, '0');\n\nexport const formatDate = (date: Date, separator = '-') => {\n  const yyyy = date.getFullYear();\n  const mm = padZero(date.getMonth() + 1);\n  const dd = padZero(date.getDate());\n  return `${yyyy}${separator}${mm}${separator}${dd}`;\n};\n\nexport const formatTime = (date: Date, withSeconds = false) => {\n  const hh = padZero(date.getHours());\n  const mm = padZero(date.getMinutes());\n  const ss = padZero(date.getSeconds());\n  return withSeconds ? `${hh}:${mm}:${ss}` : `${hh}:${mm}`;\n};\n\nexport const formatDateTime = (date: Date) => {\n  return `${formatDate(date)} ${formatTime(date, true)}`;\n};\n\nexport const format = (date: Date) => {\n  return {\n    date: (separator = '-') => formatDate(date, separator),\n    time: (withSeconds = false) => formatTime(date, withSeconds),\n    dateTime: () => formatDate(date),\n  };\n};\n"
+      },
+      {
+        "id": "date-diff",
+        "group": "date",
+        "name": "Date Diff",
+        "emoji": "⏳",
+        "code": "const ONE_SECOND = 1000;\nconst ONE_MINUTE = ONE_SECOND * 60;\nconst ONE_HOUR = ONE_MINUTE * 60;\nconst ONE_DAY = ONE_HOUR * 24;\n\nexport const diffInTime = (a: Date, b: Date): number => {\n  return Math.abs(a.getTime() - b.getTime());\n};\n\nexport const diffInDays = (a: Date, b: Date): number => {\n  return Math.floor(diffInTime(a, b) / ONE_DAY);\n};\n\nexport const diffInHours = (a: Date, b: Date): number => {\n  return Math.floor(diffInTime(a, b) / ONE_HOUR);\n};\n\nexport const diffInMinutes = (a: Date, b: Date): number => {\n  return Math.floor(diffInTime(a, b) / ONE_MINUTE);\n};\n\nexport const diffInSeconds = (a: Date, b: Date): number => {\n  return Math.floor(diffInTime(a, b) / ONE_SECOND);\n};\n\nexport const diff = (a: Date, b: Date) => {\n  return {\n    days: () => diffInDays(a, b),\n    hours: () => diffInHours(a, b),\n    minutes: () => diffInMinutes(a, b),\n    seconds: () => diffInSeconds(a, b),\n  };\n};\n"
+      },
+      {
         "id": "functional-memoize",
         "group": "functional",
         "name": "Memoize",

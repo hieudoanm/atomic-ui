@@ -73,13 +73,15 @@ const UtilsPage: NextPage<{ utils: Util[] }> = ({ utils = [] }) => {
 };
 
 export const getStaticProps = () => {
-  const utils = [
+  const utils: { id: string; group: string; emoji: string; name: string; code: string }[] = [
     { path: 'array/chunk', emoji: '📦', name: 'Chunk' },
     { path: 'array/shuffle', emoji: '🔀', name: 'Shuffle' },
     { path: 'array/union', emoji: '⚡', name: 'Union' },
     { path: 'array/unique', emoji: '🔑', name: 'Unique' },
     { path: 'clipboard/copy', emoji: '📋', name: 'Copy' },
     { path: 'clipboard/paste', emoji: '📥', name: 'Paste' },
+    { path: 'date/format', emoji: '📅', name: 'Date Format' },
+    { path: 'date/diff', emoji: '⏳', name: 'Date Diff' },
     { path: 'functional/memoize', emoji: '🧠', name: 'Memoize' },
     { path: 'functional/once', emoji: '☝️', name: 'Once' },
     { path: 'functional/request', emoji: '📡', name: 'Request' },
@@ -95,7 +97,7 @@ export const getStaticProps = () => {
     { path: 'storage/cookies', emoji: '🍪', name: 'Cookies' },
     { path: 'storage/indexed.db', emoji: '💾', name: 'Indexed DB' },
   ].map(({ path = '', emoji = '', name = '' }) => {
-    const group = path.split('/').at(0);
+    const group = path.split('/').at(0) ?? 'utils';
     const id = path.replaceAll('/', '-');
     const utilPath = `${__dirname}/src/utils/${path}.ts`;
     const code = readFileSync(utilPath, 'utf-8');
