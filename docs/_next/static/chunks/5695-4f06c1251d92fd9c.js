@@ -3,9 +3,9 @@
   [5695],
   {
     5695: (e, t, r) => {
-      r.d(t, { U: () => g });
+      r.d(t, { l: () => x, U: () => g });
       var a = r(5640);
-      let l = (e) => {
+      let s = (e) => {
           let { title: t = '' } = e;
           return (0, a.jsx)('footer', {
             className: 'border-t border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
@@ -15,8 +15,8 @@
             }),
           });
         },
-        s = (e) => {
-          let { title: t = '', subtitle: r = '', description: l = '', features: s = [] } = e;
+        l = (e) => {
+          let { title: t = '', subtitle: r = '', description: s = '', features: l = [] } = e;
           return (0, a.jsx)('section', {
             className: 'py-8 md:py-16',
             children: (0, a.jsx)('div', {
@@ -42,14 +42,14 @@
                           'mr-1 rounded bg-neutral-900 px-1 py-0.5 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900',
                         children: t,
                       }),
-                      (0, a.jsx)('span', { children: l }),
+                      (0, a.jsx)('span', { children: s }),
                     ],
                   }),
-                  s.length > 0 &&
+                  l.length > 0 &&
                     (0, a.jsx)('div', {
                       className:
                         'flex flex-col justify-center gap-x-6 text-sm font-black text-neutral-900 md:flex-row dark:text-neutral-100',
-                      children: s.map((e) =>
+                      children: l.map((e) =>
                         (0, a.jsxs)('p', { className: 'whitespace-nowrap', children: ['\uD83D\uDD2E ', e] }, e)
                       ),
                     }),
@@ -58,11 +58,11 @@
             }),
           });
         };
-      var n = r(148);
-      let i = () => {
-          let [e, t] = (0, n.useState)(!1);
+      var i = r(148);
+      let n = () => {
+          let [e, t] = (0, i.useState)(!1);
           return (
-            (0, n.useEffect)(() => {
+            (0, i.useEffect)(() => {
               'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), t(!0));
             }, []),
             {
@@ -80,16 +80,16 @@
             }
           );
         },
-        d = (e) => Array.from(new Set(e));
-      var o = r(1668),
-        c = r.n(o),
+        o = (e) => Array.from(new Set(e));
+      var d = r(1668),
+        c = r.n(d),
         u = r(6826),
         h = r.n(u);
-      let x = { assets: '\uD83D\uDDBC️', react: '⚛️', ui: '\uD83C\uDFA8', utils: '\uD83E\uDDF0' },
-        m = (e) => {
-          let { title: t = '', links: r = [], query: l = '', setState: s, disabledSearch: n = !1 } = e,
-            { darkMode: o = !1, toggleDarkMode: u } = i(),
-            m = d(
+      let m = { assets: '\uD83D\uDDBC️', react: '⚛️', ui: '\uD83C\uDFA8', utils: '\uD83E\uDDF0' },
+        p = (e) => {
+          let { title: t = '', links: r = [], query: s = '', setState: l, disabledSearch: i = !1 } = e,
+            { darkMode: d = !1, toggleDarkMode: u } = n(),
+            p = o(
               r.map((e) => {
                 let { group: t } = e;
                 return t;
@@ -133,17 +133,17 @@
                               }),
                               (0, a.jsxs)('div', {
                                 className:
-                                  'invisible absolute left-0 z-50 mt-2 w-56 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100',
+                                  'invisible absolute left-0 z-50 mt-2 w-48 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100',
                                 children: [
                                   r.map((e) => {
-                                    let { id: t = '', href: r = '', emoji: l = '', text: s = '' } = e;
+                                    let { id: t = '', href: r = '', emoji: s = '', text: l = '' } = e;
                                     return (0, a.jsxs)(
                                       h(),
                                       {
                                         href: r,
                                         className:
                                           'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
-                                        children: [l, ' ', s],
+                                        children: [s, ' ', l],
                                       },
                                       t
                                     );
@@ -173,9 +173,9 @@
                             (0, a.jsxs)('div', {
                               className: 'hidden items-center gap-x-2 md:flex md:gap-x-4',
                               children: [
-                                m.map((e) => {
+                                p.map((e) => {
                                   var t;
-                                  let { group: r, links: l = [] } = e;
+                                  let { group: r, links: s = [] } = e;
                                   return (0, a.jsxs)(
                                     'div',
                                     {
@@ -183,20 +183,20 @@
                                       children: [
                                         (0, a.jsxs)('button', {
                                           type: 'button',
-                                          children: [null != (t = x[r]) ? t : '', ' ', r, ' (', l.length, ')'],
+                                          children: [null != (t = m[r]) ? t : '', ' ', r, ' (', s.length, ')'],
                                         }),
                                         (0, a.jsx)('div', {
                                           className:
-                                            'invisible absolute right-0 z-50 mt-2 w-56 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100',
-                                          children: l.map((e) => {
-                                            let { id: t = '', href: r = '', emoji: l = '', text: s = '' } = e;
+                                            'invisible absolute right-0 z-50 mt-2 w-48 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100',
+                                          children: s.map((e) => {
+                                            let { id: t = '', href: r = '', emoji: s = '', text: l = '' } = e;
                                             return (0, a.jsxs)(
                                               h(),
                                               {
                                                 href: r,
                                                 className:
                                                   'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
-                                                children: [l, ' ', s],
+                                                children: [s, ' ', l],
                                               },
                                               t
                                             );
@@ -222,7 +222,7 @@
                               children: [
                                 (0, a.jsx)('input', {
                                   type: 'checkbox',
-                                  checked: o,
+                                  checked: d,
                                   className: 'peer sr-only',
                                   onChange: () => {
                                     u();
@@ -238,15 +238,15 @@
                         }),
                       ],
                     }),
-                    !n &&
+                    !i &&
                       (0, a.jsx)('input', {
                         type: 'text',
                         placeholder: 'Search',
-                        value: l,
+                        value: s,
                         className:
                           'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
                         onChange: (e) => {
-                          s((t) => ({ ...t, query: e.target.value }));
+                          l((t) => ({ ...t, query: e.target.value }));
                         },
                       }),
                   ],
@@ -255,64 +255,132 @@
             ],
           });
         },
-        p = [
-          { group: 'assets', id: 'assets-emojis', emoji: '\uD83D\uDE04', href: '/assets/emojis', text: 'Emojis' },
-          { group: 'assets', id: 'assets-icons', emoji: '\uD83D\uDDBC️', href: '/assets/icons', text: 'SVG Icons' },
+        x = [
+          {
+            group: 'assets',
+            id: 'assets-emojis',
+            emoji: '\uD83D\uDE04',
+            href: '/assets/emojis',
+            text: 'Emojis',
+            description:
+              'A large collection of emojis to enhance user interfaces, chats, and messaging applications with expressive icons.',
+          },
+          {
+            group: 'assets',
+            id: 'assets-icons',
+            emoji: '\uD83D\uDDBC️',
+            href: '/assets/icons',
+            text: 'SVG Icons',
+            description:
+              'High-quality scalable vector icons suitable for web and mobile interfaces, ensuring sharp visuals on any screen size.',
+          },
           {
             group: 'react',
             id: 'react-contexts',
             emoji: '\uD83D\uDD17',
             href: '/react/contexts',
-            text: 'React Contexts',
+            text: 'Contexts',
+            description:
+              'React contexts to efficiently manage and share state or data across deeply nested components without prop drilling.',
           },
-          { group: 'react', id: 'react-hooks', emoji: '\uD83E\uDE9D', href: '/react/hooks', text: 'React Hooks' },
+          {
+            group: 'react',
+            id: 'react-hooks',
+            emoji: '\uD83E\uDE9D',
+            href: '/react/hooks',
+            text: 'Hooks',
+            description:
+              'Reusable React hooks that provide custom functionality to functional components, improving code modularity and reuse.',
+          },
           {
             group: 'react',
             id: 'react-virtual-table',
             emoji: '\uD83D\uDCCB',
             href: '/react/virtual-table',
-            text: 'React Virtual Table',
+            text: 'Virtual Table',
+            description:
+              'Highly performant virtualized table component that renders only visible rows, ideal for large datasets.',
           },
-          { group: 'ui', id: 'ui-charts', emoji: '\uD83D\uDCCA', href: '/ui/charts', text: 'Charts' },
-          { group: 'ui', id: 'ui-kit', emoji: '\uD83C\uDFA8', href: '/ui/kit', text: 'UIKit' },
-          { group: 'ui', id: 'ui-blocks', emoji: '\uD83E\uDDF1', href: '/ui/block', text: 'UIBlock' },
-          { group: 'ui', id: 'ui-templates', emoji: '\uD83D\uDCDD', href: '/ui/templates', text: 'Templates' },
-          { group: 'utils', id: 'utils', emoji: '\uD83E\uDDF0', href: '/utils', text: 'Utils' },
+          {
+            group: 'ui',
+            id: 'ui-charts',
+            emoji: '\uD83D\uDCCA',
+            href: '/ui/charts',
+            text: 'Charts',
+            description:
+              'Versatile chart components for visualizing data in various formats including bar, line, pie, and more.',
+          },
+          {
+            group: 'ui',
+            id: 'ui-kit',
+            emoji: '\uD83C\uDFA8',
+            href: '/ui/kit',
+            text: 'UIKit',
+            description:
+              'Comprehensive collection of reusable UI components and design elements for building consistent user interfaces.',
+          },
+          {
+            group: 'ui',
+            id: 'ui-blocks',
+            emoji: '\uD83E\uDDF1',
+            href: '/ui/block',
+            text: 'UIBlock',
+            description:
+              'Modular UI blocks designed for rapid assembly of complex interfaces using pre-built building components.',
+          },
+          {
+            group: 'ui',
+            id: 'ui-templates',
+            emoji: '\uD83D\uDCDD',
+            href: '/ui/templates',
+            text: 'Templates',
+            description:
+              'Pre-designed UI templates that speed up development by providing ready-made layouts and styles.',
+          },
+          {
+            group: 'utils',
+            id: 'utils',
+            emoji: '\uD83E\uDDF0',
+            href: '/utils',
+            text: 'Utils',
+            description:
+              'A collection of general utility functions and helpers to simplify common programming tasks across projects.',
+          },
         ],
         g = (e) => {
           let {
             disabledSearch: t = !1,
             query: r = '',
-            setState: n = () => {},
-            id: i = '',
-            emoji: d = '',
-            title: o = '',
+            setState: i = () => {},
+            id: n = '',
+            emoji: o = '',
+            title: d = '',
             subtitle: c = '',
             description: u = '',
             features: h = [],
-            children: x = (0, a.jsx)(a.Fragment, {}),
+            children: m = (0, a.jsx)(a.Fragment, {}),
           } = e;
           return (0, a.jsxs)('div', {
             className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
             children: [
-              (0, a.jsx)(m, {
+              (0, a.jsx)(p, {
                 disabledSearch: t,
-                links: p.filter((e) => {
+                links: x.filter((e) => {
                   let { id: t = '' } = e;
-                  return i !== t;
+                  return n !== t;
                 }),
-                title: ''.concat(d, ' ').concat(o),
+                title: ''.concat(o, ' ').concat(d),
                 query: r,
-                setState: n,
+                setState: i,
               }),
               (0, a.jsxs)('div', {
                 className: 'grow overflow-auto',
                 children: [
                   (0, a.jsxs)('main', {
                     className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                    children: [(0, a.jsx)(s, { title: o, subtitle: c, description: u, features: h }), x],
+                    children: [(0, a.jsx)(l, { title: d, subtitle: c, description: u, features: h }), m],
                   }),
-                  (0, a.jsx)(l, { title: o }),
+                  (0, a.jsx)(s, { title: d }),
                 ],
               }),
             ],

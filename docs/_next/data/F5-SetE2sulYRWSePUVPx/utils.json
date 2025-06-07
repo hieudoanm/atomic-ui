@@ -9,6 +9,34 @@
         "code": "export const chunk = <T>(array: T[], size: number): T[][] => {\n  const result: T[][] = [];\n  for (let i = 0; i < array.length; i += size) {\n    result.push(array.slice(i, i + size));\n  }\n  return result;\n};\n"
       },
       {
+        "id": "array-compact",
+        "group": "array",
+        "name": "Compact",
+        "emoji": "🧹",
+        "code": "export const compact = <T>(array: (T | null | undefined | false | '' | 0)[]): T[] => {\n  return array.filter(Boolean) as T[];\n};\n"
+      },
+      {
+        "id": "array-difference",
+        "group": "array",
+        "name": "Difference",
+        "emoji": "➖",
+        "code": "export const difference = <T>(a: T[], b: T[]): T[] => {\n  const setB = new Set(b);\n  return a.filter((item) => !setB.has(item));\n};\n"
+      },
+      {
+        "id": "array-group-by",
+        "group": "array",
+        "name": "Group By",
+        "emoji": "🗂️",
+        "code": "export const groupBy = <T, K extends keyof T>(array: T[], key: K): Record<string, T[]> => {\n  return array.reduce((acc: Record<string, T[]>, item: T) => {\n    const groupKey = String(item[key]);\n    if (!acc[groupKey]) {\n      acc[groupKey] = [];\n    }\n    acc[groupKey].push(item);\n    return acc;\n  }, {});\n};\n"
+      },
+      {
+        "id": "array-intersection",
+        "group": "array",
+        "name": "Intersection",
+        "emoji": "🔗",
+        "code": "export const intersection = <T>(a: T[], b: T[]): T[] => {\n  const setB = new Set(b);\n  return a.filter((item) => setB.has(item));\n};\n"
+      },
+      {
         "id": "array-shuffle",
         "group": "array",
         "name": "Shuffle",
@@ -154,6 +182,20 @@
         "name": "Indexed DB",
         "emoji": "💾",
         "code": "interface IDBOptions {\n  dbName: string;\n  storeName: string;\n  version?: number;\n}\n\nconst openDB = ({ dbName, storeName, version = 1 }: IDBOptions): Promise<IDBDatabase> => {\n  return new Promise((resolve, reject) => {\n    const request = indexedDB.open(dbName, version);\n\n    request.onupgradeneeded = () => {\n      const db = request.result;\n      if (!db.objectStoreNames.contains(storeName)) {\n        db.createObjectStore(storeName);\n      }\n    };\n\n    request.onsuccess = () => resolve(request.result);\n    request.onerror = () => {\n      const err = request.error;\n      reject(err instanceof Error ? err : new Error(String(err)));\n    };\n  });\n};\n\nexport const setItem = async <T>(key: string, value: T, options: IDBOptions): Promise<void> => {\n  const db = await openDB(options);\n  return new Promise((resolve, reject) => {\n    const transaction = db.transaction(options.storeName, 'readwrite');\n    const store = transaction.objectStore(options.storeName);\n    const request = store.put(value, key);\n\n    request.onsuccess = () => resolve();\n    request.onerror = () => {\n      const err = request.error;\n      reject(err instanceof Error ? err : new Error(String(err)));\n    };\n  });\n};\n\nexport const getItem = async <T>(key: string, options: IDBOptions): Promise<T | null> => {\n  const db = await openDB(options);\n  return new Promise((resolve, reject) => {\n    const transaction = db.transaction(options.storeName, 'readonly');\n    const store = transaction.objectStore(options.storeName);\n    const request = store.get(key);\n\n    request.onsuccess = () => resolve(request.result ?? null);\n    request.onerror = () => {\n      const err = request.error;\n      reject(err instanceof Error ? err : new Error(String(err)));\n    };\n  });\n};\n\nexport const deleteItem = async (key: string, options: IDBOptions): Promise<void> => {\n  const db = await openDB(options);\n  return new Promise((resolve, reject) => {\n    const transaction = db.transaction(options.storeName, 'readwrite');\n    const store = transaction.objectStore(options.storeName);\n    const request = store.delete(key);\n\n    request.onsuccess = () => resolve();\n    request.onerror = () => {\n      const err = request.error;\n      reject(err instanceof Error ? err : new Error(String(err)));\n    };\n  });\n};\n"
+      },
+      {
+        "id": "storage-local-storage",
+        "group": "storage",
+        "name": "Local Storage",
+        "emoji": "🗄️",
+        "code": "export const setLocalStorage = <T>(key: string, value: T): void => {\n  if (typeof window === 'undefined') return;\n\n  try {\n    localStorage.setItem(key, JSON.stringify(value));\n  } catch (error) {\n    console.error(`Error setting localStorage key \"${key}\":`, error);\n  }\n};\n\nexport const getLocalStorage = <T>(key: string): T | null => {\n  if (typeof window === 'undefined') return null;\n\n  try {\n    const item = localStorage.getItem(key);\n    return item ? (JSON.parse(item) as T) : null;\n  } catch (error) {\n    console.error(`Error getting localStorage key \"${key}\":`, error);\n    return null;\n  }\n};\n\nexport const removeLocalStorage = (key: string): void => {\n  if (typeof window === 'undefined') return;\n\n  try {\n    localStorage.removeItem(key);\n  } catch (error) {\n    console.error(`Error removing localStorage key \"${key}\":`, error);\n  }\n};\n\nexport const clearLocalStorage = (): void => {\n  if (typeof window === 'undefined') return;\n\n  try {\n    localStorage.clear();\n  } catch (error) {\n    console.error('Error clearing localStorage:', error);\n  }\n};\n\nexport const LocalStorage = () => {\n  return { set: setLocalStorage, get: getLocalStorage, remove: removeLocalStorage, clear: clearLocalStorage };\n};\n"
+      },
+      {
+        "id": "storage-session-storage",
+        "group": "storage",
+        "name": "Session Storage",
+        "emoji": "📦",
+        "code": "export const setSessionStorage = <T>(key: string, value: T): void => {\n  if (typeof window === 'undefined') return;\n\n  try {\n    sessionStorage.setItem(key, JSON.stringify(value));\n  } catch (error) {\n    console.error(`Error setting sessionStorage key \"${key}\":`, error);\n  }\n};\n\nexport const getSessionStorage = <T>(key: string): T | null => {\n  if (typeof window === 'undefined') return null;\n\n  try {\n    const item = sessionStorage.getItem(key);\n    return item ? (JSON.parse(item) as T) : null;\n  } catch (error) {\n    console.error(`Error getting sessionStorage key \"${key}\":`, error);\n    return null;\n  }\n};\n\nexport const removeSessionStorage = (key: string): void => {\n  if (typeof window === 'undefined') return;\n\n  try {\n    sessionStorage.removeItem(key);\n  } catch (error) {\n    console.error(`Error removing sessionStorage key \"${key}\":`, error);\n  }\n};\n\nexport const clearSessionStorage = (): void => {\n  if (typeof window === 'undefined') return;\n\n  try {\n    sessionStorage.clear();\n  } catch (error) {\n    console.error('Error clearing sessionStorage:', error);\n  }\n};\n\nexport const SessionStorage = () => {\n  return { set: setSessionStorage, get: getSessionStorage, remove: removeSessionStorage, clear: clearSessionStorage };\n};\n"
       }
     ]
   },

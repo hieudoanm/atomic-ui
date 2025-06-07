@@ -75,6 +75,10 @@ const UtilsPage: NextPage<{ utils: Util[] }> = ({ utils = [] }) => {
 export const getStaticProps = () => {
   const utils: { id: string; group: string; emoji: string; name: string; code: string }[] = [
     { path: 'array/chunk', emoji: '📦', name: 'Chunk' },
+    { path: 'array/compact', emoji: '🧹', name: 'Compact' },
+    { path: 'array/difference', emoji: '➖', name: 'Difference' },
+    { path: 'array/group-by', emoji: '🗂️', name: 'Group By' },
+    { path: 'array/intersection', emoji: '🔗', name: 'Intersection' },
     { path: 'array/shuffle', emoji: '🔀', name: 'Shuffle' },
     { path: 'array/union', emoji: '⚡', name: 'Union' },
     { path: 'array/unique', emoji: '🔑', name: 'Unique' },
@@ -96,6 +100,8 @@ export const getStaticProps = () => {
     { path: 'performance/throttle', emoji: '🚦', name: 'Throttle' },
     { path: 'storage/cookies', emoji: '🍪', name: 'Cookies' },
     { path: 'storage/indexed.db', emoji: '💾', name: 'Indexed DB' },
+    { path: 'storage/local-storage', emoji: '🗄️', name: 'Local Storage' },
+    { path: 'storage/session-storage', emoji: '📦', name: 'Session Storage' },
   ].map(({ path = '', emoji = '', name = '' }) => {
     const group = path.split('/').at(0) ?? 'utils';
     const id = path.replaceAll('/', '-');

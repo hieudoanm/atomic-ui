@@ -1,12 +1,16 @@
 import { emojis } from '@atomic/database/emojis';
 import { PageTemplate } from '@atomic/templates/PageTemplate';
+import { groupBy } from '@atomic/utils/array/group-by';
 import { copy } from '@atomic/utils/clipboard/copy';
 import { NextPage } from 'next';
 import { useState } from 'react';
 
-const emojisList: { name: string; emoji: string }[] = Object.entries(emojis).map(([key, value]) => {
-  return { name: key, emoji: value };
-});
+type Emoji = { category: string; name: string; emoji: string };
+
+const emojisList: Emoji[] = Object.entries(emojis).reduce((previous, [category, record]) => {
+  const list = Object.entries(record).map(([name, emoji]) => ({ category, name, emoji }));
+  return previous.concat(list);
+}, [] as Emoji[]);
 
 const EmojisPage: NextPage = () => {
   const [{ query = '' }, setState] = useState<{ query: string }>({ query: '' });
@@ -14,6 +18,7 @@ const EmojisPage: NextPage = () => {
   const filteredEmojis = emojisList.filter(({ name }) => {
     return name.toLowerCase().includes(query.toLowerCase());
   });
+  const emojisByCategories = groupBy(filteredEmojis, 'category');
 
   return (
     <PageTemplate
@@ -32,17 +37,28 @@ const EmojisPage: NextPage = () => {
               <span className="capitalize">Emojis</span> ({filteredEmojis.length})
             </h2>
             {filteredEmojis.length > 0 && (
-              <div className="flex flex-wrap">
-                {filteredEmojis.map(({ name, emoji }) => (
-                  <button
-                    key={emoji}
-                    title={name}
-                    className="cursor-pointer rounded-lg p-2 text-4xl hover:bg-neutral-200 dark:hover:bg-neutral-800"
-                    onClick={() => copy(emoji)}>
-                    {emoji}
-                  </button>
-                ))}
-              </div>
+              <>
+                {Object.entries(emojisByCategories).map(([category, emojis]) => {
+                  return (
+                    <div key={category} className="flex flex-col gap-y-4 md:gap-y-8">
+                      <h2 className="text-3xl font-extrabold capitalize">
+                        {category} ({emojis.length})
+                      </h2>
+                      <div className="flex flex-wrap">
+                        {emojis.map(({ name, emoji }) => (
+                          <button
+                            key={emoji}
+                            title={name}
+                            className="aspect-square w-12 cursor-pointer rounded-lg text-4xl hover:bg-neutral-200 dark:hover:bg-neutral-800"
+                            onClick={() => copy(emoji)}>
+                            {emoji}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </>
             )}
           </div>
         </div>
