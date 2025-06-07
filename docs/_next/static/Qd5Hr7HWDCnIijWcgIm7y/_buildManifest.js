@@ -3,12 +3,12 @@
     __rewrites: { afterFiles: [], beforeFiles: [], fallback: [] },
     __routerFilterStatic: { numItems: 0, errorRate: 1e-4, numBits: 0, numHashes: null, bitArray: [] },
     __routerFilterDynamic: { numItems: c, errorRate: 1e-4, numBits: c, numHashes: null, bitArray: [] },
-    '/': [s, t, 'static/chunks/pages/index-0a52457067fbbe1c.js'],
+    '/': [s, t, 'static/chunks/pages/index-55dab16897b2e15e.js'],
     '/403': [s, 'static/chunks/pages/403-b86c98a3ab2357a9.js'],
     '/404': [s, 'static/chunks/pages/404-8debd110b29e5442.js'],
     '/500': [s, 'static/chunks/pages/500-265b52a7305e96f6.js'],
     '/_error': [s, 'static/chunks/pages/_error-9baac506faa6ddb5.js'],
-    '/assets/colors': [s, t, 'static/chunks/pages/assets/colors-f34ad0bb74f82e17.js'],
+    '/assets/colors': [s, t, 'static/chunks/pages/assets/colors-e778f9a39fa646bb.js'],
     '/assets/emojis': [s, t, 'static/chunks/pages/assets/emojis-90a4e29907b5a07d.js'],
     '/assets/fonts': [s, 'static/css/1a7b1a5d2618d70f.css', t, 'static/chunks/pages/assets/fonts-6d874b139a91d48a.js'],
     '/assets/icons': [s, a, t, 'static/chunks/pages/assets/icons-a2ea1a69fc99f392.js'],
@@ -45,7 +45,7 @@
   };
 })(
   'static/chunks/6826-1b8246ce82a5e8e9.js',
-  'static/chunks/5695-c95b61226b40b1c1.js',
+  'static/chunks/5695-9c0112c63f2173a7.js',
   'static/chunks/1190-798dfbc567dad739.js',
   'static/chunks/2182-91b94065f8bc657c.js',
   0,

@@ -3,7 +3,7 @@
   [5695],
   {
     5695: (e, t, r) => {
-      r.d(t, { l: () => x, U: () => g });
+      r.d(t, { l: () => f, U: () => b });
       var s = r(5640);
       let a = (e) => {
           let { title: t = '' } = e;
@@ -77,20 +77,121 @@
         m = r.n(u);
       let h = { assets: '\uD83D\uDDBC️', react: '⚛️', ui: '\uD83C\uDFA8', utils: '\uD83E\uDDF0' },
         p = (e) => {
-          let { title: t = '', links: r = [], query: a = '', setState: l, disabledSearch: i = !1 } = e,
-            { darkMode: d = !1, toggleDarkMode: u } = n(),
-            p = o(
-              r.map((e) => {
+          let { links: t } = e;
+          return (0, s.jsx)('div', {
+            className: 'inline-block md:hidden',
+            children: (0, s.jsxs)('div', {
+              className: 'group relative inline-block text-left',
+              children: [
+                (0, s.jsx)('button', {
+                  type: 'button',
+                  className:
+                    'inline-flex items-center justify-center gap-1 rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 shadow-sm hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800',
+                  children: (0, s.jsx)('svg', {
+                    xmlns: 'http://www.w3.org/2000/svg',
+                    viewBox: '0 0 448 512',
+                    className: 'w-4',
+                    fill: 'currentColor',
+                    children: (0, s.jsx)('path', {
+                      d: 'M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z',
+                    }),
+                  }),
+                }),
+                (0, s.jsxs)('div', {
+                  className:
+                    'invisible absolute left-0 z-50 mt-2 w-48 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100',
+                  children: [
+                    t.map((e) => {
+                      let { id: t = '', href: r = '', emoji: a = '', text: l = '' } = e;
+                      return (0, s.jsxs)(
+                        m(),
+                        {
+                          href: r,
+                          className: 'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
+                          children: [a, ' ', l],
+                        },
+                        t
+                      );
+                    }),
+                    (0, s.jsx)(m(), {
+                      href: 'https://github.com/hieudoanm/atomic',
+                      target: '_blank',
+                      className: 'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
+                      children: '\uD83D\uDC19 Github',
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        },
+        x = (e) => {
+          let { links: t = [] } = e,
+            r = o(
+              t.map((e) => {
                 let { group: t } = e;
                 return t;
               })
             ).map((e) => ({
               group: e,
-              links: r.filter((t) => {
+              links: t.filter((t) => {
                 let { group: r } = t;
                 return e === r;
               }),
             }));
+          return (0, s.jsxs)('div', {
+            className: 'hidden items-center gap-x-2 md:flex md:gap-x-4',
+            children: [
+              r.map((e) => {
+                var t;
+                let { group: r, links: a = [] } = e;
+                return (0, s.jsxs)(
+                  'div',
+                  {
+                    className: 'group relative inline-block text-left',
+                    children: [
+                      (0, s.jsxs)('button', {
+                        type: 'button',
+                        className: 'truncate text-sm md:text-base',
+                        children: [
+                          null != (t = h[r]) ? t : '',
+                          ' ',
+                          (0, s.jsxs)('span', { className: 'hidden lg:inline', children: [r, ' (', a.length, ')'] }),
+                        ],
+                      }),
+                      (0, s.jsx)('div', {
+                        className:
+                          'invisible absolute right-0 z-50 mt-2 w-48 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100',
+                        children: a.map((e) => {
+                          let { id: t = '', href: r = '', emoji: a = '', text: l = '' } = e;
+                          return (0, s.jsxs)(
+                            m(),
+                            {
+                              href: r,
+                              className: 'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
+                              children: [a, ' ', l],
+                            },
+                            t
+                          );
+                        }),
+                      }),
+                    ],
+                  },
+                  r
+                );
+              }),
+              (0, s.jsx)(m(), {
+                href: 'https://github.com/hieudoanm/atomic',
+                target: '_blank',
+                className: 'truncate text-sm md:text-base',
+                children: '\uD83D\uDC19 github',
+              }),
+            ],
+          });
+        },
+        g = (e) => {
+          let { title: t = '', links: r = [], query: a = '', setState: l, disabledSearch: i = !1 } = e,
+            { darkMode: o = !1, toggleDarkMode: d } = n();
           return (0, s.jsxs)(s.Fragment, {
             children: [
               (0, s.jsx)(c(), { children: (0, s.jsx)('title', { children: t }) }),
@@ -102,53 +203,7 @@
                     (0, s.jsxs)('div', {
                       className: 'flex items-center justify-between gap-x-4',
                       children: [
-                        (0, s.jsx)('div', {
-                          className: 'inline-block md:hidden',
-                          children: (0, s.jsxs)('div', {
-                            className: 'group relative inline-block text-left',
-                            children: [
-                              (0, s.jsx)('button', {
-                                type: 'button',
-                                className:
-                                  'inline-flex items-center justify-center gap-1 rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 shadow-sm hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800',
-                                children: (0, s.jsx)('svg', {
-                                  xmlns: 'http://www.w3.org/2000/svg',
-                                  viewBox: '0 0 448 512',
-                                  className: 'w-4',
-                                  fill: 'currentColor',
-                                  children: (0, s.jsx)('path', {
-                                    d: 'M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z',
-                                  }),
-                                }),
-                              }),
-                              (0, s.jsxs)('div', {
-                                className:
-                                  'invisible absolute left-0 z-50 mt-2 w-48 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100',
-                                children: [
-                                  r.map((e) => {
-                                    let { id: t = '', href: r = '', emoji: a = '', text: l = '' } = e;
-                                    return (0, s.jsxs)(
-                                      m(),
-                                      {
-                                        href: r,
-                                        className:
-                                          'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
-                                        children: [a, ' ', l],
-                                      },
-                                      t
-                                    );
-                                  }),
-                                  (0, s.jsx)(m(), {
-                                    href: 'https://github.com/hieudoanm/atomic',
-                                    target: '_blank',
-                                    className: 'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
-                                    children: '\uD83D\uDC19 github',
-                                  }),
-                                ],
-                              }),
-                            ],
-                          }),
-                        }),
+                        (0, s.jsx)(p, { links: r }),
                         (0, s.jsx)('div', {
                           className: 'flex items-center gap-x-4',
                           children: (0, s.jsx)(m(), {
@@ -160,52 +215,7 @@
                         (0, s.jsxs)('div', {
                           className: 'flex items-center gap-x-2 md:gap-x-4',
                           children: [
-                            (0, s.jsxs)('div', {
-                              className: 'hidden items-center gap-x-2 md:flex md:gap-x-4',
-                              children: [
-                                p.map((e) => {
-                                  var t;
-                                  let { group: r, links: a = [] } = e;
-                                  return (0, s.jsxs)(
-                                    'div',
-                                    {
-                                      className: 'group relative inline-block text-left',
-                                      children: [
-                                        (0, s.jsxs)('button', {
-                                          type: 'button',
-                                          className: 'truncate text-sm md:text-base',
-                                          children: [null != (t = h[r]) ? t : '', ' ', r, ' (', a.length, ')'],
-                                        }),
-                                        (0, s.jsx)('div', {
-                                          className:
-                                            'invisible absolute right-0 z-50 mt-2 w-48 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100',
-                                          children: a.map((e) => {
-                                            let { id: t = '', href: r = '', emoji: a = '', text: l = '' } = e;
-                                            return (0, s.jsxs)(
-                                              m(),
-                                              {
-                                                href: r,
-                                                className:
-                                                  'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
-                                                children: [a, ' ', l],
-                                              },
-                                              t
-                                            );
-                                          }),
-                                        }),
-                                      ],
-                                    },
-                                    r
-                                  );
-                                }),
-                                (0, s.jsx)(m(), {
-                                  href: 'https://github.com/hieudoanm/atomic',
-                                  target: '_blank',
-                                  className: 'truncate text-sm md:text-base',
-                                  children: '\uD83D\uDC19 github',
-                                }),
-                              ],
-                            }),
+                            (0, s.jsx)(x, { links: r }),
                             (0, s.jsxs)('label', {
                               className:
                                 'relative block h-8 w-14 rounded-full bg-neutral-200 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-purple-500 dark:bg-neutral-800 dark:has-checked:bg-purple-700',
@@ -213,10 +223,10 @@
                               children: [
                                 (0, s.jsx)('input', {
                                   type: 'checkbox',
-                                  checked: d,
+                                  checked: o,
                                   className: 'peer sr-only',
                                   onChange: () => {
-                                    u();
+                                    d();
                                   },
                                 }),
                                 (0, s.jsx)('span', {
@@ -246,13 +256,14 @@
             ],
           });
         },
-        x = [
+        f = [
           {
             group: 'assets',
             id: 'assets-colors',
             emoji: '\uD83C\uDFA8',
             href: '/assets/colors',
             text: 'Colors',
+            full: 'Colors',
             description:
               'A vast, beautiful color palette out of the box, carefully crafted by expert designers and suitable for a wide range of different design styles.',
           },
@@ -262,6 +273,7 @@
             emoji: '\uD83D\uDE04',
             href: '/assets/emojis',
             text: 'Emojis',
+            full: 'Emojis',
             description:
               'A large collection of emojis to enhance user interfaces, chats, and messaging applications with expressive icons.',
           },
@@ -271,6 +283,7 @@
             emoji: '\uD83D\uDD24',
             href: '/assets/fonts',
             text: 'Fonts',
+            full: 'Fonts',
             description:
               'A curated collection of fonts for web and UI projects, supporting various styles, weights, and languages.',
           },
@@ -279,7 +292,8 @@
             id: 'assets-icons',
             emoji: '\uD83D\uDDBC️',
             href: '/assets/icons',
-            text: 'SVG Icons',
+            text: 'Icons',
+            full: 'SVG Icons',
             description:
               'High-quality scalable vector icons suitable for web and mobile interfaces, ensuring sharp visuals on any screen size.',
           },
@@ -289,6 +303,7 @@
             emoji: '\uD83D\uDD17',
             href: '/react/contexts',
             text: 'Contexts',
+            full: 'React Contexts',
             description:
               'React contexts to efficiently manage and share state or data across deeply nested components without prop drilling.',
           },
@@ -298,6 +313,7 @@
             emoji: '\uD83E\uDE9D',
             href: '/react/hooks',
             text: 'Hooks',
+            full: 'React Hooks',
             description:
               'Reusable React hooks that provide custom functionality to functional components, improving code modularity and reuse.',
           },
@@ -307,8 +323,19 @@
             emoji: '\uD83D\uDCCB',
             href: '/react/virtual-table',
             text: 'Virtual Table',
+            full: 'React Virtual Table',
             description:
               'Highly performant virtualized table component that renders only visible rows, ideal for large datasets.',
+          },
+          {
+            group: 'utils',
+            id: 'utils',
+            emoji: '\uD83E\uDDF0',
+            href: '/utils',
+            text: 'Utils',
+            full: 'Utilities',
+            description:
+              'A collection of general utility functions and helpers to simplify common programming tasks across projects.',
           },
           {
             group: 'ui',
@@ -316,6 +343,7 @@
             emoji: '\uD83D\uDCCA',
             href: '/ui/charts',
             text: 'Charts',
+            full: 'UI Charts',
             description:
               'Versatile chart components for visualizing data in various formats including bar, line, pie, and more.',
           },
@@ -324,7 +352,8 @@
             id: 'ui-kit',
             emoji: '\uD83C\uDFA8',
             href: '/ui/kit',
-            text: 'UIKit',
+            text: 'UI',
+            full: 'UIKit',
             description:
               'Comprehensive collection of reusable UI components and design elements for building consistent user interfaces.',
           },
@@ -333,7 +362,8 @@
             id: 'ui-blocks',
             emoji: '\uD83E\uDDF1',
             href: '/ui/block',
-            text: 'UIBlock',
+            text: 'Blocks',
+            full: 'UI Blocks',
             description:
               'Modular UI blocks designed for rapid assembly of complex interfaces using pre-built building components.',
           },
@@ -343,20 +373,12 @@
             emoji: '\uD83D\uDCDD',
             href: '/ui/templates',
             text: 'Templates',
+            full: 'UI Templates',
             description:
               'Pre-designed UI templates that speed up development by providing ready-made layouts and styles.',
           },
-          {
-            group: 'utils',
-            id: 'utils',
-            emoji: '\uD83E\uDDF0',
-            href: '/utils',
-            text: 'Utils',
-            description:
-              'A collection of general utility functions and helpers to simplify common programming tasks across projects.',
-          },
         ],
-        g = (e) => {
+        b = (e) => {
           var t;
           let {
               disabledSearch: r = !1,
@@ -368,11 +390,11 @@
               subtitle: u = '',
               description: m = '',
               features: h = [],
-              children: g = (0, s.jsx)(s.Fragment, {}),
+              children: p = (0, s.jsx)(s.Fragment, {}),
             } = e,
-            { emoji: b = '', description: f = '' } =
+            { emoji: x = '', description: b = '' } =
               null !=
-              (t = x.find((e) => {
+              (t = f.find((e) => {
                 let { id: t = '' } = e;
                 return o === t;
               }))
@@ -381,13 +403,13 @@
           return (0, s.jsxs)('div', {
             className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
             children: [
-              (0, s.jsx)(p, {
+              (0, s.jsx)(g, {
                 disabledSearch: r,
-                links: x.filter((e) => {
+                links: f.filter((e) => {
                   let { id: t = '' } = e;
                   return o !== t;
                 }),
-                title: ''.concat(b || d, ' ').concat(c),
+                title: ''.concat(x || d, ' ').concat(c),
                 query: i,
                 setState: n,
               }),
@@ -396,7 +418,7 @@
                 children: [
                   (0, s.jsxs)('main', {
                     className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                    children: [(0, s.jsx)(l, { emoji: b, title: c, subtitle: u, description: f || m, features: h }), g],
+                    children: [(0, s.jsx)(l, { emoji: x, title: c, subtitle: u, description: b || m, features: h }), p],
                   }),
                   (0, s.jsx)(a, { title: c }),
                 ],

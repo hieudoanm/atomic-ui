@@ -335,7 +335,7 @@
               children: (0, c.jsxs)('div', {
                 className: 'mx-auto flex w-full max-w-2xl flex-col gap-y-4 md:gap-y-8',
                 children: [
-                  (0, c.jsx)('h2', { className: 'text-3xl font-bold capitalize', children: 'Colors' }),
+                  (0, c.jsx)('h2', { className: 'text-center text-3xl font-bold capitalize', children: 'Colors' }),
                   (0, c.jsx)('div', {
                     className: 'w-full overflow-y-auto',
                     children: (0, c.jsxs)('table', {

@@ -16,7 +16,7 @@ const ColorsPage = () => {
       <section className="py-4 md:py-8">
         <div className="container mx-auto px-8">
           <div className="mx-auto flex w-full max-w-2xl flex-col gap-y-4 md:gap-y-8">
-            <h2 className="text-3xl font-bold capitalize">Colors</h2>
+            <h2 className="text-center text-3xl font-bold capitalize">Colors</h2>
             <div className="w-full overflow-y-auto">
               <table className="w-full">
                 <thead>

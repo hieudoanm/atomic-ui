@@ -9,6 +9,7 @@ export const NAVBAR_LINKS: {
   emoji: string;
   href: string;
   text: string;
+  full: string;
   description: string;
 }[] = [
   {
@@ -17,6 +18,7 @@ export const NAVBAR_LINKS: {
     emoji: '🎨',
     href: '/assets/colors',
     text: 'Colors',
+    full: 'Colors',
     description:
       'A vast, beautiful color palette out of the box, carefully crafted by expert designers and suitable for a wide range of different design styles.',
   },
@@ -26,6 +28,7 @@ export const NAVBAR_LINKS: {
     emoji: '😄',
     href: '/assets/emojis',
     text: 'Emojis',
+    full: 'Emojis',
     description:
       'A large collection of emojis to enhance user interfaces, chats, and messaging applications with expressive icons.',
   },
@@ -35,6 +38,7 @@ export const NAVBAR_LINKS: {
     emoji: '🔤',
     href: '/assets/fonts',
     text: 'Fonts',
+    full: 'Fonts',
     description:
       'A curated collection of fonts for web and UI projects, supporting various styles, weights, and languages.',
   },
@@ -43,7 +47,8 @@ export const NAVBAR_LINKS: {
     id: 'assets-icons',
     emoji: '🖼️',
     href: '/assets/icons',
-    text: 'SVG Icons',
+    text: 'Icons',
+    full: 'SVG Icons',
     description:
       'High-quality scalable vector icons suitable for web and mobile interfaces, ensuring sharp visuals on any screen size.',
   },
@@ -53,6 +58,7 @@ export const NAVBAR_LINKS: {
     emoji: '🔗',
     href: '/react/contexts',
     text: 'Contexts',
+    full: 'React Contexts',
     description:
       'React contexts to efficiently manage and share state or data across deeply nested components without prop drilling.',
   },
@@ -62,6 +68,7 @@ export const NAVBAR_LINKS: {
     emoji: '🪝',
     href: '/react/hooks',
     text: 'Hooks',
+    full: 'React Hooks',
     description:
       'Reusable React hooks that provide custom functionality to functional components, improving code modularity and reuse.',
   },
@@ -71,8 +78,19 @@ export const NAVBAR_LINKS: {
     emoji: '📋',
     href: '/react/virtual-table',
     text: 'Virtual Table',
+    full: 'React Virtual Table',
     description:
       'Highly performant virtualized table component that renders only visible rows, ideal for large datasets.',
+  },
+  {
+    group: 'utils',
+    id: 'utils',
+    emoji: '🧰',
+    href: '/utils',
+    text: 'Utils',
+    full: 'Utilities',
+    description:
+      'A collection of general utility functions and helpers to simplify common programming tasks across projects.',
   },
   {
     group: 'ui',
@@ -80,6 +98,7 @@ export const NAVBAR_LINKS: {
     emoji: '📊',
     href: '/ui/charts',
     text: 'Charts',
+    full: 'UI Charts',
     description:
       'Versatile chart components for visualizing data in various formats including bar, line, pie, and more.',
   },
@@ -88,7 +107,8 @@ export const NAVBAR_LINKS: {
     id: 'ui-kit',
     emoji: '🎨',
     href: '/ui/kit',
-    text: 'UIKit',
+    text: 'UI',
+    full: 'UIKit',
     description:
       'Comprehensive collection of reusable UI components and design elements for building consistent user interfaces.',
   },
@@ -97,7 +117,8 @@ export const NAVBAR_LINKS: {
     id: 'ui-blocks',
     emoji: '🧱',
     href: '/ui/block',
-    text: 'UIBlock',
+    text: 'Blocks',
+    full: 'UI Blocks',
     description:
       'Modular UI blocks designed for rapid assembly of complex interfaces using pre-built building components.',
   },
@@ -107,16 +128,8 @@ export const NAVBAR_LINKS: {
     emoji: '📝',
     href: '/ui/templates',
     text: 'Templates',
+    full: 'UI Templates',
     description: 'Pre-designed UI templates that speed up development by providing ready-made layouts and styles.',
-  },
-  {
-    group: 'utils',
-    id: 'utils',
-    emoji: '🧰',
-    href: '/utils',
-    text: 'Utils',
-    description:
-      'A collection of general utility functions and helpers to simplify common programming tasks across projects.',
   },
 ];
 
