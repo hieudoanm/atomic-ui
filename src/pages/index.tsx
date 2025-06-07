@@ -12,7 +12,7 @@ const HomePage: NextPage = () => {
       emoji="⚛️"
       title="atomic"
       subtitle="Free and Open Source Web Development Code"
-      description="is a modern, free collection of Tailwind UI, React Hooks, Contexts, Utilities, Icons, Charts, and Templates—built for fast, accessible, and maintainable interfaces."
+      description="A modern, free collection of Tailwind UI, React Hooks, Contexts, Utilities, Icons, Charts, and Templates—built for fast, accessible, and maintainable interfaces."
       features={['Copy / Paste', 'Pure TailwindCSS', 'Pure React Code']}>
       <section className="py-4 md:py-8">
         <div className="container mx-auto px-4 md:px-8">

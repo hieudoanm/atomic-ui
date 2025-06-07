@@ -22,6 +22,15 @@ export const NAVBAR_LINKS: {
   },
   {
     group: 'assets',
+    id: 'assets-fonts',
+    emoji: '🔤',
+    href: '/assets/fonts',
+    text: 'Fonts',
+    description:
+      'A curated collection of fonts for web and UI projects, supporting various styles, weights, and languages.',
+  },
+  {
+    group: 'assets',
     id: 'assets-icons',
     emoji: '🖼️',
     href: '/assets/icons',
@@ -118,25 +127,35 @@ export const PageTemplate: FC<{
   query = '',
   setState = () => {},
   id = '',
-  emoji = '',
+  emoji: defaultEmoji = '',
   title = '',
   subtitle = '',
-  description = '',
+  description: defaultDescription = '',
   features = [],
   children = <></>,
 }) => {
+  const { emoji = '', description = '' } = NAVBAR_LINKS.find(({ id: linkId = '' }) => id === linkId) ?? {
+    emoji: '',
+    description: '',
+  };
   return (
     <div className="flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
       <Navbar
         disabledSearch={disabledSearch}
         links={NAVBAR_LINKS.filter(({ id: linkId = '' }) => id !== linkId)}
-        title={`${emoji} ${title}`}
+        title={`${emoji || defaultEmoji} ${title}`}
         query={query}
         setState={setState}
       />
       <div className="grow overflow-auto">
         <main className="divide-y divide-neutral-200 dark:divide-neutral-800">
-          <Hero title={title} subtitle={subtitle} description={description} features={features} />
+          <Hero
+            emoji={emoji}
+            title={title}
+            subtitle={subtitle}
+            description={description || defaultDescription}
+            features={features}
+          />
           {children}
         </main>
         <Footer title={title} />

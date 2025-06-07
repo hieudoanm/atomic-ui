@@ -412,12 +412,13 @@
     (f.tu = (e) => f.tt().createScriptURL(e)),
     (f.p = '/atomic/_next/'),
     (() => {
-      var e = { 8068: 0 };
+      var e = { 8068: 0, 7244: 0 };
       (f.f.j = (a, c) => {
         var d = f.o(e, a) ? e[a] : void 0;
         if (0 !== d)
           if (d) c.push(d[2]);
-          else if (8068 != a) {
+          else if (/^(7244|8068)$/.test(a)) e[a] = 0;
+          else {
             var b = new Promise((f, c) => (d = e[a] = [f, c]));
             c.push((d[2] = b));
             var t = f.p + f.u(a),
@@ -438,7 +439,7 @@
               'chunk-' + a,
               a
             );
-          } else e[a] = 0;
+          }
       }),
         (f.O.j = (a) => 0 === e[a]);
       var a = (a, c) => {

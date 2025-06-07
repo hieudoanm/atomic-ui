@@ -26,7 +26,7 @@
           title: 'atomic',
           subtitle: 'Free and Open Source Web Development Code',
           description:
-            'is a modern, free collection of Tailwind UI, React Hooks, Contexts, Utilities, Icons, Charts, and Templates—built for fast, accessible, and maintainable interfaces.',
+            'A modern, free collection of Tailwind UI, React Hooks, Contexts, Utilities, Icons, Charts, and Templates—built for fast, accessible, and maintainable interfaces.',
           features: ['Copy / Paste', 'Pure TailwindCSS', 'Pure React Code'],
           children: (0, a.jsx)('section', {
             className: 'py-4 md:py-8',

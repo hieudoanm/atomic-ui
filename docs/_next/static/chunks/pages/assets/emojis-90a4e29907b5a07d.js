@@ -1999,7 +1999,7 @@
                   className: 'flex flex-col gap-y-4 md:gap-y-8',
                   children: [
                     (0, i.jsxs)('h2', {
-                      className: 'text-2xl font-bold',
+                      className: 'text-3xl font-bold',
                       children: [
                         (0, i.jsx)('span', { className: 'capitalize', children: 'Emojis' }),
                         ' (',
@@ -2016,8 +2016,8 @@
                             {
                               className: 'flex flex-col gap-y-4 md:gap-y-8',
                               children: [
-                                (0, i.jsxs)('h2', {
-                                  className: 'text-3xl font-extrabold capitalize',
+                                (0, i.jsxs)('h3', {
+                                  className: 'text-2xl font-semibold capitalize',
                                   children: [e, ' (', n.length, ')'],
                                 }),
                                 (0, i.jsx)('div', {

@@ -33,7 +33,7 @@ const EmojisPage: NextPage = () => {
       <section className="py-4 md:py-8">
         <div className="container mx-auto px-8">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
-            <h2 className="text-2xl font-bold">
+            <h2 className="text-3xl font-bold">
               <span className="capitalize">Emojis</span> ({filteredEmojis.length})
             </h2>
             {filteredEmojis.length > 0 && (
@@ -41,9 +41,9 @@ const EmojisPage: NextPage = () => {
                 {Object.entries(emojisByCategories).map(([category, emojis]) => {
                   return (
                     <div key={category} className="flex flex-col gap-y-4 md:gap-y-8">
-                      <h2 className="text-3xl font-extrabold capitalize">
+                      <h3 className="text-2xl font-semibold capitalize">
                         {category} ({emojis.length})
-                      </h2>
+                      </h3>
                       <div className="flex flex-wrap">
                         {emojis.map(({ name, emoji }) => (
                           <button
