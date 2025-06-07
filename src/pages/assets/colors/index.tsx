@@ -45,7 +45,7 @@ const ColorsPage = () => {
                             <td align="center" key={`${shade}-${hex}`} className="p-1">
                               <button
                                 title={hex}
-                                className="aspect-square w-8 cursor-pointer rounded"
+                                className="aspect-square w-8 cursor-pointer rounded border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10"
                                 style={{ backgroundColor: hex }}
                                 onClick={() => {
                                   copy(hex);

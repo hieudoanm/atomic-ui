@@ -8,7 +8,7 @@
     '/404': [s, 'static/chunks/pages/404-8debd110b29e5442.js'],
     '/500': [s, 'static/chunks/pages/500-265b52a7305e96f6.js'],
     '/_error': [s, 'static/chunks/pages/_error-9baac506faa6ddb5.js'],
-    '/assets/colors': [s, t, 'static/chunks/pages/assets/colors-e778f9a39fa646bb.js'],
+    '/assets/colors': [s, t, 'static/chunks/pages/assets/colors-944f53740d5651b4.js'],
     '/assets/emojis': [s, t, 'static/chunks/pages/assets/emojis-90a4e29907b5a07d.js'],
     '/assets/fonts': [s, 'static/css/1a7b1a5d2618d70f.css', t, 'static/chunks/pages/assets/fonts-6d874b139a91d48a.js'],
     '/assets/icons': [s, a, t, 'static/chunks/pages/assets/icons-a2ea1a69fc99f392.js'],
@@ -19,7 +19,7 @@
     '/ui/charts': [s, e, t, 'static/chunks/pages/ui/charts-124b8c78b6e79ce7.js'],
     '/ui/kit': [s, e, a, t, 'static/chunks/pages/ui/kit-a91fcf0466050da7.js'],
     '/ui/templates': [s, a, t, 'static/chunks/pages/ui/templates-5c4c5ade8e289c55.js'],
-    '/ui/templates/[id]': [s, e, a, t, 'static/chunks/pages/ui/templates/[id]-4053b4050abb6d82.js'],
+    '/ui/templates/[id]': [s, e, a, t, 'static/chunks/pages/ui/templates/[id]-52bacffc979606b0.js'],
     '/utils': [s, e, a, t, 'static/chunks/pages/utils-4f2adbc7c4fc3896.js'],
     sortedPages: [
       '/',

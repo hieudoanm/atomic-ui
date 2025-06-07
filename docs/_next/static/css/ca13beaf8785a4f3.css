@@ -470,6 +470,9 @@
   .right-0 {
     right: calc(var(--spacing) * 0);
   }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
   .bottom-4 {
     bottom: calc(var(--spacing) * 4);
   }
@@ -717,6 +720,9 @@
   }
   .w-full {
     width: 100%;
+  }
+  .w-screen {
+    width: 100vw;
   }
   .max-w-2xl {
     max-width: var(--container-2xl);

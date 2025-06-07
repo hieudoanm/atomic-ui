@@ -376,7 +376,8 @@
                                         className: 'p-1',
                                         children: (0, c.jsx)('button', {
                                           title: a,
-                                          className: 'aspect-square w-8 cursor-pointer rounded',
+                                          className:
+                                            'aspect-square w-8 cursor-pointer rounded border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
                                           style: { backgroundColor: a },
                                           onClick: () => {
                                             (0, l.C)(a);

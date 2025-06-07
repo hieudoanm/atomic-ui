@@ -13,7 +13,7 @@
         "group": "boolean",
         "name": "useToggle",
         "emoji": "🔀",
-        "code": "import { Dispatch, SetStateAction, useCallback, useState } from 'react';\n\nexport const useToggle = (defaultValue?: boolean): [boolean, () => void, Dispatch<SetStateAction<boolean>>] => {\n  const [value, setValue] = useState(!!defaultValue);\n\n  const toggle = useCallback(() => {\n    setValue((x) => !x);\n  }, []);\n\n  return [value, toggle, setValue];\n};\n"
+        "code": "import { Dispatch, SetStateAction, useCallback, useState } from 'react';\n\nexport const useToggle = (\n  defaultValue?: boolean\n): { value: boolean; setValue: Dispatch<SetStateAction<boolean>>; toggle: () => void } => {\n  const [value, setValue] = useState(!!defaultValue);\n\n  const toggle = useCallback(() => {\n    setValue((x) => !x);\n  }, []);\n\n  return { value, toggle, setValue };\n};\n"
       },
       {
         "id": "events-use-keyboard",

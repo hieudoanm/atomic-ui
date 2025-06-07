@@ -19,8 +19,8 @@
       type="font/woff2"
       crossorigin="anonymous"
       data-next-font="size-adjust" />
-    <link rel="preload" href="/atomic/_next/static/css/725820ade537378b.css" as="style" />
-    <link rel="stylesheet" href="/atomic/_next/static/css/725820ade537378b.css" data-n-g="" />
+    <link rel="preload" href="/atomic/_next/static/css/ca13beaf8785a4f3.css" as="style" />
+    <link rel="stylesheet" href="/atomic/_next/static/css/ca13beaf8785a4f3.css" data-n-g="" />
     <noscript data-n-css=""></noscript>
     <script defer="" nomodule="" src="/atomic/_next/static/chunks/polyfills-42372ed130431b0a.js"></script>
     <script src="/atomic/_next/static/chunks/webpack-bd12bc3c2d387859.js" defer=""></script>
@@ -32,8 +32,8 @@
     <script src="/atomic/_next/static/chunks/1190-798dfbc567dad739.js" defer=""></script>
     <script src="/atomic/_next/static/chunks/5695-9c0112c63f2173a7.js" defer=""></script>
     <script src="/atomic/_next/static/chunks/pages/react/hooks-2d004b6699a27953.js" defer=""></script>
-    <script src="/atomic/_next/static/73aQ7uV9MNnlq51IMBbR7/_buildManifest.js" defer=""></script>
-    <script src="/atomic/_next/static/73aQ7uV9MNnlq51IMBbR7/_ssgManifest.js" defer=""></script>
+    <script src="/atomic/_next/static/jQQIAZAnnbcHC0N3Pgg_u/_buildManifest.js" defer=""></script>
+    <script src="/atomic/_next/static/jQQIAZAnnbcHC0N3Pgg_u/_ssgManifest.js" defer=""></script>
   </head>
   <body class="antialiased">
     <div id="__next">
@@ -1026,7 +1026,7 @@
                 "group": "boolean",
                 "name": "useToggle",
                 "emoji": "🔀",
-                "code": "import { Dispatch, SetStateAction, useCallback, useState } from 'react';\n\nexport const useToggle = (defaultValue?: boolean): [boolean, () =\u003e void, Dispatch\u003cSetStateAction\u003cboolean\u003e\u003e] =\u003e {\n  const [value, setValue] = useState(!!defaultValue);\n\n  const toggle = useCallback(() =\u003e {\n    setValue((x) =\u003e !x);\n  }, []);\n\n  return [value, toggle, setValue];\n};\n"
+                "code": "import { Dispatch, SetStateAction, useCallback, useState } from 'react';\n\nexport const useToggle = (\n  defaultValue?: boolean\n): { value: boolean; setValue: Dispatch\u003cSetStateAction\u003cboolean\u003e\u003e; toggle: () =\u003e void } =\u003e {\n  const [value, setValue] = useState(!!defaultValue);\n\n  const toggle = useCallback(() =\u003e {\n    setValue((x) =\u003e !x);\n  }, []);\n\n  return { value, toggle, setValue };\n};\n"
               },
               {
                 "id": "events-use-keyboard",
@@ -1160,7 +1160,7 @@
         },
         "page": "/react/hooks",
         "query": {},
-        "buildId": "73aQ7uV9MNnlq51IMBbR7",
+        "buildId": "jQQIAZAnnbcHC0N3Pgg_u",
         "assetPrefix": "/atomic",
         "isFallback": false,
         "gsp": true,
