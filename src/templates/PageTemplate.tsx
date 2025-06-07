@@ -13,6 +13,15 @@ export const NAVBAR_LINKS: {
 }[] = [
   {
     group: 'assets',
+    id: 'assets-colors',
+    emoji: '🎨',
+    href: '/assets/colors',
+    text: 'Colors',
+    description:
+      'A vast, beautiful color palette out of the box, carefully crafted by expert designers and suitable for a wide range of different design styles.',
+  },
+  {
+    group: 'assets',
     id: 'assets-emojis',
     emoji: '😄',
     href: '/assets/emojis',

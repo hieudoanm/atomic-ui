@@ -103,7 +103,7 @@
                             return (0, l.jsx)(
                               c(),
                               {
-                                href: '/templates/'.concat(a),
+                                href: '/ui/templates/'.concat(a),
                                 children: (0, l.jsxs)('div', {
                                   id: a,
                                   className: 'flex flex-col gap-y-4 md:gap-y-8',

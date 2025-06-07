@@ -1,4 +1,4 @@
-(self.__BUILD_MANIFEST = (function (s, t, e, a, c, i, u) {
+(self.__BUILD_MANIFEST = (function (s, t, a, e, c, i, u) {
   return {
     __rewrites: { afterFiles: [], beforeFiles: [], fallback: [] },
     __routerFilterStatic: { numItems: 0, errorRate: 1e-4, numBits: 0, numHashes: null, bitArray: [] },
@@ -8,18 +8,19 @@
     '/404': [s, 'static/chunks/pages/404-8debd110b29e5442.js'],
     '/500': [s, 'static/chunks/pages/500-265b52a7305e96f6.js'],
     '/_error': [s, 'static/chunks/pages/_error-9baac506faa6ddb5.js'],
+    '/assets/colors': [s, t, 'static/chunks/pages/assets/colors-f34ad0bb74f82e17.js'],
     '/assets/emojis': [s, t, 'static/chunks/pages/assets/emojis-90a4e29907b5a07d.js'],
     '/assets/fonts': [s, 'static/css/1a7b1a5d2618d70f.css', t, 'static/chunks/pages/assets/fonts-6d874b139a91d48a.js'],
-    '/assets/icons': [s, e, t, 'static/chunks/pages/assets/icons-a2ea1a69fc99f392.js'],
-    '/react/contexts': [s, a, e, t, 'static/chunks/pages/react/contexts-11e2e3a8298fed99.js'],
-    '/react/hooks': [s, a, e, t, 'static/chunks/pages/react/hooks-2d004b6699a27953.js'],
-    '/react/virtual-table': [s, a, t, 'static/chunks/pages/react/virtual-table-a0801e0aaa177f1e.js'],
-    '/ui/block': [s, a, e, t, 'static/chunks/pages/ui/block-524fdf15fc638c1c.js'],
-    '/ui/charts': [s, a, t, 'static/chunks/pages/ui/charts-124b8c78b6e79ce7.js'],
-    '/ui/kit': [s, a, e, t, 'static/chunks/pages/ui/kit-a91fcf0466050da7.js'],
-    '/ui/templates': [s, e, t, 'static/chunks/pages/ui/templates-dfff39fd67c6fd90.js'],
-    '/ui/templates/[id]': [s, a, e, t, 'static/chunks/pages/ui/templates/[id]-4053b4050abb6d82.js'],
-    '/utils': [s, a, e, t, 'static/chunks/pages/utils-4f2adbc7c4fc3896.js'],
+    '/assets/icons': [s, a, t, 'static/chunks/pages/assets/icons-a2ea1a69fc99f392.js'],
+    '/react/contexts': [s, e, a, t, 'static/chunks/pages/react/contexts-11e2e3a8298fed99.js'],
+    '/react/hooks': [s, e, a, t, 'static/chunks/pages/react/hooks-2d004b6699a27953.js'],
+    '/react/virtual-table': [s, e, t, 'static/chunks/pages/react/virtual-table-a0801e0aaa177f1e.js'],
+    '/ui/block': [s, e, a, t, 'static/chunks/pages/ui/block-524fdf15fc638c1c.js'],
+    '/ui/charts': [s, e, t, 'static/chunks/pages/ui/charts-124b8c78b6e79ce7.js'],
+    '/ui/kit': [s, e, a, t, 'static/chunks/pages/ui/kit-a91fcf0466050da7.js'],
+    '/ui/templates': [s, a, t, 'static/chunks/pages/ui/templates-5c4c5ade8e289c55.js'],
+    '/ui/templates/[id]': [s, e, a, t, 'static/chunks/pages/ui/templates/[id]-4053b4050abb6d82.js'],
+    '/utils': [s, e, a, t, 'static/chunks/pages/utils-4f2adbc7c4fc3896.js'],
     sortedPages: [
       '/',
       '/403',
@@ -27,6 +28,7 @@
       '/500',
       '/_app',
       '/_error',
+      '/assets/colors',
       '/assets/emojis',
       '/assets/fonts',
       '/assets/icons',
@@ -43,7 +45,7 @@
   };
 })(
   'static/chunks/6826-1b8246ce82a5e8e9.js',
-  'static/chunks/5695-f09568b272478339.js',
+  'static/chunks/5695-c95b61226b40b1c1.js',
   'static/chunks/1190-798dfbc567dad739.js',
   'static/chunks/2182-91b94065f8bc657c.js',
   0,

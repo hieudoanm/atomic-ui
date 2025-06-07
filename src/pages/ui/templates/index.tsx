@@ -65,7 +65,7 @@ const TemplatesPage: NextPage<{ templates: TemplateType[] }> = ({ templates = []
                 <div className="flex flex-col gap-y-4 md:gap-y-8">
                   {filteredTemplates.map(({ id = '', name = '', code }) => {
                     return (
-                      <Link key={id} href={`/templates/${id}`}>
+                      <Link key={id} href={`/ui/templates/${id}`}>
                         <div id={id} className="flex flex-col gap-y-4 md:gap-y-8">
                           <h2 className="text-2xl font-bold capitalize">📝 {name}</h2>
                           <div className="h-128 overflow-hidden rounded-lg border border-neutral-200 p-4 shadow md:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10">
