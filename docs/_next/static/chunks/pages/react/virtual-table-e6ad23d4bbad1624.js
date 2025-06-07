@@ -3,27 +3,27 @@
   {
     1099: (e, t, r) => {
       'use strict';
-      r.r(t), r.d(t, { __N_SSG: () => o, default: () => c });
+      r.r(t), r.d(t, { __N_SSG: () => d, default: () => c });
       var l = r(5640),
         a = r(9419),
         s = r(148);
       let n = (e) => {
           let { columns: t, data: r, rowHeight: a, height: n, renderCell: i } = e,
-            d = (0, s.useRef)(null),
-            [o, c] = (0, s.useState)(0),
+            o = (0, s.useRef)(null),
+            [d, c] = (0, s.useState)(0),
             [u, h] = (0, s.useState)(new Set()),
-            [x, m] = (0, s.useState)(null),
-            p = r.length * a,
+            [p, x] = (0, s.useState)(null),
+            m = r.length * a,
             b = Math.ceil(n / a),
-            f = Math.floor(o / a),
+            f = Math.floor(d / a),
             w = Math.min(f + b + 1, r.length),
             g = r.slice(f, w),
             y = (0, s.useCallback)(() => {
-              d.current && c(d.current.scrollTop);
+              o.current && c(o.current.scrollTop);
             }, []),
             v = (e) => {
-              if (!d.current) return;
-              let t = d.current,
+              if (!o.current) return;
+              let t = o.current,
                 r = t.scrollTop,
                 l = e * a,
                 s = l + a;
@@ -38,20 +38,20 @@
             },
             k = (e, t) => {
               let r = t.ctrlKey || t.metaKey;
-              t.shiftKey && null !== x
-                ? h(j(x, e))
+              t.shiftKey && null !== p
+                ? h(j(p, e))
                 : (r
                     ? h((t) => {
                         let r = new Set(t);
                         return r.has(e) ? r.delete(e) : r.add(e), r;
                       })
                     : h(new Set([e])),
-                  m(e)),
+                  x(e)),
                 v(e);
             };
           return (
             (0, s.useEffect)(() => {
-              let e = d.current;
+              let e = o.current;
               if (e) return e.addEventListener('scroll', y), () => e.removeEventListener('scroll', y);
             }, [y]),
             (0, l.jsxs)('div', {
@@ -59,16 +59,16 @@
               tabIndex: 0,
               onKeyDown: (e) => {
                 if (0 === r.length) return;
-                let t = null !== x ? x : u.size > 0 ? Math.min(...u) : 0;
+                let t = null !== p ? p : u.size > 0 ? Math.min(...u) : 0;
                 if ('ArrowDown' === e.key) {
                   e.preventDefault();
                   let l = Math.min(t + 1, r.length - 1);
-                  e.shiftKey ? h(j(null != x ? x : l, l)) : (h(new Set([l])), m(l)), v(l), m(l);
+                  e.shiftKey ? h(j(null != p ? p : l, l)) : (h(new Set([l])), x(l)), v(l), x(l);
                 }
                 if ('ArrowUp' === e.key) {
                   e.preventDefault();
                   let r = Math.max(t - 1, 0);
-                  e.shiftKey ? h(j(null != x ? x : r, r)) : (h(new Set([r])), m(r)), v(r), m(r);
+                  e.shiftKey ? h(j(null != p ? p : r, r)) : (h(new Set([r])), x(r)), v(r), x(r);
                 }
               },
               role: 'grid',
@@ -98,13 +98,13 @@
                   }),
                 }),
                 (0, l.jsx)('div', {
-                  ref: d,
+                  ref: o,
                   className: 'relative overflow-y-auto focus:outline-none',
                   style: { height: n },
                   role: 'rowgroup',
                   children: (0, l.jsx)('div', {
                     className: 'relative',
-                    style: { height: p },
+                    style: { height: m },
                     children: g.map((e, r) => {
                       let s = f + r,
                         n = u.has(s);
@@ -180,11 +180,11 @@
             }),
           });
         };
-      var d = r(5695),
-        o = !0;
+      var o = r(5695),
+        d = !0;
       let c = (e) => {
         let { code: t = '' } = e;
-        return (0, l.jsx)(d.U, {
+        return (0, l.jsx)(o.U, {
           disabledSearch: !0,
           query: 'query',
           setState: () => {},
@@ -223,24 +223,40 @@
         },
       ]);
     },
+    6921: (e, t, r) => {
+      'use strict';
+      r.d(t, { C: () => l });
+      let l = (e) => {
+        navigator.clipboard
+          .writeText(e)
+          .then(() => {
+            alert('Copied to clipboard!');
+          })
+          .catch((e) => {
+            console.error('Failed to copy: ', e);
+          });
+      };
+    },
     8899: (e, t, r) => {
       'use strict';
-      r.d(t, { V: () => n });
+      r.d(t, { V: () => i });
       var l = r(5640),
-        a = r(148),
-        s = r(2182);
-      let n = (e) => {
+        a = r(6921),
+        s = r(148),
+        n = r(2182);
+      let i = (e) => {
         let { code: t, lang: r } = e,
-          [n, i] = (0, a.useState)('');
+          [i, o] = (0, s.useState)('');
         return (
-          (0, a.useEffect)(() => {
+          (0, s.useEffect)(() => {
             (async () => {
-              i(await (0, s.Yz)(t, { lang: r, theme: 'github-dark' }));
+              o(await (0, n.Yz)(t, { lang: r, theme: 'github-dark' }));
             })();
           }),
-          (0, l.jsx)('div', {
-            className: 'w-full overflow-x-auto bg-neutral-900 p-4',
-            dangerouslySetInnerHTML: { __html: n },
+          (0, l.jsx)('button', {
+            className: 'w-full cursor-pointer overflow-x-auto bg-neutral-900 p-4 text-left',
+            dangerouslySetInnerHTML: { __html: i },
+            onClick: () => (0, a.C)(t),
           })
         );
       };
@@ -257,8 +273,8 @@
             emoji: r = '',
             group: n = '',
             name: i = '',
-            code: d = '',
-            chart: o = (0, l.jsx)(l.Fragment, {}),
+            code: o = '',
+            chart: d = (0, l.jsx)(l.Fragment, {}),
           } = e,
           [c, u] = (0, a.useState)(!0);
         return (0, l.jsxs)('div', {
@@ -293,8 +309,8 @@
               className:
                 'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
               children: c
-                ? (0, l.jsx)('div', { className: 'flex w-full items-center justify-center p-4 md:p-8', children: o })
-                : (0, l.jsx)(s.V, { code: d, lang: 'html' }),
+                ? (0, l.jsx)('div', { className: 'flex w-full items-center justify-center p-4 md:p-8', children: d })
+                : (0, l.jsx)(s.V, { code: o, lang: 'html' }),
             }),
           ],
         });

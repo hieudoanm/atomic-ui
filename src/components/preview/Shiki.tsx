@@ -1,3 +1,4 @@
+import { copy } from '@atomic/utils/clipboard/copy';
 import { FC, useEffect, useState } from 'react';
 import { BundledLanguage, codeToHtml } from 'shiki';
 
@@ -14,5 +15,11 @@ export const Shiki: FC<{
     codeToHtmlAsync();
   });
 
-  return <div className="w-full overflow-x-auto bg-neutral-900 p-4" dangerouslySetInnerHTML={{ __html: html }} />;
+  return (
+    <button
+      className="w-full cursor-pointer overflow-x-auto bg-neutral-900 p-4 text-left"
+      dangerouslySetInnerHTML={{ __html: html }}
+      onClick={() => copy(code)}
+    />
+  );
 };

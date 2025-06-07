@@ -1,4 +1,4 @@
-(self.__BUILD_MANIFEST = (function (s, t, a, e, c, i, u) {
+(self.__BUILD_MANIFEST = (function (s, t, e, a, c, i, u) {
   return {
     __rewrites: { afterFiles: [], beforeFiles: [], fallback: [] },
     __routerFilterStatic: { numItems: 0, errorRate: 1e-4, numBits: 0, numHashes: null, bitArray: [] },
@@ -11,16 +11,16 @@
     '/assets/colors': [s, t, 'static/chunks/pages/assets/colors-944f53740d5651b4.js'],
     '/assets/emojis': [s, t, 'static/chunks/pages/assets/emojis-90a4e29907b5a07d.js'],
     '/assets/fonts': [s, 'static/css/1a7b1a5d2618d70f.css', t, 'static/chunks/pages/assets/fonts-6d874b139a91d48a.js'],
-    '/assets/icons': [s, a, t, 'static/chunks/pages/assets/icons-a2ea1a69fc99f392.js'],
-    '/react/contexts': [s, e, a, t, 'static/chunks/pages/react/contexts-11e2e3a8298fed99.js'],
-    '/react/hooks': [s, e, a, t, 'static/chunks/pages/react/hooks-2d004b6699a27953.js'],
-    '/react/virtual-table': [s, e, t, 'static/chunks/pages/react/virtual-table-a0801e0aaa177f1e.js'],
-    '/ui/block': [s, e, a, t, 'static/chunks/pages/ui/block-524fdf15fc638c1c.js'],
-    '/ui/charts': [s, e, t, 'static/chunks/pages/ui/charts-124b8c78b6e79ce7.js'],
-    '/ui/kit': [s, e, a, t, 'static/chunks/pages/ui/kit-a91fcf0466050da7.js'],
-    '/ui/templates': [s, a, t, 'static/chunks/pages/ui/templates-5c4c5ade8e289c55.js'],
-    '/ui/templates/[id]': [s, e, a, t, 'static/chunks/pages/ui/templates/[id]-52bacffc979606b0.js'],
-    '/utils': [s, e, a, t, 'static/chunks/pages/utils-4f2adbc7c4fc3896.js'],
+    '/assets/icons': [s, e, t, 'static/chunks/pages/assets/icons-a2ea1a69fc99f392.js'],
+    '/react/contexts': [s, a, e, t, 'static/chunks/pages/react/contexts-43e1b4c080cf2208.js'],
+    '/react/hooks': [s, a, e, t, 'static/chunks/pages/react/hooks-5f3745b1b1e8971b.js'],
+    '/react/virtual-table': [s, a, t, 'static/chunks/pages/react/virtual-table-e6ad23d4bbad1624.js'],
+    '/ui/block': [s, a, e, t, 'static/chunks/pages/ui/block-556fc7c72607267f.js'],
+    '/ui/charts': [s, a, t, 'static/chunks/pages/ui/charts-5bc18c4e07516c18.js'],
+    '/ui/kit': [s, a, e, t, 'static/chunks/pages/ui/kit-908a636f2f7c932e.js'],
+    '/ui/templates': [s, e, t, 'static/chunks/pages/ui/templates-5c4c5ade8e289c55.js'],
+    '/ui/templates/[id]': [s, a, e, t, 'static/chunks/pages/ui/templates/[id]-a22867a451de4e35.js'],
+    '/utils': [s, a, e, t, 'static/chunks/pages/utils-2c77ba612e6ebf2b.js'],
     sortedPages: [
       '/',
       '/403',

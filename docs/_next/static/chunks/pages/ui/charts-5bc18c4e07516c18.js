@@ -1,24 +1,40 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [3826],
   {
+    6921: (e, t, l) => {
+      'use strict';
+      l.d(t, { C: () => a });
+      let a = (e) => {
+        navigator.clipboard
+          .writeText(e)
+          .then(() => {
+            alert('Copied to clipboard!');
+          })
+          .catch((e) => {
+            console.error('Failed to copy: ', e);
+          });
+      };
+    },
     8899: (e, t, l) => {
       'use strict';
-      l.d(t, { V: () => n });
+      l.d(t, { V: () => s });
       var a = l(5640),
-        r = l(148),
-        i = l(2182);
-      let n = (e) => {
+        r = l(6921),
+        i = l(148),
+        n = l(2182);
+      let s = (e) => {
         let { code: t, lang: l } = e,
-          [n, s] = (0, r.useState)('');
+          [s, o] = (0, i.useState)('');
         return (
-          (0, r.useEffect)(() => {
+          (0, i.useEffect)(() => {
             (async () => {
-              s(await (0, i.Yz)(t, { lang: l, theme: 'github-dark' }));
+              o(await (0, n.Yz)(t, { lang: l, theme: 'github-dark' }));
             })();
           }),
-          (0, a.jsx)('div', {
-            className: 'w-full overflow-x-auto bg-neutral-900 p-4',
-            dangerouslySetInnerHTML: { __html: n },
+          (0, a.jsx)('button', {
+            className: 'w-full cursor-pointer overflow-x-auto bg-neutral-900 p-4 text-left',
+            dangerouslySetInnerHTML: { __html: s },
+            onClick: () => (0, r.C)(t),
           })
         );
       };

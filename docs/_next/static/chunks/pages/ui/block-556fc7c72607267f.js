@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [9179],
+  [5848],
   {
-    4744: (e, a, s) => {
+    699: (e, a, s) => {
       'use strict';
       s.r(a), s.d(a, { __N_SSG: () => c, default: () => o });
       var r = s(5640),
@@ -12,7 +12,7 @@
         n = s(148),
         c = !0;
       let o = (e) => {
-        let { components: a = [] } = e,
+        let { blocks: a = [] } = e,
           [{ query: s = '' }, d] = (0, n.useState)({ query: '' }),
           c = a.filter((e) => {
             let { id: a, name: r } = e;
@@ -21,12 +21,12 @@
         return (0, r.jsxs)(t.U, {
           query: s,
           setState: d,
-          id: 'ui-kit',
+          id: 'ui-blocks',
           emoji: '\uD83C\uDFA8',
-          title: 'atomic/ui',
+          title: 'atomic/blocks',
           subtitle: 'Free and Open Source TailwindCSS v4 Components',
           description:
-            'is a free set of Tailwind CSS components built following atomic design principles for consistent UI development.',
+            'is a free set of Tailwind CSS Blocks built following atomic design principles for consistent UI development.',
           features: ['Copy / Paste', 'Pure TailwindCSS', 'Atoms / Molecules / Organisms'],
           children: [
             (0, r.jsx)('section', {
@@ -309,32 +309,34 @@
           });
       };
     },
-    7981: (e, a, s) => {
+    7043: (e, a, s) => {
       (window.__NEXT_P = window.__NEXT_P || []).push([
-        '/ui/kit',
+        '/ui/block',
         function () {
-          return s(4744);
+          return s(699);
         },
       ]);
     },
     8899: (e, a, s) => {
       'use strict';
-      s.d(a, { V: () => d });
+      s.d(a, { V: () => i });
       var r = s(5640),
-        l = s(148),
-        t = s(2182);
-      let d = (e) => {
+        l = s(6921),
+        t = s(148),
+        d = s(2182);
+      let i = (e) => {
         let { code: a, lang: s } = e,
-          [d, i] = (0, l.useState)('');
+          [i, n] = (0, t.useState)('');
         return (
-          (0, l.useEffect)(() => {
+          (0, t.useEffect)(() => {
             (async () => {
-              i(await (0, t.Yz)(a, { lang: s, theme: 'github-dark' }));
+              n(await (0, d.Yz)(a, { lang: s, theme: 'github-dark' }));
             })();
           }),
-          (0, r.jsx)('div', {
-            className: 'w-full overflow-x-auto bg-neutral-900 p-4',
-            dangerouslySetInnerHTML: { __html: d },
+          (0, r.jsx)('button', {
+            className: 'w-full cursor-pointer overflow-x-auto bg-neutral-900 p-4 text-left',
+            dangerouslySetInnerHTML: { __html: i },
+            onClick: () => (0, l.C)(a),
           })
         );
       };
@@ -342,6 +344,6 @@
   },
   (e) => {
     var a = (a) => e((e.s = a));
-    e.O(0, [6826, 2182, 1190, 5695, 636, 6593, 8792], () => a(7981)), (_N_E = e.O());
+    e.O(0, [6826, 2182, 1190, 5695, 636, 6593, 8792], () => a(7043)), (_N_E = e.O());
   },
 ]);
