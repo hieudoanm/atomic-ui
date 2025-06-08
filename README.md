@@ -9,8 +9,9 @@
   - [Introduction](#introduction)
   - [Code](#code)
     - [Assets](#assets)
-      - [SVG Icons](#svg-icons)
+      - [Colors (RYB = Red + Yellow + Blue)](#colors-ryb--red--yellow--blue)
       - [Emojis](#emojis)
+      - [SVG Icons](#svg-icons)
     - [Components](#components)
       - [Charts](#charts)
       - [UI](#ui)
@@ -81,9 +82,26 @@ atomic
 
 ### Assets
 
-#### SVG Icons
+#### Colors (RYB = Red + Yellow + Blue)
+
+| No  | Name      | Other Name    | Level       | Hex     |
+| --- | --------- | ------------- | ----------- | ------- |
+| 01  | Red       |               | **Primary** | #FF0000 |
+| 02  | Vermilion | Red-Orange    | Tertiary    | #E34234 |
+| 03  | Orange    |               | _Secondary_ | #FFA500 |
+| 04  | Amber     | Orange-Yellow | Tertiary    | #FFBF00 |
+| 05  | Yellow    |               | **Primary** | #FFFF00 |
+| 06  | Lime      | Yellow-Green  | Tertiary    | #BFFF00 |
+| 07  | Green     |               | _Secondary_ | #008000 |
+| 08  | Teal      | Green-Blue    | Tertiary    | #008080 |
+| 09  | Blue      |               | **Primary** | #0000FF |
+| 10  | Indigo    | Blue-Purple   | Tertiary    | #4B0082 |
+| 11  | Purple    |               | _Secondary_ | #800080 |
+| 12  | Violet    | Purple-Red    | Tertiary    | #8F00FF |
 
 #### Emojis
+
+#### SVG Icons
 
 ### Components
 
