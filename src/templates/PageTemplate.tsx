@@ -1,6 +1,7 @@
 import { Footer } from '@atomic/components/common/Footer';
 import { Hero } from '@atomic/components/common/Hero';
 import { Group, Navbar } from '@atomic/components/common/Navbar';
+import Head from 'next/head';
 import { Dispatch, FC, ReactNode, SetStateAction } from 'react';
 
 export const NAVBAR_LINKS: {
@@ -83,16 +84,6 @@ export const NAVBAR_LINKS: {
       'Highly performant virtualized table component that renders only visible rows, ideal for large datasets.',
   },
   {
-    group: 'utils',
-    id: 'utils',
-    emoji: '🧰',
-    href: '/utils',
-    text: 'Utils',
-    full: 'Utilities',
-    description:
-      'A collection of general utility functions and helpers to simplify common programming tasks across projects.',
-  },
-  {
     group: 'ui',
     id: 'ui-charts',
     emoji: '📊',
@@ -131,57 +122,71 @@ export const NAVBAR_LINKS: {
     full: 'UI Templates',
     description: 'Pre-designed UI templates that speed up development by providing ready-made layouts and styles.',
   },
+  {
+    group: 'utils',
+    id: 'utils',
+    emoji: '🧰',
+    href: '/utils',
+    text: 'Utils',
+    full: 'Utilities',
+    description:
+      'A collection of general utility functions and helpers to simplify common programming tasks across projects.',
+  },
 ];
 
-export const PageTemplate: FC<{
+type PageTemplateProps = {
   disabledSearch?: boolean;
   query: string;
   setState: Dispatch<SetStateAction<{ query: string }>>;
   id: string;
   emoji: string;
   title: string;
-  subtitle: string;
   description: string;
-  features: string[];
   children: ReactNode;
-}> = ({
+};
+
+export const PageTemplate: FC<PageTemplateProps> = ({
   disabledSearch = false,
   query = '',
   setState = () => {},
   id = '',
   emoji: defaultEmoji = '',
   title = '',
-  subtitle = '',
   description: defaultDescription = '',
-  features = [],
   children = <></>,
 }) => {
-  const { emoji = '', description = '' } = NAVBAR_LINKS.find(({ id: linkId = '' }) => id === linkId) ?? {
-    emoji: '',
-    description: '',
+  const { emoji = defaultEmoji, description = defaultDescription } = NAVBAR_LINKS.find(
+    ({ id: linkId = '' }) => id === linkId
+  ) ?? {
+    emoji: defaultEmoji,
+    description: defaultDescription,
   };
+
   return (
-    <div className="flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
-      <Navbar
-        disabledSearch={disabledSearch}
-        links={NAVBAR_LINKS.filter(({ id: linkId = '' }) => id !== linkId)}
-        title={`${emoji || defaultEmoji} ${title}`}
-        query={query}
-        setState={setState}
-      />
-      <div className="grow overflow-auto">
-        <main className="divide-y divide-neutral-200 dark:divide-neutral-800">
-          <Hero
-            emoji={emoji}
-            title={title}
-            subtitle={subtitle}
-            description={description || defaultDescription}
-            features={features}
-          />
-          {children}
-        </main>
-        <Footer title={title} />
+    <>
+      <Head>
+        <title>
+          {emoji} {title}
+        </title>
+        <meta name="description" content={description || defaultDescription} />
+      </Head>
+      <div className="flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
+        <Navbar
+          emoji={`${emoji || defaultEmoji}`}
+          title={title}
+          links={NAVBAR_LINKS.filter(({ id: linkId = '' }) => id !== linkId)}
+          disabledSearch={disabledSearch}
+          query={query}
+          setState={setState}
+        />
+        <div className="grow overflow-auto">
+          <main className="divide-y divide-neutral-200 dark:divide-neutral-800">
+            <Hero emoji={emoji || defaultEmoji} title={title} description={description || defaultDescription} />
+            {children}
+          </main>
+          <Footer title={title} />
+        </div>
       </div>
-    </div>
+    </>
   );
 };

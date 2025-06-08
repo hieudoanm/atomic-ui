@@ -47,16 +47,8 @@ const FontsPage = () => {
   });
 
   return (
-    <PageTemplate
-      query={query}
-      setState={setState}
-      id="assets-fonts"
-      emoji="🔤"
-      title="atomic/fonts"
-      subtitle="Collection of Favourite Fonts"
-      description=""
-      features={[]}>
-      <section className="py-4 md:py-8">
+    <PageTemplate query={query} setState={setState} id="assets-fonts" emoji="🔤" title="atomic/fonts" description="">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-8">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
             <h3 className="text-2xl font-bold md:text-3xl">

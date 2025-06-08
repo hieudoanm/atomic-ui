@@ -1,6 +1,5 @@
 import { useDarkMode } from '@atomic/hooks/use-dark-mode';
 import { unique } from '@atomic/utils/array/unique';
-import Head from 'next/head';
 import Link from 'next/link';
 import { ChangeEvent, Dispatch, FC, SetStateAction } from 'react';
 
@@ -32,12 +31,6 @@ const MobileNavbar: FC<{ links: NavbarLink[] }> = ({ links }) => {
               </Link>
             );
           })}
-          <Link
-            href="https://github.com/hieudoanm/atomic"
-            target="_blank"
-            className="block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800">
-            🐙 Github
-          </Link>
         </div>
       </div>
     </div>
@@ -76,69 +69,65 @@ const DesktopNavbar: FC<{ links: NavbarLink[] }> = ({ links = [] }) => {
           </div>
         );
       })}
-      <Link href="https://github.com/hieudoanm/atomic" target="_blank" className="truncate text-sm md:text-base">
-        🐙 github
-      </Link>
     </div>
   );
 };
 
 export const Navbar: FC<{
+  emoji: string;
   title: string;
   links: NavbarLink[];
   disabledSearch?: boolean;
   query: string;
   setState: Dispatch<SetStateAction<{ query: string }>>;
-}> = ({ title = '', links = [], query = '', setState, disabledSearch = false }) => {
+}> = ({ emoji = '', title = '', links = [], query = '', setState, disabledSearch = false }) => {
   const { darkMode = false, toggleDarkMode } = useDarkMode();
 
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-      </Head>
-      <nav className="border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
-        <div className="container mx-auto flex flex-col gap-y-2 px-8 py-4">
-          <div className="flex items-center justify-between gap-x-4">
-            <MobileNavbar links={links} />
-            <div className="flex items-center gap-x-4">
-              <Link href="/" className="truncate text-lg font-bold md:text-xl">
+    <nav className="border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+      <div className="container mx-auto flex flex-col gap-y-2 px-8 py-4">
+        <div className="flex items-center justify-between gap-x-4">
+          <MobileNavbar links={links} />
+          <div className="flex items-center gap-x-4">
+            <Link href="/" className="truncate text-lg font-bold md:text-xl">
+              {emoji}{' '}
+              <span className="bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent dark:from-red-700 dark:via-purple-700 dark:to-blue-700">
                 {title}
-              </Link>
-            </div>
-            <div className="flex items-center gap-x-2 md:gap-x-4">
-              <DesktopNavbar links={links} />
-              <label
-                className="relative block h-8 w-14 rounded-full bg-neutral-200 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-purple-500 dark:bg-neutral-800 dark:has-checked:bg-purple-700"
-                aria-label="Toggle dark mode">
-                <input
-                  type="checkbox"
-                  checked={darkMode}
-                  className="peer sr-only"
-                  onChange={() => {
-                    toggleDarkMode();
-                  }}
-                />
-                <span className="absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-white transition-[inset-inline-start] peer-checked:start-6 dark:bg-neutral-900"></span>
-              </label>
-            </div>
+              </span>
+            </Link>
           </div>
-          {!disabledSearch && (
-            <input
-              type="text"
-              placeholder="Search"
-              value={query}
-              className="w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10"
-              onChange={(event: ChangeEvent<HTMLInputElement>): void => {
-                setState((previous) => ({
-                  ...previous,
-                  query: event.target.value,
-                }));
-              }}
-            />
-          )}
+          <div className="flex items-center gap-x-2 md:gap-x-4">
+            <DesktopNavbar links={links} />
+            <label
+              className="relative block h-8 w-14 rounded-full bg-neutral-200 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-purple-500 dark:bg-neutral-800 dark:has-checked:bg-purple-700"
+              aria-label="Toggle dark mode">
+              <input
+                type="checkbox"
+                checked={darkMode}
+                className="peer sr-only"
+                onChange={() => {
+                  toggleDarkMode();
+                }}
+              />
+              <span className="absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-white transition-[inset-inline-start] peer-checked:start-6 dark:bg-neutral-900"></span>
+            </label>
+          </div>
         </div>
-      </nav>
-    </>
+        {!disabledSearch && (
+          <input
+            type="text"
+            placeholder="Search"
+            value={query}
+            className="w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10"
+            onChange={(event: ChangeEvent<HTMLInputElement>): void => {
+              setState((previous) => ({
+                ...previous,
+                query: event.target.value,
+              }));
+            }}
+          />
+        )}
+      </div>
+    </nav>
   );
 };

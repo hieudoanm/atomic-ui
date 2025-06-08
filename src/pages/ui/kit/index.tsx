@@ -31,10 +31,8 @@ const UIKitPage: NextPage<{ components: Component[] }> = ({ components = [] }) =
       id="ui-kit"
       emoji="🎨"
       title="atomic/ui"
-      subtitle="Free and Open Source TailwindCSS v4 Components"
-      description="is a free set of Tailwind CSS components built following atomic design principles for consistent UI development."
-      features={['Copy / Paste', 'Pure TailwindCSS', 'Atoms / Molecules / Organisms']}>
-      <section className="py-4 md:py-8">
+      description="is a free set of Tailwind CSS components built following atomic design principles for consistent UI development.">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-8">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
             <h2 className="text-2xl font-bold">

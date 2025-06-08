@@ -8,15 +8,13 @@ const HomePage: NextPage = () => {
       disabledSearch
       query={''}
       setState={() => {}}
-      id="atomic"
+      id="atomic/code"
       emoji="⚛️"
-      title="atomic"
-      subtitle="Free and Open Source Web Development Code"
-      description="A modern, free collection of Tailwind UI, React Hooks, Contexts, Utilities, Icons, Charts, and Templates—built for fast, accessible, and maintainable interfaces."
-      features={['Copy / Paste', 'Pure TailwindCSS', 'Pure React Code']}>
-      <section className="py-4 md:py-8">
+      title="atomic/code"
+      description="A modern, free collection of Tailwind UI, React Hooks, Contexts, Utilities, Icons, Charts, and Templates—built for fast, accessible, and maintainable interfaces.">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-16">
             {NAVBAR_LINKS.map(({ href = '', emoji = '', full = '', description = '' }) => {
               return (
                 <div key={href} className="col-span-1 flex flex-col gap-y-2">

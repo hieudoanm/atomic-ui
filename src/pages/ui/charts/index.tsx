@@ -111,10 +111,8 @@ const ChartsPage: NextPage<{ charts: ChartType[] }> = ({ charts = [] }) => {
       id="ui-charts"
       emoji="📊"
       title="atomic/charts"
-      subtitle="Free and Open Source Charts"
-      description="is a curated set of responsive, customizable charts tailored specifically for SaaS products and marketing websites."
-      features={['Copy / Paste', 'Pure Canvas', 'Pure JavaScript']}>
-      <section className="py-4 md:py-8">
+      description="is a curated set of responsive, customizable charts tailored specifically for SaaS products and marketing websites.">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-8">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
             <h2 className="text-2xl font-bold">

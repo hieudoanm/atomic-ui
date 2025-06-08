@@ -26,10 +26,8 @@ const UtilsPage: NextPage<{ utils: Util[] }> = ({ utils = [] }) => {
       id="utils"
       emoji="🧰"
       title="atomic/utils"
-      subtitle="Free and Open Source Utilities"
-      description="is a free set of reusable utility functions designed to simplify common tasks and improve code efficiency and maintainability."
-      features={['Copy / Paste', 'Pure JS', 'Functional']}>
-      <section className="py-4 md:py-8">
+      description="is a free set of reusable utility functions designed to simplify common tasks and improve code efficiency and maintainability.">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-8">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
             <h2 className="text-2xl font-bold">

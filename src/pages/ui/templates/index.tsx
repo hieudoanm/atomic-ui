@@ -34,10 +34,8 @@ const TemplatesPage: NextPage<{ templates: TemplateType[] }> = ({ templates = []
       id="ui-templates"
       emoji="📝"
       title="atomic/templates"
-      subtitle="Free and Open Source Web/App Templates"
-      description="are responsive, professionally designed web and app templates created for SaaS platforms and marketing landing pages."
-      features={['Copy / Paste', 'Pure TailwindCSS', 'UI Components']}>
-      <section className="py-4 md:py-8">
+      description="are responsive, professionally designed web and app templates created for SaaS platforms and marketing landing pages.">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-8">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
             <h2 className="text-2xl font-bold">

@@ -31,10 +31,8 @@ const HooksPage: NextPage<{ hooks: Hook[] }> = ({ hooks = [] }) => {
       id="react-hooks"
       emoji="🪝"
       title="atomic/hooks"
-      subtitle="Free and Open Source React v19 Hooks"
-      description="is a collection of reusable React hooks built for simplicity, efficiency, and ease of integration."
-      features={['Copy / Paste', 'Pure React Hooks', 'Cross Browser Compatible']}>
-      <section className="py-4 md:py-8">
+      description="is a collection of reusable React hooks built for simplicity, efficiency, and ease of integration.">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-8">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
             <h2 className="text-2xl font-bold">

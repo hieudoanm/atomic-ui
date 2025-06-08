@@ -17,10 +17,8 @@ const VirtualTablePage: NextPage<{ code: string }> = ({ code = '' }) => {
       id="react-virtual-table"
       emoji="📋"
       title="atomic/virtual-table"
-      subtitle="Free and Open Source React Virtual Table"
-      description="is a high-performance virtualized table component for React that supports large datasets by rendering only visible rows. Includes keyboard navigation for row selection (arrow keys) and mouse click to select rows with automatic scrolling to keep the selected row in view."
-      features={['Virtualized large datasets', 'Keyboard row navigation', 'Mouse click select']}>
-      <section className="py-4 md:py-8">
+      description="is a high-performance virtualized table component for React that supports large datasets by rendering only visible rows. Includes keyboard navigation for row selection (arrow keys) and mouse click to select rows with automatic scrolling to keep the selected row in view.">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-8">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
             <ReactPreview

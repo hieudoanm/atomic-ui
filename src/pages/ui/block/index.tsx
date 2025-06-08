@@ -31,10 +31,8 @@ const UIBlockPage: NextPage<{ blocks: Component[] }> = ({ blocks = [] }) => {
       id="ui-blocks"
       emoji="🎨"
       title="atomic/blocks"
-      subtitle="Free and Open Source TailwindCSS v4 Components"
-      description="is a free set of Tailwind CSS Blocks built following atomic design principles for consistent UI development."
-      features={['Copy / Paste', 'Pure TailwindCSS', 'Atoms / Molecules / Organisms']}>
-      <section className="py-4 md:py-8">
+      description="is a free set of Tailwind CSS Blocks built following atomic design principles for consistent UI development.">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-8">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
             <h2 className="text-2xl font-bold">

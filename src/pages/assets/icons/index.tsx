@@ -24,10 +24,8 @@ const IconsPage: NextPage<{ icons: IconType[] }> = ({ icons = [] }) => {
       id="assets-icons"
       emoji="🖼️"
       title="atomic/icons"
-      subtitle="Free and Open Source SVG Icons"
-      description="is a free collection of carefully crafted SVG icons, designed to enhance modern user interfaces with scalable visuals."
-      features={['Copy / Paste', 'Pure SVG', 'Custom Colors']}>
-      <section className="py-4 md:py-8">
+      description="is a free collection of carefully crafted SVG icons, designed to enhance modern user interfaces with scalable visuals.">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-8">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
             <h2 className="text-2xl font-bold">

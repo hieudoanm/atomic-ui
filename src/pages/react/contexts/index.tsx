@@ -31,10 +31,8 @@ const ContextsPage: NextPage<{ contexts: Context[] }> = ({ contexts = [] }) => {
       id="react-contexts"
       emoji="🔗"
       title="atomic/contexts"
-      subtitle="Free and Open Source React v19 Contexts"
-      description="are essential React context providers focused on simplicity, reusability, and scalability for better state management."
-      features={['Copy / Paste', 'Pure React Contexts', 'Cross Browser Compatible']}>
-      <section className="py-4 md:py-8">
+      description="are essential React context providers focused on simplicity, reusability, and scalability for better state management.">
+      <section className="py-8 md:py-16">
         <div className="container mx-auto px-8">
           <div className="flex flex-col gap-y-4 md:gap-y-8">
             <h2 className="text-2xl font-bold">
