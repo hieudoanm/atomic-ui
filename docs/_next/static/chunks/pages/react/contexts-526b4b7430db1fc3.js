@@ -1,25 +1,25 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [8048],
   {
-    403: (e, s, l) => {
+    403: (e, s, t) => {
       'use strict';
-      l.r(s), l.d(s, { __N_SSG: () => c, default: () => o });
-      var r = l(5640),
-        t = l(6260),
-        a = l(5695),
-        i = l(6826),
-        d = l.n(i),
-        n = l(148),
+      t.r(s), t.d(s, { __N_SSG: () => c, default: () => o });
+      var r = t(5640),
+        l = t(6260),
+        a = t(6916),
+        i = t(6826),
+        d = t.n(i),
+        n = t(148),
         c = !0;
       let o = (e) => {
         let { contexts: s = [] } = e,
-          [{ query: l = '' }, i] = (0, n.useState)({ query: '' }),
+          [{ query: t = '' }, i] = (0, n.useState)({ query: '' }),
           c = s.filter((e) => {
             let { id: s, name: r } = e;
-            return s.toLowerCase().includes(l.toLowerCase()) || r.toLowerCase().includes(l.toLowerCase());
+            return s.toLowerCase().includes(t.toLowerCase()) || r.toLowerCase().includes(t.toLowerCase());
           });
         return (0, r.jsx)(a.U, {
-          query: l,
+          query: t,
           setState: i,
           id: 'react-contexts',
           emoji: '\uD83D\uDD17',
@@ -48,7 +48,7 @@
                         (0, r.jsx)('div', {
                           className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3',
                           children: c.map((e) => {
-                            let { id: s = '', emoji: l = '', group: t, name: a = '' } = e;
+                            let { id: s = '', emoji: t = '', group: l, name: a = '' } = e;
                             return (0, r.jsx)(
                               d(),
                               {
@@ -59,11 +59,11 @@
                                     className:
                                       'flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
                                     children: [
-                                      (0, r.jsx)('p', { className: 'text-2xl', children: l }),
+                                      (0, r.jsx)('p', { className: 'text-2xl', children: t }),
                                       (0, r.jsxs)('div', {
                                         className: 'flex flex-col gap-y-0.25',
                                         children: [
-                                          (0, r.jsx)('p', { className: 'text-xs capitalize', children: t }),
+                                          (0, r.jsx)('p', { className: 'text-xs capitalize', children: l }),
                                           (0, r.jsx)('p', { className: 'font-semibold capitalize', children: a }),
                                         ],
                                       }),
@@ -78,14 +78,14 @@
                         (0, r.jsx)('div', {
                           className: 'flex flex-col gap-y-8',
                           children: c.map((e) => {
-                            let { id: s = '', emoji: l = '', group: a = '', name: i = '', code: d = '' } = e;
+                            let { id: s = '', emoji: t = '', group: a = '', name: i = '', code: d = '' } = e;
                             return (0, r.jsx)(
                               'div',
                               {
                                 className: 'flex flex-col gap-y-4',
-                                children: (0, r.jsx)(t.C, {
+                                children: (0, r.jsx)(l.C, {
                                   id: s,
-                                  emoji: l,
+                                  emoji: t,
                                   group: a,
                                   name: i,
                                   code: d,
@@ -105,16 +105,16 @@
         });
       };
     },
-    6260: (e, s, l) => {
+    6260: (e, s, t) => {
       'use strict';
-      l.d(s, { C: () => n });
-      var r = l(5640),
-        t = l(6921),
-        a = l(8809),
-        i = l(148),
-        d = l(8899);
+      t.d(s, { C: () => n });
+      var r = t(5640),
+        l = t(6921),
+        a = t(8809),
+        i = t(148),
+        d = t(8899);
       let n = (e) => {
-        let { id: s = '', emoji: l = '', group: n = '', name: c = '', code: o = '', codeOnly: u = !1 } = e,
+        let { id: s = '', emoji: t = '', group: n = '', name: c = '', code: o = '', codeOnly: u = !1 } = e,
           [x, p] = (0, i.useState)(''),
           [h, m] = (0, i.useState)(!0);
         return (
@@ -131,7 +131,7 @@
                   (0, r.jsxs)('div', {
                     className: 'flex items-center gap-x-2',
                     children: [
-                      (0, r.jsx)('span', { className: 'text-4xl', children: l }),
+                      (0, r.jsx)('span', { className: 'text-4xl', children: t }),
                       (0, r.jsxs)('div', {
                         children: [
                           (0, r.jsx)('p', { className: 'text-xs capitalize', children: n }),
@@ -148,7 +148,7 @@
                           type: 'button',
                           className:
                             'cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow transition duration-200 hover:bg-purple-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-purple-700 dark:shadow-neutral-100/10 dark:hover:bg-purple-600',
-                          onClick: () => (0, t.C)(o),
+                          onClick: () => (0, l.C)(o),
                           children: 'Copy',
                         }),
                       !u &&
@@ -179,34 +179,48 @@
         );
       };
     },
-    6627: (e, s, l) => {
+    6627: (e, s, t) => {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         '/react/contexts',
         function () {
-          return l(403);
+          return t(403);
         },
       ]);
     },
-    8899: (e, s, l) => {
+    6921: (e, s, t) => {
       'use strict';
-      l.d(s, { V: () => d });
-      var r = l(5640),
-        t = l(6921),
-        a = l(148),
-        i = l(2182);
+      t.d(s, { C: () => r });
+      let r = (e) => {
+        navigator.clipboard
+          .writeText(e)
+          .then(() => {
+            alert('Copied to clipboard!');
+          })
+          .catch((e) => {
+            console.error('Failed to copy: ', e);
+          });
+      };
+    },
+    8899: (e, s, t) => {
+      'use strict';
+      t.d(s, { V: () => d });
+      var r = t(5640),
+        l = t(6921),
+        a = t(148),
+        i = t(2182);
       let d = (e) => {
-        let { code: s, lang: l } = e,
+        let { code: s, lang: t } = e,
           [d, n] = (0, a.useState)('');
         return (
           (0, a.useEffect)(() => {
             (async () => {
-              n(await (0, i.Yz)(s, { lang: l, theme: 'github-dark' }));
+              n(await (0, i.Yz)(s, { lang: t, theme: 'github-dark' }));
             })();
           }),
           (0, r.jsx)('button', {
             className: 'w-full cursor-pointer overflow-x-auto bg-neutral-900 p-4 text-left',
             dangerouslySetInnerHTML: { __html: d },
-            onClick: () => (0, t.C)(s),
+            onClick: () => (0, l.C)(s),
           })
         );
       };
@@ -214,6 +228,6 @@
   },
   (e) => {
     var s = (s) => e((e.s = s));
-    e.O(0, [6826, 2182, 1190, 431, 636, 6593, 8792], () => s(6627)), (_N_E = e.O());
+    e.O(0, [6826, 2182, 1190, 6916, 636, 6593, 8792], () => s(6627)), (_N_E = e.O());
   },
 ]);

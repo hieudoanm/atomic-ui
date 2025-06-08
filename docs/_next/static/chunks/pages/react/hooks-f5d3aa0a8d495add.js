@@ -3,18 +3,18 @@
   {
     2791: (e, s, l) => {
       'use strict';
-      l.r(s), l.d(s, { __N_SSG: () => o, default: () => c });
+      l.r(s), l.d(s, { __N_SSG: () => n, default: () => c });
       var r = l(5640),
         a = l(6260),
-        t = l(5695),
+        t = l(6916),
         i = l(6826),
         d = l.n(i),
-        n = l(148),
-        o = !0;
+        o = l(148),
+        n = !0;
       let c = (e) => {
         let { hooks: s = [] } = e,
-          [{ query: l = '' }, i] = (0, n.useState)({ query: '' }),
-          o = s.filter((e) => {
+          [{ query: l = '' }, i] = (0, o.useState)({ query: '' }),
+          n = s.filter((e) => {
             let { id: s, name: r } = e;
             return s.toLowerCase().includes(l.toLowerCase()) || r.toLowerCase().includes(l.toLowerCase());
           });
@@ -35,14 +35,14 @@
                 children: [
                   (0, r.jsxs)('h2', {
                     className: 'text-2xl font-bold',
-                    children: [(0, r.jsx)('span', { className: 'capitalize', children: 'Hooks' }), ' (', o.length, ')'],
+                    children: [(0, r.jsx)('span', { className: 'capitalize', children: 'Hooks' }), ' (', n.length, ')'],
                   }),
-                  o.length > 0 &&
+                  n.length > 0 &&
                     (0, r.jsxs)(r.Fragment, {
                       children: [
                         (0, r.jsx)('div', {
                           className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4',
-                          children: o.map((e) => {
+                          children: n.map((e) => {
                             let { id: s = '', emoji: l = '', group: a, name: t = '' } = e;
                             return (0, r.jsx)(
                               d(),
@@ -72,7 +72,7 @@
                         }),
                         (0, r.jsx)('div', {
                           className: 'flex flex-col gap-y-8',
-                          children: o.map((e) => {
+                          children: n.map((e) => {
                             let { id: s = '', emoji: l = '', group: t = '', name: i = '', code: d = '' } = e;
                             return (0, r.jsx)(
                               'div',
@@ -102,14 +102,14 @@
     },
     6260: (e, s, l) => {
       'use strict';
-      l.d(s, { C: () => n });
+      l.d(s, { C: () => o });
       var r = l(5640),
         a = l(6921),
         t = l(8809),
         i = l(148),
         d = l(8899);
-      let n = (e) => {
-        let { id: s = '', emoji: l = '', group: n = '', name: o = '', code: c = '', codeOnly: u = !1 } = e,
+      let o = (e) => {
+        let { id: s = '', emoji: l = '', group: o = '', name: n = '', code: c = '', codeOnly: u = !1 } = e,
           [p, x] = (0, i.useState)(''),
           [h, m] = (0, i.useState)(!0);
         return (
@@ -129,8 +129,8 @@
                       (0, r.jsx)('span', { className: 'text-4xl', children: l }),
                       (0, r.jsxs)('div', {
                         children: [
-                          (0, r.jsx)('p', { className: 'text-xs capitalize', children: n }),
-                          (0, r.jsx)('h3', { className: 'text-xl font-bold md:text-2xl', children: o }),
+                          (0, r.jsx)('p', { className: 'text-xs capitalize', children: o }),
+                          (0, r.jsx)('h3', { className: 'text-xl font-bold md:text-2xl', children: n }),
                         ],
                       }),
                     ],
@@ -174,6 +174,20 @@
         );
       };
     },
+    6921: (e, s, l) => {
+      'use strict';
+      l.d(s, { C: () => r });
+      let r = (e) => {
+        navigator.clipboard
+          .writeText(e)
+          .then(() => {
+            alert('Copied to clipboard!');
+          })
+          .catch((e) => {
+            console.error('Failed to copy: ', e);
+          });
+      };
+    },
     7297: (e, s, l) => {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         '/react/hooks',
@@ -191,11 +205,11 @@
         i = l(2182);
       let d = (e) => {
         let { code: s, lang: l } = e,
-          [d, n] = (0, t.useState)('');
+          [d, o] = (0, t.useState)('');
         return (
           (0, t.useEffect)(() => {
             (async () => {
-              n(await (0, i.Yz)(s, { lang: l, theme: 'github-dark' }));
+              o(await (0, i.Yz)(s, { lang: l, theme: 'github-dark' }));
             })();
           }),
           (0, r.jsx)('button', {
@@ -209,6 +223,6 @@
   },
   (e) => {
     var s = (s) => e((e.s = s));
-    e.O(0, [6826, 2182, 1190, 431, 636, 6593, 8792], () => s(7297)), (_N_E = e.O());
+    e.O(0, [6826, 2182, 1190, 6916, 636, 6593, 8792], () => s(7297)), (_N_E = e.O());
   },
 ]);

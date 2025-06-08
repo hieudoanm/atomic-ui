@@ -12,8 +12,8 @@
             o = (0, s.useRef)(null),
             [d, c] = (0, s.useState)(0),
             [u, h] = (0, s.useState)(new Set()),
-            [x, m] = (0, s.useState)(null),
-            p = r.length * a,
+            [p, x] = (0, s.useState)(null),
+            m = r.length * a,
             b = Math.ceil(n / a),
             f = Math.floor(d / a),
             w = Math.min(f + b + 1, r.length),
@@ -38,15 +38,15 @@
             },
             k = (e, t) => {
               let r = t.ctrlKey || t.metaKey;
-              t.shiftKey && null !== x
-                ? h(j(x, e))
+              t.shiftKey && null !== p
+                ? h(j(p, e))
                 : (r
                     ? h((t) => {
                         let r = new Set(t);
                         return r.has(e) ? r.delete(e) : r.add(e), r;
                       })
                     : h(new Set([e])),
-                  m(e)),
+                  x(e)),
                 v(e);
             };
           return (
@@ -59,16 +59,16 @@
               tabIndex: 0,
               onKeyDown: (e) => {
                 if (0 === r.length) return;
-                let t = null !== x ? x : u.size > 0 ? Math.min(...u) : 0;
+                let t = null !== p ? p : u.size > 0 ? Math.min(...u) : 0;
                 if ('ArrowDown' === e.key) {
                   e.preventDefault();
                   let l = Math.min(t + 1, r.length - 1);
-                  e.shiftKey ? h(j(null != x ? x : l, l)) : (h(new Set([l])), m(l)), v(l), m(l);
+                  e.shiftKey ? h(j(null != p ? p : l, l)) : (h(new Set([l])), x(l)), v(l), x(l);
                 }
                 if ('ArrowUp' === e.key) {
                   e.preventDefault();
                   let r = Math.max(t - 1, 0);
-                  e.shiftKey ? h(j(null != x ? x : r, r)) : (h(new Set([r])), m(r)), v(r), m(r);
+                  e.shiftKey ? h(j(null != p ? p : r, r)) : (h(new Set([r])), x(r)), v(r), x(r);
                 }
               },
               role: 'grid',
@@ -104,7 +104,7 @@
                   role: 'rowgroup',
                   children: (0, l.jsx)('div', {
                     className: 'relative',
-                    style: { height: p },
+                    style: { height: m },
                     children: g.map((e, r) => {
                       let s = f + r,
                         n = u.has(s);
@@ -180,7 +180,7 @@
             }),
           });
         };
-      var o = r(5695),
+      var o = r(6916),
         d = !0;
       let c = (e) => {
         let { code: t = '' } = e;
@@ -220,6 +220,20 @@
           return r(1099);
         },
       ]);
+    },
+    6921: (e, t, r) => {
+      'use strict';
+      r.d(t, { C: () => l });
+      let l = (e) => {
+        navigator.clipboard
+          .writeText(e)
+          .then(() => {
+            alert('Copied to clipboard!');
+          })
+          .catch((e) => {
+            console.error('Failed to copy: ', e);
+          });
+      };
     },
     8899: (e, t, r) => {
       'use strict';
@@ -303,6 +317,6 @@
   },
   (e) => {
     var t = (t) => e((e.s = t));
-    e.O(0, [6826, 2182, 431, 636, 6593, 8792], () => t(4933)), (_N_E = e.O());
+    e.O(0, [6826, 2182, 6916, 636, 6593, 8792], () => t(4933)), (_N_E = e.O());
   },
 ]);

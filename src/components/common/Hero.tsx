@@ -14,7 +14,7 @@ export const Hero: FC<HeroProps> = ({ emoji = '', title = '', description = '' }
               {title}
             </span>
           </h1>
-          <div className="flex w-full max-w-lg flex-col gap-y-4 text-center md:gap-y-8">
+          <div className="flex w-full max-w-xl flex-col gap-y-4 text-center md:gap-y-8">
             <p className="text-neutral-900 dark:text-neutral-100">{description}</p>
           </div>
           <Link href="https://github.com/hieudoanm/atomic" target="_blank">

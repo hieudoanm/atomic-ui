@@ -6,7 +6,7 @@
       s.r(a), s.d(a, { __N_SSG: () => c, default: () => o });
       var r = s(5640),
         l = s(6260),
-        t = s(5695),
+        t = s(6916),
         d = s(6826),
         i = s.n(d),
         n = s(148),
@@ -293,6 +293,20 @@
         );
       };
     },
+    6921: (e, a, s) => {
+      'use strict';
+      s.d(a, { C: () => r });
+      let r = (e) => {
+        navigator.clipboard
+          .writeText(e)
+          .then(() => {
+            alert('Copied to clipboard!');
+          })
+          .catch((e) => {
+            console.error('Failed to copy: ', e);
+          });
+      };
+    },
     7981: (e, a, s) => {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         '/ui/kit',
@@ -328,6 +342,6 @@
   },
   (e) => {
     var a = (a) => e((e.s = a));
-    e.O(0, [6826, 2182, 1190, 431, 636, 6593, 8792], () => a(7981)), (_N_E = e.O());
+    e.O(0, [6826, 2182, 1190, 6916, 636, 6593, 8792], () => a(7981)), (_N_E = e.O());
   },
 ]);

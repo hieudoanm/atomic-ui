@@ -9,11 +9,25 @@
         },
       ]);
     },
+    6921: (a, e, n) => {
+      'use strict';
+      n.d(e, { C: () => i });
+      let i = (a) => {
+        navigator.clipboard
+          .writeText(a)
+          .then(() => {
+            alert('Copied to clipboard!');
+          })
+          .catch((a) => {
+            console.error('Failed to copy: ', a);
+          });
+      };
+    },
     7484: (a, e, n) => {
       'use strict';
       n.r(e), n.d(e, { default: () => g });
       var i = n(5640),
-        o = n(5695);
+        o = n(6916);
       let r = (a, e) =>
         a.reduce((a, n) => {
           let i = String(n[e]);
@@ -2037,6 +2051,6 @@
   },
   (a) => {
     var e = (e) => a((a.s = e));
-    a.O(0, [6826, 431, 636, 6593, 8792], () => e(5541)), (_N_E = a.O());
+    a.O(0, [6826, 6916, 636, 6593, 8792], () => e(5541)), (_N_E = a.O());
   },
 ]);

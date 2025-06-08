@@ -148,7 +148,6 @@
     --container-xs: 20rem;
     --container-sm: 24rem;
     --container-md: 28rem;
-    --container-lg: 32rem;
     --container-xl: 36rem;
     --container-2xl: 42rem;
     --container-3xl: 48rem;
@@ -538,6 +537,9 @@
   .m-1 {
     margin: calc(var(--spacing) * 1);
   }
+  .m-auto {
+    margin: auto;
+  }
   .mx-4 {
     margin-inline: calc(var(--spacing) * 4);
   }
@@ -745,9 +747,6 @@
   }
   .max-w-6xl {
     max-width: var(--container-6xl);
-  }
-  .max-w-lg {
-    max-width: var(--container-lg);
   }
   .max-w-md {
     max-width: var(--container-md);
@@ -1270,6 +1269,9 @@
   }
   .bg-gradient-to-r {
     --tw-gradient-position: to right in oklab;
+  }
+  .bg-\[radial-gradient\(\#ffe4ec_0\,_transparent_72\%\)\] {
+    background-image: radial-gradient(#ffe4ec 0, #0000 72%);
   }
   .from-cyan-500 {
     --tw-gradient-from: var(--color-cyan-500);
@@ -2485,6 +2487,9 @@
       background-color: color-mix(in oklab, var(--color-yellow-700) 25%, transparent);
     }
   }
+  .dark\:bg-\[radial-gradient\(\#510424_0\,_transparent_72\%\)\]:where(.dark, .dark *) {
+    background-image: radial-gradient(#510424 0, #0000 72%);
+  }
   .dark\:from-cyan-700:where(.dark, .dark *) {
     --tw-gradient-from: var(--color-cyan-700);
     --tw-gradient-stops: var(
@@ -2816,6 +2821,31 @@
   .dark\:has-checked\:bg-yellow-700:where(.dark, .dark *):has(:checked) {
     background-color: var(--color-yellow-700);
   }
+  .dark\:has-checked\:from-red-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-from: var(--color-red-700);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .dark\:has-checked\:via-purple-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-via: var(--color-purple-700);
+    --tw-gradient-via-stops:
+      var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .dark\:has-checked\:to-blue-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-to: var(--color-blue-700);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
   .\[\&\:\:-moz-progress-bar\]\:rounded-full::-moz-progress-bar {
     border-radius: 3.40282e38px;
   }
@@ -2968,6 +2998,14 @@ body {
 .github-dark {
   text-wrap: wrap;
   background-color: oklch(20.5% 0 0) !important;
+}
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: auto;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
 }
 @property --tw-translate-x {
   syntax: '*';

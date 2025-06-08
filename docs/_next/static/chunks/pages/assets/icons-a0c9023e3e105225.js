@@ -11,16 +11,16 @@
     },
     6601: (e, s, t) => {
       'use strict';
-      t.r(s), t.d(s, { __N_SSG: () => d, default: () => o });
+      t.r(s), t.d(s, { __N_SSG: () => o, default: () => d });
       var l = t(5640),
         r = t(6921),
         a = t(8809),
-        n = t(148);
-      let i = (e) => {
+        i = t(148);
+      let n = (e) => {
         let { name: s = '', code: t = '' } = e,
-          [i, c] = (0, n.useState)('');
+          [n, c] = (0, i.useState)('');
         return (
-          (0, n.useEffect)(() => {
+          (0, i.useEffect)(() => {
             c((0, a.A)(window).sanitize(t));
           }, [t]),
           (0, l.jsx)('button', {
@@ -36,17 +36,17 @@
               children: (0, l.jsx)('div', {
                 className:
                   'h-fit w-fit [&>svg]:h-8 [&>svg]:fill-current [&>svg]:text-neutral-900 dark:[&>svg]:text-neutral-100',
-                dangerouslySetInnerHTML: { __html: i },
+                dangerouslySetInnerHTML: { __html: n },
               }),
             }),
           })
         );
       };
-      var c = t(5695),
-        d = !0;
-      let o = (e) => {
+      var c = t(6916),
+        o = !0;
+      let d = (e) => {
         let { icons: s = [] } = e,
-          [{ query: t = '' }, r] = (0, n.useState)({ query: '' }),
+          [{ query: t = '' }, r] = (0, i.useState)({ query: '' }),
           a = s.filter((e) => {
             let { id: s, name: l } = e;
             return s.toLowerCase().includes(t.toLowerCase()) || l.toLowerCase().includes(t.toLowerCase());
@@ -81,7 +81,7 @@
                           {
                             className: 'col-span-1 flex flex-col gap-y-2',
                             children: [
-                              (0, l.jsx)(i, { name: t, code: r }),
+                              (0, l.jsx)(n, { name: t, code: r }),
                               (0, l.jsx)('p', {
                                 title: 'name',
                                 className: 'w-full truncate text-center text-xs',
@@ -100,9 +100,23 @@
         });
       };
     },
+    6921: (e, s, t) => {
+      'use strict';
+      t.d(s, { C: () => l });
+      let l = (e) => {
+        navigator.clipboard
+          .writeText(e)
+          .then(() => {
+            alert('Copied to clipboard!');
+          })
+          .catch((e) => {
+            console.error('Failed to copy: ', e);
+          });
+      };
+    },
   },
   (e) => {
     var s = (s) => e((e.s = s));
-    e.O(0, [6826, 1190, 431, 636, 6593, 8792], () => s(5835)), (_N_E = e.O());
+    e.O(0, [6826, 1190, 6916, 636, 6593, 8792], () => s(5835)), (_N_E = e.O());
   },
 ]);

@@ -5406,7 +5406,7 @@
           { id: 'jsonl', name: 'JSON Lines', import: () => n.e(5697).then(n.bind(n, 5697)) },
           { id: 'jsonnet', name: 'Jsonnet', import: () => n.e(2532).then(n.bind(n, 2532)) },
           { id: 'jssm', name: 'JSSM', aliases: ['fsl'], import: () => n.e(7302).then(n.bind(n, 7302)) },
-          { id: 'jsx', name: 'JSX', import: () => n.e(9528).then(n.bind(n, 6916)) },
+          { id: 'jsx', name: 'JSX', import: () => n.e(9528).then(n.bind(n, 4535)) },
           {
             id: 'julia',
             name: 'Julia',

@@ -99,7 +99,7 @@ export const Navbar: FC<{
           <div className="flex items-center gap-x-2 md:gap-x-4">
             <DesktopNavbar links={links} />
             <label
-              className="relative block h-8 w-14 rounded-full bg-neutral-200 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-purple-500 dark:bg-neutral-800 dark:has-checked:bg-purple-700"
+              className="relative block h-8 w-14 rounded-full bg-neutral-200 bg-gradient-to-r transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-purple-500 dark:bg-neutral-800 dark:has-checked:from-red-700 dark:has-checked:via-purple-700 dark:has-checked:to-blue-700"
               aria-label="Toggle dark mode">
               <input
                 type="checkbox"

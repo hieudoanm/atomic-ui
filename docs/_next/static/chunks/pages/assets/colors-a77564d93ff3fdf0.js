@@ -9,6 +9,20 @@
         },
       ]);
     },
+    6921: (e, f, a) => {
+      'use strict';
+      a.d(f, { C: () => c });
+      let c = (e) => {
+        navigator.clipboard
+          .writeText(e)
+          .then(() => {
+            alert('Copied to clipboard!');
+          })
+          .catch((e) => {
+            console.error('Failed to copy: ', e);
+          });
+      };
+    },
     9989: (e, f, a) => {
       'use strict';
       a.r(f), a.d(f, { default: () => r });
@@ -301,7 +315,7 @@
           950: '#0c0a09',
         },
       };
-      var s = a(5695),
+      var s = a(6916),
         l = a(6921);
       let r = () =>
         (0, c.jsx)(s.U, {
@@ -389,6 +403,6 @@
   },
   (e) => {
     var f = (f) => e((e.s = f));
-    e.O(0, [6826, 431, 636, 6593, 8792], () => f(3905)), (_N_E = e.O());
+    e.O(0, [6826, 6916, 636, 6593, 8792], () => f(3905)), (_N_E = e.O());
   },
 ]);

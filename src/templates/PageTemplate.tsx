@@ -1,6 +1,7 @@
 import { Footer } from '@atomic/components/common/Footer';
 import { Hero } from '@atomic/components/common/Hero';
 import { Group, Navbar } from '@atomic/components/common/Navbar';
+import { RadialGradientBackground } from '@atomic/components/common/RadialGradientBackground';
 import Head from 'next/head';
 import { Dispatch, FC, ReactNode, SetStateAction } from 'react';
 
@@ -170,7 +171,8 @@ export const PageTemplate: FC<PageTemplateProps> = ({
         </title>
         <meta name="description" content={description || defaultDescription} />
       </Head>
-      <div className="flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
+      <RadialGradientBackground />
+      <div className="flex h-screen flex-col text-neutral-900 dark:text-neutral-100">
         <Navbar
           emoji={`${emoji || defaultEmoji}`}
           title={title}
@@ -179,7 +181,7 @@ export const PageTemplate: FC<PageTemplateProps> = ({
           query={query}
           setState={setState}
         />
-        <div className="grow overflow-auto">
+        <div className="scrollbar-none grow overflow-auto">
           <main className="divide-y divide-neutral-200 dark:divide-neutral-800">
             <Hero emoji={emoji || defaultEmoji} title={title} description={description || defaultDescription} />
             {children}

@@ -1,6 +1,20 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [3826],
   {
+    6921: (e, t, l) => {
+      'use strict';
+      l.d(t, { C: () => a });
+      let a = (e) => {
+        navigator.clipboard
+          .writeText(e)
+          .then(() => {
+            alert('Copied to clipboard!');
+          })
+          .catch((e) => {
+            console.error('Failed to copy: ', e);
+          });
+      };
+    },
     8899: (e, t, l) => {
       'use strict';
       l.d(t, { V: () => s });
@@ -31,7 +45,7 @@
       var a = l(5640),
         r = l(148),
         i = l(9419),
-        n = l(5695),
+        n = l(6916),
         s = l(6826),
         o = l.n(s);
       let f = {
@@ -944,6 +958,6 @@
   },
   (e) => {
     var t = (t) => e((e.s = t));
-    e.O(0, [6826, 2182, 431, 636, 6593, 8792], () => t(9949)), (_N_E = e.O());
+    e.O(0, [6826, 2182, 6916, 636, 6593, 8792], () => t(9949)), (_N_E = e.O());
   },
 ]);
