@@ -1,13 +1,20 @@
 {
-  "name": "@atomic/front-end",
+  "name": "@atomic/code",
   "version": "0.0.1",
   "private": true,
-  "description": "Atomic - Hooks & UI",
+  "description": "atomic/code",
   "packageManager": "pnpm@10.11.1",
   "keywords": [
     "atomic",
+    "blocks",
+    "colors",
+    "emojis",
+    "fonts",
     "hooks",
-    "ui"
+    "icons",
+    "templates",
+    "ui",
+    "utils"
   ],
   "homepage": "https://github.com/hieudoanm/atomic#readme",
   "bugs": {

@@ -1,22 +1,30 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [2731],
+  [2336],
   {
+    336: (e, t, r) => {
+      (window.__NEXT_P = window.__NEXT_P || []).push([
+        '/404',
+        function () {
+          return r(4850);
+        },
+      ]);
+    },
     2351: (e, t, r) => {
       'use strict';
       r.d(t, { L: () => o });
       var a = r(5640),
-        l = r(7863),
-        s = r(4810),
+        s = r(7863),
+        l = r(4810),
         n = r(6826),
         d = r.n(n);
       let o = (e) => {
         let { code: t = '', title: r = '', message: n = '', action: o = '' } = e,
-          { darkMode: c } = (0, s.D)();
+          { darkMode: c } = (0, l.D)();
         return (
           console.info('darkMode', c),
           (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)(l.q, {}),
+              (0, a.jsx)(s.q, {}),
               (0, a.jsx)('div', {
                 className: 'flex min-h-screen items-center justify-center px-4 text-neutral-900 dark:text-neutral-100',
                 children: (0, a.jsxs)('div', {
@@ -48,13 +56,15 @@
     },
     4810: (e, t, r) => {
       'use strict';
-      r.d(t, { D: () => l });
+      r.d(t, { D: () => s });
       var a = r(148);
-      let l = () => {
-        let [e, t] = (0, a.useState)(!1);
+      let s = () => {
+        let [e, t] = (0, a.useState)(!0);
         return (
           (0, a.useEffect)(() => {
-            'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), t(!0));
+            'light' === localStorage.getItem('theme')
+              ? (document.documentElement.classList.remove('dark'), t(!1))
+              : (document.documentElement.classList.add('dark'), t(!0));
           }, []),
           {
             darkMode: e,
@@ -72,32 +82,24 @@
         );
       };
     },
-    6334: (e, t, r) => {
-      (window.__NEXT_P = window.__NEXT_P || []).push([
-        '/_error',
-        function () {
-          return r(6950);
-        },
-      ]);
-    },
-    6950: (e, t, r) => {
+    4850: (e, t, r) => {
       'use strict';
-      r.r(t), r.d(t, { default: () => s });
+      r.r(t), r.d(t, { default: () => l });
       var a = r(5640),
-        l = r(2351);
-      let s = () =>
-        (0, a.jsx)(l.L, {
-          code: '500',
-          title: 'Internal Server Error',
-          message: 'Something went wrong on our end. Please try again later.',
+        s = r(2351);
+      let l = () =>
+        (0, a.jsx)(s.L, {
+          code: '404',
+          title: 'Page Not Found',
+          message: "Sorry, the page you're looking for doesn't exist.",
           action: 'Go Home',
         });
     },
     7863: (e, t, r) => {
       'use strict';
-      r.d(t, { q: () => l });
+      r.d(t, { q: () => s });
       var a = r(5640);
-      let l = () =>
+      let s = () =>
         (0, a.jsx)('div', {
           className:
             'fixed top-0 right-0 bottom-0 left-0 -z-10 m-auto flex w-screen items-center justify-center bg-white dark:bg-neutral-900',
@@ -110,6 +112,6 @@
   },
   (e) => {
     var t = (t) => e((e.s = t));
-    e.O(0, [6826, 636, 6593, 8792], () => t(6334)), (_N_E = e.O());
+    e.O(0, [6826, 636, 6593, 8792], () => t(336)), (_N_E = e.O());
   },
 ]);

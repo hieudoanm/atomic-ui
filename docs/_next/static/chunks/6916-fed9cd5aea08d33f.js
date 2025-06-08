@@ -6,10 +6,12 @@
       r.d(t, { D: () => s });
       var a = r(148);
       let s = () => {
-        let [e, t] = (0, a.useState)(!1);
+        let [e, t] = (0, a.useState)(!0);
         return (
           (0, a.useEffect)(() => {
-            'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), t(!0));
+            'light' === localStorage.getItem('theme')
+              ? (document.documentElement.classList.remove('dark'), t(!1))
+              : (document.documentElement.classList.add('dark'), t(!0));
           }, []),
           {
             darkMode: e,
@@ -125,7 +127,7 @@
             }),
           });
         },
-        p = (e) => {
+        m = (e) => {
           let { links: t = [] } = e,
             r = d(
               t.map((e) => {
@@ -181,9 +183,9 @@
             }),
           });
         },
-        m = (e) => {
+        p = (e) => {
           let { emoji: t = '', title: r = '', links: s = [], query: l = '', setState: n, disabledSearch: d = !1 } = e,
-            { darkMode: c = !1, toggleDarkMode: m } = (0, o.D)();
+            { darkMode: c = !1, toggleDarkMode: p } = (0, o.D)();
           return (0, a.jsx)('nav', {
             className: 'border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
             children: (0, a.jsxs)('div', {
@@ -212,7 +214,7 @@
                     (0, a.jsxs)('div', {
                       className: 'flex items-center gap-x-2 md:gap-x-4',
                       children: [
-                        (0, a.jsx)(p, { links: s }),
+                        (0, a.jsx)(m, { links: s }),
                         (0, a.jsxs)('label', {
                           className:
                             'relative block h-8 w-14 rounded-full bg-neutral-200 bg-gradient-to-r transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-purple-500 dark:bg-neutral-800 dark:has-checked:from-red-700 dark:has-checked:via-purple-700 dark:has-checked:to-blue-700',
@@ -223,7 +225,7 @@
                               checked: c,
                               className: 'peer sr-only',
                               onChange: () => {
-                                m();
+                                p();
                               },
                             }),
                             (0, a.jsx)('span', {
@@ -386,7 +388,7 @@
               emoji: d = '',
               title: c = '',
               description: u = '',
-              children: p = (0, a.jsx)(a.Fragment, {}),
+              children: m = (0, a.jsx)(a.Fragment, {}),
             } = e,
             { emoji: x = d, description: b = u } =
               null !=
@@ -408,7 +410,7 @@
               (0, a.jsxs)('div', {
                 className: 'flex h-screen flex-col text-neutral-900 dark:text-neutral-100',
                 children: [
-                  (0, a.jsx)(m, {
+                  (0, a.jsx)(p, {
                     emoji: ''.concat(x || d),
                     title: c,
                     links: f.filter((e) => {
@@ -424,7 +426,7 @@
                     children: [
                       (0, a.jsxs)('main', {
                         className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                        children: [(0, a.jsx)(n, { emoji: x || d, title: c, description: b || u }), p],
+                        children: [(0, a.jsx)(n, { emoji: x || d, title: c, description: b || u }), m],
                       }),
                       (0, a.jsx)(s, { title: c }),
                     ],

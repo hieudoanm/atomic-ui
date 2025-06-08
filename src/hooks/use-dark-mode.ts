@@ -4,11 +4,15 @@ export const useDarkMode = (): {
   darkMode: boolean;
   toggleDarkMode: () => void;
 } => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [darkMode, setDarkMode] = useState<boolean>(true); // default to dark mode
 
   useEffect(() => {
     const saved = localStorage.getItem('theme');
-    if (saved === 'dark') {
+
+    if (saved === 'light') {
+      document.documentElement.classList.remove('dark');
+      setDarkMode(false);
+    } else {
       document.documentElement.classList.add('dark');
       setDarkMode(true);
     }

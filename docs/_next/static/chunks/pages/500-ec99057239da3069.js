@@ -59,10 +59,12 @@
       r.d(t, { D: () => l });
       var a = r(148);
       let l = () => {
-        let [e, t] = (0, a.useState)(!1);
+        let [e, t] = (0, a.useState)(!0);
         return (
           (0, a.useEffect)(() => {
-            'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), t(!0));
+            'light' === localStorage.getItem('theme')
+              ? (document.documentElement.classList.remove('dark'), t(!1))
+              : (document.documentElement.classList.add('dark'), t(!0));
           }, []),
           {
             darkMode: e,

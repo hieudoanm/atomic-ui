@@ -4,10 +4,10 @@
     __routerFilterStatic: { numItems: 0, errorRate: 1e-4, numBits: 0, numHashes: null, bitArray: [] },
     __routerFilterDynamic: { numItems: c, errorRate: 1e-4, numBits: c, numHashes: null, bitArray: [] },
     '/': [s, t, 'static/chunks/pages/index-a97126c80e37730f.js'],
-    '/403': [s, 'static/chunks/pages/403-caf6cd8a43fc5ffe.js'],
-    '/404': [s, 'static/chunks/pages/404-eb4e5b66b1afb4c9.js'],
-    '/500': [s, 'static/chunks/pages/500-958c0828a88553e4.js'],
-    '/_error': [s, 'static/chunks/pages/_error-bd0bd126904207af.js'],
+    '/403': [s, 'static/chunks/pages/403-68ce403aea3c6592.js'],
+    '/404': [s, 'static/chunks/pages/404-f07e2e3fe5ad3b27.js'],
+    '/500': [s, 'static/chunks/pages/500-ec99057239da3069.js'],
+    '/_error': [s, 'static/chunks/pages/_error-cd1489a310bb6eaf.js'],
     '/assets/colors': [s, t, 'static/chunks/pages/assets/colors-a77564d93ff3fdf0.js'],
     '/assets/emojis': [s, t, 'static/chunks/pages/assets/emojis-3c6727174cc00e37.js'],
     '/assets/fonts': [s, 'static/css/1a7b1a5d2618d70f.css', t, 'static/chunks/pages/assets/fonts-f4ec2acd2e08312d.js'],
@@ -45,7 +45,7 @@
   };
 })(
   'static/chunks/6826-1b8246ce82a5e8e9.js',
-  'static/chunks/6916-80469357d7b94e26.js',
+  'static/chunks/6916-fed9cd5aea08d33f.js',
   'static/chunks/1190-798dfbc567dad739.js',
   'static/chunks/2182-1e280413427ce046.js',
   0,
