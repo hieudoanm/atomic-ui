@@ -458,36 +458,45 @@
             className: 'py-8 md:py-16',
             children: (0, s.jsx)('div', {
               className: 'container mx-auto px-4 md:px-8',
-              children: (0, s.jsx)('div', {
-                className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-16',
-                children: a.l.map((e) => {
-                  let { href: t = '', emoji: r = '', full: a = '', description: l = '' } = e;
-                  return (0, s.jsxs)(
-                    'div',
-                    {
-                      className: 'col-span-1 flex flex-col gap-y-2',
-                      children: [
-                        (0, s.jsx)(i(), {
-                          href: t,
-                          children: (0, s.jsxs)('h2', {
-                            className: 'text-center text-xl font-semibold',
-                            children: [
-                              r,
-                              ' ',
-                              (0, s.jsx)('span', { className: 'border-b border-dotted', children: a }),
-                            ],
-                          }),
-                        }),
-                        (0, s.jsx)('p', {
-                          className:
-                            'mx-auto w-full max-w-sm text-center text-sm text-neutral-600 dark:text-neutral-400',
-                          children: l,
-                        }),
-                      ],
-                    },
-                    t
-                  );
-                }),
+              children: (0, s.jsxs)('div', {
+                className: 'flex flex-col gap-y-8 md:gap-y-16',
+                children: [
+                  (0, s.jsx)('h2', {
+                    className: 'text-center text-2xl font-extrabold md:text-3xl md:font-black',
+                    children: 'Supercharge your Web App with Atomic Code',
+                  }),
+                  (0, s.jsx)('div', {
+                    className: 'grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-16',
+                    children: a.l.map((e) => {
+                      let { href: t = '', emoji: r = '', full: a = '', description: l = '' } = e;
+                      return (0, s.jsxs)(
+                        'div',
+                        {
+                          className: 'col-span-1 flex flex-col gap-y-2',
+                          children: [
+                            (0, s.jsx)(i(), {
+                              href: t,
+                              children: (0, s.jsxs)('h2', {
+                                className: 'text-center text-xl font-semibold',
+                                children: [
+                                  r,
+                                  ' ',
+                                  (0, s.jsx)('span', { className: 'border-b border-dotted', children: a }),
+                                ],
+                              }),
+                            }),
+                            (0, s.jsx)('p', {
+                              className:
+                                'mx-auto w-full max-w-sm text-center text-sm text-neutral-600 dark:text-neutral-400',
+                              children: l,
+                            }),
+                          ],
+                        },
+                        t
+                      );
+                    }),
+                  }),
+                ],
               }),
             }),
           }),
