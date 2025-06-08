@@ -1,4 +1,4 @@
-(self.__BUILD_MANIFEST = (function (s, t, a, e, c, i, u) {
+(self.__BUILD_MANIFEST = (function (s, t, e, a, c, i, u) {
   return {
     __rewrites: { afterFiles: [], beforeFiles: [], fallback: [] },
     __routerFilterStatic: { numItems: 0, errorRate: 1e-4, numBits: 0, numHashes: null, bitArray: [] },
@@ -11,16 +11,16 @@
     '/assets/colors': [s, t, 'static/chunks/pages/assets/colors-a77564d93ff3fdf0.js'],
     '/assets/emojis': [s, t, 'static/chunks/pages/assets/emojis-3c6727174cc00e37.js'],
     '/assets/fonts': [s, 'static/css/1a7b1a5d2618d70f.css', t, 'static/chunks/pages/assets/fonts-f4ec2acd2e08312d.js'],
-    '/assets/icons': [s, a, t, 'static/chunks/pages/assets/icons-92df19fb717af322.js'],
-    '/react/contexts': [s, e, a, t, 'static/chunks/pages/react/contexts-68138e78698719c1.js'],
-    '/react/hooks': [s, e, a, t, 'static/chunks/pages/react/hooks-5edc44b8d49fdfd2.js'],
-    '/react/virtual-table': [s, e, t, 'static/chunks/pages/react/virtual-table-9d7011c4348573b5.js'],
-    '/ui/block': [s, e, a, t, 'static/chunks/pages/ui/block-1359e1f4723e0e38.js'],
-    '/ui/charts': [s, e, t, 'static/chunks/pages/ui/charts-6048e9ee0e3b207c.js'],
-    '/ui/kit': [s, e, a, t, 'static/chunks/pages/ui/kit-09ff92f760812d0f.js'],
-    '/ui/templates': [s, a, t, 'static/chunks/pages/ui/templates-a4030d3e7d55bdfc.js'],
-    '/ui/templates/[id]': [s, e, a, t, 'static/chunks/pages/ui/templates/[id]-0d593e6e68df9ea1.js'],
-    '/utils': [s, e, a, t, 'static/chunks/pages/utils-559cec4efa0d4d0a.js'],
+    '/assets/icons': [s, e, t, 'static/chunks/pages/assets/icons-92df19fb717af322.js'],
+    '/react/contexts': [s, a, e, t, 'static/chunks/pages/react/contexts-68138e78698719c1.js'],
+    '/react/hooks': [s, a, e, t, 'static/chunks/pages/react/hooks-5edc44b8d49fdfd2.js'],
+    '/react/virtual-table': [s, a, t, 'static/chunks/pages/react/virtual-table-9d7011c4348573b5.js'],
+    '/ui/block': [s, a, e, t, 'static/chunks/pages/ui/block-1359e1f4723e0e38.js'],
+    '/ui/charts': [s, a, t, 'static/chunks/pages/ui/charts-6048e9ee0e3b207c.js'],
+    '/ui/kit': [s, a, e, t, 'static/chunks/pages/ui/kit-09ff92f760812d0f.js'],
+    '/ui/templates': [s, e, t, 'static/chunks/pages/ui/templates-a4030d3e7d55bdfc.js'],
+    '/ui/templates/[id]': [s, a, e, t, 'static/chunks/pages/ui/templates/[id]-0d593e6e68df9ea1.js'],
+    '/utils': [s, a, e, t, 'static/chunks/pages/utils-559cec4efa0d4d0a.js'],
     sortedPages: [
       '/',
       '/403',
@@ -45,7 +45,7 @@
   };
 })(
   'static/chunks/6826-1b8246ce82a5e8e9.js',
-  'static/chunks/6916-fed9cd5aea08d33f.js',
+  'static/chunks/6916-33dcbe4350a83ee1.js',
   'static/chunks/8809-018e494d6cb6fa4d.js',
   'static/chunks/7382-55466734136e1cc9.js',
   0,

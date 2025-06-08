@@ -36,9 +36,12 @@
         let { title: t = '' } = e;
         return (0, a.jsx)('footer', {
           className: 'border-t border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-          children: (0, a.jsxs)('div', {
+          children: (0, a.jsx)('div', {
             className: 'container mx-auto px-8 py-4',
-            children: ['\xa9 ', new Date().getFullYear(), ' ⚛️ ', (0, a.jsx)('strong', { children: t })],
+            children: (0, a.jsxs)('p', {
+              className: 'text-center',
+              children: ['\xa9 ', new Date().getFullYear(), ' ⚛️ ', (0, a.jsx)('strong', { children: t })],
+            }),
           }),
         });
       };
