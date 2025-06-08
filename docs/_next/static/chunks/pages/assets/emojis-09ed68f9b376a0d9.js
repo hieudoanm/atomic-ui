@@ -9,448 +9,9 @@
         },
       ]);
     },
-    5695: (a, e, n) => {
-      'use strict';
-      n.d(e, { l: () => b, U: () => w });
-      var i = n(5640);
-      let o = (a) => {
-        let { title: e = '' } = a;
-        return (0, i.jsx)('footer', {
-          className: 'border-t border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-          children: (0, i.jsxs)('div', {
-            className: 'container mx-auto px-8 py-4',
-            children: ['\xa9 ', new Date().getFullYear(), ' ⚛️ ', (0, i.jsx)('strong', { children: e })],
-          }),
-        });
-      };
-      var r = n(6826),
-        t = n.n(r);
-      let l = (a) => {
-        let { emoji: e = '', title: n = '', description: o = '' } = a;
-        return (0, i.jsx)('section', {
-          className: 'py-8 md:py-16',
-          children: (0, i.jsxs)('div', {
-            className: 'container mx-auto flex flex-col items-center justify-center gap-y-4 px-8',
-            children: [
-              (0, i.jsxs)('h1', {
-                className: 'text-4xl font-black whitespace-nowrap md:text-5xl',
-                children: [
-                  e,
-                  ' ',
-                  (0, i.jsx)('span', {
-                    className:
-                      'bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent dark:from-red-700 dark:via-purple-700 dark:to-blue-700',
-                    children: n,
-                  }),
-                ],
-              }),
-              (0, i.jsx)('div', {
-                className: 'flex w-full max-w-lg flex-col gap-y-4 text-center md:gap-y-8',
-                children: (0, i.jsx)('p', { className: 'text-neutral-900 dark:text-neutral-100', children: o }),
-              }),
-              (0, i.jsx)(t(), {
-                href: 'https://github.com/hieudoanm/atomic',
-                target: '_blank',
-                children: (0, i.jsx)('button', {
-                  className:
-                    'cursor-pointer rounded-lg border border-neutral-200 bg-transparent px-6 py-3 font-semibold text-neutral-900 dark:border-neutral-800 dark:text-white',
-                  children: '\uD83D\uDC19 GitHub',
-                }),
-              }),
-            ],
-          }),
-        });
-      };
-      var s = n(148);
-      let c = () => {
-          let [a, e] = (0, s.useState)(!1);
-          return (
-            (0, s.useEffect)(() => {
-              'dark' === localStorage.getItem('theme') && (document.documentElement.classList.add('dark'), e(!0));
-            }, []),
-            {
-              darkMode: a,
-              toggleDarkMode: () => {
-                e((a) => {
-                  let e = !a;
-                  return (
-                    document.documentElement.classList.toggle('dark', e),
-                    localStorage.setItem('theme', e ? 'dark' : 'light'),
-                    e
-                  );
-                });
-              },
-            }
-          );
-        },
-        g = (a) => Array.from(new Set(a)),
-        d = { assets: '\uD83D\uDDBC️', react: '⚛️', ui: '\uD83C\uDFA8', utils: '\uD83E\uDDF0' },
-        m = (a) => {
-          let { links: e } = a;
-          return (0, i.jsx)('div', {
-            className: 'inline-block md:hidden',
-            children: (0, i.jsxs)('div', {
-              className: 'group relative inline-block text-left',
-              children: [
-                (0, i.jsx)('button', {
-                  type: 'button',
-                  className:
-                    'inline-flex items-center justify-center gap-1 rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-700 shadow-sm hover:bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:bg-neutral-800',
-                  children: (0, i.jsx)('svg', {
-                    xmlns: 'http://www.w3.org/2000/svg',
-                    viewBox: '0 0 448 512',
-                    className: 'w-4',
-                    fill: 'currentColor',
-                    children: (0, i.jsx)('path', {
-                      d: 'M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z',
-                    }),
-                  }),
-                }),
-                (0, i.jsx)('div', {
-                  className:
-                    'invisible absolute left-0 z-50 mt-2 w-48 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100',
-                  children: e.map((a) => {
-                    let { id: e = '', href: n = '', emoji: o = '', text: r = '' } = a;
-                    return (0, i.jsxs)(
-                      t(),
-                      {
-                        href: n,
-                        className: 'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
-                        children: [o, ' ', r],
-                      },
-                      e
-                    );
-                  }),
-                }),
-              ],
-            }),
-          });
-        },
-        u = (a) => {
-          let { links: e = [] } = a,
-            n = g(
-              e.map((a) => {
-                let { group: e } = a;
-                return e;
-              })
-            ).map((a) => ({
-              group: a,
-              links: e.filter((e) => {
-                let { group: n } = e;
-                return a === n;
-              }),
-            }));
-          return (0, i.jsx)('div', {
-            className: 'hidden items-center gap-x-2 md:flex md:gap-x-4',
-            children: n.map((a) => {
-              var e;
-              let { group: n, links: o = [] } = a;
-              return (0, i.jsxs)(
-                'div',
-                {
-                  className: 'group relative inline-block text-left',
-                  children: [
-                    (0, i.jsxs)('button', {
-                      type: 'button',
-                      className: 'truncate text-sm md:text-base',
-                      children: [
-                        null != (e = d[n]) ? e : '',
-                        ' ',
-                        (0, i.jsxs)('span', { className: 'hidden lg:inline', children: [n, ' (', o.length, ')'] }),
-                      ],
-                    }),
-                    (0, i.jsx)('div', {
-                      className:
-                        'invisible absolute right-0 z-50 mt-2 w-48 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100',
-                      children: o.map((a) => {
-                        let { id: e = '', href: n = '', emoji: o = '', text: r = '' } = a;
-                        return (0, i.jsxs)(
-                          t(),
-                          {
-                            href: n,
-                            className: 'block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800',
-                            children: [o, ' ', r],
-                          },
-                          e
-                        );
-                      }),
-                    }),
-                  ],
-                },
-                n
-              );
-            }),
-          });
-        },
-        h = (a) => {
-          let { emoji: e = '', title: n = '', links: o = [], query: r = '', setState: l, disabledSearch: s = !1 } = a,
-            { darkMode: g = !1, toggleDarkMode: d } = c();
-          return (0, i.jsx)('nav', {
-            className: 'border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-            children: (0, i.jsxs)('div', {
-              className: 'container mx-auto flex flex-col gap-y-2 px-8 py-4',
-              children: [
-                (0, i.jsxs)('div', {
-                  className: 'flex items-center justify-between gap-x-4',
-                  children: [
-                    (0, i.jsx)(m, { links: o }),
-                    (0, i.jsx)('div', {
-                      className: 'flex items-center gap-x-4',
-                      children: (0, i.jsxs)(t(), {
-                        href: '/',
-                        className: 'truncate text-lg font-bold md:text-xl',
-                        children: [
-                          e,
-                          ' ',
-                          (0, i.jsx)('span', {
-                            className:
-                              'bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent dark:from-red-700 dark:via-purple-700 dark:to-blue-700',
-                            children: n,
-                          }),
-                        ],
-                      }),
-                    }),
-                    (0, i.jsxs)('div', {
-                      className: 'flex items-center gap-x-2 md:gap-x-4',
-                      children: [
-                        (0, i.jsx)(u, { links: o }),
-                        (0, i.jsxs)('label', {
-                          className:
-                            'relative block h-8 w-14 rounded-full bg-neutral-200 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-purple-500 dark:bg-neutral-800 dark:has-checked:bg-purple-700',
-                          'aria-label': 'Toggle dark mode',
-                          children: [
-                            (0, i.jsx)('input', {
-                              type: 'checkbox',
-                              checked: g,
-                              className: 'peer sr-only',
-                              onChange: () => {
-                                d();
-                              },
-                            }),
-                            (0, i.jsx)('span', {
-                              className:
-                                'absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-white transition-[inset-inline-start] peer-checked:start-6 dark:bg-neutral-900',
-                            }),
-                          ],
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                !s &&
-                  (0, i.jsx)('input', {
-                    type: 'text',
-                    placeholder: 'Search',
-                    value: r,
-                    className:
-                      'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
-                    onChange: (a) => {
-                      l((e) => ({ ...e, query: a.target.value }));
-                    },
-                  }),
-              ],
-            }),
-          });
-        };
-      var f = n(1668),
-        p = n.n(f);
-      let b = [
-          {
-            group: 'assets',
-            id: 'assets-colors',
-            emoji: '\uD83C\uDFA8',
-            href: '/assets/colors',
-            text: 'Colors',
-            full: 'Colors',
-            description:
-              'A vast, beautiful color palette out of the box, carefully crafted by expert designers and suitable for a wide range of different design styles.',
-          },
-          {
-            group: 'assets',
-            id: 'assets-emojis',
-            emoji: '\uD83D\uDE04',
-            href: '/assets/emojis',
-            text: 'Emojis',
-            full: 'Emojis',
-            description:
-              'A large collection of emojis to enhance user interfaces, chats, and messaging applications with expressive icons.',
-          },
-          {
-            group: 'assets',
-            id: 'assets-fonts',
-            emoji: '\uD83D\uDD24',
-            href: '/assets/fonts',
-            text: 'Fonts',
-            full: 'Fonts',
-            description:
-              'A curated collection of fonts for web and UI projects, supporting various styles, weights, and languages.',
-          },
-          {
-            group: 'assets',
-            id: 'assets-icons',
-            emoji: '\uD83D\uDDBC️',
-            href: '/assets/icons',
-            text: 'Icons',
-            full: 'SVG Icons',
-            description:
-              'High-quality scalable vector icons suitable for web and mobile interfaces, ensuring sharp visuals on any screen size.',
-          },
-          {
-            group: 'react',
-            id: 'react-contexts',
-            emoji: '\uD83D\uDD17',
-            href: '/react/contexts',
-            text: 'Contexts',
-            full: 'React Contexts',
-            description:
-              'React contexts to efficiently manage and share state or data across deeply nested components without prop drilling.',
-          },
-          {
-            group: 'react',
-            id: 'react-hooks',
-            emoji: '\uD83E\uDE9D',
-            href: '/react/hooks',
-            text: 'Hooks',
-            full: 'React Hooks',
-            description:
-              'Reusable React hooks that provide custom functionality to functional components, improving code modularity and reuse.',
-          },
-          {
-            group: 'react',
-            id: 'react-virtual-table',
-            emoji: '\uD83D\uDCCB',
-            href: '/react/virtual-table',
-            text: 'Virtual Table',
-            full: 'React Virtual Table',
-            description:
-              'Highly performant virtualized table component that renders only visible rows, ideal for large datasets.',
-          },
-          {
-            group: 'ui',
-            id: 'ui-charts',
-            emoji: '\uD83D\uDCCA',
-            href: '/ui/charts',
-            text: 'Charts',
-            full: 'UI Charts',
-            description:
-              'Versatile chart components for visualizing data in various formats including bar, line, pie, and more.',
-          },
-          {
-            group: 'ui',
-            id: 'ui-kit',
-            emoji: '\uD83C\uDFA8',
-            href: '/ui/kit',
-            text: 'UI',
-            full: 'UIKit',
-            description:
-              'Comprehensive collection of reusable UI components and design elements for building consistent user interfaces.',
-          },
-          {
-            group: 'ui',
-            id: 'ui-blocks',
-            emoji: '\uD83E\uDDF1',
-            href: '/ui/block',
-            text: 'Blocks',
-            full: 'UI Blocks',
-            description:
-              'Modular UI blocks designed for rapid assembly of complex interfaces using pre-built building components.',
-          },
-          {
-            group: 'ui',
-            id: 'ui-templates',
-            emoji: '\uD83D\uDCDD',
-            href: '/ui/templates',
-            text: 'Templates',
-            full: 'UI Templates',
-            description:
-              'Pre-designed UI templates that speed up development by providing ready-made layouts and styles.',
-          },
-          {
-            group: 'utils',
-            id: 'utils',
-            emoji: '\uD83E\uDDF0',
-            href: '/utils',
-            text: 'Utils',
-            full: 'Utilities',
-            description:
-              'A collection of general utility functions and helpers to simplify common programming tasks across projects.',
-          },
-        ],
-        w = (a) => {
-          var e;
-          let {
-              disabledSearch: n = !1,
-              query: r = '',
-              setState: t = () => {},
-              id: s = '',
-              emoji: c = '',
-              title: g = '',
-              description: d = '',
-              children: m = (0, i.jsx)(i.Fragment, {}),
-            } = a,
-            { emoji: u = c, description: f = d } =
-              null !=
-              (e = b.find((a) => {
-                let { id: e = '' } = a;
-                return s === e;
-              }))
-                ? e
-                : { emoji: c, description: d };
-          return (0, i.jsxs)(i.Fragment, {
-            children: [
-              (0, i.jsxs)(p(), {
-                children: [
-                  (0, i.jsxs)('title', { children: [u, ' ', g] }),
-                  (0, i.jsx)('meta', { name: 'description', content: f || d }),
-                ],
-              }),
-              (0, i.jsxs)('div', {
-                className: 'flex h-screen flex-col bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100',
-                children: [
-                  (0, i.jsx)(h, {
-                    emoji: ''.concat(u || c),
-                    title: g,
-                    links: b.filter((a) => {
-                      let { id: e = '' } = a;
-                      return s !== e;
-                    }),
-                    disabledSearch: n,
-                    query: r,
-                    setState: t,
-                  }),
-                  (0, i.jsxs)('div', {
-                    className: 'grow overflow-auto',
-                    children: [
-                      (0, i.jsxs)('main', {
-                        className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                        children: [(0, i.jsx)(l, { emoji: u || c, title: g, description: f || d }), m],
-                      }),
-                      (0, i.jsx)(o, { title: g }),
-                    ],
-                  }),
-                ],
-              }),
-            ],
-          });
-        };
-    },
-    6921: (a, e, n) => {
-      'use strict';
-      n.d(e, { C: () => i });
-      let i = (a) => {
-        navigator.clipboard
-          .writeText(a)
-          .then(() => {
-            alert('Copied to clipboard!');
-          })
-          .catch((a) => {
-            console.error('Failed to copy: ', a);
-          });
-      };
-    },
     7484: (a, e, n) => {
       'use strict';
-      n.r(e), n.d(e, { default: () => c });
+      n.r(e), n.d(e, { default: () => g });
       var i = n(5640),
         o = n(5695);
       let r = (a, e) =>
@@ -458,8 +19,8 @@
           let i = String(n[e]);
           return a[i] || (a[i] = []), a[i].push(n), a;
         }, {});
-      var t = n(6921),
-        l = n(148);
+      var l = n(6921),
+        t = n(148);
       let s = Object.entries({
           smileys: {
             'grinning face': '\uD83D\uDE00',
@@ -2399,13 +1960,13 @@
             });
           return a.concat(o);
         }, []),
-        c = () => {
-          let [{ query: a = '' }, e] = (0, l.useState)({ query: '' }),
+        g = () => {
+          let [{ query: a = '' }, e] = (0, t.useState)({ query: '' }),
             n = s.filter((e) => {
               let { name: n } = e;
               return n.toLowerCase().includes(a.toLowerCase());
             }),
-            c = r(n, 'category');
+            g = r(n, 'category');
           return (0, i.jsx)(o.U, {
             query: a,
             setState: e,
@@ -2432,7 +1993,7 @@
                     }),
                     n.length > 0 &&
                       (0, i.jsx)(i.Fragment, {
-                        children: Object.entries(c).map((a) => {
+                        children: Object.entries(g).map((a) => {
                           let [e, n] = a;
                           return (0, i.jsxs)(
                             'div',
@@ -2453,7 +2014,7 @@
                                         title: e,
                                         className:
                                           'aspect-square w-12 cursor-pointer rounded-lg text-4xl hover:bg-neutral-200 dark:hover:bg-neutral-800',
-                                        onClick: () => (0, t.C)(n),
+                                        onClick: () => (0, l.C)(n),
                                         children: n,
                                       },
                                       n
@@ -2476,6 +2037,6 @@
   },
   (a) => {
     var e = (e) => a((a.s = e));
-    a.O(0, [6826, 636, 6593, 8792], () => e(5541)), (_N_E = a.O());
+    a.O(0, [6826, 431, 636, 6593, 8792], () => e(5541)), (_N_E = a.O());
   },
 ]);

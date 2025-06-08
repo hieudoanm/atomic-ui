@@ -1,6 +1,30 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [3826],
   {
+    8899: (e, t, l) => {
+      'use strict';
+      l.d(t, { V: () => s });
+      var a = l(5640),
+        r = l(6921),
+        i = l(148),
+        n = l(2182);
+      let s = (e) => {
+        let { code: t, lang: l } = e,
+          [s, o] = (0, i.useState)('');
+        return (
+          (0, i.useEffect)(() => {
+            (async () => {
+              o(await (0, n.Yz)(t, { lang: l, theme: 'github-dark' }));
+            })();
+          }),
+          (0, a.jsx)('button', {
+            className: 'w-full cursor-pointer overflow-x-auto bg-neutral-900 p-4 text-left',
+            dangerouslySetInnerHTML: { __html: s },
+            onClick: () => (0, r.C)(t),
+          })
+        );
+      };
+    },
     9105: (e, t, l) => {
       'use strict';
       l.r(t), l.d(t, { __N_SSG: () => c, default: () => u });
@@ -243,9 +267,9 @@
                     let l = i[p - e] || (m + ((b - m) / p) * (p - e)).toFixed(0);
                     a.fillText(l.toString(), 52, t);
                   }
-                  let T = l.length - 1 || 5;
-                  for (let e = 0; e <= T; e++) {
-                    let t = 60 + (d / T) * e;
+                  let y = l.length - 1 || 5;
+                  for (let e = 0; e <= y; e++) {
+                    let t = 60 + (d / y) * e;
                     a.beginPath(),
                       a.moveTo(t, 40),
                       a.lineTo(t, f - 60),
@@ -254,7 +278,7 @@
                       (a.font = '12px sans-serif'),
                       (a.textAlign = 'center'),
                       (a.textBaseline = 'top');
-                    let r = l[e] || (u + ((g - u) / T) * e).toFixed(0);
+                    let r = l[e] || (u + ((g - u) / y) * e).toFixed(0);
                     a.fillText(r.toString(), t, f - 60 + 6);
                   }
                   (a.strokeStyle = '#9ca3af'),
@@ -286,19 +310,19 @@
                     a.rotate(-Math.PI / 2),
                     a.fillText(s, 0, 0),
                     a.restore();
-                  let y = r / 2 - 16;
+                  let T = r / 2 - 16;
                   a.beginPath(),
                     (a.fillStyle = 'rgba(59, 130, 246, 0.6)'),
                     (a.strokeStyle = '#3b82f6'),
                     (a.lineWidth = 1),
-                    a.arc(y + 8, 8, 8, 0, 2 * Math.PI),
+                    a.arc(T + 8, 8, 8, 0, 2 * Math.PI),
                     a.fill(),
                     a.stroke(),
                     (a.fillStyle = '#374151'),
                     (a.font = '12px sans-serif'),
                     (a.textAlign = 'left'),
                     (a.textBaseline = 'middle'),
-                    a.fillText('Bubble Size = Radius', y + 16 + 8, 8);
+                    a.fillText('Bubble Size = Radius', T + 16 + 8, 8);
                 }, [t, l, i, n, s]),
                 (0, a.jsx)('div', {
                   className:
@@ -920,6 +944,6 @@
   },
   (e) => {
     var t = (t) => e((e.s = t));
-    e.O(0, [6826, 2182, 3685, 636, 6593, 8792], () => t(9949)), (_N_E = e.O());
+    e.O(0, [6826, 2182, 431, 636, 6593, 8792], () => t(9949)), (_N_E = e.O());
   },
 ]);

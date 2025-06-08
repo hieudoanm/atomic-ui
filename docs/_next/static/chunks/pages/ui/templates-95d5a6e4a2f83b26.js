@@ -159,35 +159,38 @@
         let { emoji: t = '', title: r = '', description: a = '' } = e;
         return (0, s.jsx)('section', {
           className: 'py-8 md:py-16',
-          children: (0, s.jsxs)('div', {
-            className: 'container mx-auto flex flex-col items-center justify-center gap-y-4 px-8',
-            children: [
-              (0, s.jsxs)('h1', {
-                className: 'text-4xl font-black whitespace-nowrap md:text-5xl',
-                children: [
-                  t,
-                  ' ',
-                  (0, s.jsx)('span', {
-                    className:
-                      'bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent dark:from-red-700 dark:via-purple-700 dark:to-blue-700',
-                    children: r,
-                  }),
-                ],
-              }),
-              (0, s.jsx)('div', {
-                className: 'flex w-full max-w-lg flex-col gap-y-4 text-center md:gap-y-8',
-                children: (0, s.jsx)('p', { className: 'text-neutral-900 dark:text-neutral-100', children: a }),
-              }),
-              (0, s.jsx)(i(), {
-                href: 'https://github.com/hieudoanm/atomic',
-                target: '_blank',
-                children: (0, s.jsx)('button', {
-                  className:
-                    'cursor-pointer rounded-lg border border-neutral-200 bg-transparent px-6 py-3 font-semibold text-neutral-900 dark:border-neutral-800 dark:text-white',
-                  children: '\uD83D\uDC19 GitHub',
+          children: (0, s.jsx)('div', {
+            className: 'container mx-auto px-8',
+            children: (0, s.jsxs)('div', {
+              className: 'flex flex-col items-center justify-center gap-y-4 md:gap-y-8',
+              children: [
+                (0, s.jsxs)('h1', {
+                  className: 'text-4xl font-black whitespace-nowrap md:text-5xl',
+                  children: [
+                    t,
+                    ' ',
+                    (0, s.jsx)('span', {
+                      className:
+                        'bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent dark:from-red-700 dark:via-purple-700 dark:to-blue-700',
+                      children: r,
+                    }),
+                  ],
                 }),
-              }),
-            ],
+                (0, s.jsx)('div', {
+                  className: 'flex w-full max-w-lg flex-col gap-y-4 text-center md:gap-y-8',
+                  children: (0, s.jsx)('p', { className: 'text-neutral-900 dark:text-neutral-100', children: a }),
+                }),
+                (0, s.jsx)(i(), {
+                  href: 'https://github.com/hieudoanm/atomic',
+                  target: '_blank',
+                  children: (0, s.jsx)('button', {
+                    className:
+                      'cursor-pointer rounded-lg bg-gradient-to-r from-red-600 via-purple-600 to-blue-600 px-5 py-3 font-semibold text-neutral-100 dark:border-neutral-800 dark:from-red-700 dark:via-purple-700 dark:to-blue-700',
+                    children: '⭐ GitHub',
+                  }),
+                }),
+              ],
+            }),
           }),
         });
       };

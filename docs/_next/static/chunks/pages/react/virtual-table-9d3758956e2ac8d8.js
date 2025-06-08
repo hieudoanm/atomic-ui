@@ -1,93 +1,93 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [8690],
   {
-    1099: (e, r, t) => {
+    1099: (e, t, r) => {
       'use strict';
-      t.r(r), t.d(r, { __N_SSG: () => o, default: () => c });
-      var l = t(5640),
-        a = t(9419),
-        n = t(148);
-      let s = (e) => {
-          let { columns: r, data: t, rowHeight: a, height: s, renderCell: i } = e,
-            d = (0, n.useRef)(null),
-            [o, c] = (0, n.useState)(0),
-            [u, h] = (0, n.useState)(new Set()),
-            [x, p] = (0, n.useState)(null),
-            m = t.length * a,
-            b = Math.ceil(s / a),
-            w = Math.floor(o / a),
-            f = Math.min(w + b + 1, t.length),
-            g = t.slice(w, f),
-            y = (0, n.useCallback)(() => {
-              d.current && c(d.current.scrollTop);
+      r.r(t), r.d(t, { __N_SSG: () => d, default: () => c });
+      var l = r(5640),
+        a = r(9419),
+        s = r(148);
+      let n = (e) => {
+          let { columns: t, data: r, rowHeight: a, height: n, renderCell: i } = e,
+            o = (0, s.useRef)(null),
+            [d, c] = (0, s.useState)(0),
+            [u, h] = (0, s.useState)(new Set()),
+            [x, m] = (0, s.useState)(null),
+            p = r.length * a,
+            b = Math.ceil(n / a),
+            f = Math.floor(d / a),
+            w = Math.min(f + b + 1, r.length),
+            g = r.slice(f, w),
+            y = (0, s.useCallback)(() => {
+              o.current && c(o.current.scrollTop);
             }, []),
             v = (e) => {
-              if (!d.current) return;
-              let r = d.current,
-                t = r.scrollTop,
+              if (!o.current) return;
+              let t = o.current,
+                r = t.scrollTop,
                 l = e * a,
-                n = l + a;
-              l < t ? (r.scrollTop = l) : n > t + s && (r.scrollTop = n - s);
+                s = l + a;
+              l < r ? (t.scrollTop = l) : s > r + n && (t.scrollTop = s - n);
             },
-            j = (e, r) => {
-              let t = Math.min(e, r),
-                l = Math.max(e, r),
+            j = (e, t) => {
+              let r = Math.min(e, t),
+                l = Math.max(e, t),
                 a = new Set(u);
-              for (let e = t; e <= l; e++) a.add(e);
+              for (let e = r; e <= l; e++) a.add(e);
               return a;
             },
-            k = (e, r) => {
-              let t = r.ctrlKey || r.metaKey;
-              r.shiftKey && null !== x
+            k = (e, t) => {
+              let r = t.ctrlKey || t.metaKey;
+              t.shiftKey && null !== x
                 ? h(j(x, e))
-                : (t
-                    ? h((r) => {
-                        let t = new Set(r);
-                        return t.has(e) ? t.delete(e) : t.add(e), t;
+                : (r
+                    ? h((t) => {
+                        let r = new Set(t);
+                        return r.has(e) ? r.delete(e) : r.add(e), r;
                       })
                     : h(new Set([e])),
-                  p(e)),
+                  m(e)),
                 v(e);
             };
           return (
-            (0, n.useEffect)(() => {
-              let e = d.current;
+            (0, s.useEffect)(() => {
+              let e = o.current;
               if (e) return e.addEventListener('scroll', y), () => e.removeEventListener('scroll', y);
             }, [y]),
             (0, l.jsxs)('div', {
               className: 'overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800',
               tabIndex: 0,
               onKeyDown: (e) => {
-                if (0 === t.length) return;
-                let r = null !== x ? x : u.size > 0 ? Math.min(...u) : 0;
+                if (0 === r.length) return;
+                let t = null !== x ? x : u.size > 0 ? Math.min(...u) : 0;
                 if ('ArrowDown' === e.key) {
                   e.preventDefault();
-                  let l = Math.min(r + 1, t.length - 1);
-                  e.shiftKey ? h(j(null != x ? x : l, l)) : (h(new Set([l])), p(l)), v(l), p(l);
+                  let l = Math.min(t + 1, r.length - 1);
+                  e.shiftKey ? h(j(null != x ? x : l, l)) : (h(new Set([l])), m(l)), v(l), m(l);
                 }
                 if ('ArrowUp' === e.key) {
                   e.preventDefault();
-                  let t = Math.max(r - 1, 0);
-                  e.shiftKey ? h(j(null != x ? x : t, t)) : (h(new Set([t])), p(t)), v(t), p(t);
+                  let r = Math.max(t - 1, 0);
+                  e.shiftKey ? h(j(null != x ? x : r, r)) : (h(new Set([r])), m(r)), v(r), m(r);
                 }
               },
               role: 'grid',
-              'aria-rowcount': t.length,
-              'aria-colcount': r.length,
+              'aria-rowcount': r.length,
+              'aria-colcount': t.length,
               children: [
                 (0, l.jsx)('table', {
                   className: 'w-full border-collapse',
                   role: 'rowgroup',
                   children: (0, l.jsx)('thead', {
                     children: (0, l.jsx)('tr', {
-                      children: r.map((e) => {
-                        var r;
+                      children: t.map((e) => {
+                        var t;
                         return (0, l.jsx)(
                           'th',
                           {
                             className:
                               'border-b border-neutral-200 bg-neutral-100 p-2 text-left dark:border-neutral-800 dark:bg-neutral-900',
-                            style: { width: null != (r = e.width) ? r : 'auto' },
+                            style: { width: null != (t = e.width) ? t : 'auto' },
                             role: 'columnheader',
                             children: e.label,
                           },
@@ -98,58 +98,58 @@
                   }),
                 }),
                 (0, l.jsx)('div', {
-                  ref: d,
+                  ref: o,
                   className: 'relative overflow-y-auto focus:outline-none',
-                  style: { height: s },
+                  style: { height: n },
                   role: 'rowgroup',
                   children: (0, l.jsx)('div', {
                     className: 'relative',
-                    style: { height: m },
-                    children: g.map((e, t) => {
-                      let n = w + t,
-                        s = u.has(n);
+                    style: { height: p },
+                    children: g.map((e, r) => {
+                      let s = f + r,
+                        n = u.has(s);
                       return (0, l.jsx)(
                         'div',
                         {
                           style: {
                             position: 'absolute',
-                            top: n * a,
+                            top: s * a,
                             height: a,
                             left: 0,
                             right: 0,
                             display: 'table',
                             width: '100%',
                             tableLayout: 'fixed',
-                            background: s ? '#e2e8f0' : void 0,
+                            background: n ? '#e2e8f0' : void 0,
                             cursor: 'pointer',
                           },
-                          onClick: (e) => k(n, e),
+                          onClick: (e) => k(s, e),
                           role: 'row',
-                          'aria-selected': s,
+                          'aria-selected': n,
                           tabIndex: -1,
                           children: (0, l.jsx)('table', {
                             className: 'w-full border-collapse',
                             role: 'presentation',
                             children: (0, l.jsx)('tbody', {
                               children: (0, l.jsx)('tr', {
-                                children: r.map((r) => {
-                                  var t;
+                                children: t.map((t) => {
+                                  var r;
                                   return (0, l.jsx)(
                                     'td',
                                     {
                                       className: 'border-b border-neutral-200 p-2 text-left dark:border-neutral-800',
-                                      style: { width: null != (t = r.width) ? t : 'auto' },
+                                      style: { width: null != (r = t.width) ? r : 'auto' },
                                       role: 'gridcell',
-                                      children: i ? i(e, r, n, s) : String(e[r.key]),
+                                      children: i ? i(e, t, s, n) : String(e[t.key]),
                                     },
-                                    String(r.key)
+                                    String(t.key)
                                   );
                                 }),
                               }),
                             }),
                           }),
                         },
-                        n
+                        s
                       );
                     }),
                   }),
@@ -159,15 +159,15 @@
           );
         },
         i = () => {
-          let e = Array.from({ length: 1e4 }, (e, r) => ({
-            id: r + 1,
-            name: 'Person '.concat(r + 1),
-            age: 20 + (r % 50),
-            email: 'user'.concat(r + 1, '@example.com'),
+          let e = Array.from({ length: 1e4 }, (e, t) => ({
+            id: t + 1,
+            name: 'Person '.concat(t + 1),
+            age: 20 + (t % 50),
+            email: 'user'.concat(t + 1, '@example.com'),
           }));
           return (0, l.jsx)('div', {
             className: 'w-full',
-            children: (0, l.jsx)(s, {
+            children: (0, l.jsx)(n, {
               columns: [
                 { key: 'id', label: 'ID', width: '80px' },
                 { key: 'name', label: 'Name', width: '160px' },
@@ -180,11 +180,11 @@
             }),
           });
         };
-      var d = t(5695),
-        o = !0;
+      var o = r(5695),
+        d = !0;
       let c = (e) => {
-        let { code: r = '' } = e;
-        return (0, l.jsx)(d.U, {
+        let { code: t = '' } = e;
+        return (0, l.jsx)(o.U, {
           disabledSearch: !0,
           query: 'query',
           setState: () => {},
@@ -204,7 +204,7 @@
                   emoji: '\uD83D\uDCCB',
                   group: 'React',
                   name: 'Virtual Table',
-                  code: r,
+                  code: t,
                   chart: (0, l.jsx)(i, {}),
                 }),
               }),
@@ -213,32 +213,56 @@
         });
       };
     },
-    4933: (e, r, t) => {
+    4933: (e, t, r) => {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         '/react/virtual-table',
         function () {
-          return t(1099);
+          return r(1099);
         },
       ]);
     },
-    9419: (e, r, t) => {
+    8899: (e, t, r) => {
       'use strict';
-      t.d(r, { O: () => s });
-      var l = t(5640),
-        a = t(148),
-        n = t(8899);
-      let s = (e) => {
+      r.d(t, { V: () => i });
+      var l = r(5640),
+        a = r(6921),
+        s = r(148),
+        n = r(2182);
+      let i = (e) => {
+        let { code: t, lang: r } = e,
+          [i, o] = (0, s.useState)('');
+        return (
+          (0, s.useEffect)(() => {
+            (async () => {
+              o(await (0, n.Yz)(t, { lang: r, theme: 'github-dark' }));
+            })();
+          }),
+          (0, l.jsx)('button', {
+            className: 'w-full cursor-pointer overflow-x-auto bg-neutral-900 p-4 text-left',
+            dangerouslySetInnerHTML: { __html: i },
+            onClick: () => (0, a.C)(t),
+          })
+        );
+      };
+    },
+    9419: (e, t, r) => {
+      'use strict';
+      r.d(t, { O: () => n });
+      var l = r(5640),
+        a = r(148),
+        s = r(8899);
+      let n = (e) => {
         let {
-            id: r = '',
-            emoji: t = '',
-            group: s = '',
+            id: t = '',
+            emoji: r = '',
+            group: n = '',
             name: i = '',
-            code: d = '',
-            chart: o = (0, l.jsx)(l.Fragment, {}),
+            code: o = '',
+            chart: d = (0, l.jsx)(l.Fragment, {}),
           } = e,
           [c, u] = (0, a.useState)(!0);
         return (0, l.jsxs)('div', {
-          id: r,
+          id: t,
           className: 'flex flex-col gap-y-4 md:gap-y-8',
           children: [
             (0, l.jsxs)('div', {
@@ -247,10 +271,10 @@
                 (0, l.jsxs)('div', {
                   className: 'flex items-center gap-x-2',
                   children: [
-                    (0, l.jsx)('span', { className: 'text-4xl', children: t }),
+                    (0, l.jsx)('span', { className: 'text-4xl', children: r }),
                     (0, l.jsxs)('div', {
                       children: [
-                        (0, l.jsx)('p', { className: 'text-xs capitalize', children: s }),
+                        (0, l.jsx)('p', { className: 'text-xs capitalize', children: n }),
                         (0, l.jsx)('h3', { className: 'text-xl font-bold capitalize md:text-2xl', children: i }),
                       ],
                     }),
@@ -269,8 +293,8 @@
               className:
                 'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
               children: c
-                ? (0, l.jsx)('div', { className: 'flex w-full items-center justify-center p-4 md:p-8', children: o })
-                : (0, l.jsx)(n.V, { code: d, lang: 'html' }),
+                ? (0, l.jsx)('div', { className: 'flex w-full items-center justify-center p-4 md:p-8', children: d })
+                : (0, l.jsx)(s.V, { code: o, lang: 'html' }),
             }),
           ],
         });
@@ -278,7 +302,7 @@
     },
   },
   (e) => {
-    var r = (r) => e((e.s = r));
-    e.O(0, [6826, 2182, 3685, 636, 6593, 8792], () => r(4933)), (_N_E = e.O());
+    var t = (t) => e((e.s = t));
+    e.O(0, [6826, 2182, 431, 636, 6593, 8792], () => t(4933)), (_N_E = e.O());
   },
 ]);

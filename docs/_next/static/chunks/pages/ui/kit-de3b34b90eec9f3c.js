@@ -6,21 +6,21 @@
       s.r(a), s.d(a, { __N_SSG: () => c, default: () => o });
       var r = s(5640),
         l = s(6260),
-        d = s(5695),
-        t = s(6826),
-        i = s.n(t),
+        t = s(5695),
+        d = s(6826),
+        i = s.n(d),
         n = s(148),
         c = !0;
       let o = (e) => {
         let { components: a = [] } = e,
-          [{ query: s = '' }, t] = (0, n.useState)({ query: '' }),
+          [{ query: s = '' }, d] = (0, n.useState)({ query: '' }),
           c = a.filter((e) => {
             let { id: a, name: r } = e;
             return a.toLowerCase().includes(s.toLowerCase()) || r.toLowerCase().includes(s.toLowerCase());
           });
-        return (0, r.jsxs)(d.U, {
+        return (0, r.jsxs)(t.U, {
           query: s,
-          setState: t,
+          setState: d,
           id: 'ui-kit',
           emoji: '\uD83C\uDFA8',
           title: 'atomic/ui',
@@ -49,7 +49,7 @@
                           (0, r.jsx)('div', {
                             className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4',
                             children: c.map((e) => {
-                              let { id: a = '', emoji: s = '', group: l, name: d = '' } = e;
+                              let { id: a = '', emoji: s = '', group: l, name: t = '' } = e;
                               return (0, r.jsx)(
                                 i(),
                                 {
@@ -67,7 +67,7 @@
                                             (0, r.jsx)('p', { className: 'text-xs capitalize', children: l }),
                                             (0, r.jsx)('p', {
                                               className: 'text-sm font-semibold capitalize',
-                                              children: d,
+                                              children: t,
                                             }),
                                           ],
                                         }),
@@ -82,12 +82,12 @@
                           (0, r.jsx)('div', {
                             className: 'flex flex-col gap-y-4 md:gap-y-8',
                             children: c.map((e) => {
-                              let { id: a = '', emoji: s = '', group: d = '', name: t = '', code: i = '' } = e;
+                              let { id: a = '', emoji: s = '', group: t = '', name: d = '', code: i = '' } = e;
                               return (0, r.jsx)(
                                 'div',
                                 {
                                   className: 'flex flex-col gap-y-4',
-                                  children: (0, r.jsx)(l.C, { id: a, emoji: s, group: d, name: t, code: i }),
+                                  children: (0, r.jsx)(l.C, { id: a, emoji: s, group: t, name: d, code: i }),
                                 },
                                 a
                               );
@@ -176,7 +176,7 @@
                               darkClass: 'dark:shadow-neutral-100/10',
                             },
                           ].map((e, a) => {
-                            let { id: s = '', name: l = '', lightClass: d = '', darkClass: t = '' } = e;
+                            let { id: s = '', name: l = '', lightClass: t = '', darkClass: d = '' } = e;
                             return (0, r.jsxs)(
                               'tr',
                               {
@@ -192,7 +192,7 @@
                                     children: (0, r.jsx)('code', {
                                       className:
                                         'mr-1 rounded bg-neutral-900 px-1 py-0.5 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900',
-                                      children: d,
+                                      children: t,
                                     }),
                                   }),
                                   (0, r.jsx)('td', {
@@ -200,7 +200,7 @@
                                     children: (0, r.jsx)('code', {
                                       className:
                                         'mr-1 rounded bg-neutral-900 px-1 py-0.5 text-neutral-100 dark:bg-neutral-100 dark:text-neutral-900',
-                                      children: t,
+                                      children: d,
                                     }),
                                   }),
                                 ],
@@ -224,16 +224,16 @@
       s.d(a, { C: () => n });
       var r = s(5640),
         l = s(6921),
-        d = s(8809),
-        t = s(148),
+        t = s(8809),
+        d = s(148),
         i = s(8899);
       let n = (e) => {
         let { id: a = '', emoji: s = '', group: n = '', name: c = '', code: o = '', codeOnly: p = !1 } = e,
-          [x, u] = (0, t.useState)(''),
-          [h, m] = (0, t.useState)(!0);
+          [x, u] = (0, d.useState)(''),
+          [h, m] = (0, d.useState)(!0);
         return (
-          (0, t.useEffect)(() => {
-            u((0, d.A)(window).sanitize(o));
+          (0, d.useEffect)(() => {
+            u((0, t.A)(window).sanitize(o));
           }, [o]),
           (0, r.jsxs)('div', {
             id: a,
@@ -301,9 +301,33 @@
         },
       ]);
     },
+    8899: (e, a, s) => {
+      'use strict';
+      s.d(a, { V: () => i });
+      var r = s(5640),
+        l = s(6921),
+        t = s(148),
+        d = s(2182);
+      let i = (e) => {
+        let { code: a, lang: s } = e,
+          [i, n] = (0, t.useState)('');
+        return (
+          (0, t.useEffect)(() => {
+            (async () => {
+              n(await (0, d.Yz)(a, { lang: s, theme: 'github-dark' }));
+            })();
+          }),
+          (0, r.jsx)('button', {
+            className: 'w-full cursor-pointer overflow-x-auto bg-neutral-900 p-4 text-left',
+            dangerouslySetInnerHTML: { __html: i },
+            onClick: () => (0, l.C)(a),
+          })
+        );
+      };
+    },
   },
   (e) => {
     var a = (a) => e((e.s = a));
-    e.O(0, [6826, 2182, 1190, 3685, 636, 6593, 8792], () => a(7981)), (_N_E = e.O());
+    e.O(0, [6826, 2182, 1190, 431, 636, 6593, 8792], () => a(7981)), (_N_E = e.O());
   },
 ]);

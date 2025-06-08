@@ -6,21 +6,21 @@
       l.r(s), l.d(s, { __N_SSG: () => c, default: () => o });
       var r = l(5640),
         a = l(6260),
-        i = l(5695),
-        t = l(6826),
-        d = l.n(t),
+        t = l(5695),
+        i = l(6826),
+        d = l.n(i),
         n = l(148),
         c = !0;
       let o = (e) => {
         let { utils: s = [] } = e,
-          [{ query: l = '' }, t] = (0, n.useState)({ query: '' }),
+          [{ query: l = '' }, i] = (0, n.useState)({ query: '' }),
           c = s.filter((e) => {
             let { id: s, name: r } = e;
             return s.toLowerCase().includes(l.toLowerCase()) || r.toLowerCase().includes(l.toLowerCase());
           });
-        return (0, r.jsx)(i.U, {
+        return (0, r.jsx)(t.U, {
           query: l,
-          setState: t,
+          setState: i,
           id: 'utils',
           emoji: '\uD83E\uDDF0',
           title: 'atomic/utils',
@@ -43,7 +43,7 @@
                         (0, r.jsx)('div', {
                           className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4',
                           children: c.map((e) => {
-                            let { id: s = '', emoji: l = '', group: a, name: i = '' } = e;
+                            let { id: s = '', emoji: l = '', group: a, name: t = '' } = e;
                             return (0, r.jsx)(
                               d(),
                               {
@@ -59,7 +59,7 @@
                                         className: 'flex flex-col gap-y-0.25',
                                         children: [
                                           (0, r.jsx)('p', { className: 'text-xs capitalize', children: a }),
-                                          (0, r.jsx)('p', { className: 'font-semibold capitalize', children: i }),
+                                          (0, r.jsx)('p', { className: 'font-semibold capitalize', children: t }),
                                         ],
                                       }),
                                     ],
@@ -73,7 +73,7 @@
                         (0, r.jsx)('div', {
                           className: 'flex flex-col gap-y-8',
                           children: c.map((e) => {
-                            let { id: s = '', emoji: l = '', group: i = '', name: t = '', code: d = '' } = e;
+                            let { id: s = '', emoji: l = '', group: t = '', name: i = '', code: d = '' } = e;
                             return (0, r.jsx)(
                               'div',
                               {
@@ -81,8 +81,8 @@
                                 children: (0, r.jsx)(a.C, {
                                   id: s,
                                   emoji: l,
-                                  group: i,
-                                  name: t,
+                                  group: t,
+                                  name: i,
                                   code: d,
                                   codeOnly: !0,
                                 }),
@@ -105,16 +105,16 @@
       l.d(s, { C: () => n });
       var r = l(5640),
         a = l(6921),
-        i = l(8809),
-        t = l(148),
+        t = l(8809),
+        i = l(148),
         d = l(8899);
       let n = (e) => {
         let { id: s = '', emoji: l = '', group: n = '', name: c = '', code: o = '', codeOnly: u = !1 } = e,
-          [p, x] = (0, t.useState)(''),
-          [m, h] = (0, t.useState)(!0);
+          [p, x] = (0, i.useState)(''),
+          [m, h] = (0, i.useState)(!0);
         return (
-          (0, t.useEffect)(() => {
-            x((0, i.A)(window).sanitize(o));
+          (0, i.useEffect)(() => {
+            x((0, t.A)(window).sanitize(o));
           }, [o]),
           (0, r.jsxs)('div', {
             id: s,
@@ -182,9 +182,33 @@
         },
       ]);
     },
+    8899: (e, s, l) => {
+      'use strict';
+      l.d(s, { V: () => d });
+      var r = l(5640),
+        a = l(6921),
+        t = l(148),
+        i = l(2182);
+      let d = (e) => {
+        let { code: s, lang: l } = e,
+          [d, n] = (0, t.useState)('');
+        return (
+          (0, t.useEffect)(() => {
+            (async () => {
+              n(await (0, i.Yz)(s, { lang: l, theme: 'github-dark' }));
+            })();
+          }),
+          (0, r.jsx)('button', {
+            className: 'w-full cursor-pointer overflow-x-auto bg-neutral-900 p-4 text-left',
+            dangerouslySetInnerHTML: { __html: d },
+            onClick: () => (0, a.C)(s),
+          })
+        );
+      };
+    },
   },
   (e) => {
     var s = (s) => e((e.s = s));
-    e.O(0, [6826, 2182, 1190, 3685, 636, 6593, 8792], () => s(6917)), (_N_E = e.O());
+    e.O(0, [6826, 2182, 1190, 431, 636, 6593, 8792], () => s(6917)), (_N_E = e.O());
   },
 ]);
