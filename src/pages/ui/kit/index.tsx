@@ -190,6 +190,7 @@ export const getStaticProps = () => {
     { path: 'feedback/toast/fill', emoji: '🥑', name: 'Toast - Fill' },
     { path: 'feedback/toast/outline', emoji: '🥑', name: 'Toast - Outline' },
     { path: 'form/calendar', emoji: '📅', name: 'Calendar' },
+    { path: 'form/color', emoji: '🎨', name: 'Color' },
     { path: 'form/checkbox', emoji: '☑️', name: 'Checkbox' },
     { path: 'form/input', emoji: '⌨️', name: 'Input' },
     { path: 'form/radio', emoji: '🔘', name: 'Radio' },
