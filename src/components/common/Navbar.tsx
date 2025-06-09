@@ -2,6 +2,7 @@ import { useDarkMode } from '@atomic/hooks/use-dark-mode';
 import { unique } from '@atomic/utils/array/unique';
 import Link from 'next/link';
 import { ChangeEvent, Dispatch, FC, SetStateAction } from 'react';
+import { Toggle } from './Toggle';
 
 type NavbarLink = { group: Group; id: string; emoji: string; href: string; text: string };
 
@@ -98,19 +99,7 @@ export const Navbar: FC<{
           </div>
           <div className="flex items-center gap-x-2 md:gap-x-4">
             <DesktopNavbar links={links} />
-            <label
-              className="relative block h-8 w-14 rounded-full bg-neutral-200 bg-gradient-to-r transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-purple-500 dark:bg-neutral-800 dark:has-checked:from-red-700 dark:has-checked:via-purple-700 dark:has-checked:to-blue-700"
-              aria-label="Toggle dark mode">
-              <input
-                type="checkbox"
-                checked={darkMode}
-                className="peer sr-only"
-                onChange={() => {
-                  toggleDarkMode();
-                }}
-              />
-              <span className="absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-white transition-[inset-inline-start] peer-checked:start-6 dark:bg-neutral-900"></span>
-            </label>
+            <Toggle checked={darkMode} onChange={() => toggleDarkMode()} />
           </div>
         </div>
         {!disabledSearch && (

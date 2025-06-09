@@ -1,6 +1,6 @@
 'use strict';
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [6916],
+  [8880],
   {
     4810: (e, t, r) => {
       r.d(t, { D: () => s });
@@ -29,8 +29,21 @@
         );
       };
     },
-    6916: (e, t, r) => {
-      r.d(t, { l: () => f, U: () => b });
+    7863: (e, t, r) => {
+      r.d(t, { q: () => s });
+      var a = r(5640);
+      let s = () =>
+        (0, a.jsx)('div', {
+          className:
+            'fixed top-0 right-0 bottom-0 left-0 -z-10 m-auto flex w-screen items-center justify-center bg-white dark:bg-neutral-900',
+          children: (0, a.jsx)('div', {
+            className:
+              'aspect-square w-full max-w-xl bg-[radial-gradient(#ffe4ec_0,_transparent_72%)] dark:bg-[radial-gradient(#510424_0,_transparent_72%)]',
+          }),
+        });
+    },
+    8880: (e, t, r) => {
+      r.d(t, { l: () => b, U: () => k });
       var a = r(5640);
       let s = (e) => {
         let { title: t = '' } = e;
@@ -88,8 +101,23 @@
       };
       var o = r(4810);
       let d = (e) => Array.from(new Set(e)),
-        c = { assets: '\uD83D\uDDBC️', react: '⚛️', ui: '\uD83C\uDFA8', utils: '\uD83E\uDDF0' },
-        u = (e) => {
+        c = (e) => {
+          let { checked: t = !1, onChange: r = () => {} } = e;
+          return (0, a.jsxs)('label', {
+            'aria-label': 'Toggle',
+            className:
+              'relative block h-8 w-14 rounded-full bg-neutral-200 bg-gradient-to-r transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:from-red-600 has-checked:via-purple-600 has-checked:to-blue-600 dark:bg-neutral-800 dark:has-checked:from-red-700 dark:has-checked:via-purple-700 dark:has-checked:to-blue-700',
+            children: [
+              (0, a.jsx)('input', { type: 'checkbox', checked: t, className: 'peer sr-only', onChange: r }),
+              (0, a.jsx)('span', {
+                className:
+                  'absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-white transition-[inset-inline-start] peer-checked:start-6 dark:bg-neutral-900',
+              }),
+            ],
+          });
+        },
+        u = { assets: '\uD83D\uDDBC️', react: '⚛️', ui: '\uD83C\uDFA8', utils: '\uD83E\uDDF0' },
+        m = (e) => {
           let { links: t } = e;
           return (0, a.jsx)('div', {
             className: 'inline-block md:hidden',
@@ -130,7 +158,7 @@
             }),
           });
         },
-        m = (e) => {
+        p = (e) => {
           let { links: t = [] } = e,
             r = d(
               t.map((e) => {
@@ -158,7 +186,7 @@
                       type: 'button',
                       className: 'truncate text-sm md:text-base',
                       children: [
-                        null != (t = c[r]) ? t : '',
+                        null != (t = u[r]) ? t : '',
                         ' ',
                         (0, a.jsxs)('span', { className: 'hidden lg:inline', children: [r, ' (', s.length, ')'] }),
                       ],
@@ -186,9 +214,9 @@
             }),
           });
         },
-        p = (e) => {
+        h = (e) => {
           let { emoji: t = '', title: r = '', links: s = [], query: l = '', setState: n, disabledSearch: d = !1 } = e,
-            { darkMode: c = !1, toggleDarkMode: p } = (0, o.D)();
+            { darkMode: u = !1, toggleDarkMode: h } = (0, o.D)();
           return (0, a.jsx)('nav', {
             className: 'border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
             children: (0, a.jsxs)('div', {
@@ -197,7 +225,7 @@
                 (0, a.jsxs)('div', {
                   className: 'flex items-center justify-between gap-x-4',
                   children: [
-                    (0, a.jsx)(u, { links: s }),
+                    (0, a.jsx)(m, { links: s }),
                     (0, a.jsx)('div', {
                       className: 'flex items-center gap-x-4',
                       children: (0, a.jsxs)(i(), {
@@ -216,28 +244,7 @@
                     }),
                     (0, a.jsxs)('div', {
                       className: 'flex items-center gap-x-2 md:gap-x-4',
-                      children: [
-                        (0, a.jsx)(m, { links: s }),
-                        (0, a.jsxs)('label', {
-                          className:
-                            'relative block h-8 w-14 rounded-full bg-neutral-200 bg-gradient-to-r transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-purple-500 dark:bg-neutral-800 dark:has-checked:from-red-700 dark:has-checked:via-purple-700 dark:has-checked:to-blue-700',
-                          'aria-label': 'Toggle dark mode',
-                          children: [
-                            (0, a.jsx)('input', {
-                              type: 'checkbox',
-                              checked: c,
-                              className: 'peer sr-only',
-                              onChange: () => {
-                                p();
-                              },
-                            }),
-                            (0, a.jsx)('span', {
-                              className:
-                                'absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-white transition-[inset-inline-start] peer-checked:start-6 dark:bg-neutral-900',
-                            }),
-                          ],
-                        }),
-                      ],
+                      children: [(0, a.jsx)(p, { links: s }), (0, a.jsx)(c, { checked: u, onChange: () => h() })],
                     }),
                   ],
                 }),
@@ -256,10 +263,10 @@
             }),
           });
         };
-      var h = r(7863),
-        x = r(1668),
-        g = r.n(x);
-      let f = [
+      var x = r(7863),
+        g = r(1668),
+        f = r.n(g);
+      let b = [
           {
             group: 'assets',
             id: 'assets-colors',
@@ -381,7 +388,7 @@
               'A collection of general utility functions and helpers to simplify common programming tasks across projects.',
           },
         ],
-        b = (e) => {
+        k = (e) => {
           var t;
           let {
               disabledSearch: r = !1,
@@ -393,9 +400,9 @@
               description: u = '',
               children: m = (0, a.jsx)(a.Fragment, {}),
             } = e,
-            { emoji: x = d, description: b = u } =
+            { emoji: p = d, description: g = u } =
               null !=
-              (t = f.find((e) => {
+              (t = b.find((e) => {
                 let { id: t = '' } = e;
                 return o === t;
               }))
@@ -403,20 +410,20 @@
                 : { emoji: d, description: u };
           return (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsxs)(g(), {
+              (0, a.jsxs)(f(), {
                 children: [
-                  (0, a.jsxs)('title', { children: [x, ' ', c] }),
-                  (0, a.jsx)('meta', { name: 'description', content: b || u }),
+                  (0, a.jsxs)('title', { children: [p, ' ', c] }),
+                  (0, a.jsx)('meta', { name: 'description', content: g || u }),
                 ],
               }),
-              (0, a.jsx)(h.q, {}),
+              (0, a.jsx)(x.q, {}),
               (0, a.jsxs)('div', {
                 className: 'flex h-screen flex-col text-neutral-900 dark:text-neutral-100',
                 children: [
-                  (0, a.jsx)(p, {
-                    emoji: ''.concat(x || d),
+                  (0, a.jsx)(h, {
+                    emoji: ''.concat(p || d),
                     title: c,
-                    links: f.filter((e) => {
+                    links: b.filter((e) => {
                       let { id: t = '' } = e;
                       return o !== t;
                     }),
@@ -429,7 +436,7 @@
                     children: [
                       (0, a.jsxs)('main', {
                         className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                        children: [(0, a.jsx)(n, { emoji: x || d, title: c, description: b || u }), m],
+                        children: [(0, a.jsx)(n, { emoji: p || d, title: c, description: g || u }), m],
                       }),
                       (0, a.jsx)(s, { title: c }),
                     ],
@@ -439,19 +446,6 @@
             ],
           });
         };
-    },
-    7863: (e, t, r) => {
-      r.d(t, { q: () => s });
-      var a = r(5640);
-      let s = () =>
-        (0, a.jsx)('div', {
-          className:
-            'fixed top-0 right-0 bottom-0 left-0 -z-10 m-auto flex w-screen items-center justify-center bg-white dark:bg-neutral-900',
-          children: (0, a.jsx)('div', {
-            className:
-              'aspect-square w-full max-w-xl bg-[radial-gradient(#ffe4ec_0,_transparent_72%)] dark:bg-[radial-gradient(#510424_0,_transparent_72%)]',
-          }),
-        });
     },
   },
 ]);

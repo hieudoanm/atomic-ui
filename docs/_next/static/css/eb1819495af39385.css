@@ -2143,9 +2143,6 @@
   .has-checked\:bg-orange-600:has(:checked) {
     background-color: var(--color-orange-600);
   }
-  .has-checked\:bg-purple-500:has(:checked) {
-    background-color: var(--color-purple-500);
-  }
   .has-checked\:bg-purple-600:has(:checked) {
     background-color: var(--color-purple-600);
   }
@@ -2154,6 +2151,147 @@
   }
   .has-checked\:bg-yellow-600:has(:checked) {
     background-color: var(--color-yellow-600);
+  }
+  .has-checked\:from-cyan-600:has(:checked) {
+    --tw-gradient-from: var(--color-cyan-600);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .has-checked\:from-green-600:has(:checked) {
+    --tw-gradient-from: var(--color-green-600);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .has-checked\:from-indigo-600:has(:checked) {
+    --tw-gradient-from: var(--color-indigo-600);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .has-checked\:from-pink-600:has(:checked) {
+    --tw-gradient-from: var(--color-pink-600);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .has-checked\:from-red-600:has(:checked) {
+    --tw-gradient-from: var(--color-red-600);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .has-checked\:from-yellow-600:has(:checked) {
+    --tw-gradient-from: var(--color-yellow-600);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .has-checked\:via-amber-600:has(:checked) {
+    --tw-gradient-via: var(--color-amber-600);
+    --tw-gradient-via-stops:
+      var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .has-checked\:via-emerald-600:has(:checked) {
+    --tw-gradient-via: var(--color-emerald-600);
+    --tw-gradient-via-stops:
+      var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .has-checked\:via-purple-600:has(:checked) {
+    --tw-gradient-via: var(--color-purple-600);
+    --tw-gradient-via-stops:
+      var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .has-checked\:via-rose-600:has(:checked) {
+    --tw-gradient-via: var(--color-rose-600);
+    --tw-gradient-via-stops:
+      var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .has-checked\:via-sky-600:has(:checked) {
+    --tw-gradient-via: var(--color-sky-600);
+    --tw-gradient-via-stops:
+      var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .has-checked\:via-violet-600:has(:checked) {
+    --tw-gradient-via: var(--color-violet-600);
+    --tw-gradient-via-stops:
+      var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .has-checked\:to-blue-600:has(:checked) {
+    --tw-gradient-to: var(--color-blue-600);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .has-checked\:to-orange-600:has(:checked) {
+    --tw-gradient-to: var(--color-orange-600);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .has-checked\:to-purple-600:has(:checked) {
+    --tw-gradient-to: var(--color-purple-600);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .has-checked\:to-red-600:has(:checked) {
+    --tw-gradient-to: var(--color-red-600);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .has-checked\:to-teal-600:has(:checked) {
+    --tw-gradient-to: var(--color-teal-600);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
   }
   @media (min-width: 40rem) {
     .sm\:grid-cols-3 {
@@ -2821,6 +2959,42 @@
   .dark\:has-checked\:bg-yellow-700:where(.dark, .dark *):has(:checked) {
     background-color: var(--color-yellow-700);
   }
+  .dark\:has-checked\:from-cyan-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-from: var(--color-cyan-700);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .dark\:has-checked\:from-green-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-from: var(--color-green-700);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .dark\:has-checked\:from-indigo-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-from: var(--color-indigo-700);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .dark\:has-checked\:from-pink-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-from: var(--color-pink-700);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
   .dark\:has-checked\:from-red-700:where(.dark, .dark *):has(:checked) {
     --tw-gradient-from: var(--color-red-700);
     --tw-gradient-stops: var(
@@ -2830,6 +3004,29 @@
       var(--tw-gradient-to) var(--tw-gradient-to-position)
     );
   }
+  .dark\:has-checked\:from-yellow-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-from: var(--color-yellow-700);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .dark\:has-checked\:via-amber-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-via: var(--color-amber-700);
+    --tw-gradient-via-stops:
+      var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .dark\:has-checked\:via-emerald-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-via: var(--color-emerald-700);
+    --tw-gradient-via-stops:
+      var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
   .dark\:has-checked\:via-purple-700:where(.dark, .dark *):has(:checked) {
     --tw-gradient-via: var(--color-purple-700);
     --tw-gradient-via-stops:
@@ -2837,8 +3034,65 @@
       var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-via-stops);
   }
+  .dark\:has-checked\:via-rose-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-via: var(--color-rose-700);
+    --tw-gradient-via-stops:
+      var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .dark\:has-checked\:via-sky-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-via: var(--color-sky-700);
+    --tw-gradient-via-stops:
+      var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .dark\:has-checked\:via-violet-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-via: var(--color-violet-700);
+    --tw-gradient-via-stops:
+      var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
   .dark\:has-checked\:to-blue-700:where(.dark, .dark *):has(:checked) {
     --tw-gradient-to: var(--color-blue-700);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .dark\:has-checked\:to-orange-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-to: var(--color-orange-700);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .dark\:has-checked\:to-purple-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-to: var(--color-purple-700);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .dark\:has-checked\:to-red-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-to: var(--color-red-700);
+    --tw-gradient-stops: var(
+      --tw-gradient-via-stops,
+      var(--tw-gradient-position),
+      var(--tw-gradient-from) var(--tw-gradient-from-position),
+      var(--tw-gradient-to) var(--tw-gradient-to-position)
+    );
+  }
+  .dark\:has-checked\:to-teal-700:where(.dark, .dark *):has(:checked) {
+    --tw-gradient-to: var(--color-teal-700);
     --tw-gradient-stops: var(
       --tw-gradient-via-stops,
       var(--tw-gradient-position),
