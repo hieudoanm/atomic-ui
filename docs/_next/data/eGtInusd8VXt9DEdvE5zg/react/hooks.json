@@ -72,6 +72,20 @@
         "code": "import { useState, useEffect } from 'react';\n\ninterface ScreenSize {\n  width: number;\n  height: number;\n}\n\nexport const useScreen = (): ScreenSize => {\n  const [size, setSize] = useState<ScreenSize>({\n    width: window.innerWidth,\n    height: window.innerHeight,\n  });\n\n  useEffect(() => {\n    const onResize = () => setSize({ width: window.innerWidth, height: window.innerHeight });\n\n    window.addEventListener('resize', onResize);\n\n    return () => window.removeEventListener('resize', onResize);\n  }, []);\n\n  return size;\n};\n"
       },
       {
+        "id": "navigator-use-bluetooth",
+        "group": "navigator",
+        "name": "useBluetooth",
+        "emoji": "📶",
+        "code": "import { useState } from 'react';\n\nexport const useBluetooth = () => {\n  const [device, setDevice] = useState<BluetoothDevice | null>(null);\n  const [error, setError] = useState<string | null>(null);\n\n  const requestBluetoothDevice = async () => {\n    try {\n      const selectedDevice = await navigator.bluetooth.requestDevice({\n        acceptAllDevices: true,\n        optionalServices: ['battery_service'],\n      });\n      setDevice(selectedDevice);\n    } catch (err) {\n      console.error(err);\n      setError('Bluetooth device request failed');\n    }\n  };\n\n  return { device, requestBluetoothDevice, error };\n};\n"
+      },
+      {
+        "id": "navigator-use-camera",
+        "group": "navigator",
+        "name": "useCamera",
+        "emoji": "📷",
+        "code": "import { useEffect, useRef, useState } from 'react';\n\nexport const useCamera = () => {\n  const videoRef = useRef<HTMLVideoElement | null>(null);\n  const [stream, setStream] = useState<MediaStream | null>(null);\n  const [error, setError] = useState<string | null>(null);\n\n  useEffect(() => {\n    const startCamera = async () => {\n      try {\n        const mediaStream = await navigator.mediaDevices.getUserMedia({ video: true });\n        setStream(mediaStream);\n        if (videoRef.current) {\n          videoRef.current.srcObject = mediaStream;\n        }\n      } catch (err) {\n        console.error(err);\n        setError('Camera access denied or not available');\n      }\n    };\n\n    startCamera();\n\n    return () => {\n      stream?.getTracks().forEach((track) => track.stop());\n    };\n  }, []);\n\n  return { videoRef, stream, error };\n};\n"
+      },
+      {
         "id": "navigator-use-clipboard",
         "group": "navigator",
         "name": "useClipboard",

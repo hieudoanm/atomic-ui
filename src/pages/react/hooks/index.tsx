@@ -87,6 +87,8 @@ export const getStaticProps = () => {
     { path: 'info/use-browser', emoji: '🌐', name: 'useBrowser' },
     { path: 'info/use-language', emoji: '🈯', name: 'useLanguage' },
     { path: 'info/use-screen', emoji: '🖥️', name: 'useScreen' },
+    { path: 'navigator/use-bluetooth', emoji: '📶', name: 'useBluetooth' },
+    { path: 'navigator/use-camera', emoji: '📷', name: 'useCamera' },
     { path: 'navigator/use-clipboard', emoji: '📋', name: 'useClipboard' },
     { path: 'navigator/use-geolocation', emoji: '📍', name: 'useGeolocation' },
     { path: 'network/use-online', emoji: '📶', name: 'useOnline' },
