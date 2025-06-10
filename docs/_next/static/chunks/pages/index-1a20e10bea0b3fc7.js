@@ -38,7 +38,7 @@
                     children: 'Supercharge your Web App with Atomic Code',
                   }),
                   (0, a.jsx)('div', {
-                    className: 'grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-16',
+                    className: 'grid grid-cols-1 gap-8 md:grid-cols-4 md:gap-16',
                     children: l.l.map((e) => {
                       let { href: t = '', emoji: s = '', full: l = '', description: c = '' } = e;
                       return (0, a.jsxs)(

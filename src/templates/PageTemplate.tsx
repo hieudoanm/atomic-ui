@@ -134,10 +134,20 @@ export const NAVBAR_LINKS: {
     description: 'Pre-designed UI templates that speed up development by providing ready-made layouts and styles.',
   },
   {
-    group: 'utils',
-    id: 'utils',
+    group: 'tools',
+    id: 'tools-logger',
+    emoji: '📝',
+    href: '/tools/log',
+    text: 'Logger',
+    full: 'Logger',
+    description:
+      'Tools and utilities for application logging, debugging, and diagnostics to help track application behavior and errors.',
+  },
+  {
+    group: 'tools',
+    id: 'tools-utils',
     emoji: '🧰',
-    href: '/utils',
+    href: '/tools/utils',
     text: 'Utils',
     full: 'Utilities',
     description:

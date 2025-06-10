@@ -6,9 +6,8 @@ import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { useState } from 'react';
 
-const NODE_ENV = process.env.NODE_ENV ?? 'development';
-const devPath = NODE_ENV === 'development' ? '../../../..' : '../../..';
-const __dirname = join(dirname(__filename), devPath);
+const DEV_PATH = '../../../..';
+const __dirname = join(dirname(__filename), DEV_PATH);
 
 type Util = { id: string; name: string; group: string; emoji: string; code: string };
 
@@ -23,7 +22,7 @@ const UtilsPage: NextPage<{ utils: Util[] }> = ({ utils = [] }) => {
     <PageTemplate
       query={query}
       setState={setState}
-      id="utils"
+      id="tools-utils"
       emoji="🧰"
       title="atomic/utils"
       description="is a free set of reusable utility functions designed to simplify common tasks and improve code efficiency and maintainability.">

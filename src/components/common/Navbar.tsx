@@ -6,9 +6,9 @@ import { Toggle } from './Toggle';
 
 type NavbarLink = { group: Group; id: string; emoji: string; href: string; text: string };
 
-export type Group = 'assets' | 'react' | 'ui' | 'utils';
+export type Group = 'assets' | 'react' | 'ui' | 'tools';
 
-const groupEmojis: Record<Group, string> = { assets: '🖼️', react: '⚛️', ui: '🎨', utils: '🧰' };
+const groupEmojis: Record<Group, string> = { assets: '🖼️', react: '⚛️', ui: '🎨', tools: '🧰' };
 
 const MobileNavbar: FC<{ links: NavbarLink[] }> = ({ links }) => {
   return (

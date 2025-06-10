@@ -7021,7 +7021,7 @@
               id: 'material-theme-lighter',
               displayName: 'Material Theme Lighter',
               type: 'light',
-              import: () => n.e(5579).then(n.bind(n, 5579)),
+              import: () => n.e(7960).then(n.bind(n, 5579)),
             },
             {
               id: 'material-theme-ocean',

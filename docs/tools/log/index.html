@@ -4,10 +4,10 @@
     <meta charset="utf-8" data-next-head="" />
     <meta name="viewport" content="width=device-width" data-next-head="" />
     <link rel="icon" href="/atomic/favicon.ico" type="image/x-icon" data-next-head="" />
-    <title data-next-head="">🧭 atomic/router</title>
+    <title data-next-head="">📝 atomic/logger</title>
     <meta
       name="description"
-      content="A custom React Router implementation using Context API and hooks to manage client-side navigation without external libraries."
+      content="Tools and utilities for application logging, debugging, and diagnostics to help track application behavior and errors."
       data-next-head="" />
     <meta name="theme-color" content="#171717" />
     <meta name="apple-mobile-web-app-title" content="Atomic" />
@@ -38,7 +38,7 @@
     <script src="/atomic/_next/static/chunks/6826-1b8246ce82a5e8e9.js" defer=""></script>
     <script src="/atomic/_next/static/chunks/7382-f85a3a16afd36344.js" defer=""></script>
     <script src="/atomic/_next/static/chunks/8880-73643027b82f9fb9.js" defer=""></script>
-    <script src="/atomic/_next/static/chunks/pages/react/router-1ba3eca2900cf57f.js" defer=""></script>
+    <script src="/atomic/_next/static/chunks/pages/tools/log-2763ba5bbe6b0473.js" defer=""></script>
     <script src="/atomic/_next/static/FC9U19i1jN1FlOMdbT5Ff/_buildManifest.js" defer=""></script>
     <script src="/atomic/_next/static/FC9U19i1jN1FlOMdbT5Ff/_ssgManifest.js" defer=""></script>
   </head>
@@ -98,6 +98,11 @@
                         <!-- -->Hooks</a
                       ><a
                         class="block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                        href="/atomic/react/router/"
+                        >🧭<!-- -->
+                        <!-- -->Router</a
+                      ><a
+                        class="block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800"
                         href="/atomic/react/virtual-table/"
                         >📋<!-- -->
                         <!-- -->Virtual Table</a
@@ -123,11 +128,6 @@
                         <!-- -->Templates</a
                       ><a
                         class="block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                        href="/atomic/tools/log/"
-                        >📝<!-- -->
-                        <!-- -->Logger</a
-                      ><a
-                        class="block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800"
                         href="/atomic/tools/utils/"
                         >🧰<!-- -->
                         <!-- -->Utils</a
@@ -137,10 +137,10 @@
                 </div>
                 <div class="flex items-center gap-x-4">
                   <a class="truncate text-lg font-bold md:text-xl" href="/atomic/"
-                    >🧭<!-- -->
+                    >📝<!-- -->
                     <span
                       class="bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent dark:from-red-700 dark:via-purple-700 dark:to-blue-700"
-                      >atomic/router</span
+                      >atomic/logger</span
                     ></a
                   >
                 </div>
@@ -184,7 +184,7 @@
                         ⚛️<!-- -->
                         <span class="hidden lg:inline"
                           >react<!-- -->
-                          (<!-- -->3<!-- -->)</span
+                          (<!-- -->4<!-- -->)</span
                         >
                       </button>
                       <div
@@ -199,6 +199,11 @@
                           href="/atomic/react/hooks/"
                           >🪝<!-- -->
                           <!-- -->Hooks</a
+                        ><a
+                          class="block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                          href="/atomic/react/router/"
+                          >🧭<!-- -->
+                          <!-- -->Router</a
                         ><a
                           class="block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800"
                           href="/atomic/react/virtual-table/"
@@ -245,17 +250,12 @@
                         🧰<!-- -->
                         <span class="hidden lg:inline"
                           >tools<!-- -->
-                          (<!-- -->2<!-- -->)</span
+                          (<!-- -->1<!-- -->)</span
                         >
                       </button>
                       <div
                         class="invisible absolute right-0 z-50 mt-2 w-48 origin-top-right scale-95 transform rounded-md border border-neutral-200 bg-white p-1 text-sm opacity-0 shadow-lg transition-all group-hover:visible group-hover:scale-100 group-hover:opacity-100 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-100">
                         <a
-                          class="block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                          href="/atomic/tools/log/"
-                          >📝<!-- -->
-                          <!-- -->Logger</a
-                        ><a
                           class="block rounded px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800"
                           href="/atomic/tools/utils/"
                           >🧰<!-- -->
@@ -280,16 +280,16 @@
                 <div class="container mx-auto px-8">
                   <div class="flex flex-col items-center justify-center gap-y-4 md:gap-y-8">
                     <h1 class="text-4xl font-black whitespace-nowrap md:text-5xl">
-                      🧭<!-- -->
+                      📝<!-- -->
                       <span
                         class="bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 bg-clip-text text-transparent dark:from-red-700 dark:via-purple-700 dark:to-blue-700"
-                        >atomic/router</span
+                        >atomic/logger</span
                       >
                     </h1>
                     <div class="flex w-full max-w-xl flex-col gap-y-4 text-center md:gap-y-8">
                       <p class="text-neutral-900 dark:text-neutral-100">
-                        A custom React Router implementation using Context API and hooks to manage client-side
-                        navigation without external libraries.
+                        Tools and utilities for application logging, debugging, and diagnostics to help track
+                        application behavior and errors.
                       </p>
                     </div>
                     <a target="_blank" href="https://github.com/hieudoanm/atomic"
@@ -306,10 +306,10 @@
                   <div class="flex flex-col gap-y-4 md:gap-y-8">
                     <div class="flex items-center justify-between gap-x-2">
                       <div class="flex items-center gap-x-2">
-                        <span class="text-4xl">🧭</span>
+                        <span class="text-4xl">📝</span>
                         <div>
-                          <p class="text-xs capitalize">React</p>
-                          <h3 class="text-xl font-bold capitalize md:text-2xl">Router</h3>
+                          <p class="text-xs capitalize">Tools</p>
+                          <h3 class="text-xl font-bold capitalize md:text-2xl">Logger</h3>
                         </div>
                       </div>
                       <button
@@ -331,7 +331,7 @@
                 <p class="text-center">
                   ©
                   <!-- -->2025<!-- -->
-                  ⚛️ <strong>atomic/router</strong>
+                  ⚛️ <strong>atomic/logger</strong>
                 </p>
               </div>
             </footer>
@@ -343,11 +343,11 @@
       {
         "props": {
           "pageProps": {
-            "code": "import React, { createContext, useContext, useEffect, useState, ReactNode, useMemo } from 'react';\n\ninterface RouterContextType {\n  path: string;\n  navigate: (to: string) =\u003e void;\n}\n\nconst RouterContext = createContext\u003cRouterContextType | undefined\u003e(undefined);\n\ninterface RouterProps {\n  children: ReactNode;\n}\n\nexport const Router: React.FC\u003cRouterProps\u003e = ({ children }) =\u003e {\n  const [path, setPath] = useState\u003cstring\u003e(window.location.pathname);\n\n  useEffect(() =\u003e {\n    const handlePop = () =\u003e setPath(window.location.pathname);\n    window.addEventListener('popstate', handlePop);\n    return () =\u003e window.removeEventListener('popstate', handlePop);\n  }, []);\n\n  const navigate = (to: string) =\u003e {\n    window.history.pushState({}, '', to);\n    setPath(to);\n  };\n\n  // useMemo to memoize the context value object\n  const contextValue = useMemo(() =\u003e ({ path, navigate }), [path]);\n\n  return \u003cRouterContext.Provider value={contextValue}\u003e{children}\u003c/RouterContext.Provider\u003e;\n};\n\ninterface RouteProps {\n  path: string;\n  component: ReactNode;\n}\n\nexport const Route: React.FC\u003cRouteProps\u003e = ({ path, component }) =\u003e {\n  const context = useContext(RouterContext);\n  if (!context) throw new Error('Route must be used within a Router');\n\n  return context.path === path ? \u003c\u003e{component}\u003c/\u003e : null;\n};\n\ninterface LinkProps {\n  to: string;\n  children: ReactNode;\n}\n\nexport const Link: React.FC\u003cLinkProps\u003e = ({ to, children }) =\u003e {\n  const context = useContext(RouterContext);\n  if (!context) throw new Error('Link must be used within a Router');\n\n  const handleClick = (e: React.MouseEvent\u003cHTMLAnchorElement\u003e) =\u003e {\n    e.preventDefault();\n    context.navigate(to);\n  };\n\n  return (\n    \u003ca href={to} onClick={handleClick}\u003e\n      {children}\n    \u003c/a\u003e\n  );\n};\n"
+            "code": "type LogLevel = 'debug' | 'info' | 'warn' | 'error';\n\ninterface LoggerConfig {\n  level?: LogLevel;\n  timestamp?: boolean;\n}\n\nconst levelColors: Record\u003cLogLevel, string\u003e = {\n  debug: '\\x1b[36m', // cyan\n  info: '\\x1b[32m', // green\n  warn: '\\x1b[33m', // yellow\n  error: '\\x1b[31m', // red\n};\n\nconst levelOrder: Record\u003cLogLevel, number\u003e = {\n  debug: 0,\n  info: 1,\n  warn: 2,\n  error: 3,\n};\n\nconst resetColor = '\\x1b[0m';\n\nexport const createLogger = (config: LoggerConfig = {}) =\u003e {\n  const level = config.level ?? 'info';\n  const timestamp = config.timestamp ?? true;\n\n  const shouldLog = (msgLevel: LogLevel) =\u003e levelOrder[msgLevel] \u003e= levelOrder[level];\n\n  const formatMessage = (msgLevel: LogLevel, message: string, context?: string): string =\u003e {\n    const color = levelColors[msgLevel];\n    const timeStr = timestamp ? `[${new Date().toISOString()}] ` : '';\n    const contextStr = context ? `[${context}] ` : '';\n    return `${color}${timeStr}${contextStr}${msgLevel.toUpperCase()}: ${message}${resetColor}`;\n  };\n\n  const log = (msgLevel: LogLevel, message: string, context?: string) =\u003e {\n    if (!shouldLog(msgLevel)) return;\n    console.log(formatMessage(msgLevel, message, context));\n  };\n\n  return {\n    debug: (msg: string, ctx?: string) =\u003e log('debug', msg, ctx),\n    info: (msg: string, ctx?: string) =\u003e log('info', msg, ctx),\n    warn: (msg: string, ctx?: string) =\u003e log('warn', msg, ctx),\n    error: (msg: string, ctx?: string) =\u003e log('error', msg, ctx),\n  };\n};\n"
           },
           "__N_SSG": true
         },
-        "page": "/react/router",
+        "page": "/tools/log",
         "query": {},
         "buildId": "FC9U19i1jN1FlOMdbT5Ff",
         "assetPrefix": "/atomic",

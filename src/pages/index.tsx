@@ -18,7 +18,7 @@ const HomePage: NextPage = () => {
             <h2 className="text-center text-2xl font-extrabold md:text-3xl md:font-black">
               Supercharge your Web App with Atomic Code
             </h2>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-16">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-4 md:gap-16">
               {NAVBAR_LINKS.map(({ href = '', emoji = '', full = '', description = '' }) => {
                 return (
                   <div key={href} className="col-span-1 flex flex-col gap-y-2">

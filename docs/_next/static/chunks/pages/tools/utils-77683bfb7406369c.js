@@ -1,7 +1,103 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [2807],
+  [5579],
   {
-    1236: (e, s, l) => {
+    5405: (e, s, l) => {
+      (window.__NEXT_P = window.__NEXT_P || []).push([
+        '/tools/utils',
+        function () {
+          return l(8344);
+        },
+      ]);
+    },
+    6260: (e, s, l) => {
+      'use strict';
+      l.d(s, { C: () => n });
+      var r = l(5640),
+        t = l(6921),
+        a = l(8809),
+        i = l(148),
+        d = l(8899);
+      let n = (e) => {
+        let { id: s = '', emoji: l = '', group: n = '', name: o = '', code: c = '', codeOnly: u = !1 } = e,
+          [p, x] = (0, i.useState)(''),
+          [h, m] = (0, i.useState)(!0);
+        return (
+          (0, i.useEffect)(() => {
+            x((0, a.A)(window).sanitize(c));
+          }, [c]),
+          (0, r.jsxs)('div', {
+            id: s,
+            className: 'flex flex-col gap-y-4 md:gap-y-8',
+            children: [
+              (0, r.jsxs)('div', {
+                className: 'flex items-center justify-between gap-x-2',
+                children: [
+                  (0, r.jsxs)('div', {
+                    className: 'flex items-center gap-x-2',
+                    children: [
+                      (0, r.jsx)('span', { className: 'text-4xl', children: l }),
+                      (0, r.jsxs)('div', {
+                        children: [
+                          (0, r.jsx)('p', { className: 'text-xs capitalize', children: n }),
+                          (0, r.jsx)('h3', { className: 'text-xl font-bold md:text-2xl', children: o }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, r.jsxs)('div', {
+                    className: 'flex items-center gap-x-2',
+                    children: [
+                      u &&
+                        (0, r.jsx)('button', {
+                          type: 'button',
+                          className:
+                            'cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow transition duration-200 hover:bg-purple-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-purple-700 dark:shadow-neutral-100/10 dark:hover:bg-purple-600',
+                          onClick: () => (0, t.C)(c),
+                          children: 'Copy',
+                        }),
+                      !u &&
+                        (0, r.jsx)('button', {
+                          type: 'button',
+                          className:
+                            'cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow transition duration-200 hover:bg-purple-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-purple-700 dark:shadow-neutral-100/10 dark:hover:bg-purple-600',
+                          onClick: () => m((e) => !e),
+                          children: h ? 'Preview' : 'Code',
+                        }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, r.jsx)('div', {
+                className:
+                  'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+                children: u
+                  ? (0, r.jsx)(d.V, { code: c, lang: 'tsx' })
+                  : (0, r.jsx)(r.Fragment, {
+                      children: h
+                        ? (0, r.jsx)('div', { className: 'w-full p-4 md:p-8', dangerouslySetInnerHTML: { __html: p } })
+                        : (0, r.jsx)(d.V, { code: c, lang: 'html' }),
+                    }),
+              }),
+            ],
+          })
+        );
+      };
+    },
+    6921: (e, s, l) => {
+      'use strict';
+      l.d(s, { C: () => r });
+      let r = (e) => {
+        navigator.clipboard
+          .writeText(e)
+          .then(() => {
+            alert('Copied to clipboard!');
+          })
+          .catch((e) => {
+            console.error('Failed to copy: ', e);
+          });
+      };
+    },
+    8344: (e, s, l) => {
       'use strict';
       l.r(s), l.d(s, { __N_SSG: () => o, default: () => c });
       var r = l(5640),
@@ -21,7 +117,7 @@
         return (0, r.jsx)(a.U, {
           query: l,
           setState: i,
-          id: 'utils',
+          id: 'tools-utils',
           emoji: '\uD83E\uDDF0',
           title: 'atomic/utils',
           description:
@@ -100,102 +196,6 @@
         });
       };
     },
-    6260: (e, s, l) => {
-      'use strict';
-      l.d(s, { C: () => n });
-      var r = l(5640),
-        t = l(6921),
-        a = l(8809),
-        i = l(148),
-        d = l(8899);
-      let n = (e) => {
-        let { id: s = '', emoji: l = '', group: n = '', name: o = '', code: c = '', codeOnly: u = !1 } = e,
-          [p, x] = (0, i.useState)(''),
-          [h, m] = (0, i.useState)(!0);
-        return (
-          (0, i.useEffect)(() => {
-            x((0, a.A)(window).sanitize(c));
-          }, [c]),
-          (0, r.jsxs)('div', {
-            id: s,
-            className: 'flex flex-col gap-y-4 md:gap-y-8',
-            children: [
-              (0, r.jsxs)('div', {
-                className: 'flex items-center justify-between gap-x-2',
-                children: [
-                  (0, r.jsxs)('div', {
-                    className: 'flex items-center gap-x-2',
-                    children: [
-                      (0, r.jsx)('span', { className: 'text-4xl', children: l }),
-                      (0, r.jsxs)('div', {
-                        children: [
-                          (0, r.jsx)('p', { className: 'text-xs capitalize', children: n }),
-                          (0, r.jsx)('h3', { className: 'text-xl font-bold md:text-2xl', children: o }),
-                        ],
-                      }),
-                    ],
-                  }),
-                  (0, r.jsxs)('div', {
-                    className: 'flex items-center gap-x-2',
-                    children: [
-                      u &&
-                        (0, r.jsx)('button', {
-                          type: 'button',
-                          className:
-                            'cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow transition duration-200 hover:bg-purple-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-purple-700 dark:shadow-neutral-100/10 dark:hover:bg-purple-600',
-                          onClick: () => (0, t.C)(c),
-                          children: 'Copy',
-                        }),
-                      !u &&
-                        (0, r.jsx)('button', {
-                          type: 'button',
-                          className:
-                            'cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow transition duration-200 hover:bg-purple-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-purple-700 dark:shadow-neutral-100/10 dark:hover:bg-purple-600',
-                          onClick: () => m((e) => !e),
-                          children: h ? 'Preview' : 'Code',
-                        }),
-                    ],
-                  }),
-                ],
-              }),
-              (0, r.jsx)('div', {
-                className:
-                  'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-                children: u
-                  ? (0, r.jsx)(d.V, { code: c, lang: 'tsx' })
-                  : (0, r.jsx)(r.Fragment, {
-                      children: h
-                        ? (0, r.jsx)('div', { className: 'w-full p-4 md:p-8', dangerouslySetInnerHTML: { __html: p } })
-                        : (0, r.jsx)(d.V, { code: c, lang: 'html' }),
-                    }),
-              }),
-            ],
-          })
-        );
-      };
-    },
-    6917: (e, s, l) => {
-      (window.__NEXT_P = window.__NEXT_P || []).push([
-        '/utils',
-        function () {
-          return l(1236);
-        },
-      ]);
-    },
-    6921: (e, s, l) => {
-      'use strict';
-      l.d(s, { C: () => r });
-      let r = (e) => {
-        navigator.clipboard
-          .writeText(e)
-          .then(() => {
-            alert('Copied to clipboard!');
-          })
-          .catch((e) => {
-            console.error('Failed to copy: ', e);
-          });
-      };
-    },
     8899: (e, s, l) => {
       'use strict';
       l.d(s, { V: () => d });
@@ -223,6 +223,6 @@
   },
   (e) => {
     var s = (s) => e((e.s = s));
-    e.O(0, [6826, 7382, 8809, 8880, 636, 6593, 8792], () => s(6917)), (_N_E = e.O());
+    e.O(0, [6826, 7382, 8809, 8880, 636, 6593, 8792], () => s(5405)), (_N_E = e.O());
   },
 ]);

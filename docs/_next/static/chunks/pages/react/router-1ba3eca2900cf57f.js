@@ -59,7 +59,7 @@
         let { code: t = '' } = e;
         return (0, a.jsx)(l.U, {
           disabledSearch: !0,
-          query: 'query',
+          query: '',
           setState: () => {},
           id: 'react-router',
           emoji: '\uD83E\uDDED',

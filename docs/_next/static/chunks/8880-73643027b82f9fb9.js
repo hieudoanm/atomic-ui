@@ -60,7 +60,7 @@
       };
       var l = r(6826),
         i = r.n(l);
-      let n = (e) => {
+      let o = (e) => {
         let { emoji: t = '', title: r = '', description: s = '' } = e;
         return (0, a.jsx)('section', {
           className: 'py-8 md:py-16',
@@ -99,7 +99,7 @@
           }),
         });
       };
-      var o = r(4810);
+      var n = r(4810);
       let d = (e) => Array.from(new Set(e)),
         c = (e) => {
           let { checked: t = !1, onChange: r = () => {} } = e;
@@ -116,8 +116,8 @@
             ],
           });
         },
-        u = { assets: '\uD83D\uDDBC️', react: '⚛️', ui: '\uD83C\uDFA8', utils: '\uD83E\uDDF0' },
-        m = (e) => {
+        u = { assets: '\uD83D\uDDBC️', react: '⚛️', ui: '\uD83C\uDFA8', tools: '\uD83E\uDDF0' },
+        p = (e) => {
           let { links: t } = e;
           return (0, a.jsx)('div', {
             className: 'inline-block md:hidden',
@@ -158,7 +158,7 @@
             }),
           });
         },
-        p = (e) => {
+        m = (e) => {
           let { links: t = [] } = e,
             r = d(
               t.map((e) => {
@@ -215,8 +215,8 @@
           });
         },
         h = (e) => {
-          let { emoji: t = '', title: r = '', links: s = [], query: l = '', setState: n, disabledSearch: d = !1 } = e,
-            { darkMode: u = !1, toggleDarkMode: h } = (0, o.D)();
+          let { emoji: t = '', title: r = '', links: s = [], query: l = '', setState: o, disabledSearch: d = !1 } = e,
+            { darkMode: u = !1, toggleDarkMode: h } = (0, n.D)();
           return (0, a.jsx)('nav', {
             className: 'border-b border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
             children: (0, a.jsxs)('div', {
@@ -225,7 +225,7 @@
                 (0, a.jsxs)('div', {
                   className: 'flex items-center justify-between gap-x-4',
                   children: [
-                    (0, a.jsx)(m, { links: s }),
+                    (0, a.jsx)(p, { links: s }),
                     (0, a.jsx)('div', {
                       className: 'flex items-center gap-x-4',
                       children: (0, a.jsxs)(i(), {
@@ -244,7 +244,7 @@
                     }),
                     (0, a.jsxs)('div', {
                       className: 'flex items-center gap-x-2 md:gap-x-4',
-                      children: [(0, a.jsx)(p, { links: s }), (0, a.jsx)(c, { checked: u, onChange: () => h() })],
+                      children: [(0, a.jsx)(m, { links: s }), (0, a.jsx)(c, { checked: u, onChange: () => h() })],
                     }),
                   ],
                 }),
@@ -256,16 +256,16 @@
                     className:
                       'w-full rounded-lg border border-neutral-200 px-4 py-2 shadow focus:outline-none dark:border-neutral-800 dark:shadow-neutral-100/10',
                     onChange: (e) => {
-                      n((t) => ({ ...t, query: e.target.value }));
+                      o((t) => ({ ...t, query: e.target.value }));
                     },
                   }),
               ],
             }),
           });
         };
-      var x = r(7863),
-        g = r(1668),
-        f = r.n(g);
+      var g = r(7863),
+        x = r(1668),
+        f = r.n(x);
       let b = [
           {
             group: 'assets',
@@ -388,10 +388,20 @@
               'Pre-designed UI templates that speed up development by providing ready-made layouts and styles.',
           },
           {
-            group: 'utils',
-            id: 'utils',
+            group: 'tools',
+            id: 'tools-logger',
+            emoji: '\uD83D\uDCDD',
+            href: '/tools/log',
+            text: 'Logger',
+            full: 'Logger',
+            description:
+              'Tools and utilities for application logging, debugging, and diagnostics to help track application behavior and errors.',
+          },
+          {
+            group: 'tools',
+            id: 'tools-utils',
             emoji: '\uD83E\uDDF0',
-            href: '/utils',
+            href: '/tools/utils',
             text: 'Utils',
             full: 'Utilities',
             description:
@@ -404,39 +414,39 @@
               disabledSearch: r = !1,
               query: l = '',
               setState: i = () => {},
-              id: o = '',
+              id: n = '',
               emoji: d = '',
               title: c = '',
               description: u = '',
-              children: m = (0, a.jsx)(a.Fragment, {}),
+              children: p = (0, a.jsx)(a.Fragment, {}),
             } = e,
-            { emoji: p = d, description: g = u } =
+            { emoji: m = d, description: x = u } =
               null !=
               (t = b.find((e) => {
                 let { id: t = '' } = e;
-                return o === t;
+                return n === t;
               }))
                 ? t
                 : { emoji: d, description: u },
-            k = ''.concat(p, ' ').concat(c);
+            k = ''.concat(m, ' ').concat(c);
           return (0, a.jsxs)(a.Fragment, {
             children: [
               (0, a.jsxs)(f(), {
                 children: [
                   (0, a.jsx)('title', { children: k }),
-                  (0, a.jsx)('meta', { name: 'description', content: g || u }),
+                  (0, a.jsx)('meta', { name: 'description', content: x || u }),
                 ],
               }),
-              (0, a.jsx)(x.q, {}),
+              (0, a.jsx)(g.q, {}),
               (0, a.jsxs)('div', {
                 className: 'flex h-screen flex-col text-neutral-900 dark:text-neutral-100',
                 children: [
                   (0, a.jsx)(h, {
-                    emoji: ''.concat(p || d),
+                    emoji: ''.concat(m || d),
                     title: c,
                     links: b.filter((e) => {
                       let { id: t = '' } = e;
-                      return o !== t;
+                      return n !== t;
                     }),
                     disabledSearch: r,
                     query: l,
@@ -447,7 +457,7 @@
                     children: [
                       (0, a.jsxs)('main', {
                         className: 'divide-y divide-neutral-200 dark:divide-neutral-800',
-                        children: [(0, a.jsx)(n, { emoji: p || d, title: c, description: g || u }), m],
+                        children: [(0, a.jsx)(o, { emoji: m || d, title: c, description: x || u }), p],
                       }),
                       (0, a.jsx)(s, { title: c }),
                     ],
