@@ -76,6 +76,16 @@ export const NAVBAR_LINKS: {
   },
   {
     group: 'react',
+    id: 'react-router',
+    emoji: '🧭',
+    href: '/react/router',
+    text: 'Router',
+    full: 'React Router',
+    description:
+      'A custom React Router implementation using Context API and hooks to manage client-side navigation without external libraries.',
+  },
+  {
+    group: 'react',
     id: 'react-virtual-table',
     emoji: '📋',
     href: '/react/virtual-table',

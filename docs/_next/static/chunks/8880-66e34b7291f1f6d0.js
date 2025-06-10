@@ -329,6 +329,16 @@
           },
           {
             group: 'react',
+            id: 'react-router',
+            emoji: '\uD83E\uDDED',
+            href: '/react/router',
+            text: 'Router',
+            full: 'React Router',
+            description:
+              'A custom React Router implementation using Context API and hooks to manage client-side navigation without external libraries.',
+          },
+          {
+            group: 'react',
             id: 'react-virtual-table',
             emoji: '\uD83D\uDCCB',
             href: '/react/virtual-table',
