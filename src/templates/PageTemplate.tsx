@@ -17,7 +17,7 @@ export const NAVBAR_LINKS: {
   {
     group: 'assets',
     id: 'assets-colors',
-    emoji: '🎨',
+    emoji: '🌈',
     href: '/assets/colors',
     text: 'Colors',
     full: 'Colors',
@@ -136,7 +136,7 @@ export const NAVBAR_LINKS: {
   {
     group: 'tools',
     id: 'tools-logger',
-    emoji: '📝',
+    emoji: '🧾',
     href: '/tools/log',
     text: 'Logger',
     full: 'Logger',

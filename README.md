@@ -66,6 +66,7 @@ atomic
 │   ├── contexts
 │   ├── environments
 │   ├── hooks
+│   ├── log
 │   ├── templates
 │   └── utils
 ├── .gitattributes

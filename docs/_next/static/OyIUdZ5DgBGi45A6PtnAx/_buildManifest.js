@@ -49,7 +49,7 @@
   };
 })(
   'static/chunks/6826-1b8246ce82a5e8e9.js',
-  'static/chunks/8880-73643027b82f9fb9.js',
+  'static/chunks/8880-dbb28065aa0cda7b.js',
   'static/chunks/7382-f85a3a16afd36344.js',
   'static/chunks/8809-018e494d6cb6fa4d.js',
   0,

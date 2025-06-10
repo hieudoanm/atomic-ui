@@ -116,7 +116,7 @@
             ],
           });
         },
-        u = { assets: '\uD83D\uDDBC️', react: '⚛️', ui: '\uD83C\uDFA8', tools: '\uD83E\uDDF0' },
+        u = { assets: '\uD83D\uDDBC️', react: '⚛️', ui: '\uD83C\uDFA8', tools: '\uD83D\uDEE0️' },
         p = (e) => {
           let { links: t } = e;
           return (0, a.jsx)('div', {
@@ -270,7 +270,7 @@
           {
             group: 'assets',
             id: 'assets-colors',
-            emoji: '\uD83C\uDFA8',
+            emoji: '\uD83C\uDF08',
             href: '/assets/colors',
             text: 'Colors',
             full: 'Colors',
@@ -390,7 +390,7 @@
           {
             group: 'tools',
             id: 'tools-logger',
-            emoji: '\uD83D\uDCDD',
+            emoji: '\uD83E\uDDFE',
             href: '/tools/log',
             text: 'Logger',
             full: 'Logger',

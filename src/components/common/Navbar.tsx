@@ -8,7 +8,7 @@ type NavbarLink = { group: Group; id: string; emoji: string; href: string; text:
 
 export type Group = 'assets' | 'react' | 'ui' | 'tools';
 
-const groupEmojis: Record<Group, string> = { assets: '🖼️', react: '⚛️', ui: '🎨', tools: '🧰' };
+const groupEmojis: Record<Group, string> = { assets: '🖼️', react: '⚛️', ui: '🎨', tools: '🛠️' };
 
 const MobileNavbar: FC<{ links: NavbarLink[] }> = ({ links }) => {
   return (
