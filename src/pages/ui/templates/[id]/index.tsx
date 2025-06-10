@@ -3,7 +3,7 @@ import { FullScreen } from '@atomic/components/preview/FullScreen';
 import { useToggle } from '@atomic/hooks/boolean/use-toggle';
 import { PageTemplate } from '@atomic/templates/PageTemplate';
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 
 const DEV_PATH = process.env.NODE_ENV === 'development' ? '../../../..' : '../../../../..';
@@ -52,6 +52,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
       { params: { id: 'dashboard' } },
       { params: { id: 'error' } },
       { params: { id: 'landing' } },
+      { params: { id: 'photos' } },
+      { params: { id: 'wallet' } },
     ],
     fallback: false,
   };
@@ -59,8 +61,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<{ template: TemplateType }, { id: string }> = (context) => {
   const id = context?.params?.id ?? '';
-  const filePath: string = join(__dirname, `src/html/templates/${id}.html`);
-  const code: string = readFileSync(filePath, 'utf-8');
+  const desktopPath: string = join(__dirname, `src/html/templates/desktop/${id}.html`);
+  const mobilePath: string = join(__dirname, `src/html/templates/mobile/${id}.html`);
+  let code: string = '';
+  if (existsSync(desktopPath)) {
+    code = readFileSync(desktopPath, 'utf-8');
+  } else if (existsSync(mobilePath)) {
+    code = readFileSync(mobilePath, 'utf-8');
+  }
   const template = { id, name: id, code };
 
   return { props: { template } };

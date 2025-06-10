@@ -18,8 +18,8 @@
     '/ui/block': [s, e, a, t, 'static/chunks/pages/ui/block-a359a39688890267.js'],
     '/ui/charts': [s, e, t, 'static/chunks/pages/ui/charts-faa34be5a89d7851.js'],
     '/ui/kit': [s, e, a, t, 'static/chunks/pages/ui/kit-c627b586be3bf453.js'],
-    '/ui/templates': [s, a, t, 'static/chunks/pages/ui/templates-1b713d6cd01772f1.js'],
-    '/ui/templates/[id]': [s, e, a, t, 'static/chunks/pages/ui/templates/[id]-d93512256314380f.js'],
+    '/ui/templates': [s, a, t, 'static/chunks/pages/ui/templates-fafc885a90250b70.js'],
+    '/ui/templates/[id]': [s, e, a, t, 'static/chunks/pages/ui/templates/[id]-bf806a5aa9897687.js'],
     '/utils': [s, e, a, t, 'static/chunks/pages/utils-d2dfbcef4fa29afb.js'],
     sortedPages: [
       '/',
@@ -45,7 +45,7 @@
   };
 })(
   'static/chunks/6826-1b8246ce82a5e8e9.js',
-  'static/chunks/8880-fc8cfcedd710f7dc.js',
+  'static/chunks/8880-8b801c1c1a36ce92.js',
   'static/chunks/8809-018e494d6cb6fa4d.js',
   'static/chunks/7382-55466734136e1cc9.js',
   0,

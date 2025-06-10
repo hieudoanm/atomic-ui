@@ -407,12 +407,13 @@
                 return o === t;
               }))
                 ? t
-                : { emoji: d, description: u };
+                : { emoji: d, description: u },
+            k = ''.concat(p, ' ').concat(c);
           return (0, a.jsxs)(a.Fragment, {
             children: [
               (0, a.jsxs)(f(), {
                 children: [
-                  (0, a.jsxs)('title', { children: [p, ' ', c] }),
+                  (0, a.jsx)('title', { children: k }),
                   (0, a.jsx)('meta', { name: 'description', content: g || u }),
                 ],
               }),

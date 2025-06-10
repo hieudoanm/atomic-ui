@@ -1,24 +1,24 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [2836],
   {
-    6260: (e, t, r) => {
+    6260: (e, r, t) => {
       'use strict';
-      r.d(t, { C: () => o });
-      var s = r(5640),
-        l = r(6921),
-        a = r(8809),
-        i = r(148),
-        n = r(8899);
-      let o = (e) => {
-        let { id: t = '', emoji: r = '', group: o = '', name: d = '', code: c = '', codeOnly: u = !1 } = e,
+      t.d(r, { C: () => n });
+      var s = t(5640),
+        l = t(6921),
+        a = t(8809),
+        i = t(148),
+        d = t(8899);
+      let n = (e) => {
+        let { id: r = '', emoji: t = '', group: n = '', name: o = '', code: c = '', codeOnly: u = !1 } = e,
           [p, x] = (0, i.useState)(''),
-          [h, m] = (0, i.useState)(!0);
+          [m, b] = (0, i.useState)(!0);
         return (
           (0, i.useEffect)(() => {
             x((0, a.A)(window).sanitize(c));
           }, [c]),
           (0, s.jsxs)('div', {
-            id: t,
+            id: r,
             className: 'flex flex-col gap-y-4 md:gap-y-8',
             children: [
               (0, s.jsxs)('div', {
@@ -27,11 +27,11 @@
                   (0, s.jsxs)('div', {
                     className: 'flex items-center gap-x-2',
                     children: [
-                      (0, s.jsx)('span', { className: 'text-4xl', children: r }),
+                      (0, s.jsx)('span', { className: 'text-4xl', children: t }),
                       (0, s.jsxs)('div', {
                         children: [
-                          (0, s.jsx)('p', { className: 'text-xs capitalize', children: o }),
-                          (0, s.jsx)('h3', { className: 'text-xl font-bold md:text-2xl', children: d }),
+                          (0, s.jsx)('p', { className: 'text-xs capitalize', children: n }),
+                          (0, s.jsx)('h3', { className: 'text-xl font-bold md:text-2xl', children: o }),
                         ],
                       }),
                     ],
@@ -52,8 +52,8 @@
                           type: 'button',
                           className:
                             'cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow transition duration-200 hover:bg-purple-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-purple-700 dark:shadow-neutral-100/10 dark:hover:bg-purple-600',
-                          onClick: () => m((e) => !e),
-                          children: h ? 'Preview' : 'Code',
+                          onClick: () => b((e) => !e),
+                          children: m ? 'Preview' : 'Code',
                         }),
                     ],
                   }),
@@ -63,11 +63,11 @@
                 className:
                   'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
                 children: u
-                  ? (0, s.jsx)(n.V, { code: c, lang: 'tsx' })
+                  ? (0, s.jsx)(d.V, { code: c, lang: 'tsx' })
                   : (0, s.jsx)(s.Fragment, {
-                      children: h
+                      children: m
                         ? (0, s.jsx)('div', { className: 'w-full p-4 md:p-8', dangerouslySetInnerHTML: { __html: p } })
-                        : (0, s.jsx)(n.V, { code: c, lang: 'html' }),
+                        : (0, s.jsx)(d.V, { code: c, lang: 'html' }),
                     }),
               }),
             ],
@@ -75,9 +75,9 @@
         );
       };
     },
-    6921: (e, t, r) => {
+    6921: (e, r, t) => {
       'use strict';
-      r.d(t, { C: () => s });
+      t.d(r, { C: () => s });
       let s = (e) => {
         navigator.clipboard
           .writeText(e)
@@ -89,72 +89,75 @@
           });
       };
     },
-    7017: (e, t, r) => {
+    7017: (e, r, t) => {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         '/ui/templates/[id]',
         function () {
-          return r(7084);
+          return t(7084);
         },
       ]);
     },
-    7084: (e, t, r) => {
+    7084: (e, r, t) => {
       'use strict';
-      r.r(t), r.d(t, { __N_SSG: () => c, default: () => u });
-      var s = r(5640),
-        l = r(6260),
-        a = r(8809),
-        i = r(148);
-      let n = (e) => {
-          let { name: t = '', code: r = '', onClose: l = () => {} } = e,
-            [n, o] = (0, i.useState)('');
+      t.r(r), t.d(r, { __N_SSG: () => c, default: () => u });
+      var s = t(5640),
+        l = t(6260),
+        a = t(8809),
+        i = t(148);
+      let d = (e) => {
+          let { name: r = '', code: t = '', onClose: l = () => {} } = e,
+            [d, n] = (0, i.useState)('');
           return (
             (0, i.useEffect)(() => {
-              o((0, a.A)(window).sanitize(r));
-            }, [r]),
+              n((0, a.A)(window).sanitize(t));
+            }, [t]),
             (0, s.jsxs)('div', {
               className:
                 'fixed top-0 right-0 bottom-0 left-0 z-50 flex h-screen w-screen flex-col bg-white dark:bg-neutral-900',
               children: [
                 (0, s.jsx)('div', {
-                  className: 'container mx-auto px-8 py-4',
-                  children: (0, s.jsxs)('div', {
-                    className: 'flex w-full items-center justify-between',
-                    children: [
-                      (0, s.jsx)('p', { className: 'capitalize', children: t }),
-                      (0, s.jsx)('button', {
-                        type: 'button',
-                        className: 'cursor-pointer',
-                        onClick: l,
-                        children: 'Close',
-                      }),
-                    ],
+                  className: 'border-b border-neutral-200 dark:border-neutral-800',
+                  children: (0, s.jsx)('div', {
+                    className: 'container mx-auto px-4 py-2 md:px-8 md:py-4',
+                    children: (0, s.jsxs)('div', {
+                      className: 'flex w-full items-center justify-between',
+                      children: [
+                        (0, s.jsx)('p', { className: 'capitalize', children: r }),
+                        (0, s.jsx)('button', {
+                          type: 'button',
+                          className: 'cursor-pointer',
+                          onClick: l,
+                          children: 'Close',
+                        }),
+                      ],
+                    }),
                   }),
                 }),
                 (0, s.jsx)('div', {
-                  className: 'grow overflow-y-auto',
-                  children: (0, s.jsx)('div', { className: 'h-full w-full', dangerouslySetInnerHTML: { __html: n } }),
+                  className: 'grow overflow-y-auto p-4 md:p-8',
+                  children: (0, s.jsx)('div', { className: 'w-full', dangerouslySetInnerHTML: { __html: d } }),
                 }),
               ],
             })
           );
         },
-        o = (e) => {
-          let [t, r] = (0, i.useState)(!!e);
+        n = (e) => {
+          let [r, t] = (0, i.useState)(!!e);
           return {
-            value: t,
+            value: r,
             toggle: (0, i.useCallback)(() => {
-              r((e) => !e);
+              t((e) => !e);
             }, []),
-            setValue: r,
+            setValue: t,
           };
         };
-      var d = r(8880),
+      var o = t(8880),
         c = !0;
       let u = (e) => {
-        let { template: t = { id: '', name: '', code: '' } } = e,
-          { value: r, toggle: a } = o(!1),
-          { id: i = '', name: c = '', code: u = '' } = t;
-        return (0, s.jsxs)(d.U, {
+        let { template: r = { id: '', name: '', code: '' } } = e,
+          { value: t, toggle: a } = n(!1),
+          { id: i = '', name: c = '', code: u = '' } = r;
+        return (0, s.jsxs)(o.U, {
           disabledSearch: !0,
           query: '',
           setState: () => {},
@@ -183,38 +186,38 @@
                 }),
               }),
             }),
-            r && (0, s.jsx)(n, { name: c, code: u, onClose: () => a() }),
+            t && (0, s.jsx)(d, { name: c, code: u, onClose: () => a() }),
           ],
         });
       };
     },
-    8899: (e, t, r) => {
+    8899: (e, r, t) => {
       'use strict';
-      r.d(t, { V: () => n });
-      var s = r(5640),
-        l = r(6921),
-        a = r(148),
-        i = r(7382);
-      let n = (e) => {
-        let { code: t, lang: r } = e,
-          [n, o] = (0, a.useState)('');
+      t.d(r, { V: () => d });
+      var s = t(5640),
+        l = t(6921),
+        a = t(148),
+        i = t(7382);
+      let d = (e) => {
+        let { code: r, lang: t } = e,
+          [d, n] = (0, a.useState)('');
         return (
           (0, a.useEffect)(() => {
             (async () => {
-              o(await (0, i.Yz)(t, { lang: r, theme: 'github-dark' }));
+              n(await (0, i.Yz)(r, { lang: t, theme: 'github-dark' }));
             })();
           }),
           (0, s.jsx)('button', {
             className: 'w-full cursor-pointer overflow-x-auto bg-neutral-900 p-4 text-left',
-            dangerouslySetInnerHTML: { __html: n },
-            onClick: () => (0, l.C)(t),
+            dangerouslySetInnerHTML: { __html: d },
+            onClick: () => (0, l.C)(r),
           })
         );
       };
     },
   },
   (e) => {
-    var t = (t) => e((e.s = t));
-    e.O(0, [6826, 7382, 8809, 8880, 636, 6593, 8792], () => t(7017)), (_N_E = e.O());
+    var r = (r) => e((e.s = r));
+    e.O(0, [6826, 7382, 8809, 8880, 636, 6593, 8792], () => r(7017)), (_N_E = e.O());
   },
 ]);

@@ -9,7 +9,7 @@ import { useState } from 'react';
 const DEV_PATH = '../../../..';
 const __dirname = join(dirname(__filename), DEV_PATH);
 
-type TemplateType = { id: string; name: string; code: string };
+type TemplateType = { id: string; group: string; name: string; code: string };
 
 const emojis: Record<string, string> = {
   blog: '📝',
@@ -18,6 +18,7 @@ const emojis: Record<string, string> = {
   dashboard: '📊',
   error: '❌',
   landing: '🏠',
+  wallet: '💰',
 };
 
 const TemplatesPage: NextPage<{ templates: TemplateType[] }> = ({ templates = [] }) => {
@@ -43,15 +44,15 @@ const TemplatesPage: NextPage<{ templates: TemplateType[] }> = ({ templates = []
             </h2>
             {filteredTemplates.length > 0 && (
               <>
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-6">
-                  {filteredTemplates.map(({ id = '', name = '' }) => {
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
+                  {filteredTemplates.map(({ id = '', group = '', name = '' }) => {
                     return (
                       <Link href={`#${id}`} key={id}>
                         <div className="col-span-1">
                           <div className="flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
                             <p className="text-2xl">{emojis[id] ?? ''}</p>
                             <div className="flex flex-col gap-y-0.25">
-                              <p className="text-xs capitalize">Templates</p>
+                              <p className="text-xs capitalize">{group}</p>
                               <p className="font-semibold capitalize">{name}</p>
                             </div>
                           </div>
@@ -83,14 +84,22 @@ const TemplatesPage: NextPage<{ templates: TemplateType[] }> = ({ templates = []
   );
 };
 
-export const getStaticProps = () => {
-  const files = readdirSync(join(__dirname, 'src/html/templates'));
+const getTemplates = (group: string) => {
+  const files = readdirSync(join(__dirname, `src/html/templates/${group}`));
   const templates = files.map((file: string) => {
     const id: string = file?.replaceAll('.html', '');
-    const filePath: string = join(__dirname, `src/html/templates/${file}`);
+    const filePath: string = join(__dirname, `src/html/templates/${group}/${file}`);
     const code: string = readFileSync(filePath, 'utf-8');
-    return { id, name: id, code };
+    return { id, group, name: id, code };
   });
+  return templates;
+};
+
+export const getStaticProps = () => {
+  const desktopTemplates = getTemplates('desktop');
+  const mobileTemplates = getTemplates('mobile');
+
+  const templates = [...desktopTemplates, ...mobileTemplates];
   return { props: { templates } };
 };
 

@@ -163,12 +163,12 @@ export const PageTemplate: FC<PageTemplateProps> = ({
     description: defaultDescription,
   };
 
+  const headTitle: string = `${emoji} ${title}`;
+
   return (
     <>
       <Head>
-        <title>
-          {emoji} {title}
-        </title>
+        <title>{headTitle}</title>
         <meta name="description" content={description || defaultDescription} />
       </Head>
       <RadialGradientBackground />
