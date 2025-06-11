@@ -2,7 +2,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [6871],
   {
-    6871: (e, n, t) => {
+    9252: (e, n, t) => {
       t.r(n), t.d(n, { default: () => a });
       let a = [
         Object.freeze(

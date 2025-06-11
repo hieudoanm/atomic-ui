@@ -6566,7 +6566,7 @@
             name: 'MDC',
             import: () => Promise.all([n.e(6887), n.e(4019), n.e(9875), n.e(175), n.e(4204)]).then(n.bind(n, 4204)),
           },
-          { id: 'mdx', name: 'MDX', import: () => n.e(6871).then(n.bind(n, 6871)) },
+          { id: 'mdx', name: 'MDX', import: () => n.e(6871).then(n.bind(n, 9252)) },
           { id: 'mermaid', name: 'Mermaid', aliases: ['mmd'], import: () => n.e(1939).then(n.bind(n, 1939)) },
           { id: 'mipsasm', name: 'MIPS Assembly', aliases: ['mips'], import: () => n.e(3564).then(n.bind(n, 3564)) },
           { id: 'mojo', name: 'Mojo', import: () => n.e(4133).then(n.bind(n, 4133)) },
