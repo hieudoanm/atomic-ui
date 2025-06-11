@@ -12,7 +12,13 @@ const PreviewHtmlPage: NextPage = () => {
   }, [code]);
 
   return (
-    <PageTemplate query="" setState={() => {}} id="preview-html" emoji="" title="atomic/preview" description="">
+    <PageTemplate
+      query=""
+      setState={() => {}}
+      id="preview-html"
+      emoji="🧪"
+      title="atomic/preview"
+      description="Live preview of atomic design components rendered as HTML">
       <section className="py-8 md:py-16">
         <div className="container mx-auto px-8">
           <div className="grid grid-cols-1 divide-x divide-neutral-200 overflow-hidden rounded-lg border border-neutral-200 bg-white shadow md:grid-cols-2 dark:divide-neutral-800 dark:border-neutral-800 dark:bg-neutral-900 dark:shadow-neutral-100/10">

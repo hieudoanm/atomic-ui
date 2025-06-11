@@ -12,7 +12,7 @@
     '/assets/emojis': [s, t, 'static/chunks/pages/assets/emojis-0a53afcba9692bde.js'],
     '/assets/fonts': [s, 'static/css/1a7b1a5d2618d70f.css', t, 'static/chunks/pages/assets/fonts-39abc30be5793697.js'],
     '/assets/icons': [s, a, t, 'static/chunks/pages/assets/icons-1b028c7be9414075.js'],
-    '/preview/html': [s, a, t, 'static/chunks/pages/preview/html-415984ed42298f33.js'],
+    '/preview/html': [s, a, t, 'static/chunks/pages/preview/html-fc4d9c5c8b6ffdf4.js'],
     '/react/contexts': [s, e, a, t, 'static/chunks/pages/react/contexts-e475fa26f2303ca5.js'],
     '/react/hooks': [s, e, a, t, 'static/chunks/pages/react/hooks-9f952ae981c53e48.js'],
     '/react/router': [s, e, t, 'static/chunks/pages/react/router-1ba3eca2900cf57f.js'],

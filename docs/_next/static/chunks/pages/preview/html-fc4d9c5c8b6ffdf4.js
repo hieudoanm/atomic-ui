@@ -14,22 +14,22 @@
       l.r(d), l.d(d, { default: () => t });
       var a = l(5640),
         r = l(8880),
-        s = l(148),
-        i = l(8809);
+        i = l(148),
+        s = l(8809);
       let t = () => {
-        let [{ code: e, html: d }, l] = (0, s.useState)({ code: '', html: '' });
+        let [{ code: e, html: d }, l] = (0, i.useState)({ code: '', html: '' });
         return (
-          (0, s.useEffect)(() => {
-            let d = (0, i.A)(window);
+          (0, i.useEffect)(() => {
+            let d = (0, s.A)(window);
             l((l) => ({ ...l, html: d.sanitize(e) }));
           }, [e]),
           (0, a.jsx)(r.U, {
             query: '',
             setState: () => {},
             id: 'preview-html',
-            emoji: '',
+            emoji: '\uD83E\uDDEA',
             title: 'atomic/preview',
-            description: '',
+            description: 'Live preview of atomic design components rendered as HTML',
             children: (0, a.jsx)('section', {
               className: 'py-8 md:py-16',
               children: (0, a.jsx)('div', {
@@ -48,7 +48,7 @@
                         value: e,
                         onChange: (d) => {
                           let a = d.target.value,
-                            r = (0, i.A)(window).sanitize(e);
+                            r = (0, s.A)(window).sanitize(e);
                           l((e) => ({ ...e, code: a, html: r }));
                         },
                       }),
