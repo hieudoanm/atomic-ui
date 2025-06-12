@@ -1,40 +1,24 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [3826],
   {
-    6921: (e, t, l) => {
-      'use strict';
-      l.d(t, { C: () => a });
-      let a = (e) => {
-        navigator.clipboard
-          .writeText(e)
-          .then(() => {
-            alert('Copied to clipboard!');
-          })
-          .catch((e) => {
-            console.error('Failed to copy: ', e);
-          });
-      };
-    },
     8899: (e, t, l) => {
       'use strict';
-      l.d(t, { V: () => s });
+      l.d(t, { V: () => n });
       var a = l(5640),
-        r = l(6921),
-        i = l(148),
-        n = l(7382);
-      let s = (e) => {
+        r = l(148),
+        i = l(7382);
+      let n = (e) => {
         let { code: t, lang: l } = e,
-          [s, o] = (0, i.useState)('');
+          [n, s] = (0, r.useState)('');
         return (
-          (0, i.useEffect)(() => {
+          (0, r.useEffect)(() => {
             (async () => {
-              o(await (0, n.Yz)(t, { lang: l, theme: 'github-dark' }));
+              s(await (0, i.Yz)(t, { lang: l, theme: 'github-dark' }));
             })();
           }),
-          (0, a.jsx)('button', {
+          (0, a.jsx)('div', {
             className: 'w-full cursor-pointer overflow-x-auto bg-neutral-900 p-4 text-left',
-            dangerouslySetInnerHTML: { __html: s },
-            onClick: () => (0, r.C)(t),
+            dangerouslySetInnerHTML: { __html: n },
           })
         );
       };
@@ -843,7 +827,7 @@
                                   className: 'col-span-1',
                                   children: (0, a.jsx)('div', {
                                     className:
-                                      'flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+                                      'flex items-center gap-x-2 rounded-lg border border-neutral-200 bg-white/40 p-4 shadow dark:border-neutral-800 dark:bg-neutral-900/40 dark:shadow-neutral-100/10',
                                     children: (0, a.jsxs)('p', {
                                       className: 'font-semibold capitalize',
                                       children: [null != (t = f[l]) ? t : '', ' ', r],

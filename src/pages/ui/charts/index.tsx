@@ -125,7 +125,7 @@ const ChartsPage: NextPage<{ charts: ChartType[] }> = ({ charts = [] }) => {
                     return (
                       <Link href={`#${id}`} key={id}>
                         <div className="col-span-1">
-                          <div className="flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10">
+                          <div className="flex items-center gap-x-2 rounded-lg border border-neutral-200 bg-white/40 p-4 shadow dark:border-neutral-800 dark:bg-neutral-900/40 dark:shadow-neutral-100/10">
                             <p className="font-semibold capitalize">
                               {emojis[id] ?? ''} {name}
                             </p>

@@ -18,18 +18,20 @@ const HomePage: NextPage = () => {
             <h2 className="text-center text-2xl font-extrabold md:text-3xl md:font-black">
               Supercharge your Web App with Atomic Code
             </h2>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-16 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
               {NAVBAR_LINKS.map(({ href = '', emoji = '', full = '', description = '' }) => {
                 return (
-                  <div key={href} className="col-span-1 flex flex-col gap-y-2">
-                    <Link href={href}>
-                      <h2 className="text-center text-xl font-semibold">
-                        {emoji} <span className="border-b border-dotted">{full}</span>
-                      </h2>
-                    </Link>
-                    <p className="mx-auto w-full max-w-sm text-center text-sm text-neutral-600 dark:text-neutral-400">
-                      {description}
-                    </p>
+                  <div key={href} className="col-span-1">
+                    <div className="flex flex-col gap-y-2 rounded-lg border border-neutral-200 bg-white/40 p-4 shadow dark:border-neutral-800 dark:bg-neutral-900/40 dark:shadow-neutral-100/10">
+                      <Link href={href}>
+                        <h2 className="text-center text-xl font-semibold">
+                          {emoji} <span className="border-b border-dotted">{full}</span>
+                        </h2>
+                      </Link>
+                      <p className="mx-auto w-full max-w-sm text-center text-sm text-neutral-600 dark:text-neutral-400">
+                        {description}
+                      </p>
+                    </div>
                   </div>
                 );
               })}

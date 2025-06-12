@@ -3,8 +3,8 @@
   {
     6921: (e, t, r) => {
       'use strict';
-      r.d(t, { C: () => l });
-      let l = (e) => {
+      r.d(t, { C: () => s });
+      let s = (e) => {
         navigator.clipboard
           .writeText(e)
           .then(() => {
@@ -25,15 +25,15 @@
     },
     8793: (e, t, r) => {
       'use strict';
-      r.r(t), r.d(t, { __N_SSG: () => d, default: () => i });
-      var l = r(5640),
-        s = r(8899),
+      r.r(t), r.d(t, { __N_SSG: () => o, default: () => i });
+      var s = r(5640),
+        l = r(8899),
         a = r(8880),
-        o = r(6921),
-        d = !0;
+        d = r(6921),
+        o = !0;
       let i = (e) => {
         let { code: t = '' } = e;
-        return (0, l.jsx)(a.U, {
+        return (0, s.jsx)(a.U, {
           disabledSearch: !0,
           query: '',
           setState: () => {},
@@ -41,24 +41,24 @@
           emoji: '\uD83D\uDCDD',
           title: 'atomic/logger',
           description: '',
-          children: (0, l.jsx)('section', {
+          children: (0, s.jsx)('section', {
             className: 'py-8 md:py-16',
-            children: (0, l.jsx)('div', {
+            children: (0, s.jsx)('div', {
               className: 'container mx-auto px-8',
-              children: (0, l.jsxs)('div', {
+              children: (0, s.jsxs)('div', {
                 className: 'flex flex-col gap-y-4 md:gap-y-8',
                 children: [
-                  (0, l.jsxs)('div', {
+                  (0, s.jsxs)('div', {
                     className: 'flex items-center justify-between gap-x-2',
                     children: [
-                      (0, l.jsxs)('div', {
+                      (0, s.jsxs)('div', {
                         className: 'flex items-center gap-x-2',
                         children: [
-                          (0, l.jsx)('span', { className: 'text-4xl', children: '\uD83D\uDCDD' }),
-                          (0, l.jsxs)('div', {
+                          (0, s.jsx)('span', { className: 'text-4xl', children: '\uD83D\uDCDD' }),
+                          (0, s.jsxs)('div', {
                             children: [
-                              (0, l.jsx)('p', { className: 'text-xs capitalize', children: 'Tools' }),
-                              (0, l.jsx)('h3', {
+                              (0, s.jsx)('p', { className: 'text-xs capitalize', children: 'Tools' }),
+                              (0, s.jsx)('h3', {
                                 className: 'text-xl font-bold capitalize md:text-2xl',
                                 children: 'Logger',
                               }),
@@ -66,19 +66,19 @@
                           }),
                         ],
                       }),
-                      (0, l.jsx)('button', {
+                      (0, s.jsx)('button', {
                         type: 'button',
                         className:
                           'cursor-pointer rounded-lg border border-purple-800 bg-purple-600 px-4 py-2 text-white shadow dark:border-purple-900 dark:bg-purple-700 dark:shadow-neutral-100/10',
-                        onClick: () => (0, o.C)(t),
+                        onClick: () => (0, d.C)(t),
                         children: 'Copy',
                       }),
                     ],
                   }),
-                  (0, l.jsx)('div', {
+                  (0, s.jsx)('div', {
                     className:
                       'flex items-center justify-center overflow-hidden rounded-lg border border-neutral-200 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
-                    children: (0, l.jsx)(s.V, { code: t, lang: 'ts' }),
+                    children: (0, s.jsx)(l.V, { code: t, lang: 'ts' }),
                   }),
                 ],
               }),
@@ -90,23 +90,21 @@
     8899: (e, t, r) => {
       'use strict';
       r.d(t, { V: () => d });
-      var l = r(5640),
-        s = r(6921),
-        a = r(148),
-        o = r(7382);
+      var s = r(5640),
+        l = r(148),
+        a = r(7382);
       let d = (e) => {
         let { code: t, lang: r } = e,
-          [d, i] = (0, a.useState)('');
+          [d, o] = (0, l.useState)('');
         return (
-          (0, a.useEffect)(() => {
+          (0, l.useEffect)(() => {
             (async () => {
-              i(await (0, o.Yz)(t, { lang: r, theme: 'github-dark' }));
+              o(await (0, a.Yz)(t, { lang: r, theme: 'github-dark' }));
             })();
           }),
-          (0, l.jsx)('button', {
+          (0, s.jsx)('div', {
             className: 'w-full cursor-pointer overflow-x-auto bg-neutral-900 p-4 text-left',
             dangerouslySetInnerHTML: { __html: d },
-            onClick: () => (0, s.C)(t),
           })
         );
       };

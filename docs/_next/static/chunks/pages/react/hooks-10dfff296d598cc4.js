@@ -1,31 +1,31 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [5848],
+  [6748],
   {
-    699: (e, s, l) => {
+    2791: (e, s, l) => {
       'use strict';
-      l.r(s), l.d(s, { __N_SSG: () => o, default: () => c });
+      l.r(s), l.d(s, { __N_SSG: () => n, default: () => c });
       var r = l(5640),
-        t = l(6260),
-        a = l(8880),
+        a = l(6260),
+        t = l(8880),
         i = l(6826),
         d = l.n(i),
-        n = l(148),
-        o = !0;
+        o = l(148),
+        n = !0;
       let c = (e) => {
-        let { blocks: s = [] } = e,
-          [{ query: l = '' }, i] = (0, n.useState)({ query: '' }),
-          o = s.filter((e) => {
+        let { hooks: s = [] } = e,
+          [{ query: l = '' }, i] = (0, o.useState)({ query: '' }),
+          n = s.filter((e) => {
             let { id: s, name: r } = e;
             return s.toLowerCase().includes(l.toLowerCase()) || r.toLowerCase().includes(l.toLowerCase());
           });
-        return (0, r.jsx)(a.U, {
+        return (0, r.jsx)(t.U, {
           query: l,
           setState: i,
-          id: 'ui-blocks',
-          emoji: '\uD83C\uDFA8',
-          title: 'atomic/blocks',
+          id: 'react-hooks',
+          emoji: '\uD83E\uDE9D',
+          title: 'atomic/hooks',
           description:
-            'is a free set of Tailwind CSS Blocks built following atomic design principles for consistent UI development.',
+            'is a collection of reusable React hooks built for simplicity, efficiency, and ease of integration.',
           children: (0, r.jsx)('section', {
             className: 'py-8 md:py-16',
             children: (0, r.jsx)('div', {
@@ -35,20 +35,15 @@
                 children: [
                   (0, r.jsxs)('h2', {
                     className: 'text-2xl font-bold',
-                    children: [
-                      (0, r.jsx)('span', { className: 'capitalize', children: 'Components' }),
-                      ' (',
-                      o.length,
-                      ')',
-                    ],
+                    children: [(0, r.jsx)('span', { className: 'capitalize', children: 'Hooks' }), ' (', n.length, ')'],
                   }),
-                  o.length > 0 &&
+                  n.length > 0 &&
                     (0, r.jsxs)(r.Fragment, {
                       children: [
                         (0, r.jsx)('div', {
                           className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4',
-                          children: o.map((e) => {
-                            let { id: s = '', emoji: l = '', group: t, name: a = '' } = e;
+                          children: n.map((e) => {
+                            let { id: s = '', emoji: l = '', group: a, name: t = '' } = e;
                             return (0, r.jsx)(
                               d(),
                               {
@@ -57,17 +52,14 @@
                                   className: 'col-span-1',
                                   children: (0, r.jsxs)('div', {
                                     className:
-                                      'flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+                                      'flex items-center gap-x-2 rounded-lg border border-neutral-200 bg-white/40 p-4 shadow dark:border-neutral-800 dark:bg-neutral-900/40 dark:shadow-neutral-100/10',
                                     children: [
                                       (0, r.jsx)('p', { className: 'text-2xl', children: l }),
                                       (0, r.jsxs)('div', {
                                         className: 'flex flex-col gap-y-0.25',
                                         children: [
-                                          (0, r.jsx)('p', { className: 'text-xs capitalize', children: t }),
-                                          (0, r.jsx)('p', {
-                                            className: 'text-sm font-semibold capitalize',
-                                            children: a,
-                                          }),
+                                          (0, r.jsx)('p', { className: 'text-xs capitalize', children: a }),
+                                          (0, r.jsx)('p', { className: 'font-semibold capitalize', children: t }),
                                         ],
                                       }),
                                     ],
@@ -79,14 +71,21 @@
                           }),
                         }),
                         (0, r.jsx)('div', {
-                          className: 'flex flex-col gap-y-4 md:gap-y-8',
-                          children: o.map((e) => {
-                            let { id: s = '', emoji: l = '', group: a = '', name: i = '', code: d = '' } = e;
+                          className: 'flex flex-col gap-y-8',
+                          children: n.map((e) => {
+                            let { id: s = '', emoji: l = '', group: t = '', name: i = '', code: d = '' } = e;
                             return (0, r.jsx)(
                               'div',
                               {
                                 className: 'flex flex-col gap-y-4',
-                                children: (0, r.jsx)(t.C, { id: s, emoji: l, group: a, name: i, code: d }),
+                                children: (0, r.jsx)(a.C, {
+                                  id: s,
+                                  emoji: l,
+                                  group: t,
+                                  name: i,
+                                  code: d,
+                                  codeOnly: !0,
+                                }),
                               },
                               s
                             );
@@ -103,19 +102,19 @@
     },
     6260: (e, s, l) => {
       'use strict';
-      l.d(s, { C: () => n });
+      l.d(s, { C: () => o });
       var r = l(5640),
-        t = l(6921),
-        a = l(8809),
+        a = l(6921),
+        t = l(8809),
         i = l(148),
         d = l(8899);
-      let n = (e) => {
-        let { id: s = '', emoji: l = '', group: n = '', name: o = '', code: c = '', codeOnly: u = !1 } = e,
+      let o = (e) => {
+        let { id: s = '', emoji: l = '', group: o = '', name: n = '', code: c = '', codeOnly: u = !1 } = e,
           [p, x] = (0, i.useState)(''),
           [h, m] = (0, i.useState)(!0);
         return (
           (0, i.useEffect)(() => {
-            x((0, a.A)(window).sanitize(c));
+            x((0, t.A)(window).sanitize(c));
           }, [c]),
           (0, r.jsxs)('div', {
             id: s,
@@ -130,8 +129,8 @@
                       (0, r.jsx)('span', { className: 'text-4xl', children: l }),
                       (0, r.jsxs)('div', {
                         children: [
-                          (0, r.jsx)('p', { className: 'text-xs capitalize', children: n }),
-                          (0, r.jsx)('h3', { className: 'text-xl font-bold md:text-2xl', children: o }),
+                          (0, r.jsx)('p', { className: 'text-xs capitalize', children: o }),
+                          (0, r.jsx)('h3', { className: 'text-xl font-bold md:text-2xl', children: n }),
                         ],
                       }),
                     ],
@@ -144,7 +143,7 @@
                           type: 'button',
                           className:
                             'cursor-pointer rounded-md border border-purple-600 bg-purple-600 px-4 py-2 text-white shadow transition duration-200 hover:bg-purple-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-purple-700 dark:shadow-neutral-100/10 dark:hover:bg-purple-600',
-                          onClick: () => (0, t.C)(c),
+                          onClick: () => (0, a.C)(c),
                           children: 'Copy',
                         }),
                       !u &&
@@ -189,34 +188,32 @@
           });
       };
     },
-    7043: (e, s, l) => {
+    7297: (e, s, l) => {
       (window.__NEXT_P = window.__NEXT_P || []).push([
-        '/ui/block',
+        '/react/hooks',
         function () {
-          return l(699);
+          return l(2791);
         },
       ]);
     },
     8899: (e, s, l) => {
       'use strict';
-      l.d(s, { V: () => d });
+      l.d(s, { V: () => i });
       var r = l(5640),
-        t = l(6921),
         a = l(148),
-        i = l(7382);
-      let d = (e) => {
+        t = l(7382);
+      let i = (e) => {
         let { code: s, lang: l } = e,
-          [d, n] = (0, a.useState)('');
+          [i, d] = (0, a.useState)('');
         return (
           (0, a.useEffect)(() => {
             (async () => {
-              n(await (0, i.Yz)(s, { lang: l, theme: 'github-dark' }));
+              d(await (0, t.Yz)(s, { lang: l, theme: 'github-dark' }));
             })();
           }),
-          (0, r.jsx)('button', {
+          (0, r.jsx)('div', {
             className: 'w-full cursor-pointer overflow-x-auto bg-neutral-900 p-4 text-left',
-            dangerouslySetInnerHTML: { __html: d },
-            onClick: () => (0, t.C)(s),
+            dangerouslySetInnerHTML: { __html: i },
           })
         );
       };
@@ -224,6 +221,6 @@
   },
   (e) => {
     var s = (s) => e((e.s = s));
-    e.O(0, [6826, 7382, 8809, 8880, 636, 6593, 8792], () => s(7043)), (_N_E = e.O());
+    e.O(0, [6826, 7382, 8809, 8880, 636, 6593, 8792], () => s(7297)), (_N_E = e.O());
   },
 ]);

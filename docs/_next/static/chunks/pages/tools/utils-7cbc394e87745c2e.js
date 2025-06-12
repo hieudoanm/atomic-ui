@@ -148,7 +148,7 @@
                                   className: 'col-span-1',
                                   children: (0, r.jsxs)('div', {
                                     className:
-                                      'flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+                                      'flex items-center gap-x-2 rounded-lg border border-neutral-200 bg-white/40 p-4 shadow dark:border-neutral-800 dark:bg-neutral-900/40 dark:shadow-neutral-100/10',
                                     children: [
                                       (0, r.jsx)('p', { className: 'text-2xl', children: l }),
                                       (0, r.jsxs)('div', {
@@ -198,24 +198,22 @@
     },
     8899: (e, s, l) => {
       'use strict';
-      l.d(s, { V: () => d });
+      l.d(s, { V: () => i });
       var r = l(5640),
-        t = l(6921),
-        a = l(148),
-        i = l(7382);
-      let d = (e) => {
+        t = l(148),
+        a = l(7382);
+      let i = (e) => {
         let { code: s, lang: l } = e,
-          [d, n] = (0, a.useState)('');
+          [i, d] = (0, t.useState)('');
         return (
-          (0, a.useEffect)(() => {
+          (0, t.useEffect)(() => {
             (async () => {
-              n(await (0, i.Yz)(s, { lang: l, theme: 'github-dark' }));
+              d(await (0, a.Yz)(s, { lang: l, theme: 'github-dark' }));
             })();
           }),
-          (0, r.jsx)('button', {
+          (0, r.jsx)('div', {
             className: 'w-full cursor-pointer overflow-x-auto bg-neutral-900 p-4 text-left',
-            dangerouslySetInnerHTML: { __html: d },
-            onClick: () => (0, t.C)(s),
+            dangerouslySetInnerHTML: { __html: i },
           })
         );
       };

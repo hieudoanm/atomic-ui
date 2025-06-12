@@ -25,24 +25,22 @@
     },
     8899: (e, t, r) => {
       'use strict';
-      r.d(t, { V: () => c });
+      r.d(t, { V: () => d });
       var a = r(5640),
-        s = r(6921),
-        l = r(148),
-        d = r(7382);
-      let c = (e) => {
+        s = r(148),
+        l = r(7382);
+      let d = (e) => {
         let { code: t, lang: r } = e,
-          [c, i] = (0, l.useState)('');
+          [d, c] = (0, s.useState)('');
         return (
-          (0, l.useEffect)(() => {
+          (0, s.useEffect)(() => {
             (async () => {
-              i(await (0, d.Yz)(t, { lang: r, theme: 'github-dark' }));
+              c(await (0, l.Yz)(t, { lang: r, theme: 'github-dark' }));
             })();
           }),
-          (0, a.jsx)('button', {
+          (0, a.jsx)('div', {
             className: 'w-full cursor-pointer overflow-x-auto bg-neutral-900 p-4 text-left',
-            dangerouslySetInnerHTML: { __html: c },
-            onClick: () => (0, s.C)(t),
+            dangerouslySetInnerHTML: { __html: d },
           })
         );
       };

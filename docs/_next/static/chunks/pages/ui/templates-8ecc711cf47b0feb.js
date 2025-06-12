@@ -6,13 +6,13 @@
       l.r(a), l.d(a, { __N_SSG: () => p, default: () => x });
       var s = l(5640),
         r = l(148),
-        d = l(8809);
-      let t = (e) => {
+        t = l(8809);
+      let d = (e) => {
         let { code: a = '' } = e,
-          [l, t] = (0, r.useState)('');
+          [l, d] = (0, r.useState)('');
         return (
           (0, r.useEffect)(() => {
-            t((0, d.A)(window).sanitize(a));
+            d((0, t.A)(window).sanitize(a));
           }, [a]),
           (0, s.jsx)('div', { dangerouslySetInnerHTML: { __html: l } })
         );
@@ -32,14 +32,14 @@
       var p = !0;
       let x = (e) => {
         let { templates: a = [] } = e,
-          [{ query: l = '' }, d] = (0, r.useState)({ query: '' }),
+          [{ query: l = '' }, t] = (0, r.useState)({ query: '' }),
           i = a.filter((e) => {
             let { id: a, name: s } = e;
             return a.toLowerCase().includes(l.toLowerCase()) || s.toLowerCase().includes(l.toLowerCase());
           });
         return (0, s.jsx)(n.U, {
           query: l,
-          setState: d,
+          setState: t,
           id: 'ui-templates',
           emoji: '\uD83D\uDCDD',
           title: 'atomic/templates',
@@ -68,7 +68,7 @@
                           className: 'grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4',
                           children: i.map((e) => {
                             var a;
-                            let { id: l = '', group: r = '', name: d = '' } = e;
+                            let { id: l = '', group: r = '', name: t = '' } = e;
                             return (0, s.jsx)(
                               c(),
                               {
@@ -77,14 +77,14 @@
                                   className: 'col-span-1',
                                   children: (0, s.jsxs)('div', {
                                     className:
-                                      'flex items-center gap-x-2 rounded-lg border border-neutral-200 p-4 shadow dark:border-neutral-800 dark:shadow-neutral-100/10',
+                                      'flex items-center gap-x-2 rounded-lg border border-neutral-200 bg-white/40 p-4 shadow dark:border-neutral-800 dark:bg-neutral-900/40 dark:shadow-neutral-100/10',
                                     children: [
                                       (0, s.jsx)('p', { className: 'text-2xl', children: null != (a = o[l]) ? a : '' }),
                                       (0, s.jsxs)('div', {
                                         className: 'flex flex-col gap-y-0.25',
                                         children: [
                                           (0, s.jsx)('p', { className: 'text-xs capitalize', children: r }),
-                                          (0, s.jsx)('p', { className: 'font-semibold capitalize', children: d }),
+                                          (0, s.jsx)('p', { className: 'font-semibold capitalize', children: t }),
                                         ],
                                       }),
                                     ],
@@ -114,7 +114,7 @@
                                     (0, s.jsx)('div', {
                                       className:
                                         'h-128 overflow-hidden rounded-lg border border-neutral-200 p-4 shadow md:p-8 dark:border-neutral-800 dark:shadow-neutral-100/10',
-                                      children: (0, s.jsx)(t, { code: r }),
+                                      children: (0, s.jsx)(d, { code: r }),
                                     }),
                                   ],
                                 }),
