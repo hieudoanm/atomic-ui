@@ -1,4 +1,4 @@
-export const commas = (num: number) => {
-  if (typeof num !== 'number') return '';
-  return num.toLocaleString('en-US');
+export const commas = (number: number | bigint) => {
+  if (typeof number !== 'number' && typeof number !== 'bigint') return '';
+  return number.toLocaleString('en-US');
 };

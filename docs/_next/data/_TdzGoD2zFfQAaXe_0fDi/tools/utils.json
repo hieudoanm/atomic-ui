@@ -125,14 +125,14 @@
         "group": "number",
         "name": "Commas",
         "emoji": "🔢",
-        "code": "export const commas = (num: number) => {\n  if (typeof num !== 'number') return '';\n  return num.toLocaleString('en-US');\n};\n"
+        "code": "export const commas = (number: number | bigint) => {\n  if (typeof number !== 'number' && typeof number !== 'bigint') return '';\n  return number.toLocaleString('en-US');\n};\n"
       },
       {
         "id": "number-currency",
         "group": "number",
         "name": "Currency",
         "emoji": "💰",
-        "code": "// Format number as currency (default USD, configurable)\nexport const currency = (value: number, currency = 'USD', locale = 'en-US') => {\n  if (typeof value !== 'number') return '';\n  return new Intl.NumberFormat(locale, { style: 'currency', currency }).format(value);\n};\n"
+        "code": "export const currency = (number: number | bigint, currency = 'USD', locale = 'en-US') => {\n  if (typeof number !== 'number' && typeof number !== 'bigint') return '';\n  return new Intl.NumberFormat(locale, { style: 'currency', currency }).format(number);\n};\n"
       },
       {
         "id": "number-random",

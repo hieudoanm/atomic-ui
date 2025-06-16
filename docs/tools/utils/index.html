@@ -40,8 +40,8 @@
     <script src="/atomic/_next/static/chunks/8809-018e494d6cb6fa4d.js" defer=""></script>
     <script src="/atomic/_next/static/chunks/8880-dbb28065aa0cda7b.js" defer=""></script>
     <script src="/atomic/_next/static/chunks/pages/tools/utils-7cbc394e87745c2e.js" defer=""></script>
-    <script src="/atomic/_next/static/5_0B5m0hdHXmH4FjVzluH/_buildManifest.js" defer=""></script>
-    <script src="/atomic/_next/static/5_0B5m0hdHXmH4FjVzluH/_ssgManifest.js" defer=""></script>
+    <script src="/atomic/_next/static/_TdzGoD2zFfQAaXe_0fDi/_buildManifest.js" defer=""></script>
+    <script src="/atomic/_next/static/_TdzGoD2zFfQAaXe_0fDi/_ssgManifest.js" defer=""></script>
   </head>
   <body class="antialiased">
     <div id="__next">
@@ -1442,14 +1442,14 @@
                 "group": "number",
                 "name": "Commas",
                 "emoji": "🔢",
-                "code": "export const commas = (num: number) =\u003e {\n  if (typeof num !== 'number') return '';\n  return num.toLocaleString('en-US');\n};\n"
+                "code": "export const commas = (number: number | bigint) =\u003e {\n  if (typeof number !== 'number' \u0026\u0026 typeof number !== 'bigint') return '';\n  return number.toLocaleString('en-US');\n};\n"
               },
               {
                 "id": "number-currency",
                 "group": "number",
                 "name": "Currency",
                 "emoji": "💰",
-                "code": "// Format number as currency (default USD, configurable)\nexport const currency = (value: number, currency = 'USD', locale = 'en-US') =\u003e {\n  if (typeof value !== 'number') return '';\n  return new Intl.NumberFormat(locale, { style: 'currency', currency }).format(value);\n};\n"
+                "code": "export const currency = (number: number | bigint, currency = 'USD', locale = 'en-US') =\u003e {\n  if (typeof number !== 'number' \u0026\u0026 typeof number !== 'bigint') return '';\n  return new Intl.NumberFormat(locale, { style: 'currency', currency }).format(number);\n};\n"
               },
               {
                 "id": "number-random",
@@ -1520,7 +1520,7 @@
         },
         "page": "/tools/utils",
         "query": {},
-        "buildId": "5_0B5m0hdHXmH4FjVzluH",
+        "buildId": "_TdzGoD2zFfQAaXe_0fDi",
         "assetPrefix": "/atomic",
         "isFallback": false,
         "gsp": true,
