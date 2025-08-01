@@ -7,7 +7,7 @@
       let { entries: o, setPrototypeOf: r, isFrozen: i, getPrototypeOf: a, getOwnPropertyDescriptor: l } = Object,
         { freeze: c, seal: s, create: u } = Object,
         { apply: m, construct: p } = 'undefined' != typeof Reflect && Reflect;
-      c ||
+      (c ||
         (c = function (e) {
           return e;
         }),
@@ -22,7 +22,7 @@
         p ||
           (p = function (e, t) {
             return new e(...t);
-          });
+          }));
       let f = v(Array.prototype.forEach),
         d = v(Array.prototype.lastIndexOf),
         h = v(Array.prototype.pop),
@@ -748,7 +748,7 @@
           try {
             return e.createPolicy(r, { createHTML: (e) => e, createScriptURL: (e) => e });
           } catch (e) {
-            return console.warn('TrustedTypes policy ' + r + ' could not be created.'), null;
+            return (console.warn('TrustedTypes policy ' + r + ' could not be created.'), null);
           }
         },
         et = function () {
@@ -778,7 +778,7 @@
           (r.removed = []),
           !n || !n.document || n.document.nodeType !== Q.document || !n.Element)
         )
-          return (r.isSupported = !1), r;
+          return ((r.isSupported = !1), r);
         let { document: i } = n,
           a = i,
           l = a.currentScript,
@@ -986,8 +986,8 @@
                 if ('function' != typeof e.TRUSTED_TYPES_POLICY.createScriptURL)
                   throw R('TRUSTED_TYPES_POLICY configuration option must provide a "createScriptURL" hook.');
                 ei = (t = e.TRUSTED_TYPES_POLICY).createHTML('');
-              } else void 0 === t && (t = ee(q, l)), null !== t && 'string' == typeof ei && (ei = t.createHTML(''));
-              c && c(e), (te = e);
+              } else (void 0 === t && (t = ee(q, l)), null !== t && 'string' == typeof ei && (ei = t.createHTML('')));
+              (c && c(e), (te = e));
             }
           },
           tr = C({}, [...x, ...D, ...I]),
@@ -1104,7 +1104,7 @@
         }
         let td = function (e) {
             let t = null;
-            if ((tf(em.beforeSanitizeElements, e, null), tm(e))) return tl(e), !0;
+            if ((tf(em.beforeSanitizeElements, e, null), tm(e))) return (tl(e), !0);
             let n = e7(e.nodeName);
             if (
               (tf(em.uponSanitizeElement, e, { tagName: n, allowedTags: eA }),
@@ -1116,7 +1116,7 @@
                 e.nodeType === Q.progressingInstruction ||
                 (eD && e.nodeType === Q.comment && w(/<[/\w]/g, e.data)))
             )
-              return tl(e), !0;
+              return (tl(e), !0);
             if (!eA[n] || eR[n]) {
               if (
                 !eR[n] &&
@@ -1132,11 +1132,11 @@
                   let o = n.length;
                   for (let r = o - 1; r >= 0; --r) {
                     let o = K(n[r], !0);
-                    (o.__removalCount = (e.__removalCount || 0) + 1), t.insertBefore(o, en(e));
+                    ((o.__removalCount = (e.__removalCount || 0) + 1), t.insertBefore(o, en(e)));
                   }
                 }
               }
-              return tl(e), !0;
+              return (tl(e), !0);
             }
             return (e instanceof v && !ta(e)) ||
               (('noscript' === n || 'noembed' === n || 'noframes' === n) &&
@@ -1235,7 +1235,7 @@
                   }
               if (u !== c)
                 try {
-                  l ? e.setAttributeNS(l, a, u) : e.setAttribute(a, u), tm(e) ? tl(e) : h(r.removed);
+                  (l ? e.setAttributeNS(l, a, u) : e.setAttribute(a, u), tm(e) ? tl(e) : h(r.removed));
                 } catch (t) {
                   tc(a, e);
                 }
@@ -1246,7 +1246,7 @@
             let n = null,
               o = tu(t);
             for (tf(em.beforeSanitizeShadowDOM, t, null); (n = o.nextNode()); )
-              tf(em.uponSanitizeShadowNode, n, null), td(n), tT(n), n.content instanceof s && e(n.content);
+              (tf(em.uponSanitizeShadowNode, n, null), td(n), tT(n), n.content instanceof s && e(n.content));
             tf(em.afterSanitizeShadowDOM, t, null);
           };
         return (
@@ -1278,12 +1278,12 @@
             }
             o && eU && tl(o.firstChild);
             let u = tu(eB ? e : o);
-            for (; (l = u.nextNode()); ) td(l), tT(l), l.content instanceof s && ty(l.content);
+            for (; (l = u.nextNode()); ) (td(l), tT(l), l.content instanceof s && ty(l.content));
             if (eB) return e;
             if (ez) {
               if (eP) for (c = ec.call(o.ownerDocument); o.firstChild; ) c.appendChild(o.firstChild);
               else c = o;
-              return (eN.shadowroot || eN.shadowrootmode) && (c = eu.call(a, c, !0)), c;
+              return ((eN.shadowroot || eN.shadowrootmode) && (c = eu.call(a, c, !0)), c);
             }
             let m = eI ? o.outerHTML : o.innerHTML;
             return (
@@ -1303,13 +1303,13 @@
           }),
           (r.setConfig = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            to(e), (eM = !0);
+            (to(e), (eM = !0));
           }),
           (r.clearConfig = function () {
-            (te = null), (eM = !1);
+            ((te = null), (eM = !1));
           }),
           (r.isValidAttribute = function (e, t, n) {
-            return te || to({}), th(e7(e), e7(t), n);
+            return (te || to({}), th(e7(e), e7(t), n));
           }),
           (r.addHook = function (e, t) {
             'function' == typeof t && g(em[e], t);
